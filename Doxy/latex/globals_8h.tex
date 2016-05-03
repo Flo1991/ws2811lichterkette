@@ -1,0 +1,92 @@
+\hypertarget{globals_8h}{}\subsection{globals.\+h File Reference}
+\label{globals_8h}\index{globals.\+h@{globals.\+h}}
+
+
+file that contains basic and global definitions, no changes should be done here  
+
+
+{\ttfamily \#include $<$stdint.\+h$>$}\\*
+\subsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{globals_8h_a9b1581d45c3729eba4966b893457d148}{}\#define {\bfseries \+\_\+\+S\+T\+R\+\_\+\+E\+X\+P\+A\+N\+D}(tok)~\#tok\label{globals_8h_a9b1581d45c3729eba4966b893457d148}
+
+\item 
+\hypertarget{globals_8h_a3976b857dc3fc0e3627b3a6b28062299}{}\#define {\bfseries \+\_\+\+S\+T\+R}(tok)~\+\_\+\+S\+T\+R\+\_\+\+E\+X\+P\+A\+N\+D(tok)\label{globals_8h_a3976b857dc3fc0e3627b3a6b28062299}
+
+\item 
+\hypertarget{globals_8h_a1190af2e5eb5d640bf7e59588deddddf}{}\#define {\bfseries \+\_\+\+C\+P\+U\+\_\+\+I\+N\+F\+O}(x)~C\+P\+U\+\_\+\+F\+R\+E\+Q\+U\+E\+N\+C\+Y\#\#x\label{globals_8h_a1190af2e5eb5d640bf7e59588deddddf}
+
+\item 
+\hypertarget{globals_8h_a77366c1bd428629dc898e188bfd182a3}{}\#define \hyperlink{globals_8h_a77366c1bd428629dc898e188bfd182a3}{E\+X\+T\+E\+R\+N}~extern\label{globals_8h_a77366c1bd428629dc898e188bfd182a3}
+
+\begin{DoxyCompactList}\small\item\em macro for global variable management \end{DoxyCompactList}\item 
+\hypertarget{globals_8h_af07a5ce170c7be13d096843960e7b9da}{}\#define \hyperlink{globals_8h_af07a5ce170c7be13d096843960e7b9da}{B\+A\+S\+E\+L\+E\+D\+T\+Y\+P\+E}~11\label{globals_8h_af07a5ce170c7be13d096843960e7b9da}
+
+\begin{DoxyCompactList}\small\item\em default L\+E\+D type of the stribe (11 for W\+S2811, do not change here! change ledtype in main function!) \end{DoxyCompactList}\item 
+\hypertarget{globals_8h_a6e2b9e79df9491377ae405ef85aa0ca5}{}\#define \hyperlink{globals_8h_a6e2b9e79df9491377ae405ef85aa0ca5}{M\+A\+X\+N\+U\+M\+C\+O\+L\+O\+R\+S}~50\label{globals_8h_a6e2b9e79df9491377ae405ef85aa0ca5}
+
+\begin{DoxyCompactList}\small\item\em definition for maximum number of different colors that can be handled at the same time (the maximum value should be 50, a higher value may result in an memory overflow refering to 2k\+Byte (atmega328p)) \end{DoxyCompactList}\item 
+\hypertarget{globals_8h_a0d57378e32bf8278011460740bc29f7f}{}\#define \hyperlink{globals_8h_a0d57378e32bf8278011460740bc29f7f}{U\+A\+R\+T\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+I\+Z\+E}~80\label{globals_8h_a0d57378e32bf8278011460740bc29f7f}
+
+\begin{DoxyCompactList}\small\item\em definition for U\+A\+R\+T Buffer, must be at least M\+A\+X\+N\+U\+M\+C\+O\+L\+O\+R\+S+5 \end{DoxyCompactList}\item 
+\hypertarget{globals_8h_a43bafb28b29491ec7f871319b5a3b2f8}{}\#define \hyperlink{globals_8h_a43bafb28b29491ec7f871319b5a3b2f8}{F\+\_\+\+C\+P\+U}~8000000\label{globals_8h_a43bafb28b29491ec7f871319b5a3b2f8}
+
+\begin{DoxyCompactList}\small\item\em C\+P\+U Frequency definition for avr delay function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{globals_8h_ad5db4045aed262ed4aae2af9d81fab98}{}\hyperlink{globals_8h_a77366c1bd428629dc898e188bfd182a3}{E\+X\+T\+E\+R\+N} uint8\+\_\+t \hyperlink{globals_8h_ad5db4045aed262ed4aae2af9d81fab98}{Num\+Of\+Leds}\label{globals_8h_ad5db4045aed262ed4aae2af9d81fab98}
+
+\begin{DoxyCompactList}\small\item\em global variable for number of leds to control \end{DoxyCompactList}\item 
+\hypertarget{globals_8h_ac2445d316b2972d381edeac44bb6a226}{}\hyperlink{globals_8h_a77366c1bd428629dc898e188bfd182a3}{E\+X\+T\+E\+R\+N} uint16\+\_\+t \hyperlink{globals_8h_ac2445d316b2972d381edeac44bb6a226}{effectime}\label{globals_8h_ac2445d316b2972d381edeac44bb6a226}
+
+\begin{DoxyCompactList}\small\item\em global effectime for effect delays, a higher value means a higher delay \end{DoxyCompactList}\item 
+\hypertarget{globals_8h_a722e1eb38b661d1338ada3cc7a4049a0}{}\hyperlink{globals_8h_a77366c1bd428629dc898e188bfd182a3}{E\+X\+T\+E\+R\+N} uint8\+\_\+t \hyperlink{globals_8h_a722e1eb38b661d1338ada3cc7a4049a0}{ledtype}\label{globals_8h_a722e1eb38b661d1338ada3cc7a4049a0}
+
+\begin{DoxyCompactList}\small\item\em global ledtype, 11 = W\+S2811 (R\+G\+B Color), 12 = W\+S2812 (G\+R\+B Color) \end{DoxyCompactList}\item 
+\hypertarget{globals_8h_a159854edb9d0c7283013495d85bdf997}{}\hyperlink{globals_8h_a77366c1bd428629dc898e188bfd182a3}{E\+X\+T\+E\+R\+N} uint8\+\_\+t \hyperlink{globals_8h_a159854edb9d0c7283013495d85bdf997}{Comp\+Color\+Array} \mbox{[}\hyperlink{globals_8h_a6e2b9e79df9491377ae405ef85aa0ca5}{M\+A\+X\+N\+U\+M\+C\+O\+L\+O\+R\+S}\mbox{]}\label{globals_8h_a159854edb9d0c7283013495d85bdf997}
+
+\begin{DoxyCompactList}\small\item\em color array containing the received packed 8-\/\+Bit colors \end{DoxyCompactList}\item 
+\hypertarget{globals_8h_a5d735865707e6694a8173d629e0b4d5c}{}\hyperlink{globals_8h_a77366c1bd428629dc898e188bfd182a3}{E\+X\+T\+E\+R\+N} uint8\+\_\+t \hyperlink{globals_8h_a5d735865707e6694a8173d629e0b4d5c}{Rec\+Buffer} \mbox{[}\hyperlink{globals_8h_a0d57378e32bf8278011460740bc29f7f}{U\+A\+R\+T\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+I\+Z\+E}\mbox{]}\label{globals_8h_a5d735865707e6694a8173d629e0b4d5c}
+
+\begin{DoxyCompactList}\small\item\em receive buffer for U\+A\+R\+T communication \end{DoxyCompactList}\item 
+\hypertarget{globals_8h_aa6fcb4d4fca4554ac73bef10668c23cd}{}\hyperlink{globals_8h_a77366c1bd428629dc898e188bfd182a3}{E\+X\+T\+E\+R\+N} uint8\+\_\+t \hyperlink{globals_8h_aa6fcb4d4fca4554ac73bef10668c23cd}{Buffer\+Counter}\label{globals_8h_aa6fcb4d4fca4554ac73bef10668c23cd}
+
+\begin{DoxyCompactList}\small\item\em counter for accessing the Comp\+Color\+Array indices for data income \end{DoxyCompactList}\item 
+\hypertarget{globals_8h_aaa611e00c18e950be43a4cd5ce0ceeb1}{}\hyperlink{globals_8h_a77366c1bd428629dc898e188bfd182a3}{E\+X\+T\+E\+R\+N} uint8\+\_\+t \hyperlink{globals_8h_aaa611e00c18e950be43a4cd5ce0ceeb1}{Data\+Len}\label{globals_8h_aaa611e00c18e950be43a4cd5ce0ceeb1}
+
+\begin{DoxyCompactList}\small\item\em variable to store the current packet length of the U\+A\+R\+T packet \end{DoxyCompactList}\item 
+\hypertarget{globals_8h_a053b8e1f039c19251b90d60317db8aed}{}\hyperlink{globals_8h_a77366c1bd428629dc898e188bfd182a3}{E\+X\+T\+E\+R\+N} uint8\+\_\+t \hyperlink{globals_8h_a053b8e1f039c19251b90d60317db8aed}{effect}\label{globals_8h_a053b8e1f039c19251b90d60317db8aed}
+
+\begin{DoxyCompactList}\small\item\em global effect variable to switch between the effects \end{DoxyCompactList}\item 
+\hypertarget{globals_8h_a1b09d1a5bcf4c8ab435bb3c9e36def59}{}\hyperlink{globals_8h_a77366c1bd428629dc898e188bfd182a3}{E\+X\+T\+E\+R\+N} uint8\+\_\+t \hyperlink{globals_8h_a1b09d1a5bcf4c8ab435bb3c9e36def59}{Packet\+Complete}\label{globals_8h_a1b09d1a5bcf4c8ab435bb3c9e36def59}
+
+\begin{DoxyCompactList}\small\item\em flag to store if a U\+A\+R\+T packet is complete; a packet is complete if the Buffer\+Counter equals Data\+Len \end{DoxyCompactList}\item 
+\hypertarget{globals_8h_aaa3bddd2273257ac5ec259197b62e984}{}\hyperlink{globals_8h_a77366c1bd428629dc898e188bfd182a3}{E\+X\+T\+E\+R\+N} uint8\+\_\+t \hyperlink{globals_8h_aaa3bddd2273257ac5ec259197b62e984}{Paket\+Start}\label{globals_8h_aaa3bddd2273257ac5ec259197b62e984}
+
+\begin{DoxyCompactList}\small\item\em flag to store if the \hyperlink{ws2811lichterkette_8c_a8aac8c5098aaf915463fb31715efa09f}{P\+R\+E\+A\+M\+B\+L\+E} has been received \end{DoxyCompactList}\item 
+\hypertarget{globals_8h_a922ad5baed647eca43ad1a979e162ebd}{}\hyperlink{globals_8h_a77366c1bd428629dc898e188bfd182a3}{E\+X\+T\+E\+R\+N} uint8\+\_\+t \hyperlink{globals_8h_a922ad5baed647eca43ad1a979e162ebd}{Is\+Reading}\label{globals_8h_a922ad5baed647eca43ad1a979e162ebd}
+
+\begin{DoxyCompactList}\small\item\em flag to show if the Rec\+Buffer is in copy process so that the array cannot be filled with new data from U\+A\+R\+T \end{DoxyCompactList}\item 
+\hypertarget{globals_8h_ab5490074aaca289e986e9a00e0c25663}{}\hyperlink{globals_8h_a77366c1bd428629dc898e188bfd182a3}{E\+X\+T\+E\+R\+N} volatile char \hyperlink{globals_8h_ab5490074aaca289e986e9a00e0c25663}{Received\+Char}\label{globals_8h_ab5490074aaca289e986e9a00e0c25663}
+
+\begin{DoxyCompactList}\small\item\em current data received from U\+A\+R\+T \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsubsection{Detailed Description}
+file that contains basic and global definitions, no changes should be done here 
+
+\begin{DoxyVersion}{Version}
+V1.\+00 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+05.\+01.\+2016 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Authors}
+Wank Florian 
+\end{DoxyAuthor}
+
+
+Definition in file \hyperlink{globals_8h_source}{globals.\+h}.
+

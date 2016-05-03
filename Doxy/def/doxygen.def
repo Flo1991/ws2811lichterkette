@@ -1,0 +1,2620 @@
+AutoGen Definitions dummy;
+struct = {
+  cp-id     = 'structcolor24bit';
+  cp-name   = 'color24bit';
+  cp-section = {
+    sec-kind = 'public-attrib';
+    sec-member = {
+      sec-mem-kind = 'variable';
+      sec-mem-id   = 'structcolor24bit_1ad47d918910aaa51c73160ac85999d09c';
+      sec-mem-virt = normal;
+      sec-mem-prot = public;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+uint8_t
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'red';
+      sec-mem-desc-file = 'C:/Users/Commander/Documents/Atmel Studio/6.2/ws2811lichterkette/ws2811lichterkette/Lightstribe.h';
+      sec-mem-desc-line = '17';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+8 Bit red 
+_EnD_oF_dEf_TeXt_;
+    }; /* sec-member */
+    sec-member = {
+      sec-mem-kind = 'variable';
+      sec-mem-id   = 'structcolor24bit_1a90d21fa503b626c00cdc8d94863d5877';
+      sec-mem-virt = normal;
+      sec-mem-prot = public;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+uint8_t
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'green';
+      sec-mem-desc-file = 'C:/Users/Commander/Documents/Atmel Studio/6.2/ws2811lichterkette/ws2811lichterkette/Lightstribe.h';
+      sec-mem-desc-line = '18';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+8 Bit green 
+_EnD_oF_dEf_TeXt_;
+    }; /* sec-member */
+    sec-member = {
+      sec-mem-kind = 'variable';
+      sec-mem-id   = 'structcolor24bit_1a287b397e90d7b995c81ff54e741f96b2';
+      sec-mem-virt = normal;
+      sec-mem-prot = public;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+uint8_t
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'blue';
+      sec-mem-desc-file = 'C:/Users/Commander/Documents/Atmel Studio/6.2/ws2811lichterkette/ws2811lichterkette/Lightstribe.h';
+      sec-mem-desc-line = '19';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+8 Bit blue 
+_EnD_oF_dEf_TeXt_;
+    }; /* sec-member */
+  }; /* cp-section */
+  cp-filename  = 'C:/Users/Commander/Documents/Atmel Studio/6.2/ws2811lichterkette/ws2811lichterkette/Lightstribe.h';
+  cp-fileline  = '16';
+  cp-briefdesc = <<_EnD_oF_dEf_TeXt_
+24 Bit color structure RGB 8-8-8
+_EnD_oF_dEf_TeXt_;
+  cp-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+}; /* struct */
+file = {
+  file-id   = 'globals_8h';
+  file-name = 'globals.h';
+    define = {
+    define-member = {
+      define-mem-kind = 'define';
+      define-mem-id   = 'globals_8h_1a9b1581d45c3729eba4966b893457d148';
+      define-mem-virt = normal;
+      define-mem-prot = public;
+      define-mem-name = '_STR_EXPAND';
+      define-mem-param  = {
+        define-mem-def-name = 'tok';
+      }; /*        define-mem-def--param */
+      define-mem-initializer = <<_EnD_oF_dEf_TeXt_
+#tok
+_EnD_oF_dEf_TeXt_;
+      define-mem-desc-file = 'C:/Users/Commander/Documents/Atmel Studio/6.2/ws2811lichterkette/ws2811lichterkette/globals.h';
+      define-mem-desc-line = '15';
+      define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      define-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* define-member */
+    define-member = {
+      define-mem-kind = 'define';
+      define-mem-id   = 'globals_8h_1a3976b857dc3fc0e3627b3a6b28062299';
+      define-mem-virt = normal;
+      define-mem-prot = public;
+      define-mem-name = '_STR';
+      define-mem-param  = {
+        define-mem-def-name = 'tok';
+      }; /*        define-mem-def--param */
+      define-mem-initializer = <<_EnD_oF_dEf_TeXt_
+_STR_EXPAND(tok)
+_EnD_oF_dEf_TeXt_;
+      define-mem-desc-file = 'C:/Users/Commander/Documents/Atmel Studio/6.2/ws2811lichterkette/ws2811lichterkette/globals.h';
+      define-mem-desc-line = '16';
+      define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      define-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* define-member */
+    define-member = {
+      define-mem-kind = 'define';
+      define-mem-id   = 'globals_8h_1a1190af2e5eb5d640bf7e59588deddddf';
+      define-mem-virt = normal;
+      define-mem-prot = public;
+      define-mem-name = '_CPU_INFO';
+      define-mem-param  = {
+        define-mem-def-name = 'x';
+      }; /*        define-mem-def--param */
+      define-mem-initializer = <<_EnD_oF_dEf_TeXt_
+CPU_FREQUENCY##x
+_EnD_oF_dEf_TeXt_;
+      define-mem-desc-file = 'C:/Users/Commander/Documents/Atmel Studio/6.2/ws2811lichterkette/ws2811lichterkette/globals.h';
+      define-mem-desc-line = '17';
+      define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      define-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* define-member */
+    define-member = {
+      define-mem-kind = 'define';
+      define-mem-id   = 'globals_8h_1a77366c1bd428629dc898e188bfd182a3';
+      define-mem-virt = normal;
+      define-mem-prot = public;
+      define-mem-name = 'EXTERN';
+      define-mem-initializer = <<_EnD_oF_dEf_TeXt_
+extern
+_EnD_oF_dEf_TeXt_;
+      define-mem-desc-file = 'C:/Users/Commander/Documents/Atmel Studio/6.2/ws2811lichterkette/ws2811lichterkette/globals.h';
+      define-mem-desc-line = '21';
+      define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+macro for global variable management
+_EnD_oF_dEf_TeXt_;
+      define-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* define-member */
+    define-member = {
+      define-mem-kind = 'define';
+      define-mem-id   = 'globals_8h_1af07a5ce170c7be13d096843960e7b9da';
+      define-mem-virt = normal;
+      define-mem-prot = public;
+      define-mem-name = 'BASELEDTYPE';
+      define-mem-initializer = <<_EnD_oF_dEf_TeXt_
+11
+_EnD_oF_dEf_TeXt_;
+      define-mem-desc-file = 'C:/Users/Commander/Documents/Atmel Studio/6.2/ws2811lichterkette/ws2811lichterkette/globals.h';
+      define-mem-desc-line = '31';
+      define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+default LED type of the stribe (11 for WS2811, do not change here! change ledtype in main function!)
+_EnD_oF_dEf_TeXt_;
+      define-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* define-member */
+    define-member = {
+      define-mem-kind = 'define';
+      define-mem-id   = 'globals_8h_1a6e2b9e79df9491377ae405ef85aa0ca5';
+      define-mem-virt = normal;
+      define-mem-prot = public;
+      define-mem-name = 'MAXNUMCOLORS';
+      define-mem-initializer = <<_EnD_oF_dEf_TeXt_
+50
+_EnD_oF_dEf_TeXt_;
+      define-mem-desc-file = 'C:/Users/Commander/Documents/Atmel Studio/6.2/ws2811lichterkette/ws2811lichterkette/globals.h';
+      define-mem-desc-line = '35';
+      define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+definition for maximum number of different colors that can be handled at the same time 
+        (the maximum value should be 50, a higher value may result in an memory overflow refering to 2kByte (atmega328p))
+_EnD_oF_dEf_TeXt_;
+      define-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* define-member */
+    define-member = {
+      define-mem-kind = 'define';
+      define-mem-id   = 'globals_8h_1a0d57378e32bf8278011460740bc29f7f';
+      define-mem-virt = normal;
+      define-mem-prot = public;
+      define-mem-name = 'UART_BUFFER_SIZE';
+      define-mem-initializer = <<_EnD_oF_dEf_TeXt_
+80
+_EnD_oF_dEf_TeXt_;
+      define-mem-desc-file = 'C:/Users/Commander/Documents/Atmel Studio/6.2/ws2811lichterkette/ws2811lichterkette/globals.h';
+      define-mem-desc-line = '37';
+      define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+definition for UART Buffer, must be at least MAXNUMCOLORS+5
+_EnD_oF_dEf_TeXt_;
+      define-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* define-member */
+    define-member = {
+      define-mem-kind = 'define';
+      define-mem-id   = 'globals_8h_1a43bafb28b29491ec7f871319b5a3b2f8';
+      define-mem-virt = normal;
+      define-mem-prot = public;
+      define-mem-name = 'F_CPU';
+      define-mem-initializer = <<_EnD_oF_dEf_TeXt_
+8000000
+_EnD_oF_dEf_TeXt_;
+      define-mem-desc-file = 'C:/Users/Commander/Documents/Atmel Studio/6.2/ws2811lichterkette/ws2811lichterkette/globals.h';
+      define-mem-desc-line = '63';
+      define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+CPU Frequency definition for avr delay function.
+_EnD_oF_dEf_TeXt_;
+      define-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* define-member */
+    };
+    var = {
+    var-member = {
+      var-mem-kind = 'variable';
+      var-mem-id   = 'globals_8h_1ad5db4045aed262ed4aae2af9d81fab98';
+      var-mem-virt = normal;
+      var-mem-prot = public;
+      var-mem-type = <<_EnD_oF_dEf_TeXt_
+EXTERN uint8_t
+_EnD_oF_dEf_TeXt_;
+      var-mem-name = 'NumOfLeds';
+      var-mem-desc-file = 'C:/Users/Commander/Documents/Atmel Studio/6.2/ws2811lichterkette/ws2811lichterkette/globals.h';
+      var-mem-desc-line = '25';
+      var-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+global variable for number of leds to control
+_EnD_oF_dEf_TeXt_;
+      var-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* var-member */
+    var-member = {
+      var-mem-kind = 'variable';
+      var-mem-id   = 'globals_8h_1ac2445d316b2972d381edeac44bb6a226';
+      var-mem-virt = normal;
+      var-mem-prot = public;
+      var-mem-type = <<_EnD_oF_dEf_TeXt_
+EXTERN uint16_t
+_EnD_oF_dEf_TeXt_;
+      var-mem-name = 'effectime';
+      var-mem-desc-file = 'C:/Users/Commander/Documents/Atmel Studio/6.2/ws2811lichterkette/ws2811lichterkette/globals.h';
+      var-mem-desc-line = '27';
+      var-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+global effectime for effect delays, a higher value means a higher delay
+_EnD_oF_dEf_TeXt_;
+      var-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* var-member */
+    var-member = {
+      var-mem-kind = 'variable';
+      var-mem-id   = 'globals_8h_1a722e1eb38b661d1338ada3cc7a4049a0';
+      var-mem-virt = normal;
+      var-mem-prot = public;
+      var-mem-type = <<_EnD_oF_dEf_TeXt_
+EXTERN uint8_t
+_EnD_oF_dEf_TeXt_;
+      var-mem-name = 'ledtype';
+      var-mem-desc-file = 'C:/Users/Commander/Documents/Atmel Studio/6.2/ws2811lichterkette/ws2811lichterkette/globals.h';
+      var-mem-desc-line = '29';
+      var-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+global ledtype, 11 = WS2811 (RGB Color), 12 = WS2812 (GRB Color)
+_EnD_oF_dEf_TeXt_;
+      var-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* var-member */
+    var-member = {
+      var-mem-kind = 'variable';
+      var-mem-id   = 'globals_8h_1a159854edb9d0c7283013495d85bdf997';
+      var-mem-virt = normal;
+      var-mem-prot = public;
+      var-mem-type = <<_EnD_oF_dEf_TeXt_
+EXTERN uint8_t
+_EnD_oF_dEf_TeXt_;
+      var-mem-name = 'CompColorArray';
+      var-mem-desc-file = 'C:/Users/Commander/Documents/Atmel Studio/6.2/ws2811lichterkette/ws2811lichterkette/globals.h';
+      var-mem-desc-line = '40';
+      var-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+color array containing the received packed 8-Bit colors
+_EnD_oF_dEf_TeXt_;
+      var-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* var-member */
+    var-member = {
+      var-mem-kind = 'variable';
+      var-mem-id   = 'globals_8h_1a5d735865707e6694a8173d629e0b4d5c';
+      var-mem-virt = normal;
+      var-mem-prot = public;
+      var-mem-type = <<_EnD_oF_dEf_TeXt_
+EXTERN uint8_t
+_EnD_oF_dEf_TeXt_;
+      var-mem-name = 'RecBuffer';
+      var-mem-desc-file = 'C:/Users/Commander/Documents/Atmel Studio/6.2/ws2811lichterkette/ws2811lichterkette/globals.h';
+      var-mem-desc-line = '42';
+      var-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+receive buffer for UART communication
+_EnD_oF_dEf_TeXt_;
+      var-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* var-member */
+    var-member = {
+      var-mem-kind = 'variable';
+      var-mem-id   = 'globals_8h_1aa6fcb4d4fca4554ac73bef10668c23cd';
+      var-mem-virt = normal;
+      var-mem-prot = public;
+      var-mem-type = <<_EnD_oF_dEf_TeXt_
+EXTERN uint8_t
+_EnD_oF_dEf_TeXt_;
+      var-mem-name = 'BufferCounter';
+      var-mem-desc-file = 'C:/Users/Commander/Documents/Atmel Studio/6.2/ws2811lichterkette/ws2811lichterkette/globals.h';
+      var-mem-desc-line = '44';
+      var-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+counter for accessing the CompColorArray indices for data income
+_EnD_oF_dEf_TeXt_;
+      var-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* var-member */
+    var-member = {
+      var-mem-kind = 'variable';
+      var-mem-id   = 'globals_8h_1aaa611e00c18e950be43a4cd5ce0ceeb1';
+      var-mem-virt = normal;
+      var-mem-prot = public;
+      var-mem-type = <<_EnD_oF_dEf_TeXt_
+EXTERN uint8_t
+_EnD_oF_dEf_TeXt_;
+      var-mem-name = 'DataLen';
+      var-mem-desc-file = 'C:/Users/Commander/Documents/Atmel Studio/6.2/ws2811lichterkette/ws2811lichterkette/globals.h';
+      var-mem-desc-line = '46';
+      var-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+variable to store the current packet length of the UART packet
+_EnD_oF_dEf_TeXt_;
+      var-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* var-member */
+    var-member = {
+      var-mem-kind = 'variable';
+      var-mem-id   = 'globals_8h_1a053b8e1f039c19251b90d60317db8aed';
+      var-mem-virt = normal;
+      var-mem-prot = public;
+      var-mem-type = <<_EnD_oF_dEf_TeXt_
+EXTERN uint8_t
+_EnD_oF_dEf_TeXt_;
+      var-mem-name = 'effect';
+      var-mem-desc-file = 'C:/Users/Commander/Documents/Atmel Studio/6.2/ws2811lichterkette/ws2811lichterkette/globals.h';
+      var-mem-desc-line = '48';
+      var-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+global effect variable to switch between the effects
+_EnD_oF_dEf_TeXt_;
+      var-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* var-member */
+    var-member = {
+      var-mem-kind = 'variable';
+      var-mem-id   = 'globals_8h_1a1b09d1a5bcf4c8ab435bb3c9e36def59';
+      var-mem-virt = normal;
+      var-mem-prot = public;
+      var-mem-type = <<_EnD_oF_dEf_TeXt_
+EXTERN uint8_t
+_EnD_oF_dEf_TeXt_;
+      var-mem-name = 'PacketComplete';
+      var-mem-desc-file = 'C:/Users/Commander/Documents/Atmel Studio/6.2/ws2811lichterkette/ws2811lichterkette/globals.h';
+      var-mem-desc-line = '53';
+      var-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+flag to store if a UART packet is complete; a packet is complete if the BufferCounter equals DataLen
+_EnD_oF_dEf_TeXt_;
+      var-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* var-member */
+    var-member = {
+      var-mem-kind = 'variable';
+      var-mem-id   = 'globals_8h_1aaa3bddd2273257ac5ec259197b62e984';
+      var-mem-virt = normal;
+      var-mem-prot = public;
+      var-mem-type = <<_EnD_oF_dEf_TeXt_
+EXTERN uint8_t
+_EnD_oF_dEf_TeXt_;
+      var-mem-name = 'PaketStart';
+      var-mem-desc-file = 'C:/Users/Commander/Documents/Atmel Studio/6.2/ws2811lichterkette/ws2811lichterkette/globals.h';
+      var-mem-desc-line = '55';
+      var-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+flag to store if the @link PREAMBLE @endlink has been received
+_EnD_oF_dEf_TeXt_;
+      var-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* var-member */
+    var-member = {
+      var-mem-kind = 'variable';
+      var-mem-id   = 'globals_8h_1a922ad5baed647eca43ad1a979e162ebd';
+      var-mem-virt = normal;
+      var-mem-prot = public;
+      var-mem-type = <<_EnD_oF_dEf_TeXt_
+EXTERN uint8_t
+_EnD_oF_dEf_TeXt_;
+      var-mem-name = 'IsReading';
+      var-mem-desc-file = 'C:/Users/Commander/Documents/Atmel Studio/6.2/ws2811lichterkette/ws2811lichterkette/globals.h';
+      var-mem-desc-line = '57';
+      var-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+flag to show if the RecBuffer is in copy process so that the array cannot be filled with new data from UART
+_EnD_oF_dEf_TeXt_;
+      var-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* var-member */
+    var-member = {
+      var-mem-kind = 'variable';
+      var-mem-id   = 'globals_8h_1ab5490074aaca289e986e9a00e0c25663';
+      var-mem-virt = normal;
+      var-mem-prot = public;
+      var-mem-type = <<_EnD_oF_dEf_TeXt_
+EXTERN volatile char
+_EnD_oF_dEf_TeXt_;
+      var-mem-name = 'ReceivedChar';
+      var-mem-desc-file = 'C:/Users/Commander/Documents/Atmel Studio/6.2/ws2811lichterkette/ws2811lichterkette/globals.h';
+      var-mem-desc-line = '59';
+      var-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+current data received from UART
+_EnD_oF_dEf_TeXt_;
+      var-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* var-member */
+    };
+  file-full-name  = 'C:/Users/Commander/Documents/Atmel Studio/6.2/ws2811lichterkette/ws2811lichterkette/globals.h';
+  file-first-line = '1';
+  file-briefdesc  = <<_EnD_oF_dEf_TeXt_
+file that contains basic and global definitions, no changes should be done here
+_EnD_oF_dEf_TeXt_;
+  file-documentation = <<_EnD_oF_dEf_TeXt_
+@version  V1.00
+@date     05.01.2016
+@authors  Wank Florian
+_EnD_oF_dEf_TeXt_;
+}; /* file */
+file = {
+  file-id   = '_led_effects_8c';
+  file-name = 'LedEffects.c';
+    func = {
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = '_led_effects_8c_1ad67a4e660b5122ed454e101432bbdba0';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+uint8_t
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'map';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+uint8_t
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'x';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+uint8_t
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'in_min';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+uint8_t
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'in_max';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+uint8_t
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'out_min';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+uint8_t
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'out_max';
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = 'C:/Users/Commander/Documents/Atmel Studio/6.2/ws2811lichterkette/ws2811lichterkette/LedEffects.c';
+      func-mem-desc-line = '33';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+Arduino map function; used for color conversion.
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+\param [in]     uint8_t x: value to map
+\param [in]     uint8_t in_min : minimum value input reference
+\param [in]     uint8_t in_max : maximum value input reference
+\param [in]     uint8_t out_min : minimum value output reference
+\param [in]     uint8_t out_max : maximum value output reference
+\return         uint8_t : mapped value referring to the input
+\note           This function is used for color conversion from 8 Bit to 24 Bit colors;
+                How it works:
+                in_min < x < in_max convert to out_min < returnvalue < out_max
+                by positioning the x proportionally in the new number range
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = '_led_effects_8c_1a55291315ab0f2ca8d508f0e9da1920a7';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+struct color24bit
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'colorconv8to24';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+uint8_t
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'startcolor';
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = 'C:/Users/Commander/Documents/Atmel Studio/6.2/ws2811lichterkette/ws2811lichterkette/LedEffects.c';
+      func-mem-desc-line = '33';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+color conversion function; converts a 8 Bit color (RGB 3-3-2) to a 24 Bit color (RGB 8-8-8)
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+\param [in]     uint8_t startcolor: 8 Bit color to convert
+\return         struct color24bit : 24 Bit color result
+\note           This function converts the 8 Bit color to a 24 Bit color depending on the ledtype.
+                This is neccessary because of differnt color formats (WS2811->RGB ; WS2812->GRB).
+                Original the whole environment was for WS2812 LEDs!             
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = '_led_effects_8c_1a6950e7657ba74d0d490ba36427533c4b';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+void
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'effectdelay';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+uint16_t
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'delay';
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = 'C:/Users/Commander/Documents/Atmel Studio/6.2/ws2811lichterkette/ws2811lichterkette/LedEffects.c';
+      func-mem-desc-line = '72';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+simple delay function; no concrete delay time
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+\param [in]     uint16_t delay : delay value
+\return         void
+\note           This function is just a variable delay, there is no coherence with a concrete time (i.e. s, ms)         
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = '_led_effects_8c_1a2d54d1a6c61fe667b7c68ff04a11c503';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+void
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'setfullcolor';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+struct color24bit
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'color';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+uint8_t *
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'lightdata';
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = 'C:/Users/Commander/Documents/Atmel Studio/6.2/ws2811lichterkette/ws2811lichterkette/LedEffects.c';
+      func-mem-desc-line = '96';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+Set all LEDs to the chosen color; run transmit2leds afterwards to update the LEDs.
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+\param [in]     struct color24bit color : color to set
+\param [in]     uint8_t *lightdata : lightdata array that holds the color values for the stribe
+\return         void
+\note           This function sets the lightdata array. To update the stribe run transmit2leds afterwards!      
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = '_led_effects_8c_1a1c5e6b0f45c1787c25f8eafa8b9c6247';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+void
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'resetstribe';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+uint8_t *
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'lightdata';
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = 'C:/Users/Commander/Documents/Atmel Studio/6.2/ws2811lichterkette/ws2811lichterkette/LedEffects.c';
+      func-mem-desc-line = '118';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+Set all LEDs off; run transmit2leds afterwards to update the LEDs.
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+\param [in]     uint8_t *lightdata : lightdata array that holds the color values for the stribe
+\return         void
+\note           This function sets the lightdata array to 0x00. To update the stribe run transmit2leds afterwards!      
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = '_led_effects_8c_1afd64325b08e785d37b4dfaf358e517f0';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+void
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'rotate';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+uint8_t *
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'lightdata';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+uint8_t
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'direction';
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = 'C:/Users/Commander/Documents/Atmel Studio/6.2/ws2811lichterkette/ws2811lichterkette/LedEffects.c';
+      func-mem-desc-line = '138';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+Rotate the lightdata for 1 LED Position; run transmit2leds afterwards to update the LEDs.
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+\param [in]     uint8_t *lightdata : lightdata array that holds the color values for the stribe
+\param [in]     uint8_t direction : direction to rotate
+\return         void
+\note           This function rotates lightdata array. To update the stribe run transmit2leds afterwards! 
+                The rotation "moves every LED" by one step, the overflowing LED is appended at the other ending.
+                Example:
+                RED BLUE YELLOW GREEN ... rotate... BLUE YELLOW GREEN RED
+                other direction:
+                RED BLUE YELLOW GREEN ... rotate... GREEN RED BLUE YELLOW
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = '_led_effects_8c_1a1fa5e03cb24195a46dcdc5948f596181';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+void
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'rotateN';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+uint8_t *
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'lightdata';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+uint8_t
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'direction';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+uint8_t
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'width';
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = 'C:/Users/Commander/Documents/Atmel Studio/6.2/ws2811lichterkette/ws2811lichterkette/LedEffects.c';
+      func-mem-desc-line = '196';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+Rotate the lightdata for n LED Positions; run transmit2leds afterwards to update the LEDs.
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+\param [in]     uint8_t *lightdata : lightdata array that holds the color values for the stribe
+\param [in]     uint8_t direction : direction to rotate
+\param [in]     uint8_t width : width to rotate
+\return         void
+\note           This function rotates lightdata array. To update the stribe run transmit2leds afterwards! 
+                The rotation "moves every LED" by n steps, the overflowing LEDs are appended at the other ending.
+                Example:
+                RED BLUE YELLOW GREEN PINK ... rotate 2 ... YELLOW GREEN PINK RED BLUE
+                other direction:
+                RED BLUE YELLOW GREEN PINK ... rotate 2 ... GREEN PINK RED BLUE YELLOW
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = '_led_effects_8c_1aecba07ab559ab94e6f44c16e39012d80';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+void
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'initrunled';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+struct color24bit
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'color';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+uint8_t *
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'lightdata';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+struct color24bit
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'background';
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = 'C:/Users/Commander/Documents/Atmel Studio/6.2/ws2811lichterkette/ws2811lichterkette/LedEffects.c';
+      func-mem-desc-line = '217';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+init the runled effect; run runrunled afterwards to start the effect
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+This function initializes the running LED effect. The running LED effect has
+                a background color that is used for all LEDs except one. One LED is in the
+                foreground color an moves stepwise along the stribe. The initialization prepares
+                the lightdata array by setting one LED at the start position and filling the
+                others with the background color. 
+\param [in]     struct color24bit color : 24 Bit color for the effect
+\param [in]     uint8_t *lightdata : lightdata array that holds the color values for the stribe
+\param [in]     struct color24bit background : 24 Bit color for the effect background
+\return         void
+\note           Run runrunled afterwards to start the effect! 
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = '_led_effects_8c_1a35cfbfc36c975f98a7779a37b6ff63ce';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+void
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'runrunled';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+uint8_t *
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'lightdata';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+uint8_t
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'direction';
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = 'C:/Users/Commander/Documents/Atmel Studio/6.2/ws2811lichterkette/ws2811lichterkette/LedEffects.c';
+      func-mem-desc-line = '236';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+Do the runled effect; before this function is called the lightdata needs to be initiliazed using initrunled!
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+This function runs the running LED effect. The running LED effect has
+                a background color that is used for all LEDs except one. The one LED
+                moves stepwise to the next position depending on the chosen direction.
+                Direction 0/1 are right/left, direction 2 runs from left to right an back again.
+                For direction 0/1 the running LED overflows and begins on the other ending.
+\param [in]     uint8_t *lightdata : lightdata array that holds the color values for the stribe
+\param [in]     uint8_t direction : movement direction, 0/1 = right/left, 2 = left->right and back
+\return         void
+\note           No need to run transmit2leds afterwards! This is already done in the function.
+                The function is interrupted if a new UART package is completely received so a new
+                effect gets active.
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = '_led_effects_8c_1a9fd87d01d5cc4ce5fce6ddca55ebaf37';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+void
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'blinkled';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+struct color24bit
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'color';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+uint8_t *
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'lightdata';
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = 'C:/Users/Commander/Documents/Atmel Studio/6.2/ws2811lichterkette/ws2811lichterkette/LedEffects.c';
+      func-mem-desc-line = '278';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+blink the whole stribe; this function does not need another function call
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+This function creates a blinking effect. First all LEDs are set to the
+                chosen color, after the defined delay the LEDs are turned off. This is
+                repeated in the main while loop.
+\param [in]     struct color24bit color : color for the blink effect    
+\param [in]     uint8_t *lightdata : lightdata array that holds the color values for the stribe
+\return         void
+\note           No need to run transmit2leds afterwards! This is already done in the function.
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = '_led_effects_8c_1af67b7638a175e4971f25df5a5db3d8d0';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+void
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'init_alternating';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+struct color24bit
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'color';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+struct color24bit
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'backcolor';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+uint8_t *
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'lightdata';
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = 'C:/Users/Commander/Documents/Atmel Studio/6.2/ws2811lichterkette/ws2811lichterkette/LedEffects.c';
+      func-mem-desc-line = '300';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+initialize the alternating function; call run_alternating afterwards
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+This function initializes the alternating effect. The effect assigns
+                every even LED number in one color and the odd numbers in the background color.
+                If the effect is running, the odd and even LED switch positions.                
+\param [in]     struct color24bit color : color for the alternate effect (Init even LEDs)   
+\param [in]     struct color24bit backcolor : color for the alternate effect bakckground (Init odd LEDs)    
+\param [in]     uint8_t *lightdata : lightdata array that holds the color values for the stribe
+\return         void
+\note           Run run_alternating afterwards to start the effect!
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = '_led_effects_8c_1a5bde1e9e7fc19a9916f1ec02d8fbcd6c';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+void
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'run_alternating';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+uint8_t *
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'lightdata';
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = 'C:/Users/Commander/Documents/Atmel Studio/6.2/ws2811lichterkette/ws2811lichterkette/LedEffects.c';
+      func-mem-desc-line = '323';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+Run the alternating effect; call init_alternating before.
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+This function runs the alternating effect. The effect assigns
+                every even LED number in one color and the odd numbers in the background color.
+                If the effect is running, the odd and even LED switch positions.
+                This function rotates the LEDs by one position to achieve the effect.
+                The rotation direction is not of importance.                    
+\param [in]     uint8_t *lightdata : lightdata array that holds the color values for the stribe
+\return         void
+\note           No need to run transmit2leds afterwards! The effect is generated by the main while loop.
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = '_led_effects_8c_1a448758d76f47ea6fed4beb349196363f';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+void
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'recolor';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+struct color24bit
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'color';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+uint8_t *
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'lightdata';
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = 'C:/Users/Commander/Documents/Atmel Studio/6.2/ws2811lichterkette/ws2811lichterkette/LedEffects.c';
+      func-mem-desc-line = '340';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+Recolor the LED stribe; no other function call is necessary.
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+This function generates a recolor effect. The old configuration of the
+                LEDs is overwritten with the new color step by step. When the whole stribe
+                is filled with the new color the effect ends.
+\param [in]     struct color24bit color : color that is used for recoloring
+\param [in]     uint8_t *lightdata : lightdata array that holds the color values for the stribe
+\return         void
+\note           No need to run transmit2leds afterwards! The effect is standalone and ends if the stribe 
+                is recolored.
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = '_led_effects_8c_1a71d3b2ff21a63b48a01461e74be0c2b8';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+void
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'faden';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+struct color24bit
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'color';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+uint8_t *
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'lightdata';
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = 'C:/Users/Commander/Documents/Atmel Studio/6.2/ws2811lichterkette/ws2811lichterkette/LedEffects.c';
+      func-mem-desc-line = '366';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+Generate a fading color effect. No other function call is necessary.
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+This function generates a fading color effect. At the beginning the whole
+                stribe is filled with the chosen color. The color intensity of each color channel
+                (blue, red, green) is decreased until the stribe is off. After that the color
+                values are increased until the chosen color values are reached. The effect looks
+                different depending on the chosen color because the color value proportion is not kept
+                over the whole effect. 
+\param [in]     struct color24bit color : color that is used for the fading effect
+\param [in]     uint8_t *lightdata : lightdata array that holds the color values for the stribe
+\return         void
+\note           No need to run transmit2leds afterwards! The effect is standalone and ends is looped
+                in the main while loop. The color value proportion is not kept over the whole effect.
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = '_led_effects_8c_1a9d0f91360c87b851925bf05be5352435';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+void
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'initrainbow';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+uint8_t *
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'lightdata';
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = 'C:/Users/Commander/Documents/Atmel Studio/6.2/ws2811lichterkette/ws2811lichterkette/LedEffects.c';
+      func-mem-desc-line = '442';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+Initialize a rainbow on the color array; to show the rainbow run transmit2leds afterwards.
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+This function fills the color array with rainbow colors. For this effect the color
+                array is filled with different colors that are calculated by increasing and decreasing
+                the color channels to loop over a RGB palette. 
+\param [in]     uint8_t *lightdata : lightdata array that holds the color values for the stribe
+\return         void
+\note           Run transmit2leds afterwards! A nice effect is to rotate the array stepwise after the
+                rainbow initialization (run transmit2leds after every rotation).
+                The effect directly sets color values, so there may be a problem with the color profiles
+                (RGB vs. GRB). The function was primary written for WS2812 LEDs (GRB)! 
+                The effect needs a minimum number of 20 LEDs to look nice!              
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = '_led_effects_8c_1ac83bd19da7ebd3c475e3667e4229db41';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+void
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'eastereggbase';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+struct color24bit
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'color';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+uint8_t *
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'lightdata';
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = 'C:/Users/Commander/Documents/Atmel Studio/6.2/ws2811lichterkette/ws2811lichterkette/LedEffects.c';
+      func-mem-desc-line = '489';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+Initialize the easteregg; do not use directly; this function is used by the easteregg function.
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+\param [in]     struct color24bit color : color for the easteregg
+\param [in]     uint8_t *lightdata : lightdata array that holds the color values for the stribe
+\return         void
+\note           Do not use this function directly; this function is used by the easteregg function  
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = '_led_effects_8c_1a25e09bcb1481b20ebc2a27e7098b5115';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+void
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'easteregg';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+uint8_t *
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'lightdata';
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = 'C:/Users/Commander/Documents/Atmel Studio/6.2/ws2811lichterkette/ws2811lichterkette/LedEffects.c';
+      func-mem-desc-line = '514';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+Run the easteregg; No other function call is necessary.
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+\param [in]     uint8_t *lightdata : lightdata array that holds the color values for the stribe
+\return         void
+\note           Just try it :-) funny looking effect    
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = '_led_effects_8c_1a99174e2b381d7ec6667d29352e6eca1b';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+void
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'fillup';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+struct color24bit
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'color';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+struct color24bit
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'backcolor';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+uint8_t *
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'lightdata';
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = 'C:/Users/Commander/Documents/Atmel Studio/6.2/ws2811lichterkette/ws2811lichterkette/LedEffects.c';
+      func-mem-desc-line = '549';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+This function fills up the stribe; No other function call is necessary.
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+This function fills up the whole stribe and beginns again if it is finished.
+                First one LED moves in the chosen color stepwise through the whole stribe and recolors
+                all LEDs in the background color which have already been passed.
+                At the end of the stribe the LED stays an the next single LED is going to move to
+                the last-1 position. The next LED to the last-2 position. This is going on until
+                the whole stribe is colored. Then the effect restarts (main while loop).
+\param [in]     struct color24bit color : foreground color for the moving LED
+\param [in]     struct color24bit backcolor : background color
+\param [in]     uint8_t *lightdata : lightdata array that holds the color values for the stribe
+\return         void
+\note           This is a standalone effect.
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    };
+  file-full-name  = 'C:/Users/Commander/Documents/Atmel Studio/6.2/ws2811lichterkette/ws2811lichterkette/LedEffects.c';
+  file-first-line = '1';
+  file-briefdesc  = <<_EnD_oF_dEf_TeXt_
+effect functions for controlling WS2811/WS2812 LEDs
+_EnD_oF_dEf_TeXt_;
+  file-documentation = <<_EnD_oF_dEf_TeXt_
+This file contains different effect functions to control WS2811/WS2812 LEDs using 
+         an AVR. It also contains a conversion function to convert 8 Bit color values (RGB 3-3-2)
+         to 24 Bit color values (RGB/GRB 8-8-8). The effects control first the lightdata array
+         and then transmit the array data to the stribe. Using different operations result in different
+         effects. You can add different functions if you like to. But remember that all operations
+         need to be done on the lightdata array that needs to be transmitted at one block to the 
+         LEDs after your array has been changed.
+@version  V1.00
+@date     05.01.2016
+@authors  Wank Florian
+_EnD_oF_dEf_TeXt_;
+}; /* file */
+file = {
+  file-id   = '_led_effects_8h';
+  file-name = 'LedEffects.h';
+    define = {
+    define-member = {
+      define-mem-kind = 'define';
+      define-mem-id   = '_led_effects_8h_1a996334f1d53296a931624800377d5b01';
+      define-mem-virt = normal;
+      define-mem-prot = public;
+      define-mem-name = 'SETFULLCOLOR';
+      define-mem-initializer = <<_EnD_oF_dEf_TeXt_
+0
+_EnD_oF_dEf_TeXt_;
+      define-mem-desc-file = 'C:/Users/Commander/Documents/Atmel Studio/6.2/ws2811lichterkette/ws2811lichterkette/LedEffects.h';
+      define-mem-desc-line = '16';
+      define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+define for the setfullcolor effect, used for main switch
+_EnD_oF_dEf_TeXt_;
+      define-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* define-member */
+    define-member = {
+      define-mem-kind = 'define';
+      define-mem-id   = '_led_effects_8h_1a2f349ea8f5412514d90f138ede08da62';
+      define-mem-virt = normal;
+      define-mem-prot = public;
+      define-mem-name = 'FILLUP';
+      define-mem-initializer = <<_EnD_oF_dEf_TeXt_
+1
+_EnD_oF_dEf_TeXt_;
+      define-mem-desc-file = 'C:/Users/Commander/Documents/Atmel Studio/6.2/ws2811lichterkette/ws2811lichterkette/LedEffects.h';
+      define-mem-desc-line = '18';
+      define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+define for the the fillup effect, used for main switch
+_EnD_oF_dEf_TeXt_;
+      define-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* define-member */
+    define-member = {
+      define-mem-kind = 'define';
+      define-mem-id   = '_led_effects_8h_1a38eec52a7dccb94ff563e30eda32c891';
+      define-mem-virt = normal;
+      define-mem-prot = public;
+      define-mem-name = 'BLINK';
+      define-mem-initializer = <<_EnD_oF_dEf_TeXt_
+2
+_EnD_oF_dEf_TeXt_;
+      define-mem-desc-file = 'C:/Users/Commander/Documents/Atmel Studio/6.2/ws2811lichterkette/ws2811lichterkette/LedEffects.h';
+      define-mem-desc-line = '20';
+      define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+define for the blink effect, used for main switch
+_EnD_oF_dEf_TeXt_;
+      define-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* define-member */
+    define-member = {
+      define-mem-kind = 'define';
+      define-mem-id   = '_led_effects_8h_1ab6e06c8b4c17edc65d75be641a0fc39b';
+      define-mem-virt = normal;
+      define-mem-prot = public;
+      define-mem-name = 'RUNLED';
+      define-mem-initializer = <<_EnD_oF_dEf_TeXt_
+3
+_EnD_oF_dEf_TeXt_;
+      define-mem-desc-file = 'C:/Users/Commander/Documents/Atmel Studio/6.2/ws2811lichterkette/ws2811lichterkette/LedEffects.h';
+      define-mem-desc-line = '22';
+      define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+define for the runled effect, used for main switch, refers to the runled init
+_EnD_oF_dEf_TeXt_;
+      define-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* define-member */
+    define-member = {
+      define-mem-kind = 'define';
+      define-mem-id   = '_led_effects_8h_1ac7190c598c8618207180d135c0650dac';
+      define-mem-virt = normal;
+      define-mem-prot = public;
+      define-mem-name = 'ALTERNATE';
+      define-mem-initializer = <<_EnD_oF_dEf_TeXt_
+5
+_EnD_oF_dEf_TeXt_;
+      define-mem-desc-file = 'C:/Users/Commander/Documents/Atmel Studio/6.2/ws2811lichterkette/ws2811lichterkette/LedEffects.h';
+      define-mem-desc-line = '24';
+      define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+define for the alternating effect, used for main switch, refers to the alternate init
+_EnD_oF_dEf_TeXt_;
+      define-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* define-member */
+    define-member = {
+      define-mem-kind = 'define';
+      define-mem-id   = '_led_effects_8h_1a6b71fe4d23960c3701fc935a3368a6cc';
+      define-mem-virt = normal;
+      define-mem-prot = public;
+      define-mem-name = 'RECOLOR';
+      define-mem-initializer = <<_EnD_oF_dEf_TeXt_
+7
+_EnD_oF_dEf_TeXt_;
+      define-mem-desc-file = 'C:/Users/Commander/Documents/Atmel Studio/6.2/ws2811lichterkette/ws2811lichterkette/LedEffects.h';
+      define-mem-desc-line = '26';
+      define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+define for the recolor effect, used for main switch
+_EnD_oF_dEf_TeXt_;
+      define-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* define-member */
+    define-member = {
+      define-mem-kind = 'define';
+      define-mem-id   = '_led_effects_8h_1ac64e9d348f9ff60935a2275f477020dc';
+      define-mem-virt = normal;
+      define-mem-prot = public;
+      define-mem-name = 'FADEN';
+      define-mem-initializer = <<_EnD_oF_dEf_TeXt_
+8
+_EnD_oF_dEf_TeXt_;
+      define-mem-desc-file = 'C:/Users/Commander/Documents/Atmel Studio/6.2/ws2811lichterkette/ws2811lichterkette/LedEffects.h';
+      define-mem-desc-line = '28';
+      define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+define for the fade effect, used for main switch
+_EnD_oF_dEf_TeXt_;
+      define-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* define-member */
+    define-member = {
+      define-mem-kind = 'define';
+      define-mem-id   = '_led_effects_8h_1a2805176df86592658ae06a508a558720';
+      define-mem-virt = normal;
+      define-mem-prot = public;
+      define-mem-name = 'INITRAINBOW';
+      define-mem-initializer = <<_EnD_oF_dEf_TeXt_
+9
+_EnD_oF_dEf_TeXt_;
+      define-mem-desc-file = 'C:/Users/Commander/Documents/Atmel Studio/6.2/ws2811lichterkette/ws2811lichterkette/LedEffects.h';
+      define-mem-desc-line = '30';
+      define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+define for the initrainbow function, used for main switch
+_EnD_oF_dEf_TeXt_;
+      define-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* define-member */
+    define-member = {
+      define-mem-kind = 'define';
+      define-mem-id   = '_led_effects_8h_1a85bd242525add173bd67847b7acac00b';
+      define-mem-virt = normal;
+      define-mem-prot = public;
+      define-mem-name = 'ROTATE_R';
+      define-mem-initializer = <<_EnD_oF_dEf_TeXt_
+10
+_EnD_oF_dEf_TeXt_;
+      define-mem-desc-file = 'C:/Users/Commander/Documents/Atmel Studio/6.2/ws2811lichterkette/ws2811lichterkette/LedEffects.h';
+      define-mem-desc-line = '32';
+      define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+define for the the rotate function right, used for main switch
+_EnD_oF_dEf_TeXt_;
+      define-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* define-member */
+    define-member = {
+      define-mem-kind = 'define';
+      define-mem-id   = '_led_effects_8h_1a4a0c329f45825186172aee0c62531423';
+      define-mem-virt = normal;
+      define-mem-prot = public;
+      define-mem-name = 'ROTATE_L';
+      define-mem-initializer = <<_EnD_oF_dEf_TeXt_
+11
+_EnD_oF_dEf_TeXt_;
+      define-mem-desc-file = 'C:/Users/Commander/Documents/Atmel Studio/6.2/ws2811lichterkette/ws2811lichterkette/LedEffects.h';
+      define-mem-desc-line = '34';
+      define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+define for the the rotate function left, used for main switch
+_EnD_oF_dEf_TeXt_;
+      define-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* define-member */
+    define-member = {
+      define-mem-kind = 'define';
+      define-mem-id   = '_led_effects_8h_1a686dea444026cbf1236c24e7edb3a96d';
+      define-mem-virt = normal;
+      define-mem-prot = public;
+      define-mem-name = 'CUSTOM';
+      define-mem-initializer = <<_EnD_oF_dEf_TeXt_
+12
+_EnD_oF_dEf_TeXt_;
+      define-mem-desc-file = 'C:/Users/Commander/Documents/Atmel Studio/6.2/ws2811lichterkette/ws2811lichterkette/LedEffects.h';
+      define-mem-desc-line = '36';
+      define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+define for the custom effect, used for main switch, every LED is filled in a userdefined color (up to MAXNUMCOLORS, then reloop the colors)
+_EnD_oF_dEf_TeXt_;
+      define-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* define-member */
+    define-member = {
+      define-mem-kind = 'define';
+      define-mem-id   = '_led_effects_8h_1a5645ec20d3cd39bfc1c9ad5ec99db2f2';
+      define-mem-virt = normal;
+      define-mem-prot = public;
+      define-mem-name = 'EASTEREGG';
+      define-mem-initializer = <<_EnD_oF_dEf_TeXt_
+13
+_EnD_oF_dEf_TeXt_;
+      define-mem-desc-file = 'C:/Users/Commander/Documents/Atmel Studio/6.2/ws2811lichterkette/ws2811lichterkette/LedEffects.h';
+      define-mem-desc-line = '38';
+      define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+define for the easteregg effect, used for main switch
+_EnD_oF_dEf_TeXt_;
+      define-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* define-member */
+    };
+    func = {
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = '_led_effects_8h_1ad67a4e660b5122ed454e101432bbdba0';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+uint8_t
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'map';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+uint8_t
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'x';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+uint8_t
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'in_min';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+uint8_t
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'in_max';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+uint8_t
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'out_min';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+uint8_t
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'out_max';
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = 'C:/Users/Commander/Documents/Atmel Studio/6.2/ws2811lichterkette/ws2811lichterkette/LedEffects.h';
+      func-mem-desc-line = '40';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+Arduino map function; used for color conversion.
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+\param [in]     uint8_t x: value to map
+\param [in]     uint8_t in_min : minimum value input reference
+\param [in]     uint8_t in_max : maximum value input reference
+\param [in]     uint8_t out_min : minimum value output reference
+\param [in]     uint8_t out_max : maximum value output reference
+\return         uint8_t : mapped value referring to the input
+\note           This function is used for color conversion from 8 Bit to 24 Bit colors;
+                How it works:
+                in_min < x < in_max convert to out_min < returnvalue < out_max
+                by positioning the x proportionally in the new number range
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = '_led_effects_8h_1a55291315ab0f2ca8d508f0e9da1920a7';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+struct color24bit
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'colorconv8to24';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+uint8_t
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'startcolor';
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = 'C:/Users/Commander/Documents/Atmel Studio/6.2/ws2811lichterkette/ws2811lichterkette/LedEffects.h';
+      func-mem-desc-line = '40';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+color conversion function; converts a 8 Bit color (RGB 3-3-2) to a 24 Bit color (RGB 8-8-8)
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+\param [in]     uint8_t startcolor: 8 Bit color to convert
+\return         struct color24bit : 24 Bit color result
+\note           This function converts the 8 Bit color to a 24 Bit color depending on the ledtype.
+                This is neccessary because of differnt color formats (WS2811->RGB ; WS2812->GRB).
+                Original the whole environment was for WS2812 LEDs!             
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = '_led_effects_8h_1a6950e7657ba74d0d490ba36427533c4b';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+void
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'effectdelay';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+uint16_t
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'delay';
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = 'C:/Users/Commander/Documents/Atmel Studio/6.2/ws2811lichterkette/ws2811lichterkette/LedEffects.h';
+      func-mem-desc-line = '42';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+simple delay function; no concrete delay time
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+\param [in]     uint16_t delay : delay value
+\return         void
+\note           This function is just a variable delay, there is no coherence with a concrete time (i.e. s, ms)         
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = '_led_effects_8h_1a2d54d1a6c61fe667b7c68ff04a11c503';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+void
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'setfullcolor';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+struct color24bit
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'color';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+uint8_t *
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'lightdata';
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = 'C:/Users/Commander/Documents/Atmel Studio/6.2/ws2811lichterkette/ws2811lichterkette/LedEffects.h';
+      func-mem-desc-line = '43';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+Set all LEDs to the chosen color; run transmit2leds afterwards to update the LEDs.
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+\param [in]     struct color24bit color : color to set
+\param [in]     uint8_t *lightdata : lightdata array that holds the color values for the stribe
+\return         void
+\note           This function sets the lightdata array. To update the stribe run transmit2leds afterwards!      
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = '_led_effects_8h_1a1c5e6b0f45c1787c25f8eafa8b9c6247';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+void
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'resetstribe';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+uint8_t *
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'lightdata';
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = 'C:/Users/Commander/Documents/Atmel Studio/6.2/ws2811lichterkette/ws2811lichterkette/LedEffects.h';
+      func-mem-desc-line = '44';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+Set all LEDs off; run transmit2leds afterwards to update the LEDs.
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+\param [in]     uint8_t *lightdata : lightdata array that holds the color values for the stribe
+\return         void
+\note           This function sets the lightdata array to 0x00. To update the stribe run transmit2leds afterwards!      
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = '_led_effects_8h_1afd64325b08e785d37b4dfaf358e517f0';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+void
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'rotate';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+uint8_t *
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'lightdata';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+uint8_t
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'direction';
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = 'C:/Users/Commander/Documents/Atmel Studio/6.2/ws2811lichterkette/ws2811lichterkette/LedEffects.h';
+      func-mem-desc-line = '45';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+Rotate the lightdata for 1 LED Position; run transmit2leds afterwards to update the LEDs.
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+\param [in]     uint8_t *lightdata : lightdata array that holds the color values for the stribe
+\param [in]     uint8_t direction : direction to rotate
+\return         void
+\note           This function rotates lightdata array. To update the stribe run transmit2leds afterwards! 
+                The rotation "moves every LED" by one step, the overflowing LED is appended at the other ending.
+                Example:
+                RED BLUE YELLOW GREEN ... rotate... BLUE YELLOW GREEN RED
+                other direction:
+                RED BLUE YELLOW GREEN ... rotate... GREEN RED BLUE YELLOW
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = '_led_effects_8h_1a1fa5e03cb24195a46dcdc5948f596181';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+void
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'rotateN';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+uint8_t *
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'lightdata';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+uint8_t
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'direction';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+uint8_t
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'width';
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = 'C:/Users/Commander/Documents/Atmel Studio/6.2/ws2811lichterkette/ws2811lichterkette/LedEffects.h';
+      func-mem-desc-line = '46';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+Rotate the lightdata for n LED Positions; run transmit2leds afterwards to update the LEDs.
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+\param [in]     uint8_t *lightdata : lightdata array that holds the color values for the stribe
+\param [in]     uint8_t direction : direction to rotate
+\param [in]     uint8_t width : width to rotate
+\return         void
+\note           This function rotates lightdata array. To update the stribe run transmit2leds afterwards! 
+                The rotation "moves every LED" by n steps, the overflowing LEDs are appended at the other ending.
+                Example:
+                RED BLUE YELLOW GREEN PINK ... rotate 2 ... YELLOW GREEN PINK RED BLUE
+                other direction:
+                RED BLUE YELLOW GREEN PINK ... rotate 2 ... GREEN PINK RED BLUE YELLOW
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = '_led_effects_8h_1aecba07ab559ab94e6f44c16e39012d80';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+void
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'initrunled';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+struct color24bit
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'color';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+uint8_t *
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'lightdata';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+struct color24bit
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'background';
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = 'C:/Users/Commander/Documents/Atmel Studio/6.2/ws2811lichterkette/ws2811lichterkette/LedEffects.h';
+      func-mem-desc-line = '47';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+init the runled effect; run runrunled afterwards to start the effect
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+This function initializes the running LED effect. The running LED effect has
+                a background color that is used for all LEDs except one. One LED is in the
+                foreground color an moves stepwise along the stribe. The initialization prepares
+                the lightdata array by setting one LED at the start position and filling the
+                others with the background color. 
+\param [in]     struct color24bit color : 24 Bit color for the effect
+\param [in]     uint8_t *lightdata : lightdata array that holds the color values for the stribe
+\param [in]     struct color24bit background : 24 Bit color for the effect background
+\return         void
+\note           Run runrunled afterwards to start the effect! 
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = '_led_effects_8h_1a35cfbfc36c975f98a7779a37b6ff63ce';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+void
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'runrunled';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+uint8_t *
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'lightdata';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+uint8_t
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'direction';
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = 'C:/Users/Commander/Documents/Atmel Studio/6.2/ws2811lichterkette/ws2811lichterkette/LedEffects.h';
+      func-mem-desc-line = '48';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+Do the runled effect; before this function is called the lightdata needs to be initiliazed using initrunled!
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+This function runs the running LED effect. The running LED effect has
+                a background color that is used for all LEDs except one. The one LED
+                moves stepwise to the next position depending on the chosen direction.
+                Direction 0/1 are right/left, direction 2 runs from left to right an back again.
+                For direction 0/1 the running LED overflows and begins on the other ending.
+\param [in]     uint8_t *lightdata : lightdata array that holds the color values for the stribe
+\param [in]     uint8_t direction : movement direction, 0/1 = right/left, 2 = left->right and back
+\return         void
+\note           No need to run transmit2leds afterwards! This is already done in the function.
+                The function is interrupted if a new UART package is completely received so a new
+                effect gets active.
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = '_led_effects_8h_1a9fd87d01d5cc4ce5fce6ddca55ebaf37';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+void
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'blinkled';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+struct color24bit
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'color';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+uint8_t *
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'lightdata';
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = 'C:/Users/Commander/Documents/Atmel Studio/6.2/ws2811lichterkette/ws2811lichterkette/LedEffects.h';
+      func-mem-desc-line = '49';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+blink the whole stribe; this function does not need another function call
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+This function creates a blinking effect. First all LEDs are set to the
+                chosen color, after the defined delay the LEDs are turned off. This is
+                repeated in the main while loop.
+\param [in]     struct color24bit color : color for the blink effect    
+\param [in]     uint8_t *lightdata : lightdata array that holds the color values for the stribe
+\return         void
+\note           No need to run transmit2leds afterwards! This is already done in the function.
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = '_led_effects_8h_1af67b7638a175e4971f25df5a5db3d8d0';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+void
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'init_alternating';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+struct color24bit
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'color';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+struct color24bit
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'backcolor';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+uint8_t *
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'lightdata';
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = 'C:/Users/Commander/Documents/Atmel Studio/6.2/ws2811lichterkette/ws2811lichterkette/LedEffects.h';
+      func-mem-desc-line = '50';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+initialize the alternating function; call run_alternating afterwards
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+This function initializes the alternating effect. The effect assigns
+                every even LED number in one color and the odd numbers in the background color.
+                If the effect is running, the odd and even LED switch positions.                
+\param [in]     struct color24bit color : color for the alternate effect (Init even LEDs)   
+\param [in]     struct color24bit backcolor : color for the alternate effect bakckground (Init odd LEDs)    
+\param [in]     uint8_t *lightdata : lightdata array that holds the color values for the stribe
+\return         void
+\note           Run run_alternating afterwards to start the effect!
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = '_led_effects_8h_1a5bde1e9e7fc19a9916f1ec02d8fbcd6c';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+void
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'run_alternating';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+uint8_t *
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'lightdata';
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = 'C:/Users/Commander/Documents/Atmel Studio/6.2/ws2811lichterkette/ws2811lichterkette/LedEffects.h';
+      func-mem-desc-line = '51';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+Run the alternating effect; call init_alternating before.
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+This function runs the alternating effect. The effect assigns
+                every even LED number in one color and the odd numbers in the background color.
+                If the effect is running, the odd and even LED switch positions.
+                This function rotates the LEDs by one position to achieve the effect.
+                The rotation direction is not of importance.                    
+\param [in]     uint8_t *lightdata : lightdata array that holds the color values for the stribe
+\return         void
+\note           No need to run transmit2leds afterwards! The effect is generated by the main while loop.
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = '_led_effects_8h_1a448758d76f47ea6fed4beb349196363f';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+void
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'recolor';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+struct color24bit
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'color';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+uint8_t *
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'lightdata';
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = 'C:/Users/Commander/Documents/Atmel Studio/6.2/ws2811lichterkette/ws2811lichterkette/LedEffects.h';
+      func-mem-desc-line = '52';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+Recolor the LED stribe; no other function call is necessary.
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+This function generates a recolor effect. The old configuration of the
+                LEDs is overwritten with the new color step by step. When the whole stribe
+                is filled with the new color the effect ends.
+\param [in]     struct color24bit color : color that is used for recoloring
+\param [in]     uint8_t *lightdata : lightdata array that holds the color values for the stribe
+\return         void
+\note           No need to run transmit2leds afterwards! The effect is standalone and ends if the stribe 
+                is recolored.
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = '_led_effects_8h_1a71d3b2ff21a63b48a01461e74be0c2b8';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+void
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'faden';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+struct color24bit
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'color';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+uint8_t *
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'lightdata';
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = 'C:/Users/Commander/Documents/Atmel Studio/6.2/ws2811lichterkette/ws2811lichterkette/LedEffects.h';
+      func-mem-desc-line = '53';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+Generate a fading color effect. No other function call is necessary.
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+This function generates a fading color effect. At the beginning the whole
+                stribe is filled with the chosen color. The color intensity of each color channel
+                (blue, red, green) is decreased until the stribe is off. After that the color
+                values are increased until the chosen color values are reached. The effect looks
+                different depending on the chosen color because the color value proportion is not kept
+                over the whole effect. 
+\param [in]     struct color24bit color : color that is used for the fading effect
+\param [in]     uint8_t *lightdata : lightdata array that holds the color values for the stribe
+\return         void
+\note           No need to run transmit2leds afterwards! The effect is standalone and ends is looped
+                in the main while loop. The color value proportion is not kept over the whole effect.
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = '_led_effects_8h_1a9d0f91360c87b851925bf05be5352435';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+void
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'initrainbow';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+uint8_t *
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'lightdata';
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = 'C:/Users/Commander/Documents/Atmel Studio/6.2/ws2811lichterkette/ws2811lichterkette/LedEffects.h';
+      func-mem-desc-line = '54';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+Initialize a rainbow on the color array; to show the rainbow run transmit2leds afterwards.
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+This function fills the color array with rainbow colors. For this effect the color
+                array is filled with different colors that are calculated by increasing and decreasing
+                the color channels to loop over a RGB palette. 
+\param [in]     uint8_t *lightdata : lightdata array that holds the color values for the stribe
+\return         void
+\note           Run transmit2leds afterwards! A nice effect is to rotate the array stepwise after the
+                rainbow initialization (run transmit2leds after every rotation).
+                The effect directly sets color values, so there may be a problem with the color profiles
+                (RGB vs. GRB). The function was primary written for WS2812 LEDs (GRB)! 
+                The effect needs a minimum number of 20 LEDs to look nice!              
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = '_led_effects_8h_1ac83bd19da7ebd3c475e3667e4229db41';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+void
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'eastereggbase';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+struct color24bit
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'color';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+uint8_t *
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'lightdata';
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = 'C:/Users/Commander/Documents/Atmel Studio/6.2/ws2811lichterkette/ws2811lichterkette/LedEffects.h';
+      func-mem-desc-line = '55';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+Initialize the easteregg; do not use directly; this function is used by the easteregg function.
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+\param [in]     struct color24bit color : color for the easteregg
+\param [in]     uint8_t *lightdata : lightdata array that holds the color values for the stribe
+\return         void
+\note           Do not use this function directly; this function is used by the easteregg function  
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = '_led_effects_8h_1a25e09bcb1481b20ebc2a27e7098b5115';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+void
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'easteregg';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+uint8_t *
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'lightdata';
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = 'C:/Users/Commander/Documents/Atmel Studio/6.2/ws2811lichterkette/ws2811lichterkette/LedEffects.h';
+      func-mem-desc-line = '56';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+Run the easteregg; No other function call is necessary.
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+\param [in]     uint8_t *lightdata : lightdata array that holds the color values for the stribe
+\return         void
+\note           Just try it :-) funny looking effect    
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = '_led_effects_8h_1a99174e2b381d7ec6667d29352e6eca1b';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+void
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'fillup';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+struct color24bit
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'color';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+struct color24bit
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'backcolor';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+uint8_t *
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'lightdata';
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = 'C:/Users/Commander/Documents/Atmel Studio/6.2/ws2811lichterkette/ws2811lichterkette/LedEffects.h';
+      func-mem-desc-line = '57';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+This function fills up the stribe; No other function call is necessary.
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+This function fills up the whole stribe and beginns again if it is finished.
+                First one LED moves in the chosen color stepwise through the whole stribe and recolors
+                all LEDs in the background color which have already been passed.
+                At the end of the stribe the LED stays an the next single LED is going to move to
+                the last-1 position. The next LED to the last-2 position. This is going on until
+                the whole stribe is colored. Then the effect restarts (main while loop).
+\param [in]     struct color24bit color : foreground color for the moving LED
+\param [in]     struct color24bit backcolor : background color
+\param [in]     uint8_t *lightdata : lightdata array that holds the color values for the stribe
+\return         void
+\note           This is a standalone effect.
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    };
+  file-full-name  = 'C:/Users/Commander/Documents/Atmel Studio/6.2/ws2811lichterkette/ws2811lichterkette/LedEffects.h';
+  file-first-line = '1';
+  file-briefdesc  = <<_EnD_oF_dEf_TeXt_
+file that contains different effect definitions for the lightstribe
+_EnD_oF_dEf_TeXt_;
+  file-documentation = <<_EnD_oF_dEf_TeXt_
+@version  V1.00
+@date     05.01.2016
+@authors  Wank Florian
+_EnD_oF_dEf_TeXt_;
+}; /* file */
+file = {
+  file-id   = '_lightstribe_8c';
+  file-name = 'Lightstribe.c';
+    func = {
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = '_lightstribe_8c_1a63fa595d401f0e85c1bba55ba2b1d66e';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+void
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'changeled';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+struct color24bit
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'color';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+uint8_t *
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'lightdata';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+uint8_t
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'lednr';
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = 'C:/Users/Commander/Documents/Atmel Studio/6.2/ws2811lichterkette/ws2811lichterkette/Lightstribe.c';
+      func-mem-desc-line = '33';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+change the color of one LED at a specific position; run transmit2leds afterwards to update the LEDs
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+\param [in]     struct color24bit color : 24 bit color in GRB format
+\param [in]     uint8_t *lightdata : pointer to the complete lightdata that contains all color values
+\param [in]     uint8_t lednr : position of the LED that should be changed
+\return         void
+\note           the right color format is created using the colorconv8to24-function with the ledtype predefined
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = '_lightstribe_8c_1abba9462833e30ef725eaf18c3d01eb71';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+void
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'setled';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+struct color24bit
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'color';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+uint8_t *
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'lightdata';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+uint8_t
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'lednr';
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = 'C:/Users/Commander/Documents/Atmel Studio/6.2/ws2811lichterkette/ws2811lichterkette/Lightstribe.c';
+      func-mem-desc-line = '51';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+set the color of one LED at a specific position, all others are off; run transmit2leds afterwards to update the LEDs
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+\param [in]     struct color24bit color : 24 bit color in GRB format
+\param [in]     uint8_t *lightdata : pointer to the complete lightdata that contains all color values
+\param [in]     uint8_t lednr : position of the LED that should be set
+\return         void
+\note           the right color format is created using the colorconv8to24-function with the ledtype predefined;
+                all other LEDs are cleared so they are off
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = '_lightstribe_8c_1aac724dad670e4a26723daf71ce6a8d8a';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+void
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'transmit2leds';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+uint8_t
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'lightdata';
+        func-mem-param-array = '[]';
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = 'C:/Users/Commander/Documents/Atmel Studio/6.2/ws2811lichterkette/ws2811lichterkette/Lightstribe.c';
+      func-mem-desc-line = '96';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+transmit the color array to the stribe
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+To control the LEDs of type WS2811/WS2812 a critical timing is necessary. To achieve the correct
+                timing and to create effects the lightdata is stored in an array first. All operations effect the
+                color array. If the color array is prepared it is transmitted to the stribes via a one-wire protocol
+                using this function. This function generates the high and low times using assembler NOPs to achieve 
+                the timing. The number of NOPs are stored in macros for transmitting a Low Bit (SETLOW) or a High Bit
+                (SETHIGH). This function should not be changed or optimized because of the timing!
+\param [in]     uint8_t lightdata[] : data with the colors for each LED to control
+\return         void
+\note           This function should not be changed or optimized because of the timing!
+                Do not use higher optimization than O1!!!
+                Do not remove the {} brackets because SETLOW/SETHIGH are definitions with several commands!
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    };
+  file-full-name  = 'C:/Users/Commander/Documents/Atmel Studio/6.2/ws2811lichterkette/ws2811lichterkette/Lightstribe.c';
+  file-first-line = '1';
+  file-briefdesc  = <<_EnD_oF_dEf_TeXt_
+basic functions for controlling WS2811/WS2812 LEDs
+_EnD_oF_dEf_TeXt_;
+  file-documentation = <<_EnD_oF_dEf_TeXt_
+This file contains the basic functions to control WS2811/WS2812 LEDs using 
+         an AVR. It declares the function to transmit lightdata to a stribe using the
+         one wire protocol. For the right timing be aware of the crystal frequency!
+         This code is written for using an extern clock of 16 MHz, if you change it 
+         you need to modify the number of NOPs in the macros defined in the header file.
+         This file also contains the basic functions to set or to change one LED in the stribe.
+         The whole system is working with a color array that stores the 24 Bit colors for all
+         LEDs in an GRB format (WS2812). Every effect changes the array, after that the array
+         is sent out by the transmit2leds function. This guarantees a correct timing. The most
+         functions base on uint8_t variables so the maximum length of the stribe to control 
+         contains 255 LEDs. This should not be changed because you have hardware limitations as well
+         that will limit a basic setup to 200-250 LEDs.
+@version  V1.00
+@date     05.01.2016
+@authors  Wank Florian
+_EnD_oF_dEf_TeXt_;
+}; /* file */
+file = {
+  file-id   = '_lightstribe_8h';
+  file-name = 'Lightstribe.h';
+    func = {
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = '_lightstribe_8h_1a63fa595d401f0e85c1bba55ba2b1d66e';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+void
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'changeled';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+struct color24bit
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'color';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+uint8_t *
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'lightdata';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+uint8_t
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'lednr';
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = 'C:/Users/Commander/Documents/Atmel Studio/6.2/ws2811lichterkette/ws2811lichterkette/Lightstribe.h';
+      func-mem-desc-line = '87';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+change the color of one LED at a specific position; run transmit2leds afterwards to update the LEDs
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+\param [in]     struct color24bit color : 24 bit color in GRB format
+\param [in]     uint8_t *lightdata : pointer to the complete lightdata that contains all color values
+\param [in]     uint8_t lednr : position of the LED that should be changed
+\return         void
+\note           the right color format is created using the colorconv8to24-function with the ledtype predefined
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = '_lightstribe_8h_1abba9462833e30ef725eaf18c3d01eb71';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+void
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'setled';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+struct color24bit
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'color';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+uint8_t *
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'lightdata';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+uint8_t
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'lednr';
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = 'C:/Users/Commander/Documents/Atmel Studio/6.2/ws2811lichterkette/ws2811lichterkette/Lightstribe.h';
+      func-mem-desc-line = '89';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+set the color of one LED at a specific position, all others are off; run transmit2leds afterwards to update the LEDs
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+\param [in]     struct color24bit color : 24 bit color in GRB format
+\param [in]     uint8_t *lightdata : pointer to the complete lightdata that contains all color values
+\param [in]     uint8_t lednr : position of the LED that should be set
+\return         void
+\note           the right color format is created using the colorconv8to24-function with the ledtype predefined;
+                all other LEDs are cleared so they are off
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = '_lightstribe_8h_1aac724dad670e4a26723daf71ce6a8d8a';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+void
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'transmit2leds';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+uint8_t
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'lightdata';
+        func-mem-param-array = '[]';
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = 'C:/Users/Commander/Documents/Atmel Studio/6.2/ws2811lichterkette/ws2811lichterkette/Lightstribe.h';
+      func-mem-desc-line = '91';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+transmit the color array to the stribe
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+To control the LEDs of type WS2811/WS2812 a critical timing is necessary. To achieve the correct
+                timing and to create effects the lightdata is stored in an array first. All operations effect the
+                color array. If the color array is prepared it is transmitted to the stribes via a one-wire protocol
+                using this function. This function generates the high and low times using assembler NOPs to achieve 
+                the timing. The number of NOPs are stored in macros for transmitting a Low Bit (SETLOW) or a High Bit
+                (SETHIGH). This function should not be changed or optimized because of the timing!
+\param [in]     uint8_t lightdata[] : data with the colors for each LED to control
+\return         void
+\note           This function should not be changed or optimized because of the timing!
+                Do not use higher optimization than O1!!!
+                Do not remove the {} brackets because SETLOW/SETHIGH are definitions with several commands!
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    };
+  file-full-name  = 'C:/Users/Commander/Documents/Atmel Studio/6.2/ws2811lichterkette/ws2811lichterkette/Lightstribe.h';
+  file-first-line = '1';
+  file-briefdesc  = <<_EnD_oF_dEf_TeXt_
+basic functions for controlling WS2811/WS2812 LEDs
+_EnD_oF_dEf_TeXt_;
+  file-documentation = <<_EnD_oF_dEf_TeXt_
+@version  V1.00
+@date     05.01.2016
+@authors  Wank Florian
+_EnD_oF_dEf_TeXt_;
+}; /* file */
+file = {
+  file-id   = 'ws2811lichterkette_8c';
+  file-name = 'ws2811lichterkette.c';
+    define = {
+    define-member = {
+      define-mem-kind = 'define';
+      define-mem-id   = 'ws2811lichterkette_8c_1a77366c1bd428629dc898e188bfd182a3';
+      define-mem-virt = normal;
+      define-mem-prot = public;
+      define-mem-name = 'EXTERN';
+      define-mem-desc-file = 'C:/Users/Commander/Documents/Atmel Studio/6.2/ws2811lichterkette/ws2811lichterkette/ws2811lichterkette.c';
+      define-mem-desc-line = '70';
+      define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      define-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* define-member */
+    define-member = {
+      define-mem-kind = 'define';
+      define-mem-id   = 'ws2811lichterkette_8c_1a62634036639f88eece6fbf226b45f84b';
+      define-mem-virt = normal;
+      define-mem-prot = public;
+      define-mem-name = 'BAUD';
+      define-mem-initializer = <<_EnD_oF_dEf_TeXt_
+38400
+_EnD_oF_dEf_TeXt_;
+      define-mem-desc-file = 'C:/Users/Commander/Documents/Atmel Studio/6.2/ws2811lichterkette/ws2811lichterkette/ws2811lichterkette.c';
+      define-mem-desc-line = '85';
+      define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+Baudrate definition, choose 76800 or 38400, faster value prefered, the maximum speed of ESP8266 software-UART is 38400.
+_EnD_oF_dEf_TeXt_;
+      define-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* define-member */
+    define-member = {
+      define-mem-kind = 'define';
+      define-mem-id   = 'ws2811lichterkette_8c_1a711e9130c825a7269c8c87dbb57a85e0';
+      define-mem-virt = normal;
+      define-mem-prot = public;
+      define-mem-name = 'MYUBRR';
+      define-mem-initializer = <<_EnD_oF_dEf_TeXt_
+F_CPU/16/BAUD -1
+_EnD_oF_dEf_TeXt_;
+      define-mem-desc-file = 'C:/Users/Commander/Documents/Atmel Studio/6.2/ws2811lichterkette/ws2811lichterkette/ws2811lichterkette.c';
+      define-mem-desc-line = '87';
+      define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+calculate baudrate register value
+_EnD_oF_dEf_TeXt_;
+      define-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* define-member */
+    define-member = {
+      define-mem-kind = 'define';
+      define-mem-id   = 'ws2811lichterkette_8c_1a0efa6385d653e699e90640b35a0c2b54';
+      define-mem-virt = normal;
+      define-mem-prot = public;
+      define-mem-name = 'BAUD_REAL';
+      define-mem-initializer = <<_EnD_oF_dEf_TeXt_
+(F_CPU/(16*(MYUBRR+1)))		/*real baudrate in this configuration*/
+_EnD_oF_dEf_TeXt_;
+      define-mem-desc-file = 'C:/Users/Commander/Documents/Atmel Studio/6.2/ws2811lichterkette/ws2811lichterkette/ws2811lichterkette.c';
+      define-mem-desc-line = '89';
+      define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      define-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* define-member */
+    define-member = {
+      define-mem-kind = 'define';
+      define-mem-id   = 'ws2811lichterkette_8c_1ac46ef58ff714ed839a5a324c358f2c8f';
+      define-mem-virt = normal;
+      define-mem-prot = public;
+      define-mem-name = 'BAUD_ERROR';
+      define-mem-initializer = <<_EnD_oF_dEf_TeXt_
+((BAUD_REAL*1000)/BAUD)		/*calculate baudrate error*/
+_EnD_oF_dEf_TeXt_;
+      define-mem-desc-file = 'C:/Users/Commander/Documents/Atmel Studio/6.2/ws2811lichterkette/ws2811lichterkette/ws2811lichterkette.c';
+      define-mem-desc-line = '90';
+      define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      define-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* define-member */
+    define-member = {
+      define-mem-kind = 'define';
+      define-mem-id   = 'ws2811lichterkette_8c_1a8aac8c5098aaf915463fb31715efa09f';
+      define-mem-virt = normal;
+      define-mem-prot = public;
+      define-mem-name = 'PREAMBLE';
+      define-mem-initializer = <<_EnD_oF_dEf_TeXt_
+254
+_EnD_oF_dEf_TeXt_;
+      define-mem-desc-file = 'C:/Users/Commander/Documents/Atmel Studio/6.2/ws2811lichterkette/ws2811lichterkette/ws2811lichterkette.c';
+      define-mem-desc-line = '105';
+      define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+definition of the preamble is 254, no other data field must contain this value
+_EnD_oF_dEf_TeXt_;
+      define-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* define-member */
+    define-member = {
+      define-mem-kind = 'define';
+      define-mem-id   = 'ws2811lichterkette_8c_1aec9ae4a8d59e838ac8ed93ad0de8e827';
+      define-mem-virt = normal;
+      define-mem-prot = public;
+      define-mem-name = 'LENINDEX';
+      define-mem-initializer = <<_EnD_oF_dEf_TeXt_
+1
+_EnD_oF_dEf_TeXt_;
+      define-mem-desc-file = 'C:/Users/Commander/Documents/Atmel Studio/6.2/ws2811lichterkette/ws2811lichterkette/ws2811lichterkette.c';
+      define-mem-desc-line = '107';
+      define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+definition of the second field; contains the total packet length (including the preamble)
+_EnD_oF_dEf_TeXt_;
+      define-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* define-member */
+    define-member = {
+      define-mem-kind = 'define';
+      define-mem-id   = 'ws2811lichterkette_8c_1a8d4e4cf47dd6136ace963623e1a8e27c';
+      define-mem-virt = normal;
+      define-mem-prot = public;
+      define-mem-name = 'EFFECTINDEX';
+      define-mem-initializer = <<_EnD_oF_dEf_TeXt_
+2
+_EnD_oF_dEf_TeXt_;
+      define-mem-desc-file = 'C:/Users/Commander/Documents/Atmel Studio/6.2/ws2811lichterkette/ws2811lichterkette/ws2811lichterkette.c';
+      define-mem-desc-line = '109';
+      define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+definition of 1 Byte effect at third position, the MSBit is used to choose WS2811/WS2812 (color profile RGB or GRB)
+_EnD_oF_dEf_TeXt_;
+      define-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* define-member */
+    define-member = {
+      define-mem-kind = 'define';
+      define-mem-id   = 'ws2811lichterkette_8c_1a9ff437877d0878dd16eacf103a1e1c40';
+      define-mem-virt = normal;
+      define-mem-prot = public;
+      define-mem-name = 'DELAYINDEX';
+      define-mem-initializer = <<_EnD_oF_dEf_TeXt_
+3
+_EnD_oF_dEf_TeXt_;
+      define-mem-desc-file = 'C:/Users/Commander/Documents/Atmel Studio/6.2/ws2811lichterkette/ws2811lichterkette/ws2811lichterkette.c';
+      define-mem-desc-line = '111';
+      define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+definition of the delay field, contains the delay duplicator
+_EnD_oF_dEf_TeXt_;
+      define-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* define-member */
+    define-member = {
+      define-mem-kind = 'define';
+      define-mem-id   = 'ws2811lichterkette_8c_1afbc75dc20761a05dda7cbb70b9b322dd';
+      define-mem-virt = normal;
+      define-mem-prot = public;
+      define-mem-name = 'NUMOFLEDINDEX';
+      define-mem-initializer = <<_EnD_oF_dEf_TeXt_
+4
+_EnD_oF_dEf_TeXt_;
+      define-mem-desc-file = 'C:/Users/Commander/Documents/Atmel Studio/6.2/ws2811lichterkette/ws2811lichterkette/ws2811lichterkette.c';
+      define-mem-desc-line = '113';
+      define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+field position for the number of LEDs to control, should be max. 200 (dynamic memory allocation for the lightdata array)
+_EnD_oF_dEf_TeXt_;
+      define-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* define-member */
+    };
+    func = {
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = 'ws2811lichterkette_8c_1ac7b3df0fa68526d64c732d5f916e34b1';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+void
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'init_uart';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+void
+_EnD_oF_dEf_TeXt_;
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = 'C:/Users/Commander/Documents/Atmel Studio/6.2/ws2811lichterkette/ws2811lichterkette/ws2811lichterkette.c';
+      func-mem-desc-line = '127';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+Init the hardware UART with Baud = 76800/38400, depending on @link BAUD @endlink definition, 8 Databits, 1 Stopbit, no Parity.
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+\return         void
+\note           This function depends on the oscillator clock frequency and the @link BAUD @endlink defintion.
+                If your UART is not working first check all frequency issues (Fuse settings, clock speed, clock divider, Baudrate)          
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = 'ws2811lichterkette_8c_1a840291bc02cba5474a4cb46a9b9566fe';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+int
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'main';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+void
+_EnD_oF_dEf_TeXt_;
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = 'C:/Users/Commander/Documents/Atmel Studio/6.2/ws2811lichterkette/ws2811lichterkette/ws2811lichterkette.c';
+      func-mem-desc-line = '142';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+main function, should never end, effects are handled in main while
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = 'ws2811lichterkette_8c_1a09ce999e15ad60b8a3f07d08af1946f9';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'ISR';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+USART_RX_vect
+_EnD_oF_dEf_TeXt_;
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = 'C:/Users/Commander/Documents/Atmel Studio/6.2/ws2811lichterkette/ws2811lichterkette/ws2811lichterkette.c';
+      func-mem-desc-line = '269';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+UART Interrupt handler, interrupts when new data is available in the RX buffer.
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    };
+  file-full-name  = 'C:/Users/Commander/Documents/Atmel Studio/6.2/ws2811lichterkette/ws2811lichterkette/ws2811lichterkette.c';
+  file-first-line = '1';
+  file-briefdesc  = <<_EnD_oF_dEf_TeXt_
+main file for interfacing WS2811/WS2812 LEDs
+_EnD_oF_dEf_TeXt_;
+  file-documentation = <<_EnD_oF_dEf_TeXt_
+This file contains the main environment for interfacing WS2811/WS2812 LEDs with an AVR.
+         The implementation has been done for an atmega328p. You may use another controller but
+         be aware of the memory you need for the color array (dynamically allocated). 
+         The AVR interfaces the one wire of the LEDs. All operations (effects, colorchange etc.)
+         are done on an lightdata array, that needs to be transmitted to the LEDs after your
+         operations. The reason for this is the critical timing for interfacing the LEDs. So also
+         be aware if you change the clock speed. If you do so you have to change the number of 
+         NOPs in the macros of Lightstribe.h. Because of the critical timing compile all files
+         at optimization O1! Furthermore be aware of the @link BAUD BAUDRATE  @endlink changes, the BAUD error may be
+         to worse if you change the CPU frequency. <br>
+         The one wire output is on the PIN B0! You can change in the main and @link Lightstribe.h @endlink. <br>
+         By default this file just initializes the AVR system, no updates to the LEDs are done by
+         default. To change the LED configuration you need to access the AVR UART Interface with
+         another controller (FTDI is also possible). Over the UART you send a message containing all
+         relevant information for the system. Therefore a simple protocol is used:
+         1 Byte preamble (254)
+         1 Byte total packet length (including the preamble)
+         1 Byte effect
+         1 Byte effect delay (effect speed)
+         1 Byte number of LEDs to control
+         n Bytes containing 8-Bit color values (RGB 3-3-2), depended on the effect, max. 50 values
+         The preamble 254 must never be used at another position!!!<br>
+         Protocol examples:<br>
+         @link SETFULLCOLOR @endlink:       254 6  0  1 20 22                <br>
+         @link FILLUP       @endlink:       254 7  1 22 20 22 201            <br>
+         @link BLINK        @endlink:       254 6  2 55 20 56                <br>
+         @link RUNLED       @endlink:       254 7  3 55 20 56 151            <br>
+         @link INITRAINBOW  @endlink:       254 5  9  0 20                   <br>
+         @link ROTATE_R     @endlink:       254 5 11 23 20                   <br>
+         @link CUSTOM       @endlink:       254 8 12  1 20 22 201 60         <br>
+         @link EASTEREGG    @endlink:       254 5 13  2 20                   <br>
+
+         The UART communication is done by using an RX interrupt an storing the data into a temp array.
+         In the main loop a flag shows if a data packet is complete. So you will get no update on the LEDs
+         if the UART package was wrong (too short).
+         In the project this programm has been written the UART was controlled by an ESP8266 or BLE113.
+         Have Fun!
+@version  V1.00
+@date     05.01.2016
+@authors  Wank Florian
+_EnD_oF_dEf_TeXt_;
+}; /* file */

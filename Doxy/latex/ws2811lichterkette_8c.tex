@@ -1,0 +1,116 @@
+\hypertarget{ws2811lichterkette_8c}{}\subsection{ws2811lichterkette.\+c File Reference}
+\label{ws2811lichterkette_8c}\index{ws2811lichterkette.\+c@{ws2811lichterkette.\+c}}
+
+
+main file for interfacing W\+S2811/\+W\+S2812 L\+E\+Ds  
+
+
+{\ttfamily \#include \char`\"{}globals.\+h\char`\"{}}\\*
+{\ttfamily \#include $<$avr/io.\+h$>$}\\*
+{\ttfamily \#include $<$util/delay.\+h$>$}\\*
+{\ttfamily \#include $<$avr/interrupt.\+h$>$}\\*
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+{\ttfamily \#include $<$stdlib.\+h$>$}\\*
+{\ttfamily \#include $<$string.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}Lightstribe.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Led\+Effects.\+h\char`\"{}}\\*
+\subsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{ws2811lichterkette_8c_a77366c1bd428629dc898e188bfd182a3}{}\#define {\bfseries E\+X\+T\+E\+R\+N}\label{ws2811lichterkette_8c_a77366c1bd428629dc898e188bfd182a3}
+
+\item 
+\hypertarget{ws2811lichterkette_8c_a62634036639f88eece6fbf226b45f84b}{}\#define \hyperlink{ws2811lichterkette_8c_a62634036639f88eece6fbf226b45f84b}{B\+A\+U\+D}~38400\label{ws2811lichterkette_8c_a62634036639f88eece6fbf226b45f84b}
+
+\begin{DoxyCompactList}\small\item\em Baudrate definition, choose 76800 or 38400, faster value prefered, the maximum speed of E\+S\+P8266 software-\/\+U\+A\+R\+T is 38400. \end{DoxyCompactList}\item 
+\hypertarget{ws2811lichterkette_8c_a711e9130c825a7269c8c87dbb57a85e0}{}\#define \hyperlink{ws2811lichterkette_8c_a711e9130c825a7269c8c87dbb57a85e0}{M\+Y\+U\+B\+R\+R}~\hyperlink{globals_8h_a43bafb28b29491ec7f871319b5a3b2f8}{F\+\_\+\+C\+P\+U}/16/\hyperlink{ws2811lichterkette_8c_a62634036639f88eece6fbf226b45f84b}{B\+A\+U\+D} -\/1\label{ws2811lichterkette_8c_a711e9130c825a7269c8c87dbb57a85e0}
+
+\begin{DoxyCompactList}\small\item\em calculate baudrate register value \end{DoxyCompactList}\item 
+\hypertarget{ws2811lichterkette_8c_a0efa6385d653e699e90640b35a0c2b54}{}\#define {\bfseries B\+A\+U\+D\+\_\+\+R\+E\+A\+L}~(\hyperlink{globals_8h_a43bafb28b29491ec7f871319b5a3b2f8}{F\+\_\+\+C\+P\+U}/(16$\ast$(\hyperlink{ws2811lichterkette_8c_a711e9130c825a7269c8c87dbb57a85e0}{M\+Y\+U\+B\+R\+R}+1)))		/$\ast$real baudrate in this configuration$\ast$/\label{ws2811lichterkette_8c_a0efa6385d653e699e90640b35a0c2b54}
+
+\item 
+\hypertarget{ws2811lichterkette_8c_ac46ef58ff714ed839a5a324c358f2c8f}{}\#define {\bfseries B\+A\+U\+D\+\_\+\+E\+R\+R\+O\+R}~((B\+A\+U\+D\+\_\+\+R\+E\+A\+L$\ast$1000)/\hyperlink{ws2811lichterkette_8c_a62634036639f88eece6fbf226b45f84b}{B\+A\+U\+D})		/$\ast$calculate baudrate error$\ast$/\label{ws2811lichterkette_8c_ac46ef58ff714ed839a5a324c358f2c8f}
+
+\item 
+\hypertarget{ws2811lichterkette_8c_a8aac8c5098aaf915463fb31715efa09f}{}\#define \hyperlink{ws2811lichterkette_8c_a8aac8c5098aaf915463fb31715efa09f}{P\+R\+E\+A\+M\+B\+L\+E}~254\label{ws2811lichterkette_8c_a8aac8c5098aaf915463fb31715efa09f}
+
+\begin{DoxyCompactList}\small\item\em definition of the preamble is 254, no other data field must contain this value \end{DoxyCompactList}\item 
+\hypertarget{ws2811lichterkette_8c_aec9ae4a8d59e838ac8ed93ad0de8e827}{}\#define \hyperlink{ws2811lichterkette_8c_aec9ae4a8d59e838ac8ed93ad0de8e827}{L\+E\+N\+I\+N\+D\+E\+X}~1\label{ws2811lichterkette_8c_aec9ae4a8d59e838ac8ed93ad0de8e827}
+
+\begin{DoxyCompactList}\small\item\em definition of the second field; contains the total packet length (including the preamble) \end{DoxyCompactList}\item 
+\hypertarget{ws2811lichterkette_8c_a8d4e4cf47dd6136ace963623e1a8e27c}{}\#define \hyperlink{ws2811lichterkette_8c_a8d4e4cf47dd6136ace963623e1a8e27c}{E\+F\+F\+E\+C\+T\+I\+N\+D\+E\+X}~2\label{ws2811lichterkette_8c_a8d4e4cf47dd6136ace963623e1a8e27c}
+
+\begin{DoxyCompactList}\small\item\em definition of 1 Byte effect at third position, the M\+S\+Bit is used to choose W\+S2811/\+W\+S2812 (color profile R\+G\+B or G\+R\+B) \end{DoxyCompactList}\item 
+\hypertarget{ws2811lichterkette_8c_a9ff437877d0878dd16eacf103a1e1c40}{}\#define \hyperlink{ws2811lichterkette_8c_a9ff437877d0878dd16eacf103a1e1c40}{D\+E\+L\+A\+Y\+I\+N\+D\+E\+X}~3\label{ws2811lichterkette_8c_a9ff437877d0878dd16eacf103a1e1c40}
+
+\begin{DoxyCompactList}\small\item\em definition of the delay field, contains the delay duplicator \end{DoxyCompactList}\item 
+\hypertarget{ws2811lichterkette_8c_afbc75dc20761a05dda7cbb70b9b322dd}{}\#define \hyperlink{ws2811lichterkette_8c_afbc75dc20761a05dda7cbb70b9b322dd}{N\+U\+M\+O\+F\+L\+E\+D\+I\+N\+D\+E\+X}~4\label{ws2811lichterkette_8c_afbc75dc20761a05dda7cbb70b9b322dd}
+
+\begin{DoxyCompactList}\small\item\em field position for the number of L\+E\+Ds to control, should be max. 200 (dynamic memory allocation for the lightdata array) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{ws2811lichterkette_8c_ac7b3df0fa68526d64c732d5f916e34b1}{init\+\_\+uart} (void)
+\begin{DoxyCompactList}\small\item\em Init the hardware U\+A\+R\+T with Baud = 76800/38400, depending on \hyperlink{ws2811lichterkette_8c_a62634036639f88eece6fbf226b45f84b}{B\+A\+U\+D} definition, 8 Databits, 1 Stopbit, no Parity. \end{DoxyCompactList}\item 
+\hypertarget{ws2811lichterkette_8c_a840291bc02cba5474a4cb46a9b9566fe}{}int \hyperlink{ws2811lichterkette_8c_a840291bc02cba5474a4cb46a9b9566fe}{main} (void)\label{ws2811lichterkette_8c_a840291bc02cba5474a4cb46a9b9566fe}
+
+\begin{DoxyCompactList}\small\item\em main function, should never end, effects are handled in main while \end{DoxyCompactList}\item 
+\hypertarget{ws2811lichterkette_8c_a09ce999e15ad60b8a3f07d08af1946f9}{}\hyperlink{ws2811lichterkette_8c_a09ce999e15ad60b8a3f07d08af1946f9}{I\+S\+R} (U\+S\+A\+R\+T\+\_\+\+R\+X\+\_\+vect)\label{ws2811lichterkette_8c_a09ce999e15ad60b8a3f07d08af1946f9}
+
+\begin{DoxyCompactList}\small\item\em U\+A\+R\+T Interrupt handler, interrupts when new data is available in the R\+X buffer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsubsection{Detailed Description}
+main file for interfacing W\+S2811/\+W\+S2812 L\+E\+Ds 
+
+This file contains the main environment for interfacing W\+S2811/\+W\+S2812 L\+E\+Ds with an A\+V\+R. The implementation has been done for an atmega328p. You may use another controller but be aware of the memory you need for the color array (dynamically allocated). The A\+V\+R interfaces the one wire of the L\+E\+Ds. All operations (effects, colorchange etc.) are done on an lightdata array, that needs to be transmitted to the L\+E\+Ds after your operations. The reason for this is the critical timing for interfacing the L\+E\+Ds. So also be aware if you change the clock speed. If you do so you have to change the number of N\+O\+Ps in the macros of \hyperlink{_lightstribe_8h}{Lightstribe.\+h}. Because of the critical timing compile all files at optimization O1! Furthermore be aware of the \hyperlink{ws2811lichterkette_8c_a62634036639f88eece6fbf226b45f84b}{B\+A\+U\+D\+R\+A\+T\+E } changes, the B\+A\+U\+D error may be to worse if you change the C\+P\+U frequency. ~\newline
+ The one wire output is on the P\+I\+N B0! You can change in the main and \hyperlink{_lightstribe_8h}{Lightstribe.\+h}. ~\newline
+ By default this file just initializes the A\+V\+R system, no updates to the L\+E\+Ds are done by default. To change the L\+E\+D configuration you need to access the A\+V\+R U\+A\+R\+T Interface with another controller (F\+T\+D\+I is also possible). Over the U\+A\+R\+T you send a message containing all relevant information for the system. Therefore a simple protocol is used\+: 1 Byte preamble (254) 1 Byte total packet length (including the preamble) 1 Byte effect 1 Byte effect delay (effect speed) 1 Byte number of L\+E\+Ds to control n Bytes containing 8-\/\+Bit color values (R\+G\+B 3-\/3-\/2), depended on the effect, max. 50 values The preamble 254 must never be used at another position!!!~\newline
+ Protocol examples\+:~\newline
+ \hyperlink{_led_effects_8h_a996334f1d53296a931624800377d5b01}{S\+E\+T\+F\+U\+L\+L\+C\+O\+L\+O\+R}\+: 254 6 0 1 20 22 ~\newline
+ \hyperlink{_led_effects_8h_a2f349ea8f5412514d90f138ede08da62}{F\+I\+L\+L\+U\+P}\+: 254 7 1 22 20 22 201 ~\newline
+ \hyperlink{_led_effects_8h_a38eec52a7dccb94ff563e30eda32c891}{B\+L\+I\+N\+K}\+: 254 6 2 55 20 56 ~\newline
+ \hyperlink{_led_effects_8h_ab6e06c8b4c17edc65d75be641a0fc39b}{R\+U\+N\+L\+E\+D}\+: 254 7 3 55 20 56 151 ~\newline
+ \hyperlink{_led_effects_8h_a2805176df86592658ae06a508a558720}{I\+N\+I\+T\+R\+A\+I\+N\+B\+O\+W}\+: 254 5 9 0 20 ~\newline
+ \hyperlink{_led_effects_8h_a85bd242525add173bd67847b7acac00b}{R\+O\+T\+A\+T\+E\+\_\+\+R}\+: 254 5 11 23 20 ~\newline
+ \hyperlink{_led_effects_8h_a686dea444026cbf1236c24e7edb3a96d}{C\+U\+S\+T\+O\+M}\+: 254 8 12 1 20 22 201 60 ~\newline
+ \hyperlink{_led_effects_8h_a5645ec20d3cd39bfc1c9ad5ec99db2f2}{E\+A\+S\+T\+E\+R\+E\+G\+G}\+: 254 5 13 2 20 ~\newline
+
+
+The U\+A\+R\+T communication is done by using an R\+X interrupt an storing the data into a temp array. In the main loop a flag shows if a data packet is complete. So you will get no update on the L\+E\+Ds if the U\+A\+R\+T package was wrong (too short). In the project this programm has been written the U\+A\+R\+T was controlled by an E\+S\+P8266 or B\+L\+E113. Have Fun! \begin{DoxyVersion}{Version}
+V1.\+00 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+05.\+01.\+2016 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Authors}
+Wank Florian 
+\end{DoxyAuthor}
+
+
+Definition in file \hyperlink{ws2811lichterkette_8c_source}{ws2811lichterkette.\+c}.
+
+
+
+\subsubsection{Function Documentation}
+\hypertarget{ws2811lichterkette_8c_ac7b3df0fa68526d64c732d5f916e34b1}{}\index{ws2811lichterkette.\+c@{ws2811lichterkette.\+c}!init\+\_\+uart@{init\+\_\+uart}}
+\index{init\+\_\+uart@{init\+\_\+uart}!ws2811lichterkette.\+c@{ws2811lichterkette.\+c}}
+\paragraph[{init\+\_\+uart(void)}]{\setlength{\rightskip}{0pt plus 5cm}void init\+\_\+uart (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{ws2811lichterkette_8c_ac7b3df0fa68526d64c732d5f916e34b1}
+
+
+Init the hardware U\+A\+R\+T with Baud = 76800/38400, depending on \hyperlink{ws2811lichterkette_8c_a62634036639f88eece6fbf226b45f84b}{B\+A\+U\+D} definition, 8 Databits, 1 Stopbit, no Parity. 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+This function depends on the oscillator clock frequency and the \hyperlink{ws2811lichterkette_8c_a62634036639f88eece6fbf226b45f84b}{B\+A\+U\+D} defintion. If your U\+A\+R\+T is not working first check all frequency issues (Fuse settings, clock speed, clock divider, Baudrate) 
+\end{DoxyNote}
+
+
+Definition at line \hyperlink{ws2811lichterkette_8c_source_l00127}{127} of file \hyperlink{ws2811lichterkette_8c_source}{ws2811lichterkette.\+c}.
+

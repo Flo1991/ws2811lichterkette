@@ -1,0 +1,393 @@
+\hypertarget{_led_effects_8c_source}{}\subsection{Led\+Effects.\+c}
+
+\begin{DoxyCode}
+00001 \textcolor{comment}{/**************************************************************************/}
+00016 \textcolor{preprocessor}{#include "\hyperlink{globals_8h}{globals.h}"}
+00017 \textcolor{preprocessor}{#include "\hyperlink{_lightstribe_8h}{Lightstribe.h}"}
+00018 \textcolor{preprocessor}{#include "\hyperlink{_led_effects_8h}{LedEffects.h}"}
+00019 \textcolor{preprocessor}{#include <util/delay.h>}
+00020 
+\hypertarget{_led_effects_8c_source_l00033}{}\hyperlink{_led_effects_8h_ad67a4e660b5122ed454e101432bbdba0}{00033} uint8\_t \hyperlink{_led_effects_8c_ad67a4e660b5122ed454e101432bbdba0}{map}(uint8\_t x, uint8\_t in\_min, uint8\_t in\_max, uint8\_t out\_min, uint8\_t out\_max)
+00034 \{
+00035     \textcolor{keywordflow}{return} (x - in\_min) * (out\_max - out\_min) / (in\_max - in\_min) + out\_min;
+00036 \}
+00037 
+\hypertarget{_led_effects_8c_source_l00045}{}\hyperlink{_led_effects_8h_a55291315ab0f2ca8d508f0e9da1920a7}{00045} \textcolor{keyword}{struct }\hyperlink{structcolor24bit}{color24bit} \hyperlink{_led_effects_8c_a55291315ab0f2ca8d508f0e9da1920a7}{colorconv8to24}(uint8\_t startcolor)
+00046 \{
+00047     \textcolor{keyword}{struct }\hyperlink{structcolor24bit}{color24bit} color;
+00048     \textcolor{keywordflow}{if} (\hyperlink{globals_8h_a722e1eb38b661d1338ada3cc7a4049a0}{ledtype}==11)
+00049     \{   \textcolor{comment}{//color conversion for WS2811 LEDs (RGB color)}
+00050         \textcolor{comment}{//the converted values are assigned to the colors of the struct, red an green are switched}
+00051         \textcolor{comment}{//because of the different color profiles}
+00052         color.\hyperlink{structcolor24bit_a287b397e90d7b995c81ff54e741f96b2}{blue} =\hyperlink{_led_effects_8c_ad67a4e660b5122ed454e101432bbdba0}{map}((0b00000011 & startcolor),0,3,0,255);    \textcolor{comment}{//2 Bit blue converted to 8 bit}
+00053         color.\hyperlink{structcolor24bit_ad47d918910aaa51c73160ac85999d09c}{red}=\hyperlink{_led_effects_8c_ad67a4e660b5122ed454e101432bbdba0}{map}((0b00011100 & startcolor)>>2,0,7,0,255);    \textcolor{comment}{//3 Bit green converted to 8 bit,
+       assigned to red (color profiles!)}
+00054         color.\hyperlink{structcolor24bit_a90d21fa503b626c00cdc8d94863d5877}{green}=\hyperlink{_led_effects_8c_ad67a4e660b5122ed454e101432bbdba0}{map}((0b11100000 & startcolor)>>5,0,7,0,255);\textcolor{comment}{//3 Bit red converted to 8 bit,
+       assigned to green (color profiles!) }
+00055     \}
+00056     \textcolor{keywordflow}{else}
+00057     \{   \textcolor{comment}{//color conversion for WS2812 LEDs (GRB color)}
+00058         \textcolor{comment}{//the converted values are assigned to the colors of the struct}
+00059         \textcolor{comment}{//no color switching is done, the environment is for WS2812 LEDs (GRB)}
+00060         color.\hyperlink{structcolor24bit_a287b397e90d7b995c81ff54e741f96b2}{blue} =\hyperlink{_led_effects_8c_ad67a4e660b5122ed454e101432bbdba0}{map}((0b00000011 & startcolor),0,3,0,255);    \textcolor{comment}{//2 Bit blue}
+00061         color.\hyperlink{structcolor24bit_a90d21fa503b626c00cdc8d94863d5877}{green}=\hyperlink{_led_effects_8c_ad67a4e660b5122ed454e101432bbdba0}{map}((0b00011100 & startcolor)>>2,0,7,0,255);\textcolor{comment}{//3 Bit green}
+00062         color.\hyperlink{structcolor24bit_ad47d918910aaa51c73160ac85999d09c}{red}=\hyperlink{_led_effects_8c_ad67a4e660b5122ed454e101432bbdba0}{map}((0b11100000 & startcolor)>>5,0,7,0,255);    \textcolor{comment}{//3 Bit red}
+00063     \}
+00064     \textcolor{keywordflow}{return} color;
+00065 \}
+00066 
+\hypertarget{_led_effects_8c_source_l00072}{}\hyperlink{_led_effects_8h_a6950e7657ba74d0d490ba36427533c4b}{00072} \textcolor{keywordtype}{void} \hyperlink{_led_effects_8c_a6950e7657ba74d0d490ba36427533c4b}{effectdelay}(uint16\_t delay)
+00073 \{
+00074     uint16\_t j;
+00075     \textcolor{keywordflow}{if} (delay==0)
+00076         \textcolor{keywordflow}{return};
+00077     \textcolor{keywordflow}{do}
+00078     \{
+00079         j=2000;
+00080         \textcolor{keywordflow}{if} (\hyperlink{globals_8h_a1b09d1a5bcf4c8ab435bb3c9e36def59}{PacketComplete}==1)    \textcolor{comment}{//interrupt the function if new settings have been received}
+00081             \textcolor{keywordflow}{break};
+00082         \textcolor{keywordflow}{do}
+00083         \{
+00084             \textcolor{keyword}{asm} (\textcolor{stringliteral}{"nop"});
+00085         \} \textcolor{keywordflow}{while} (--j);
+00086     \} \textcolor{keywordflow}{while} (--delay);
+00087     
+00088 \}
+00089 
+\hypertarget{_led_effects_8c_source_l00096}{}\hyperlink{_led_effects_8h_a2d54d1a6c61fe667b7c68ff04a11c503}{00096} \textcolor{keywordtype}{void} \hyperlink{_led_effects_8c_a2d54d1a6c61fe667b7c68ff04a11c503}{setfullcolor}(\textcolor{keyword}{struct} \hyperlink{structcolor24bit}{color24bit} color, uint8\_t *lightdata)
+00097 \{
+00098     uint8\_t ledcolor;
+00099     uint16\_t i;
+00100     \textcolor{keywordflow}{for} (i=0;i<\hyperlink{globals_8h_ad5db4045aed262ed4aae2af9d81fab98}{NumOfLeds}*3;i++)    \textcolor{comment}{//Loop over color array (lightdata)}
+00101     \{
+00102         ledcolor = i%3;
+00103         \textcolor{comment}{//set the array elements}
+00104         \textcolor{keywordflow}{if} (ledcolor==0)
+00105             *lightdata++=color.\hyperlink{structcolor24bit_a90d21fa503b626c00cdc8d94863d5877}{green};  
+00106         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(ledcolor==1)
+00107             *lightdata++=color.\hyperlink{structcolor24bit_ad47d918910aaa51c73160ac85999d09c}{red};      
+00108         \textcolor{keywordflow}{else}
+00109             *lightdata++=color.\hyperlink{structcolor24bit_a287b397e90d7b995c81ff54e741f96b2}{blue};
+00110     \}
+00111 \}
+00112 
+\hypertarget{_led_effects_8c_source_l00118}{}\hyperlink{_led_effects_8h_a1c5e6b0f45c1787c25f8eafa8b9c6247}{00118} \textcolor{keywordtype}{void} \hyperlink{_led_effects_8c_a1c5e6b0f45c1787c25f8eafa8b9c6247}{resetstribe}(uint8\_t *lightdata)
+00119 \{
+00120     \textcolor{keyword}{struct }\hyperlink{structcolor24bit}{color24bit} color;
+00121     color.\hyperlink{structcolor24bit_a287b397e90d7b995c81ff54e741f96b2}{blue} = 0x00;
+00122     color.\hyperlink{structcolor24bit_a90d21fa503b626c00cdc8d94863d5877}{green}= 0x00;
+00123     color.\hyperlink{structcolor24bit_ad47d918910aaa51c73160ac85999d09c}{red} = 0x00;
+00124     \hyperlink{_led_effects_8c_a2d54d1a6c61fe667b7c68ff04a11c503}{setfullcolor}(color, lightdata);
+00125 \}
+00126 
+\hypertarget{_led_effects_8c_source_l00138}{}\hyperlink{_led_effects_8h_afd64325b08e785d37b4dfaf358e517f0}{00138} \textcolor{keywordtype}{void} \hyperlink{_led_effects_8c_afd64325b08e785d37b4dfaf358e517f0}{rotate}(uint8\_t *lightdata, uint8\_t direction)
+00139 \{
+00140     uint8\_t temp1, temp2, temp3;
+00141     uint8\_t *tempp;
+00142     uint16\_t i;
+00143     
+00144     \textcolor{keywordflow}{if} (direction==0)
+00145     \{
+00146         \textcolor{comment}{//Store overflowing LED}
+00147         temp1 = *lightdata;
+00148         temp2= *(lightdata+1);
+00149         temp3 =*(lightdata+2);
+00150         \textcolor{comment}{//Rotate the array (minus 1 LED-->overflow; 1 LED correlate three 8 Bit color values)}
+00151         \textcolor{keywordflow}{for} (i=0;i<\hyperlink{globals_8h_ad5db4045aed262ed4aae2af9d81fab98}{NumOfLeds}*3-3;i++)
+00152         \{   \textcolor{comment}{//increase the array pointer step by step}
+00153             *lightdata = *(lightdata+3);
+00154             lightdata++;
+00155         \}
+00156         \textcolor{comment}{//assign overflowed LED}
+00157         *lightdata++ = temp1;
+00158         *lightdata++ = temp2;
+00159         *lightdata++ = temp3;
+00160         
+00161     \}
+00162     \textcolor{keywordflow}{else}
+00163     \{
+00164         \textcolor{comment}{//Set a pointer to the end of the lightdata}
+00165         tempp = lightdata + \hyperlink{globals_8h_ad5db4045aed262ed4aae2af9d81fab98}{NumOfLeds}*3 -1;
+00166         \textcolor{comment}{//Store overflowing LED}
+00167         temp1 = *tempp;
+00168         temp2 = *(tempp-1);
+00169         temp3 = *(tempp-2);
+00170         
+00171         \textcolor{comment}{//Rotate the array (minus 1 LED-->overflow; 1 LED correlate three 8 Bit color values)}
+00172         \textcolor{keywordflow}{for} (i=0;i<(NumOfLeds*3-3);i++)
+00173         \{   \textcolor{comment}{//decrease the array pointer step by step}
+00174             *tempp = *(tempp-3);    
+00175             tempp--;    
+00176         \}
+00177         \textcolor{comment}{//assign overflowed LED}
+00178         *tempp--=temp1;
+00179         *tempp--=temp2;
+00180         *tempp = temp3;     
+00181     \}
+00182 \}
+00183 
+\hypertarget{_led_effects_8c_source_l00196}{}\hyperlink{_led_effects_8h_a1fa5e03cb24195a46dcdc5948f596181}{00196} \textcolor{keywordtype}{void} \hyperlink{_led_effects_8c_a1fa5e03cb24195a46dcdc5948f596181}{rotateN}(uint8\_t *lightdata, uint8\_t direction, uint8\_t width)
+00197 \{
+00198     uint8\_t i;
+00199     \textcolor{keywordflow}{for} (i=0;i<width;i++)
+00200     \{
+00201         \hyperlink{_led_effects_8c_afd64325b08e785d37b4dfaf358e517f0}{rotate}(lightdata,direction);
+00202     \}
+00203 \}
+00204 
+\hypertarget{_led_effects_8c_source_l00217}{}\hyperlink{_led_effects_8h_aecba07ab559ab94e6f44c16e39012d80}{00217} \textcolor{keywordtype}{void} \hyperlink{_led_effects_8c_aecba07ab559ab94e6f44c16e39012d80}{initrunled}(\textcolor{keyword}{struct} \hyperlink{structcolor24bit}{color24bit} color, uint8\_t *lightdata, \textcolor{keyword}{struct} 
+      \hyperlink{structcolor24bit}{color24bit} background)
+00218 \{
+00219     \hyperlink{_led_effects_8c_a2d54d1a6c61fe667b7c68ff04a11c503}{setfullcolor}(background,lightdata);
+00220     \hyperlink{_lightstribe_8c_a63fa595d401f0e85c1bba55ba2b1d66e}{changeled}(color, lightdata,0);
+00221 \}
+00222 
+\hypertarget{_led_effects_8c_source_l00236}{}\hyperlink{_led_effects_8h_a35cfbfc36c975f98a7779a37b6ff63ce}{00236} \textcolor{keywordtype}{void} \hyperlink{_led_effects_8c_a35cfbfc36c975f98a7779a37b6ff63ce}{runrunled}(uint8\_t *lightdata, uint8\_t direction)
+00237 \{
+00238     uint8\_t i;
+00239     
+00240     \textcolor{comment}{//Run from left to right and back, one loop in this function, main while repeats the effect}
+00241     \textcolor{keywordflow}{if} (direction==2)
+00242     \{
+00243         \textcolor{keywordflow}{for} (i=0;i<\hyperlink{globals_8h_ad5db4045aed262ed4aae2af9d81fab98}{NumOfLeds};i++)
+00244         \{
+00245             \hyperlink{_lightstribe_8c_aac724dad670e4a26723daf71ce6a8d8a}{transmit2leds}(lightdata);
+00246             \hyperlink{_led_effects_8c_afd64325b08e785d37b4dfaf358e517f0}{rotate}(lightdata,1);
+00247             \hyperlink{_led_effects_8c_a6950e7657ba74d0d490ba36427533c4b}{effectdelay}(\hyperlink{globals_8h_ac2445d316b2972d381edeac44bb6a226}{effectime});
+00248             \textcolor{keywordflow}{if} (\hyperlink{globals_8h_a1b09d1a5bcf4c8ab435bb3c9e36def59}{PacketComplete}==1)
+00249                 \textcolor{keywordflow}{break};
+00250         \}
+00251         \textcolor{keywordflow}{for} (i=0;i<\hyperlink{globals_8h_ad5db4045aed262ed4aae2af9d81fab98}{NumOfLeds};i++)
+00252         \{
+00253             
+00254             \hyperlink{_led_effects_8c_afd64325b08e785d37b4dfaf358e517f0}{rotate}(lightdata,0);
+00255             \hyperlink{_lightstribe_8c_aac724dad670e4a26723daf71ce6a8d8a}{transmit2leds}(lightdata);
+00256             \hyperlink{_led_effects_8c_a6950e7657ba74d0d490ba36427533c4b}{effectdelay}(\hyperlink{globals_8h_ac2445d316b2972d381edeac44bb6a226}{effectime});
+00257             \textcolor{keywordflow}{if} (\hyperlink{globals_8h_a1b09d1a5bcf4c8ab435bb3c9e36def59}{PacketComplete}==1)
+00258                 \textcolor{keywordflow}{break};
+00259         \}   
+00260     \}
+00261     \textcolor{keywordflow}{else}
+00262     \{   \textcolor{comment}{//Only one rotation is done, main while does the effect}
+00263         \hyperlink{_led_effects_8c_afd64325b08e785d37b4dfaf358e517f0}{rotate}(lightdata,direction);
+00264         \hyperlink{_lightstribe_8c_aac724dad670e4a26723daf71ce6a8d8a}{transmit2leds}(lightdata);
+00265         \hyperlink{_led_effects_8c_a6950e7657ba74d0d490ba36427533c4b}{effectdelay}(\hyperlink{globals_8h_ac2445d316b2972d381edeac44bb6a226}{effectime});     
+00266     \}
+00267 \}
+00268 
+\hypertarget{_led_effects_8c_source_l00278}{}\hyperlink{_led_effects_8h_a9fd87d01d5cc4ce5fce6ddca55ebaf37}{00278} \textcolor{keywordtype}{void} \hyperlink{_led_effects_8c_a9fd87d01d5cc4ce5fce6ddca55ebaf37}{blinkled}(\textcolor{keyword}{struct} \hyperlink{structcolor24bit}{color24bit} color, uint8\_t *lightdata)
+00279 \{
+00280     \textcolor{comment}{//Set the chosen color}
+00281     \hyperlink{_led_effects_8c_a2d54d1a6c61fe667b7c68ff04a11c503}{setfullcolor}(color, lightdata);
+00282     \hyperlink{_lightstribe_8c_aac724dad670e4a26723daf71ce6a8d8a}{transmit2leds}(lightdata);
+00283     \hyperlink{_led_effects_8c_a6950e7657ba74d0d490ba36427533c4b}{effectdelay}(\hyperlink{globals_8h_ac2445d316b2972d381edeac44bb6a226}{effectime});
+00284     \textcolor{comment}{//Turn the stribe off}
+00285     \hyperlink{_led_effects_8c_a1c5e6b0f45c1787c25f8eafa8b9c6247}{resetstribe}(lightdata);
+00286     \hyperlink{_lightstribe_8c_aac724dad670e4a26723daf71ce6a8d8a}{transmit2leds}(lightdata);
+00287     \hyperlink{_led_effects_8c_a6950e7657ba74d0d490ba36427533c4b}{effectdelay}(\hyperlink{globals_8h_ac2445d316b2972d381edeac44bb6a226}{effectime});
+00288 \}
+00289 
+\hypertarget{_led_effects_8c_source_l00300}{}\hyperlink{_led_effects_8h_af67b7638a175e4971f25df5a5db3d8d0}{00300} \textcolor{keywordtype}{void} \hyperlink{_led_effects_8c_af67b7638a175e4971f25df5a5db3d8d0}{init\_alternating}(\textcolor{keyword}{struct} \hyperlink{structcolor24bit}{color24bit} color, \textcolor{keyword}{struct} 
+      \hyperlink{structcolor24bit}{color24bit} backcolor, uint8\_t *lightdata)
+00301 \{
+00302     uint16\_t i;
+00303     \hyperlink{_led_effects_8c_a2d54d1a6c61fe667b7c68ff04a11c503}{setfullcolor}(backcolor, lightdata);     \textcolor{comment}{//Set background color}
+00304     \textcolor{keywordflow}{for} (i=0;i<\hyperlink{globals_8h_ad5db4045aed262ed4aae2af9d81fab98}{NumOfLeds};i++)
+00305     \{
+00306         \textcolor{keywordflow}{if}(i%2==0)
+00307         \{
+00308             \hyperlink{_lightstribe_8c_a63fa595d401f0e85c1bba55ba2b1d66e}{changeled}(color,lightdata,i);  \textcolor{comment}{//set the even LEDs}
+00309         \}
+00310     \}
+00311 \}
+00312 
+\hypertarget{_led_effects_8c_source_l00323}{}\hyperlink{_led_effects_8h_a5bde1e9e7fc19a9916f1ec02d8fbcd6c}{00323} \textcolor{keywordtype}{void} \hyperlink{_led_effects_8c_a5bde1e9e7fc19a9916f1ec02d8fbcd6c}{run\_alternating}(uint8\_t *lightdata )
+00324 \{
+00325     \hyperlink{_lightstribe_8c_aac724dad670e4a26723daf71ce6a8d8a}{transmit2leds}(lightdata);
+00326     \hyperlink{_led_effects_8c_a6950e7657ba74d0d490ba36427533c4b}{effectdelay}(\hyperlink{globals_8h_ac2445d316b2972d381edeac44bb6a226}{effectime});
+00327     \hyperlink{_led_effects_8c_afd64325b08e785d37b4dfaf358e517f0}{rotate}(lightdata,1);
+00328 \}
+00329 
+\hypertarget{_led_effects_8c_source_l00340}{}\hyperlink{_led_effects_8h_a448758d76f47ea6fed4beb349196363f}{00340} \textcolor{keywordtype}{void} \hyperlink{_led_effects_8c_a448758d76f47ea6fed4beb349196363f}{recolor}(\textcolor{keyword}{struct} \hyperlink{structcolor24bit}{color24bit} color, uint8\_t *lightdata)
+00341 \{
+00342     uint8\_t i;
+00343     \textcolor{keywordflow}{for} (i=0;i<\hyperlink{globals_8h_ad5db4045aed262ed4aae2af9d81fab98}{NumOfLeds};i++)
+00344     \{
+00345         \hyperlink{_lightstribe_8c_a63fa595d401f0e85c1bba55ba2b1d66e}{changeled}(color,lightdata,i);
+00346         \hyperlink{_lightstribe_8c_aac724dad670e4a26723daf71ce6a8d8a}{transmit2leds}(lightdata);
+00347         \hyperlink{_led_effects_8c_a6950e7657ba74d0d490ba36427533c4b}{effectdelay}(\hyperlink{globals_8h_ac2445d316b2972d381edeac44bb6a226}{effectime});
+00348         \textcolor{keywordflow}{if} (\hyperlink{globals_8h_a1b09d1a5bcf4c8ab435bb3c9e36def59}{PacketComplete}==1)
+00349             \textcolor{keywordflow}{break};
+00350     \}
+00351 \}
+00352 
+\hypertarget{_led_effects_8c_source_l00366}{}\hyperlink{_led_effects_8h_a71d3b2ff21a63b48a01461e74be0c2b8}{00366} \textcolor{keywordtype}{void} \hyperlink{_led_effects_8c_a71d3b2ff21a63b48a01461e74be0c2b8}{faden}(\textcolor{keyword}{struct} \hyperlink{structcolor24bit}{color24bit} color, uint8\_t *lightdata)
+00367 \{
+00368     uint8\_t i;
+00369     uint8\_t maxgreen, maxred, maxblue;
+00370     maxgreen =color.\hyperlink{structcolor24bit_a90d21fa503b626c00cdc8d94863d5877}{green};
+00371     maxblue = color.\hyperlink{structcolor24bit_a287b397e90d7b995c81ff54e741f96b2}{blue};
+00372     maxred = color.\hyperlink{structcolor24bit_ad47d918910aaa51c73160ac85999d09c}{red};
+00373     \textcolor{keywordflow}{for} (i=0;i<255;i++) \textcolor{comment}{//Fade down to LED off}
+00374     \{
+00375         \hyperlink{_led_effects_8c_a2d54d1a6c61fe667b7c68ff04a11c503}{setfullcolor}(color,lightdata);
+00376         \hyperlink{_lightstribe_8c_aac724dad670e4a26723daf71ce6a8d8a}{transmit2leds}(lightdata);
+00377         \hyperlink{_led_effects_8c_a6950e7657ba74d0d490ba36427533c4b}{effectdelay}(\hyperlink{globals_8h_ac2445d316b2972d381edeac44bb6a226}{effectime});
+00378         \textcolor{comment}{//Decrease the color values that are greater than 0, stop if every value is 0}
+00379         \textcolor{keywordflow}{if} (color.\hyperlink{structcolor24bit_a90d21fa503b626c00cdc8d94863d5877}{green} > 0)
+00380         \{
+00381             --color.\hyperlink{structcolor24bit_a90d21fa503b626c00cdc8d94863d5877}{green};
+00382         \}
+00383         \textcolor{keywordflow}{if} (color.\hyperlink{structcolor24bit_a287b397e90d7b995c81ff54e741f96b2}{blue} > 0)
+00384         \{
+00385             --color.\hyperlink{structcolor24bit_a287b397e90d7b995c81ff54e741f96b2}{blue};
+00386         \}
+00387         \textcolor{keywordflow}{if} (color.\hyperlink{structcolor24bit_ad47d918910aaa51c73160ac85999d09c}{red} > 0)
+00388         \{
+00389             --color.\hyperlink{structcolor24bit_ad47d918910aaa51c73160ac85999d09c}{red};
+00390         \}
+00391         \textcolor{keywordflow}{if} (color.\hyperlink{structcolor24bit_ad47d918910aaa51c73160ac85999d09c}{red} == 0 && color.\hyperlink{structcolor24bit_a287b397e90d7b995c81ff54e741f96b2}{blue} == 0 && color.\hyperlink{structcolor24bit_a90d21fa503b626c00cdc8d94863d5877}{green} == 0)
+00392         \{
+00393             \textcolor{keywordflow}{break};
+00394         \}
+00395         \textcolor{keywordflow}{if} (\hyperlink{globals_8h_a1b09d1a5bcf4c8ab435bb3c9e36def59}{PacketComplete}==1)
+00396         \{
+00397             \textcolor{keywordflow}{break};
+00398         \}
+00399     \}
+00400     
+00401     \textcolor{keywordflow}{for} (i=0;i<255;i++) \textcolor{comment}{//Fade up to chosen color}
+00402     \{
+00403         \hyperlink{_led_effects_8c_a2d54d1a6c61fe667b7c68ff04a11c503}{setfullcolor}(color,lightdata);
+00404         \hyperlink{_lightstribe_8c_aac724dad670e4a26723daf71ce6a8d8a}{transmit2leds}(lightdata);
+00405         \hyperlink{_led_effects_8c_a6950e7657ba74d0d490ba36427533c4b}{effectdelay}(\hyperlink{globals_8h_ac2445d316b2972d381edeac44bb6a226}{effectime});
+00406         \textcolor{comment}{//Increase the color values is they are lower than the chosen color value, stop if all maximums are
+       reached}
+00407         \textcolor{keywordflow}{if} (color.\hyperlink{structcolor24bit_a90d21fa503b626c00cdc8d94863d5877}{green} < maxgreen)
+00408         \{
+00409             ++color.\hyperlink{structcolor24bit_a90d21fa503b626c00cdc8d94863d5877}{green};
+00410         \}
+00411         \textcolor{keywordflow}{if} (color.\hyperlink{structcolor24bit_a287b397e90d7b995c81ff54e741f96b2}{blue} < maxblue)
+00412         \{
+00413             ++color.\hyperlink{structcolor24bit_a287b397e90d7b995c81ff54e741f96b2}{blue};
+00414         \}
+00415         \textcolor{keywordflow}{if} (color.\hyperlink{structcolor24bit_ad47d918910aaa51c73160ac85999d09c}{red} < maxred)
+00416         \{
+00417             ++color.\hyperlink{structcolor24bit_ad47d918910aaa51c73160ac85999d09c}{red};
+00418         \}
+00419         \textcolor{keywordflow}{if} (color.\hyperlink{structcolor24bit_ad47d918910aaa51c73160ac85999d09c}{red} == maxred && color.\hyperlink{structcolor24bit_a287b397e90d7b995c81ff54e741f96b2}{blue} == maxblue && color.\hyperlink{structcolor24bit_a90d21fa503b626c00cdc8d94863d5877}{green} == maxgreen)
+00420         \{
+00421             \textcolor{keywordflow}{break};
+00422         \}
+00423         \textcolor{keywordflow}{if} (\hyperlink{globals_8h_a1b09d1a5bcf4c8ab435bb3c9e36def59}{PacketComplete}==1)
+00424         \{
+00425             \textcolor{keywordflow}{break};
+00426         \}
+00427     \}   
+00428 \}
+00429 
+\hypertarget{_led_effects_8c_source_l00442}{}\hyperlink{_led_effects_8h_a9d0f91360c87b851925bf05be5352435}{00442} \textcolor{keywordtype}{void} \hyperlink{_led_effects_8c_a9d0f91360c87b851925bf05be5352435}{initrainbow}(uint8\_t *lightdata)
+00443 \{
+00444     uint8\_t steps = \hyperlink{globals_8h_ad5db4045aed262ed4aae2af9d81fab98}{NumOfLeds} / 5;
+00445     \textcolor{keyword}{struct }\hyperlink{structcolor24bit}{color24bit} color;
+00446     uint8\_t i,j;
+00447     \textcolor{comment}{//Start rainbow with red color}
+00448     color.\hyperlink{structcolor24bit_ad47d918910aaa51c73160ac85999d09c}{red} = 0xFF;
+00449     color.\hyperlink{structcolor24bit_a287b397e90d7b995c81ff54e741f96b2}{blue}= 0x00;
+00450     color.\hyperlink{structcolor24bit_a90d21fa503b626c00cdc8d94863d5877}{green}=0x00;
+00451     j=0;
+00452     \textcolor{keywordflow}{for}(i=0;i<\hyperlink{globals_8h_ad5db4045aed262ed4aae2af9d81fab98}{NumOfLeds};i++)
+00453     \{
+00454         \textcolor{keywordflow}{if} (j<steps)
+00455         \{
+00456             color.\hyperlink{structcolor24bit_a287b397e90d7b995c81ff54e741f96b2}{blue} = 0x00+0xFF/steps*j;     \textcolor{comment}{//increase blue to get violett      }
+00457         \}
+00458         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(j>steps && j<=2*steps)
+00459         \{
+00460             color.\hyperlink{structcolor24bit_ad47d918910aaa51c73160ac85999d09c}{red} = 0xFF-0xFF/steps*(j/2);   \textcolor{comment}{//decrease red to get blue}
+00461         \}
+00462         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(j>2*steps && j<=3*steps)
+00463         \{
+00464             color.\hyperlink{structcolor24bit_a90d21fa503b626c00cdc8d94863d5877}{green} = 0x00+0xFF/steps*(j/3);\textcolor{comment}{//increase green to get cyan}
+00465         \}
+00466         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(j>3*steps && j<=4*steps)
+00467         \{
+00468             color.\hyperlink{structcolor24bit_a287b397e90d7b995c81ff54e741f96b2}{blue} = 0xFF-0xFF/steps*(j/4); \textcolor{comment}{//decrease blue to get green}
+00469         \}
+00470         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(j>4*steps && j<=5*steps)
+00471         \{
+00472             color.\hyperlink{structcolor24bit_ad47d918910aaa51c73160ac85999d09c}{red} = 0x00+0xFF/steps*(j/5);   \textcolor{comment}{//increase red to get yellow}
+00473         \}
+00474         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(j>6*steps)
+00475         \{
+00476             color.\hyperlink{structcolor24bit_a90d21fa503b626c00cdc8d94863d5877}{green} = 0xFF-0xFF/steps*(j/6);\textcolor{comment}{//decrease green to get red}
+00477         \}
+00478         j++;
+00479         \hyperlink{_lightstribe_8c_a63fa595d401f0e85c1bba55ba2b1d66e}{changeled}(color,lightdata,i);
+00480     \}
+00481 \}
+00482 
+\hypertarget{_led_effects_8c_source_l00489}{}\hyperlink{_led_effects_8h_ac83bd19da7ebd3c475e3667e4229db41}{00489} \textcolor{keywordtype}{void} \hyperlink{_led_effects_8c_ac83bd19da7ebd3c475e3667e4229db41}{eastereggbase}(\textcolor{keyword}{struct} \hyperlink{structcolor24bit}{color24bit} color, uint8\_t *lightdata)
+00490 \{
+00491     uint8\_t i,j;
+00492     uint8\_t n;
+00493     j=\hyperlink{globals_8h_ad5db4045aed262ed4aae2af9d81fab98}{NumOfLeds};
+00494     \textcolor{keywordflow}{for} (i=0;i<\hyperlink{globals_8h_ad5db4045aed262ed4aae2af9d81fab98}{NumOfLeds};i++)
+00495     \{
+00496         n=(j-i);
+00497         \hyperlink{_lightstribe_8c_a63fa595d401f0e85c1bba55ba2b1d66e}{changeled}(color,lightdata,0);
+00498         \textcolor{keywordflow}{while}(n-->0)
+00499         \{
+00500             \hyperlink{_led_effects_8c_afd64325b08e785d37b4dfaf358e517f0}{rotate}(lightdata,1);
+00501             \hyperlink{_lightstribe_8c_aac724dad670e4a26723daf71ce6a8d8a}{transmit2leds}(lightdata);
+00502             \hyperlink{_led_effects_8c_a6950e7657ba74d0d490ba36427533c4b}{effectdelay}(\hyperlink{globals_8h_ac2445d316b2972d381edeac44bb6a226}{effectime});
+00503         \}
+00504         \textcolor{keywordflow}{if} (\hyperlink{globals_8h_a1b09d1a5bcf4c8ab435bb3c9e36def59}{PacketComplete}==1)
+00505         \textcolor{keywordflow}{break};
+00506     \}
+00507 \}
+00508 
+\hypertarget{_led_effects_8c_source_l00514}{}\hyperlink{_led_effects_8h_a25e09bcb1481b20ebc2a27e7098b5115}{00514} \textcolor{keywordtype}{void} \hyperlink{_led_effects_8c_a25e09bcb1481b20ebc2a27e7098b5115}{easteregg}(uint8\_t *lightdata)
+00515 \{
+00516     \textcolor{keyword}{struct }\hyperlink{structcolor24bit}{color24bit} color, color2;
+00517     uint8\_t i;
+00518     color=\hyperlink{_led_effects_8c_a55291315ab0f2ca8d508f0e9da1920a7}{colorconv8to24}(252);
+00519     color2=\hyperlink{_led_effects_8c_a55291315ab0f2ca8d508f0e9da1920a7}{colorconv8to24}(201);
+00520     \hyperlink{_led_effects_8c_ac83bd19da7ebd3c475e3667e4229db41}{eastereggbase}(color2,lightdata);
+00521     \textcolor{keywordflow}{for} (i=0;i<100;i++)
+00522     \{
+00523         \textcolor{keywordflow}{if} (\hyperlink{globals_8h_a1b09d1a5bcf4c8ab435bb3c9e36def59}{PacketComplete}==1)
+00524         \textcolor{keywordflow}{break};
+00525         \_delay\_ms(50);
+00526     \}
+00527     \hyperlink{_led_effects_8c_ac83bd19da7ebd3c475e3667e4229db41}{eastereggbase}(color,lightdata);
+00528     \textcolor{keywordflow}{for} (i=0;i<100;i++)
+00529     \{
+00530         \textcolor{keywordflow}{if} (\hyperlink{globals_8h_a1b09d1a5bcf4c8ab435bb3c9e36def59}{PacketComplete}==1)
+00531         \textcolor{keywordflow}{break};
+00532         \_delay\_ms(50);
+00533     \}
+00534 \}
+00535 
+\hypertarget{_led_effects_8c_source_l00549}{}\hyperlink{_led_effects_8h_a99174e2b381d7ec6667d29352e6eca1b}{00549} \textcolor{keywordtype}{void} \hyperlink{_led_effects_8c_a99174e2b381d7ec6667d29352e6eca1b}{fillup}(\textcolor{keyword}{struct} \hyperlink{structcolor24bit}{color24bit} color,\textcolor{keyword}{struct} \hyperlink{structcolor24bit}{color24bit} backcolor, uint8\_t *
+      lightdata)
+00550 \{
+00551     uint8\_t i,j;
+00552     \textcolor{keywordflow}{for} (i=0;i<\hyperlink{globals_8h_ad5db4045aed262ed4aae2af9d81fab98}{NumOfLeds};i++)
+00553     \{
+00554         \textcolor{keywordflow}{for} (j=0;j<NumOfLeds-i;j++)
+00555         \{
+00556             \hyperlink{_lightstribe_8c_a63fa595d401f0e85c1bba55ba2b1d66e}{changeled}(color,lightdata,j);          \textcolor{comment}{//running LED, foreground}
+00557             \textcolor{keywordflow}{if} (j>0)
+00558             \{
+00559                 \hyperlink{_lightstribe_8c_a63fa595d401f0e85c1bba55ba2b1d66e}{changeled}(backcolor,lightdata,j-1);    \textcolor{comment}{//background LEDs}
+00560             \}
+00561             \hyperlink{_lightstribe_8c_aac724dad670e4a26723daf71ce6a8d8a}{transmit2leds}(lightdata);
+00562             \hyperlink{_led_effects_8c_a6950e7657ba74d0d490ba36427533c4b}{effectdelay}(\hyperlink{globals_8h_ac2445d316b2972d381edeac44bb6a226}{effectime});
+00563         \}
+00564         \textcolor{keywordflow}{if} (\hyperlink{globals_8h_a1b09d1a5bcf4c8ab435bb3c9e36def59}{PacketComplete}==1)
+00565             \textcolor{keywordflow}{break};
+00566         \hyperlink{_led_effects_8c_a6950e7657ba74d0d490ba36427533c4b}{effectdelay}(\hyperlink{globals_8h_ac2445d316b2972d381edeac44bb6a226}{effectime});
+00567     \}
+00568 \}
+\end{DoxyCode}

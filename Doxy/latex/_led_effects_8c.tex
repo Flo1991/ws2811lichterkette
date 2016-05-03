@@ -1,0 +1,596 @@
+\hypertarget{_led_effects_8c}{}\subsection{Led\+Effects.\+c File Reference}
+\label{_led_effects_8c}\index{Led\+Effects.\+c@{Led\+Effects.\+c}}
+
+
+effect functions for controlling W\+S2811/\+W\+S2812 L\+E\+Ds  
+
+
+{\ttfamily \#include \char`\"{}globals.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Lightstribe.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Led\+Effects.\+h\char`\"{}}\\*
+{\ttfamily \#include $<$util/delay.\+h$>$}\\*
+\subsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+uint8\+\_\+t \hyperlink{_led_effects_8c_ad67a4e660b5122ed454e101432bbdba0}{map} (uint8\+\_\+t x, uint8\+\_\+t in\+\_\+min, uint8\+\_\+t in\+\_\+max, uint8\+\_\+t out\+\_\+min, uint8\+\_\+t out\+\_\+max)
+\begin{DoxyCompactList}\small\item\em Arduino map function; used for color conversion. \end{DoxyCompactList}\item 
+struct \hyperlink{structcolor24bit}{color24bit} \hyperlink{_led_effects_8c_a55291315ab0f2ca8d508f0e9da1920a7}{colorconv8to24} (uint8\+\_\+t startcolor)
+\begin{DoxyCompactList}\small\item\em color conversion function; converts a 8 Bit color (R\+G\+B 3-\/3-\/2) to a 24 Bit color (R\+G\+B 8-\/8-\/8) \end{DoxyCompactList}\item 
+void \hyperlink{_led_effects_8c_a6950e7657ba74d0d490ba36427533c4b}{effectdelay} (uint16\+\_\+t delay)
+\begin{DoxyCompactList}\small\item\em simple delay function; no concrete delay time \end{DoxyCompactList}\item 
+void \hyperlink{_led_effects_8c_a2d54d1a6c61fe667b7c68ff04a11c503}{setfullcolor} (struct \hyperlink{structcolor24bit}{color24bit} color, uint8\+\_\+t $\ast$lightdata)
+\begin{DoxyCompactList}\small\item\em Set all L\+E\+Ds to the chosen color; run transmit2leds afterwards to update the L\+E\+Ds. \end{DoxyCompactList}\item 
+void \hyperlink{_led_effects_8c_a1c5e6b0f45c1787c25f8eafa8b9c6247}{resetstribe} (uint8\+\_\+t $\ast$lightdata)
+\begin{DoxyCompactList}\small\item\em Set all L\+E\+Ds off; run transmit2leds afterwards to update the L\+E\+Ds. \end{DoxyCompactList}\item 
+void \hyperlink{_led_effects_8c_afd64325b08e785d37b4dfaf358e517f0}{rotate} (uint8\+\_\+t $\ast$lightdata, uint8\+\_\+t direction)
+\begin{DoxyCompactList}\small\item\em Rotate the lightdata for 1 L\+E\+D Position; run transmit2leds afterwards to update the L\+E\+Ds. \end{DoxyCompactList}\item 
+void \hyperlink{_led_effects_8c_a1fa5e03cb24195a46dcdc5948f596181}{rotate\+N} (uint8\+\_\+t $\ast$lightdata, uint8\+\_\+t direction, uint8\+\_\+t width)
+\begin{DoxyCompactList}\small\item\em Rotate the lightdata for n L\+E\+D Positions; run transmit2leds afterwards to update the L\+E\+Ds. \end{DoxyCompactList}\item 
+void \hyperlink{_led_effects_8c_aecba07ab559ab94e6f44c16e39012d80}{initrunled} (struct \hyperlink{structcolor24bit}{color24bit} color, uint8\+\_\+t $\ast$lightdata, struct \hyperlink{structcolor24bit}{color24bit} background)
+\begin{DoxyCompactList}\small\item\em init the runled effect; run runrunled afterwards to start the effect \end{DoxyCompactList}\item 
+void \hyperlink{_led_effects_8c_a35cfbfc36c975f98a7779a37b6ff63ce}{runrunled} (uint8\+\_\+t $\ast$lightdata, uint8\+\_\+t direction)
+\begin{DoxyCompactList}\small\item\em Do the runled effect; before this function is called the lightdata needs to be initiliazed using initrunled! \end{DoxyCompactList}\item 
+void \hyperlink{_led_effects_8c_a9fd87d01d5cc4ce5fce6ddca55ebaf37}{blinkled} (struct \hyperlink{structcolor24bit}{color24bit} color, uint8\+\_\+t $\ast$lightdata)
+\begin{DoxyCompactList}\small\item\em blink the whole stribe; this function does not need another function call \end{DoxyCompactList}\item 
+void \hyperlink{_led_effects_8c_af67b7638a175e4971f25df5a5db3d8d0}{init\+\_\+alternating} (struct \hyperlink{structcolor24bit}{color24bit} color, struct \hyperlink{structcolor24bit}{color24bit} backcolor, uint8\+\_\+t $\ast$lightdata)
+\begin{DoxyCompactList}\small\item\em initialize the alternating function; call run\+\_\+alternating afterwards \end{DoxyCompactList}\item 
+void \hyperlink{_led_effects_8c_a5bde1e9e7fc19a9916f1ec02d8fbcd6c}{run\+\_\+alternating} (uint8\+\_\+t $\ast$lightdata)
+\begin{DoxyCompactList}\small\item\em Run the alternating effect; call init\+\_\+alternating before. \end{DoxyCompactList}\item 
+void \hyperlink{_led_effects_8c_a448758d76f47ea6fed4beb349196363f}{recolor} (struct \hyperlink{structcolor24bit}{color24bit} color, uint8\+\_\+t $\ast$lightdata)
+\begin{DoxyCompactList}\small\item\em Recolor the L\+E\+D stribe; no other function call is necessary. \end{DoxyCompactList}\item 
+void \hyperlink{_led_effects_8c_a71d3b2ff21a63b48a01461e74be0c2b8}{faden} (struct \hyperlink{structcolor24bit}{color24bit} color, uint8\+\_\+t $\ast$lightdata)
+\begin{DoxyCompactList}\small\item\em Generate a fading color effect. No other function call is necessary. \end{DoxyCompactList}\item 
+void \hyperlink{_led_effects_8c_a9d0f91360c87b851925bf05be5352435}{initrainbow} (uint8\+\_\+t $\ast$lightdata)
+\begin{DoxyCompactList}\small\item\em Initialize a rainbow on the color array; to show the rainbow run transmit2leds afterwards. \end{DoxyCompactList}\item 
+void \hyperlink{_led_effects_8c_ac83bd19da7ebd3c475e3667e4229db41}{eastereggbase} (struct \hyperlink{structcolor24bit}{color24bit} color, uint8\+\_\+t $\ast$lightdata)
+\begin{DoxyCompactList}\small\item\em Initialize the easteregg; do not use directly; this function is used by the easteregg function. \end{DoxyCompactList}\item 
+void \hyperlink{_led_effects_8c_a25e09bcb1481b20ebc2a27e7098b5115}{easteregg} (uint8\+\_\+t $\ast$lightdata)
+\begin{DoxyCompactList}\small\item\em Run the easteregg; No other function call is necessary. \end{DoxyCompactList}\item 
+void \hyperlink{_led_effects_8c_a99174e2b381d7ec6667d29352e6eca1b}{fillup} (struct \hyperlink{structcolor24bit}{color24bit} color, struct \hyperlink{structcolor24bit}{color24bit} backcolor, uint8\+\_\+t $\ast$lightdata)
+\begin{DoxyCompactList}\small\item\em This function fills up the stribe; No other function call is necessary. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsubsection{Detailed Description}
+effect functions for controlling W\+S2811/\+W\+S2812 L\+E\+Ds 
+
+This file contains different effect functions to control W\+S2811/\+W\+S2812 L\+E\+Ds using an A\+V\+R. It also contains a conversion function to convert 8 Bit color values (R\+G\+B 3-\/3-\/2) to 24 Bit color values (R\+G\+B/\+G\+R\+B 8-\/8-\/8). The effects control first the lightdata array and then transmit the array data to the stribe. Using different operations result in different effects. You can add different functions if you like to. But remember that all operations need to be done on the lightdata array that needs to be transmitted at one block to the L\+E\+Ds after your array has been changed. \begin{DoxyVersion}{Version}
+V1.\+00 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+05.\+01.\+2016 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Authors}
+Wank Florian 
+\end{DoxyAuthor}
+
+
+Definition in file \hyperlink{_led_effects_8c_source}{Led\+Effects.\+c}.
+
+
+
+\subsubsection{Function Documentation}
+\hypertarget{_led_effects_8c_a9fd87d01d5cc4ce5fce6ddca55ebaf37}{}\index{Led\+Effects.\+c@{Led\+Effects.\+c}!blinkled@{blinkled}}
+\index{blinkled@{blinkled}!Led\+Effects.\+c@{Led\+Effects.\+c}}
+\paragraph[{blinkled(struct color24bit color, uint8\+\_\+t $\ast$lightdata)}]{\setlength{\rightskip}{0pt plus 5cm}void blinkled (
+\begin{DoxyParamCaption}
+\item[{struct {\bf color24bit}}]{color, }
+\item[{uint8\+\_\+t $\ast$}]{lightdata}
+\end{DoxyParamCaption}
+)}\label{_led_effects_8c_a9fd87d01d5cc4ce5fce6ddca55ebaf37}
+
+
+blink the whole stribe; this function does not need another function call 
+
+This function creates a blinking effect. First all L\+E\+Ds are set to the chosen color, after the defined delay the L\+E\+Ds are turned off. This is repeated in the main while loop. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em struct} & \hyperlink{structcolor24bit}{color24bit} color \+: color for the blink effect \\
+\hline
+\mbox{\tt in}  & {\em uint8\+\_\+t} & $\ast$lightdata \+: lightdata array that holds the color values for the stribe \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+No need to run transmit2leds afterwards! This is already done in the function. 
+\end{DoxyNote}
+
+
+Definition at line \hyperlink{_led_effects_8c_source_l00278}{278} of file \hyperlink{_led_effects_8c_source}{Led\+Effects.\+c}.
+
+\hypertarget{_led_effects_8c_a55291315ab0f2ca8d508f0e9da1920a7}{}\index{Led\+Effects.\+c@{Led\+Effects.\+c}!colorconv8to24@{colorconv8to24}}
+\index{colorconv8to24@{colorconv8to24}!Led\+Effects.\+c@{Led\+Effects.\+c}}
+\paragraph[{colorconv8to24(uint8\+\_\+t startcolor)}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf color24bit} colorconv8to24 (
+\begin{DoxyParamCaption}
+\item[{uint8\+\_\+t}]{startcolor}
+\end{DoxyParamCaption}
+)}\label{_led_effects_8c_a55291315ab0f2ca8d508f0e9da1920a7}
+
+
+color conversion function; converts a 8 Bit color (R\+G\+B 3-\/3-\/2) to a 24 Bit color (R\+G\+B 8-\/8-\/8) 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em uint8\+\_\+t} & startcolor\+: 8 Bit color to convert \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+struct \hyperlink{structcolor24bit}{color24bit} \+: 24 Bit color result 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+This function converts the 8 Bit color to a 24 Bit color depending on the ledtype. This is neccessary because of differnt color formats (W\+S2811-\/$>$R\+G\+B ; W\+S2812-\/$>$G\+R\+B). Original the whole environment was for W\+S2812 L\+E\+Ds! 
+\end{DoxyNote}
+
+
+Definition at line \hyperlink{_led_effects_8c_source_l00045}{45} of file \hyperlink{_led_effects_8c_source}{Led\+Effects.\+c}.
+
+\hypertarget{_led_effects_8c_a25e09bcb1481b20ebc2a27e7098b5115}{}\index{Led\+Effects.\+c@{Led\+Effects.\+c}!easteregg@{easteregg}}
+\index{easteregg@{easteregg}!Led\+Effects.\+c@{Led\+Effects.\+c}}
+\paragraph[{easteregg(uint8\+\_\+t $\ast$lightdata)}]{\setlength{\rightskip}{0pt plus 5cm}void easteregg (
+\begin{DoxyParamCaption}
+\item[{uint8\+\_\+t $\ast$}]{lightdata}
+\end{DoxyParamCaption}
+)}\label{_led_effects_8c_a25e09bcb1481b20ebc2a27e7098b5115}
+
+
+Run the easteregg; No other function call is necessary. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em uint8\+\_\+t} & $\ast$lightdata \+: lightdata array that holds the color values for the stribe \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Just try it \+:-\/) funny looking effect 
+\end{DoxyNote}
+
+
+Definition at line \hyperlink{_led_effects_8c_source_l00514}{514} of file \hyperlink{_led_effects_8c_source}{Led\+Effects.\+c}.
+
+\hypertarget{_led_effects_8c_ac83bd19da7ebd3c475e3667e4229db41}{}\index{Led\+Effects.\+c@{Led\+Effects.\+c}!eastereggbase@{eastereggbase}}
+\index{eastereggbase@{eastereggbase}!Led\+Effects.\+c@{Led\+Effects.\+c}}
+\paragraph[{eastereggbase(struct color24bit color, uint8\+\_\+t $\ast$lightdata)}]{\setlength{\rightskip}{0pt plus 5cm}void eastereggbase (
+\begin{DoxyParamCaption}
+\item[{struct {\bf color24bit}}]{color, }
+\item[{uint8\+\_\+t $\ast$}]{lightdata}
+\end{DoxyParamCaption}
+)}\label{_led_effects_8c_ac83bd19da7ebd3c475e3667e4229db41}
+
+
+Initialize the easteregg; do not use directly; this function is used by the easteregg function. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em struct} & \hyperlink{structcolor24bit}{color24bit} color \+: color for the easteregg \\
+\hline
+\mbox{\tt in}  & {\em uint8\+\_\+t} & $\ast$lightdata \+: lightdata array that holds the color values for the stribe \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Do not use this function directly; this function is used by the easteregg function 
+\end{DoxyNote}
+
+
+Definition at line \hyperlink{_led_effects_8c_source_l00489}{489} of file \hyperlink{_led_effects_8c_source}{Led\+Effects.\+c}.
+
+\hypertarget{_led_effects_8c_a6950e7657ba74d0d490ba36427533c4b}{}\index{Led\+Effects.\+c@{Led\+Effects.\+c}!effectdelay@{effectdelay}}
+\index{effectdelay@{effectdelay}!Led\+Effects.\+c@{Led\+Effects.\+c}}
+\paragraph[{effectdelay(uint16\+\_\+t delay)}]{\setlength{\rightskip}{0pt plus 5cm}void effectdelay (
+\begin{DoxyParamCaption}
+\item[{uint16\+\_\+t}]{delay}
+\end{DoxyParamCaption}
+)}\label{_led_effects_8c_a6950e7657ba74d0d490ba36427533c4b}
+
+
+simple delay function; no concrete delay time 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em uint16\+\_\+t} & delay \+: delay value \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+This function is just a variable delay, there is no coherence with a concrete time (i.\+e. s, ms) 
+\end{DoxyNote}
+
+
+Definition at line \hyperlink{_led_effects_8c_source_l00072}{72} of file \hyperlink{_led_effects_8c_source}{Led\+Effects.\+c}.
+
+\hypertarget{_led_effects_8c_a71d3b2ff21a63b48a01461e74be0c2b8}{}\index{Led\+Effects.\+c@{Led\+Effects.\+c}!faden@{faden}}
+\index{faden@{faden}!Led\+Effects.\+c@{Led\+Effects.\+c}}
+\paragraph[{faden(struct color24bit color, uint8\+\_\+t $\ast$lightdata)}]{\setlength{\rightskip}{0pt plus 5cm}void faden (
+\begin{DoxyParamCaption}
+\item[{struct {\bf color24bit}}]{color, }
+\item[{uint8\+\_\+t $\ast$}]{lightdata}
+\end{DoxyParamCaption}
+)}\label{_led_effects_8c_a71d3b2ff21a63b48a01461e74be0c2b8}
+
+
+Generate a fading color effect. No other function call is necessary. 
+
+This function generates a fading color effect. At the beginning the whole stribe is filled with the chosen color. The color intensity of each color channel (blue, red, green) is decreased until the stribe is off. After that the color values are increased until the chosen color values are reached. The effect looks different depending on the chosen color because the color value proportion is not kept over the whole effect. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em struct} & \hyperlink{structcolor24bit}{color24bit} color \+: color that is used for the fading effect \\
+\hline
+\mbox{\tt in}  & {\em uint8\+\_\+t} & $\ast$lightdata \+: lightdata array that holds the color values for the stribe \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+No need to run transmit2leds afterwards! The effect is standalone and ends is looped in the main while loop. The color value proportion is not kept over the whole effect. 
+\end{DoxyNote}
+
+
+Definition at line \hyperlink{_led_effects_8c_source_l00366}{366} of file \hyperlink{_led_effects_8c_source}{Led\+Effects.\+c}.
+
+\hypertarget{_led_effects_8c_a99174e2b381d7ec6667d29352e6eca1b}{}\index{Led\+Effects.\+c@{Led\+Effects.\+c}!fillup@{fillup}}
+\index{fillup@{fillup}!Led\+Effects.\+c@{Led\+Effects.\+c}}
+\paragraph[{fillup(struct color24bit color, struct color24bit backcolor, uint8\+\_\+t $\ast$lightdata)}]{\setlength{\rightskip}{0pt plus 5cm}void fillup (
+\begin{DoxyParamCaption}
+\item[{struct {\bf color24bit}}]{color, }
+\item[{struct {\bf color24bit}}]{backcolor, }
+\item[{uint8\+\_\+t $\ast$}]{lightdata}
+\end{DoxyParamCaption}
+)}\label{_led_effects_8c_a99174e2b381d7ec6667d29352e6eca1b}
+
+
+This function fills up the stribe; No other function call is necessary. 
+
+This function fills up the whole stribe and beginns again if it is finished. First one L\+E\+D moves in the chosen color stepwise through the whole stribe and recolors all L\+E\+Ds in the background color which have already been passed. At the end of the stribe the L\+E\+D stays an the next single L\+E\+D is going to move to the last-\/1 position. The next L\+E\+D to the last-\/2 position. This is going on until the whole stribe is colored. Then the effect restarts (main while loop). 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em struct} & \hyperlink{structcolor24bit}{color24bit} color \+: foreground color for the moving L\+E\+D \\
+\hline
+\mbox{\tt in}  & {\em struct} & \hyperlink{structcolor24bit}{color24bit} backcolor \+: background color \\
+\hline
+\mbox{\tt in}  & {\em uint8\+\_\+t} & $\ast$lightdata \+: lightdata array that holds the color values for the stribe \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+This is a standalone effect. 
+\end{DoxyNote}
+
+
+Definition at line \hyperlink{_led_effects_8c_source_l00549}{549} of file \hyperlink{_led_effects_8c_source}{Led\+Effects.\+c}.
+
+\hypertarget{_led_effects_8c_af67b7638a175e4971f25df5a5db3d8d0}{}\index{Led\+Effects.\+c@{Led\+Effects.\+c}!init\+\_\+alternating@{init\+\_\+alternating}}
+\index{init\+\_\+alternating@{init\+\_\+alternating}!Led\+Effects.\+c@{Led\+Effects.\+c}}
+\paragraph[{init\+\_\+alternating(struct color24bit color, struct color24bit backcolor, uint8\+\_\+t $\ast$lightdata)}]{\setlength{\rightskip}{0pt plus 5cm}void init\+\_\+alternating (
+\begin{DoxyParamCaption}
+\item[{struct {\bf color24bit}}]{color, }
+\item[{struct {\bf color24bit}}]{backcolor, }
+\item[{uint8\+\_\+t $\ast$}]{lightdata}
+\end{DoxyParamCaption}
+)}\label{_led_effects_8c_af67b7638a175e4971f25df5a5db3d8d0}
+
+
+initialize the alternating function; call run\+\_\+alternating afterwards 
+
+This function initializes the alternating effect. The effect assigns every even L\+E\+D number in one color and the odd numbers in the background color. If the effect is running, the odd and even L\+E\+D switch positions. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em struct} & \hyperlink{structcolor24bit}{color24bit} color \+: color for the alternate effect (Init even L\+E\+Ds) \\
+\hline
+\mbox{\tt in}  & {\em struct} & \hyperlink{structcolor24bit}{color24bit} backcolor \+: color for the alternate effect bakckground (Init odd L\+E\+Ds) \\
+\hline
+\mbox{\tt in}  & {\em uint8\+\_\+t} & $\ast$lightdata \+: lightdata array that holds the color values for the stribe \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Run run\+\_\+alternating afterwards to start the effect! 
+\end{DoxyNote}
+
+
+Definition at line \hyperlink{_led_effects_8c_source_l00300}{300} of file \hyperlink{_led_effects_8c_source}{Led\+Effects.\+c}.
+
+\hypertarget{_led_effects_8c_a9d0f91360c87b851925bf05be5352435}{}\index{Led\+Effects.\+c@{Led\+Effects.\+c}!initrainbow@{initrainbow}}
+\index{initrainbow@{initrainbow}!Led\+Effects.\+c@{Led\+Effects.\+c}}
+\paragraph[{initrainbow(uint8\+\_\+t $\ast$lightdata)}]{\setlength{\rightskip}{0pt plus 5cm}void initrainbow (
+\begin{DoxyParamCaption}
+\item[{uint8\+\_\+t $\ast$}]{lightdata}
+\end{DoxyParamCaption}
+)}\label{_led_effects_8c_a9d0f91360c87b851925bf05be5352435}
+
+
+Initialize a rainbow on the color array; to show the rainbow run transmit2leds afterwards. 
+
+This function fills the color array with rainbow colors. For this effect the color array is filled with different colors that are calculated by increasing and decreasing the color channels to loop over a R\+G\+B palette. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em uint8\+\_\+t} & $\ast$lightdata \+: lightdata array that holds the color values for the stribe \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Run transmit2leds afterwards! A nice effect is to rotate the array stepwise after the rainbow initialization (run transmit2leds after every rotation). The effect directly sets color values, so there may be a problem with the color profiles (R\+G\+B vs. G\+R\+B). The function was primary written for W\+S2812 L\+E\+Ds (G\+R\+B)! The effect needs a minimum number of 20 L\+E\+Ds to look nice! 
+\end{DoxyNote}
+
+
+Definition at line \hyperlink{_led_effects_8c_source_l00442}{442} of file \hyperlink{_led_effects_8c_source}{Led\+Effects.\+c}.
+
+\hypertarget{_led_effects_8c_aecba07ab559ab94e6f44c16e39012d80}{}\index{Led\+Effects.\+c@{Led\+Effects.\+c}!initrunled@{initrunled}}
+\index{initrunled@{initrunled}!Led\+Effects.\+c@{Led\+Effects.\+c}}
+\paragraph[{initrunled(struct color24bit color, uint8\+\_\+t $\ast$lightdata, struct color24bit background)}]{\setlength{\rightskip}{0pt plus 5cm}void initrunled (
+\begin{DoxyParamCaption}
+\item[{struct {\bf color24bit}}]{color, }
+\item[{uint8\+\_\+t $\ast$}]{lightdata, }
+\item[{struct {\bf color24bit}}]{background}
+\end{DoxyParamCaption}
+)}\label{_led_effects_8c_aecba07ab559ab94e6f44c16e39012d80}
+
+
+init the runled effect; run runrunled afterwards to start the effect 
+
+This function initializes the running L\+E\+D effect. The running L\+E\+D effect has a background color that is used for all L\+E\+Ds except one. One L\+E\+D is in the foreground color an moves stepwise along the stribe. The initialization prepares the lightdata array by setting one L\+E\+D at the start position and filling the others with the background color. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em struct} & \hyperlink{structcolor24bit}{color24bit} color \+: 24 Bit color for the effect \\
+\hline
+\mbox{\tt in}  & {\em uint8\+\_\+t} & $\ast$lightdata \+: lightdata array that holds the color values for the stribe \\
+\hline
+\mbox{\tt in}  & {\em struct} & \hyperlink{structcolor24bit}{color24bit} background \+: 24 Bit color for the effect background \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Run runrunled afterwards to start the effect! 
+\end{DoxyNote}
+
+
+Definition at line \hyperlink{_led_effects_8c_source_l00217}{217} of file \hyperlink{_led_effects_8c_source}{Led\+Effects.\+c}.
+
+\hypertarget{_led_effects_8c_ad67a4e660b5122ed454e101432bbdba0}{}\index{Led\+Effects.\+c@{Led\+Effects.\+c}!map@{map}}
+\index{map@{map}!Led\+Effects.\+c@{Led\+Effects.\+c}}
+\paragraph[{map(uint8\+\_\+t x, uint8\+\_\+t in\+\_\+min, uint8\+\_\+t in\+\_\+max, uint8\+\_\+t out\+\_\+min, uint8\+\_\+t out\+\_\+max)}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t map (
+\begin{DoxyParamCaption}
+\item[{uint8\+\_\+t}]{x, }
+\item[{uint8\+\_\+t}]{in\+\_\+min, }
+\item[{uint8\+\_\+t}]{in\+\_\+max, }
+\item[{uint8\+\_\+t}]{out\+\_\+min, }
+\item[{uint8\+\_\+t}]{out\+\_\+max}
+\end{DoxyParamCaption}
+)}\label{_led_effects_8c_ad67a4e660b5122ed454e101432bbdba0}
+
+
+Arduino map function; used for color conversion. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em uint8\+\_\+t} & x\+: value to map \\
+\hline
+\mbox{\tt in}  & {\em uint8\+\_\+t} & in\+\_\+min \+: minimum value input reference \\
+\hline
+\mbox{\tt in}  & {\em uint8\+\_\+t} & in\+\_\+max \+: maximum value input reference \\
+\hline
+\mbox{\tt in}  & {\em uint8\+\_\+t} & out\+\_\+min \+: minimum value output reference \\
+\hline
+\mbox{\tt in}  & {\em uint8\+\_\+t} & out\+\_\+max \+: maximum value output reference \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+uint8\+\_\+t \+: mapped value referring to the input 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+This function is used for color conversion from 8 Bit to 24 Bit colors; How it works\+: in\+\_\+min $<$ x $<$ in\+\_\+max convert to out\+\_\+min $<$ returnvalue $<$ out\+\_\+max by positioning the x proportionally in the new number range 
+\end{DoxyNote}
+
+
+Definition at line \hyperlink{_led_effects_8c_source_l00033}{33} of file \hyperlink{_led_effects_8c_source}{Led\+Effects.\+c}.
+
+\hypertarget{_led_effects_8c_a448758d76f47ea6fed4beb349196363f}{}\index{Led\+Effects.\+c@{Led\+Effects.\+c}!recolor@{recolor}}
+\index{recolor@{recolor}!Led\+Effects.\+c@{Led\+Effects.\+c}}
+\paragraph[{recolor(struct color24bit color, uint8\+\_\+t $\ast$lightdata)}]{\setlength{\rightskip}{0pt plus 5cm}void recolor (
+\begin{DoxyParamCaption}
+\item[{struct {\bf color24bit}}]{color, }
+\item[{uint8\+\_\+t $\ast$}]{lightdata}
+\end{DoxyParamCaption}
+)}\label{_led_effects_8c_a448758d76f47ea6fed4beb349196363f}
+
+
+Recolor the L\+E\+D stribe; no other function call is necessary. 
+
+This function generates a recolor effect. The old configuration of the L\+E\+Ds is overwritten with the new color step by step. When the whole stribe is filled with the new color the effect ends. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em struct} & \hyperlink{structcolor24bit}{color24bit} color \+: color that is used for recoloring \\
+\hline
+\mbox{\tt in}  & {\em uint8\+\_\+t} & $\ast$lightdata \+: lightdata array that holds the color values for the stribe \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+No need to run transmit2leds afterwards! The effect is standalone and ends if the stribe is recolored. 
+\end{DoxyNote}
+
+
+Definition at line \hyperlink{_led_effects_8c_source_l00340}{340} of file \hyperlink{_led_effects_8c_source}{Led\+Effects.\+c}.
+
+\hypertarget{_led_effects_8c_a1c5e6b0f45c1787c25f8eafa8b9c6247}{}\index{Led\+Effects.\+c@{Led\+Effects.\+c}!resetstribe@{resetstribe}}
+\index{resetstribe@{resetstribe}!Led\+Effects.\+c@{Led\+Effects.\+c}}
+\paragraph[{resetstribe(uint8\+\_\+t $\ast$lightdata)}]{\setlength{\rightskip}{0pt plus 5cm}void resetstribe (
+\begin{DoxyParamCaption}
+\item[{uint8\+\_\+t $\ast$}]{lightdata}
+\end{DoxyParamCaption}
+)}\label{_led_effects_8c_a1c5e6b0f45c1787c25f8eafa8b9c6247}
+
+
+Set all L\+E\+Ds off; run transmit2leds afterwards to update the L\+E\+Ds. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em uint8\+\_\+t} & $\ast$lightdata \+: lightdata array that holds the color values for the stribe \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+This function sets the lightdata array to 0x00. To update the stribe run transmit2leds afterwards! 
+\end{DoxyNote}
+
+
+Definition at line \hyperlink{_led_effects_8c_source_l00118}{118} of file \hyperlink{_led_effects_8c_source}{Led\+Effects.\+c}.
+
+\hypertarget{_led_effects_8c_afd64325b08e785d37b4dfaf358e517f0}{}\index{Led\+Effects.\+c@{Led\+Effects.\+c}!rotate@{rotate}}
+\index{rotate@{rotate}!Led\+Effects.\+c@{Led\+Effects.\+c}}
+\paragraph[{rotate(uint8\+\_\+t $\ast$lightdata, uint8\+\_\+t direction)}]{\setlength{\rightskip}{0pt plus 5cm}void rotate (
+\begin{DoxyParamCaption}
+\item[{uint8\+\_\+t $\ast$}]{lightdata, }
+\item[{uint8\+\_\+t}]{direction}
+\end{DoxyParamCaption}
+)}\label{_led_effects_8c_afd64325b08e785d37b4dfaf358e517f0}
+
+
+Rotate the lightdata for 1 L\+E\+D Position; run transmit2leds afterwards to update the L\+E\+Ds. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em uint8\+\_\+t} & $\ast$lightdata \+: lightdata array that holds the color values for the stribe \\
+\hline
+\mbox{\tt in}  & {\em uint8\+\_\+t} & direction \+: direction to rotate \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+This function rotates lightdata array. To update the stribe run transmit2leds afterwards! The rotation \char`\"{}moves every L\+E\+D\char`\"{} by one step, the overflowing L\+E\+D is appended at the other ending. Example\+: R\+E\+D B\+L\+U\+E Y\+E\+L\+L\+O\+W G\+R\+E\+E\+N ... rotate... B\+L\+U\+E Y\+E\+L\+L\+O\+W G\+R\+E\+E\+N R\+E\+D other direction\+: R\+E\+D B\+L\+U\+E Y\+E\+L\+L\+O\+W G\+R\+E\+E\+N ... rotate... G\+R\+E\+E\+N R\+E\+D B\+L\+U\+E Y\+E\+L\+L\+O\+W 
+\end{DoxyNote}
+
+
+Definition at line \hyperlink{_led_effects_8c_source_l00138}{138} of file \hyperlink{_led_effects_8c_source}{Led\+Effects.\+c}.
+
+\hypertarget{_led_effects_8c_a1fa5e03cb24195a46dcdc5948f596181}{}\index{Led\+Effects.\+c@{Led\+Effects.\+c}!rotate\+N@{rotate\+N}}
+\index{rotate\+N@{rotate\+N}!Led\+Effects.\+c@{Led\+Effects.\+c}}
+\paragraph[{rotate\+N(uint8\+\_\+t $\ast$lightdata, uint8\+\_\+t direction, uint8\+\_\+t width)}]{\setlength{\rightskip}{0pt plus 5cm}void rotate\+N (
+\begin{DoxyParamCaption}
+\item[{uint8\+\_\+t $\ast$}]{lightdata, }
+\item[{uint8\+\_\+t}]{direction, }
+\item[{uint8\+\_\+t}]{width}
+\end{DoxyParamCaption}
+)}\label{_led_effects_8c_a1fa5e03cb24195a46dcdc5948f596181}
+
+
+Rotate the lightdata for n L\+E\+D Positions; run transmit2leds afterwards to update the L\+E\+Ds. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em uint8\+\_\+t} & $\ast$lightdata \+: lightdata array that holds the color values for the stribe \\
+\hline
+\mbox{\tt in}  & {\em uint8\+\_\+t} & direction \+: direction to rotate \\
+\hline
+\mbox{\tt in}  & {\em uint8\+\_\+t} & width \+: width to rotate \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+This function rotates lightdata array. To update the stribe run transmit2leds afterwards! The rotation \char`\"{}moves every L\+E\+D\char`\"{} by n steps, the overflowing L\+E\+Ds are appended at the other ending. Example\+: R\+E\+D B\+L\+U\+E Y\+E\+L\+L\+O\+W G\+R\+E\+E\+N P\+I\+N\+K ... rotate 2 ... Y\+E\+L\+L\+O\+W G\+R\+E\+E\+N P\+I\+N\+K R\+E\+D B\+L\+U\+E other direction\+: R\+E\+D B\+L\+U\+E Y\+E\+L\+L\+O\+W G\+R\+E\+E\+N P\+I\+N\+K ... rotate 2 ... G\+R\+E\+E\+N P\+I\+N\+K R\+E\+D B\+L\+U\+E Y\+E\+L\+L\+O\+W 
+\end{DoxyNote}
+
+
+Definition at line \hyperlink{_led_effects_8c_source_l00196}{196} of file \hyperlink{_led_effects_8c_source}{Led\+Effects.\+c}.
+
+\hypertarget{_led_effects_8c_a5bde1e9e7fc19a9916f1ec02d8fbcd6c}{}\index{Led\+Effects.\+c@{Led\+Effects.\+c}!run\+\_\+alternating@{run\+\_\+alternating}}
+\index{run\+\_\+alternating@{run\+\_\+alternating}!Led\+Effects.\+c@{Led\+Effects.\+c}}
+\paragraph[{run\+\_\+alternating(uint8\+\_\+t $\ast$lightdata)}]{\setlength{\rightskip}{0pt plus 5cm}void run\+\_\+alternating (
+\begin{DoxyParamCaption}
+\item[{uint8\+\_\+t $\ast$}]{lightdata}
+\end{DoxyParamCaption}
+)}\label{_led_effects_8c_a5bde1e9e7fc19a9916f1ec02d8fbcd6c}
+
+
+Run the alternating effect; call init\+\_\+alternating before. 
+
+This function runs the alternating effect. The effect assigns every even L\+E\+D number in one color and the odd numbers in the background color. If the effect is running, the odd and even L\+E\+D switch positions. This function rotates the L\+E\+Ds by one position to achieve the effect. The rotation direction is not of importance. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em uint8\+\_\+t} & $\ast$lightdata \+: lightdata array that holds the color values for the stribe \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+No need to run transmit2leds afterwards! The effect is generated by the main while loop. 
+\end{DoxyNote}
+
+
+Definition at line \hyperlink{_led_effects_8c_source_l00323}{323} of file \hyperlink{_led_effects_8c_source}{Led\+Effects.\+c}.
+
+\hypertarget{_led_effects_8c_a35cfbfc36c975f98a7779a37b6ff63ce}{}\index{Led\+Effects.\+c@{Led\+Effects.\+c}!runrunled@{runrunled}}
+\index{runrunled@{runrunled}!Led\+Effects.\+c@{Led\+Effects.\+c}}
+\paragraph[{runrunled(uint8\+\_\+t $\ast$lightdata, uint8\+\_\+t direction)}]{\setlength{\rightskip}{0pt plus 5cm}void runrunled (
+\begin{DoxyParamCaption}
+\item[{uint8\+\_\+t $\ast$}]{lightdata, }
+\item[{uint8\+\_\+t}]{direction}
+\end{DoxyParamCaption}
+)}\label{_led_effects_8c_a35cfbfc36c975f98a7779a37b6ff63ce}
+
+
+Do the runled effect; before this function is called the lightdata needs to be initiliazed using initrunled! 
+
+This function runs the running L\+E\+D effect. The running L\+E\+D effect has a background color that is used for all L\+E\+Ds except one. The one L\+E\+D moves stepwise to the next position depending on the chosen direction. Direction 0/1 are right/left, direction 2 runs from left to right an back again. For direction 0/1 the running L\+E\+D overflows and begins on the other ending. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em uint8\+\_\+t} & $\ast$lightdata \+: lightdata array that holds the color values for the stribe \\
+\hline
+\mbox{\tt in}  & {\em uint8\+\_\+t} & direction \+: movement direction, 0/1 = right/left, 2 = left-\/$>$right and back \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+No need to run transmit2leds afterwards! This is already done in the function. The function is interrupted if a new U\+A\+R\+T package is completely received so a new effect gets active. 
+\end{DoxyNote}
+
+
+Definition at line \hyperlink{_led_effects_8c_source_l00236}{236} of file \hyperlink{_led_effects_8c_source}{Led\+Effects.\+c}.
+
+\hypertarget{_led_effects_8c_a2d54d1a6c61fe667b7c68ff04a11c503}{}\index{Led\+Effects.\+c@{Led\+Effects.\+c}!setfullcolor@{setfullcolor}}
+\index{setfullcolor@{setfullcolor}!Led\+Effects.\+c@{Led\+Effects.\+c}}
+\paragraph[{setfullcolor(struct color24bit color, uint8\+\_\+t $\ast$lightdata)}]{\setlength{\rightskip}{0pt plus 5cm}void setfullcolor (
+\begin{DoxyParamCaption}
+\item[{struct {\bf color24bit}}]{color, }
+\item[{uint8\+\_\+t $\ast$}]{lightdata}
+\end{DoxyParamCaption}
+)}\label{_led_effects_8c_a2d54d1a6c61fe667b7c68ff04a11c503}
+
+
+Set all L\+E\+Ds to the chosen color; run transmit2leds afterwards to update the L\+E\+Ds. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em struct} & \hyperlink{structcolor24bit}{color24bit} color \+: color to set \\
+\hline
+\mbox{\tt in}  & {\em uint8\+\_\+t} & $\ast$lightdata \+: lightdata array that holds the color values for the stribe \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+This function sets the lightdata array. To update the stribe run transmit2leds afterwards! 
+\end{DoxyNote}
+
+
+Definition at line \hyperlink{_led_effects_8c_source_l00096}{96} of file \hyperlink{_led_effects_8c_source}{Led\+Effects.\+c}.
+

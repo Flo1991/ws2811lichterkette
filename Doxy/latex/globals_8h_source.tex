@@ -1,0 +1,45 @@
+\hypertarget{globals_8h_source}{}\subsection{globals.\+h}
+
+\begin{DoxyCode}
+00001 \textcolor{comment}{/**************************************************************************/}
+00009 \textcolor{preprocessor}{#include <stdint.h>}
+00010 
+00011 \textcolor{preprocessor}{#ifndef GLOBALS\_H\_}
+00012 \textcolor{preprocessor}{#define GLOBALS\_H\_}
+00013 
+00014 \textcolor{comment}{//macros to display infos for CPU Frequency or other defines}
+00015 \textcolor{preprocessor}{#define \_STR\_EXPAND(tok) #tok}
+00016 \textcolor{preprocessor}{#define \_STR(tok) \_STR\_EXPAND(tok)}
+00017 \textcolor{preprocessor}{#define \_CPU\_INFO(x) CPU\_FREQUENCY##x}
+00018 
+00020 \textcolor{preprocessor}{#ifndef EXTERN}
+\hypertarget{globals_8h_source_l00021}{}\hyperlink{globals_8h_a77366c1bd428629dc898e188bfd182a3}{00021} \textcolor{preprocessor}{#define EXTERN extern}
+00022 \textcolor{preprocessor}{#endif}
+00023 
+\hypertarget{globals_8h_source_l00025}{}\hyperlink{globals_8h_ad5db4045aed262ed4aae2af9d81fab98}{00025} \hyperlink{globals_8h_a77366c1bd428629dc898e188bfd182a3}{EXTERN} uint8\_t \hyperlink{globals_8h_ad5db4045aed262ed4aae2af9d81fab98}{NumOfLeds};
+\hypertarget{globals_8h_source_l00027}{}\hyperlink{globals_8h_ac2445d316b2972d381edeac44bb6a226}{00027} \hyperlink{globals_8h_a77366c1bd428629dc898e188bfd182a3}{EXTERN} uint16\_t \hyperlink{globals_8h_ac2445d316b2972d381edeac44bb6a226}{effectime};
+\hypertarget{globals_8h_source_l00029}{}\hyperlink{globals_8h_a722e1eb38b661d1338ada3cc7a4049a0}{00029} \hyperlink{globals_8h_a77366c1bd428629dc898e188bfd182a3}{EXTERN} uint8\_t \hyperlink{globals_8h_a722e1eb38b661d1338ada3cc7a4049a0}{ledtype};
+\hypertarget{globals_8h_source_l00031}{}\hyperlink{globals_8h_af07a5ce170c7be13d096843960e7b9da}{00031} \textcolor{preprocessor}{#define BASELEDTYPE 11}
+00032 
+\hypertarget{globals_8h_source_l00035}{}\hyperlink{globals_8h_a6e2b9e79df9491377ae405ef85aa0ca5}{00035} \textcolor{preprocessor}{#define MAXNUMCOLORS 50}
+00036 
+\hypertarget{globals_8h_source_l00037}{}\hyperlink{globals_8h_a0d57378e32bf8278011460740bc29f7f}{00037} \textcolor{preprocessor}{#define UART\_BUFFER\_SIZE 80}
+00038 
+\hypertarget{globals_8h_source_l00040}{}\hyperlink{globals_8h_a159854edb9d0c7283013495d85bdf997}{00040} \hyperlink{globals_8h_a77366c1bd428629dc898e188bfd182a3}{EXTERN} uint8\_t \hyperlink{globals_8h_a159854edb9d0c7283013495d85bdf997}{CompColorArray}[\hyperlink{globals_8h_a6e2b9e79df9491377ae405ef85aa0ca5}{MAXNUMCOLORS}];
+\hypertarget{globals_8h_source_l00042}{}\hyperlink{globals_8h_a5d735865707e6694a8173d629e0b4d5c}{00042} \hyperlink{globals_8h_a77366c1bd428629dc898e188bfd182a3}{EXTERN} uint8\_t \hyperlink{globals_8h_a5d735865707e6694a8173d629e0b4d5c}{RecBuffer}[\hyperlink{globals_8h_a0d57378e32bf8278011460740bc29f7f}{UART\_BUFFER\_SIZE}];
+\hypertarget{globals_8h_source_l00044}{}\hyperlink{globals_8h_aa6fcb4d4fca4554ac73bef10668c23cd}{00044} \hyperlink{globals_8h_a77366c1bd428629dc898e188bfd182a3}{EXTERN} uint8\_t \hyperlink{globals_8h_aa6fcb4d4fca4554ac73bef10668c23cd}{BufferCounter};
+\hypertarget{globals_8h_source_l00046}{}\hyperlink{globals_8h_aaa611e00c18e950be43a4cd5ce0ceeb1}{00046} \hyperlink{globals_8h_a77366c1bd428629dc898e188bfd182a3}{EXTERN} uint8\_t \hyperlink{globals_8h_aaa611e00c18e950be43a4cd5ce0ceeb1}{DataLen};
+\hypertarget{globals_8h_source_l00048}{}\hyperlink{globals_8h_a053b8e1f039c19251b90d60317db8aed}{00048} \hyperlink{globals_8h_a77366c1bd428629dc898e188bfd182a3}{EXTERN} uint8\_t \hyperlink{globals_8h_a053b8e1f039c19251b90d60317db8aed}{effect};
+00049 
+00050 \textcolor{comment}{//EXTERN uint8\_t speed;}
+00051 
+\hypertarget{globals_8h_source_l00053}{}\hyperlink{globals_8h_a1b09d1a5bcf4c8ab435bb3c9e36def59}{00053} \hyperlink{globals_8h_a77366c1bd428629dc898e188bfd182a3}{EXTERN} uint8\_t \hyperlink{globals_8h_a1b09d1a5bcf4c8ab435bb3c9e36def59}{PacketComplete};
+\hypertarget{globals_8h_source_l00055}{}\hyperlink{globals_8h_aaa3bddd2273257ac5ec259197b62e984}{00055} \hyperlink{globals_8h_a77366c1bd428629dc898e188bfd182a3}{EXTERN} uint8\_t \hyperlink{globals_8h_aaa3bddd2273257ac5ec259197b62e984}{PaketStart};
+\hypertarget{globals_8h_source_l00057}{}\hyperlink{globals_8h_a922ad5baed647eca43ad1a979e162ebd}{00057} \hyperlink{globals_8h_a77366c1bd428629dc898e188bfd182a3}{EXTERN} uint8\_t \hyperlink{globals_8h_a922ad5baed647eca43ad1a979e162ebd}{IsReading};
+\hypertarget{globals_8h_source_l00059}{}\hyperlink{globals_8h_ab5490074aaca289e986e9a00e0c25663}{00059} \hyperlink{globals_8h_a77366c1bd428629dc898e188bfd182a3}{EXTERN} \textcolor{keyword}{volatile} \textcolor{keywordtype}{char} \hyperlink{globals_8h_ab5490074aaca289e986e9a00e0c25663}{ReceivedChar};
+00060 
+00062 \textcolor{preprocessor}{#ifndef F\_CPU}
+\hypertarget{globals_8h_source_l00063}{}\hyperlink{globals_8h_a43bafb28b29491ec7f871319b5a3b2f8}{00063} \textcolor{preprocessor}{#define F\_CPU 8000000}
+00064 \textcolor{preprocessor}{#endif}
+00065 \textcolor{preprocessor}{#endif }\textcolor{comment}{/* GLOBALS\_H\_ */}\textcolor{preprocessor}{}
+\end{DoxyCode}

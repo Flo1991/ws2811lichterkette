@@ -1,0 +1,126 @@
+\hypertarget{_lightstribe_8c_source}{}\subsection{Lightstribe.\+c}
+
+\begin{DoxyCode}
+00001 \textcolor{comment}{/**************************************************************************/}
+00022 \textcolor{preprocessor}{#include "\hyperlink{globals_8h}{globals.h}"}
+00023 \textcolor{preprocessor}{#include "\hyperlink{_lightstribe_8h}{Lightstribe.h}"}
+00024 \textcolor{preprocessor}{#include <util/delay.h>}
+00025 
+\hypertarget{_lightstribe_8c_source_l00033}{}\hyperlink{_lightstribe_8h_a63fa595d401f0e85c1bba55ba2b1d66e}{00033} \textcolor{keywordtype}{void} \hyperlink{_lightstribe_8c_a63fa595d401f0e85c1bba55ba2b1d66e}{changeled}(\textcolor{keyword}{struct} \hyperlink{structcolor24bit}{color24bit} color, uint8\_t *lightdata, uint8\_t lednr)
+00034 \{
+00035     \textcolor{keywordflow}{if} (lednr>\hyperlink{globals_8h_ad5db4045aed262ed4aae2af9d81fab98}{NumOfLeds})
+00036         \textcolor{keywordflow}{return};
+00037     lightdata=lightdata+lednr*3;
+00038     *lightdata++=color.\hyperlink{structcolor24bit_a90d21fa503b626c00cdc8d94863d5877}{green};
+00039     *lightdata++=color.\hyperlink{structcolor24bit_ad47d918910aaa51c73160ac85999d09c}{red};
+00040     *lightdata++=color.\hyperlink{structcolor24bit_a287b397e90d7b995c81ff54e741f96b2}{blue};
+00041 \}
+00042 
+\hypertarget{_lightstribe_8c_source_l00051}{}\hyperlink{_lightstribe_8h_abba9462833e30ef725eaf18c3d01eb71}{00051} \textcolor{keywordtype}{void} \hyperlink{_lightstribe_8c_abba9462833e30ef725eaf18c3d01eb71}{setled}(\textcolor{keyword}{struct} \hyperlink{structcolor24bit}{color24bit} color, uint8\_t *lightdata, uint8\_t lednr)
+00052 \{
+00053     uint8\_t ledcolor;
+00054     uint16\_t i;
+00055     \textcolor{keywordflow}{if} (lednr>\hyperlink{globals_8h_ad5db4045aed262ed4aae2af9d81fab98}{NumOfLeds})
+00056         \textcolor{keywordflow}{return};
+00057     \textcolor{comment}{//Loop over the whole color array (-->NumOfLeds*3)}
+00058     \textcolor{keywordflow}{for} (i=0;i<\hyperlink{globals_8h_ad5db4045aed262ed4aae2af9d81fab98}{NumOfLeds}*3;i++)
+00059     \{
+00060         \textcolor{keywordflow}{if} (i==(lednr*3) || i==(lednr*3+1) || i==(lednr*3+2))
+00061         \{   \textcolor{comment}{//position of the LED to set}
+00062             ledcolor = i%3;
+00063             \textcolor{keywordflow}{if} (ledcolor==0)
+00064                 *lightdata++=color.\hyperlink{structcolor24bit_a90d21fa503b626c00cdc8d94863d5877}{green};
+00065             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(ledcolor==1)
+00066                 *lightdata++=color.\hyperlink{structcolor24bit_ad47d918910aaa51c73160ac85999d09c}{red};
+00067             \textcolor{keywordflow}{else}
+00068                 *lightdata++=color.\hyperlink{structcolor24bit_a287b397e90d7b995c81ff54e741f96b2}{blue};
+00069         \}
+00070         \textcolor{keywordflow}{else}
+00071         \{   \textcolor{comment}{//all others off (0x00-->black)}
+00072             ledcolor = i%3;
+00073             \textcolor{keywordflow}{if} (ledcolor==0)
+00074                 *lightdata++=0x00;
+00075             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(ledcolor==1)
+00076                 *lightdata++=0x00;
+00077             \textcolor{keywordflow}{else}
+00078                 *lightdata++=0x00;
+00079         \}   
+00080     \}   
+00081 \}
+00082 
+\hypertarget{_lightstribe_8c_source_l00096}{}\hyperlink{_lightstribe_8h_aac724dad670e4a26723daf71ce6a8d8a}{00096} \textcolor{keywordtype}{void} \hyperlink{_lightstribe_8c_aac724dad670e4a26723daf71ce6a8d8a}{transmit2leds}(uint8\_t lightdata[])
+00097 \{
+00098     uint16\_t i ;
+00099     uint8\_t byte2send ;
+00100     \textcolor{keywordflow}{for}(i=0;i<\hyperlink{globals_8h_ad5db4045aed262ed4aae2af9d81fab98}{NumOfLeds}*3;i++)
+00101     \{
+00102         byte2send = lightdata[i];   
+00103         \textcolor{comment}{//Transmit each Bit of one Byte using the One Wire Protocoll}
+00104         \textcolor{keywordflow}{if} ((byte2send & 128)==0)
+00105         \{
+00106             SETLOW
+00107         \}
+00108         \textcolor{keywordflow}{else}
+00109         \{
+00110             SETHIGH
+00111         \}
+00112         \textcolor{keywordflow}{if} ((byte2send & 64)==0)
+00113         \{
+00114             SETLOW
+00115         \}
+00116         \textcolor{keywordflow}{else}
+00117         \{
+00118             SETHIGH
+00119         \}
+00120         \textcolor{keywordflow}{if} ((byte2send & 32)==0)
+00121         \{
+00122             SETLOW
+00123         \}
+00124         \textcolor{keywordflow}{else}
+00125         \{
+00126             SETHIGH
+00127         \}
+00128         \textcolor{keywordflow}{if} ((byte2send & 16)==0)
+00129         \{
+00130             SETLOW
+00131         \}
+00132         \textcolor{keywordflow}{else}
+00133         \{
+00134             SETHIGH
+00135         \}
+00136         \textcolor{keywordflow}{if} ((byte2send & 8)==0)
+00137         \{
+00138             SETLOW
+00139         \}
+00140         \textcolor{keywordflow}{else}
+00141         \{
+00142             SETHIGH
+00143         \}
+00144         \textcolor{keywordflow}{if} ((byte2send & 4)==0)
+00145         \{
+00146             SETLOW
+00147         \}
+00148         \textcolor{keywordflow}{else}
+00149         \{
+00150             SETHIGH
+00151         \}
+00152         \textcolor{keywordflow}{if} ((byte2send & 2)==0)
+00153         \{
+00154             SETLOW
+00155         \}
+00156         \textcolor{keywordflow}{else}
+00157         \{
+00158             SETHIGH
+00159         \}
+00160         \textcolor{keywordflow}{if} ((byte2send & 1)==0)
+00161         \{
+00162             SETLOW
+00163         \}
+00164         \textcolor{keywordflow}{else}
+00165         \{
+00166             SETHIGH
+00167         \}   
+00168     \}
+00169     \_delay\_us(55);      \textcolor{comment}{//defined delay after the transmission is complete (Datasheet says >=50us)}
+00170 \}
+\end{DoxyCode}

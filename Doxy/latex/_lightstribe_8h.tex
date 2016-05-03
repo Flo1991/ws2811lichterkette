@@ -1,0 +1,134 @@
+\hypertarget{_lightstribe_8h}{}\subsection{Lightstribe.\+h File Reference}
+\label{_lightstribe_8h}\index{Lightstribe.\+h@{Lightstribe.\+h}}
+
+
+basic functions for controlling W\+S2811/\+W\+S2812 L\+E\+Ds  
+
+
+{\ttfamily \#include $<$stdint.\+h$>$}\\*
+{\ttfamily \#include $<$avr/io.\+h$>$}\\*
+\subsubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structcolor24bit}{color24bit}
+\begin{DoxyCompactList}\small\item\em 24 Bit color structure R\+G\+B 8-\/8-\/8 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{_lightstribe_8h_a63fa595d401f0e85c1bba55ba2b1d66e}{changeled} (struct \hyperlink{structcolor24bit}{color24bit} color, uint8\+\_\+t $\ast$lightdata, uint8\+\_\+t lednr)
+\begin{DoxyCompactList}\small\item\em change the color of one L\+E\+D at a specific position; run transmit2leds afterwards to update the L\+E\+Ds \end{DoxyCompactList}\item 
+void \hyperlink{_lightstribe_8h_abba9462833e30ef725eaf18c3d01eb71}{setled} (struct \hyperlink{structcolor24bit}{color24bit} color, uint8\+\_\+t $\ast$lightdata, uint8\+\_\+t lednr)
+\begin{DoxyCompactList}\small\item\em set the color of one L\+E\+D at a specific position, all others are off; run transmit2leds afterwards to update the L\+E\+Ds \end{DoxyCompactList}\item 
+void \hyperlink{_lightstribe_8h_aac724dad670e4a26723daf71ce6a8d8a}{transmit2leds} (uint8\+\_\+t lightdata\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em transmit the color array to the stribe \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsubsection{Detailed Description}
+basic functions for controlling W\+S2811/\+W\+S2812 L\+E\+Ds 
+
+\begin{DoxyVersion}{Version}
+V1.\+00 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+05.\+01.\+2016 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Authors}
+Wank Florian 
+\end{DoxyAuthor}
+
+
+Definition in file \hyperlink{_lightstribe_8h_source}{Lightstribe.\+h}.
+
+
+
+\subsubsection{Function Documentation}
+\hypertarget{_lightstribe_8h_a63fa595d401f0e85c1bba55ba2b1d66e}{}\index{Lightstribe.\+h@{Lightstribe.\+h}!changeled@{changeled}}
+\index{changeled@{changeled}!Lightstribe.\+h@{Lightstribe.\+h}}
+\paragraph[{changeled(struct color24bit color, uint8\+\_\+t $\ast$lightdata, uint8\+\_\+t lednr)}]{\setlength{\rightskip}{0pt plus 5cm}void changeled (
+\begin{DoxyParamCaption}
+\item[{struct {\bf color24bit}}]{color, }
+\item[{uint8\+\_\+t $\ast$}]{lightdata, }
+\item[{uint8\+\_\+t}]{lednr}
+\end{DoxyParamCaption}
+)}\label{_lightstribe_8h_a63fa595d401f0e85c1bba55ba2b1d66e}
+
+
+change the color of one L\+E\+D at a specific position; run transmit2leds afterwards to update the L\+E\+Ds 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em struct} & \hyperlink{structcolor24bit}{color24bit} color \+: 24 bit color in G\+R\+B format \\
+\hline
+\mbox{\tt in}  & {\em uint8\+\_\+t} & $\ast$lightdata \+: pointer to the complete lightdata that contains all color values \\
+\hline
+\mbox{\tt in}  & {\em uint8\+\_\+t} & lednr \+: position of the L\+E\+D that should be changed \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+the right color format is created using the colorconv8to24-\/function with the ledtype predefined 
+\end{DoxyNote}
+
+
+Definition at line \hyperlink{_lightstribe_8c_source_l00033}{33} of file \hyperlink{_lightstribe_8c_source}{Lightstribe.\+c}.
+
+\hypertarget{_lightstribe_8h_abba9462833e30ef725eaf18c3d01eb71}{}\index{Lightstribe.\+h@{Lightstribe.\+h}!setled@{setled}}
+\index{setled@{setled}!Lightstribe.\+h@{Lightstribe.\+h}}
+\paragraph[{setled(struct color24bit color, uint8\+\_\+t $\ast$lightdata, uint8\+\_\+t lednr)}]{\setlength{\rightskip}{0pt plus 5cm}void setled (
+\begin{DoxyParamCaption}
+\item[{struct {\bf color24bit}}]{color, }
+\item[{uint8\+\_\+t $\ast$}]{lightdata, }
+\item[{uint8\+\_\+t}]{lednr}
+\end{DoxyParamCaption}
+)}\label{_lightstribe_8h_abba9462833e30ef725eaf18c3d01eb71}
+
+
+set the color of one L\+E\+D at a specific position, all others are off; run transmit2leds afterwards to update the L\+E\+Ds 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em struct} & \hyperlink{structcolor24bit}{color24bit} color \+: 24 bit color in G\+R\+B format \\
+\hline
+\mbox{\tt in}  & {\em uint8\+\_\+t} & $\ast$lightdata \+: pointer to the complete lightdata that contains all color values \\
+\hline
+\mbox{\tt in}  & {\em uint8\+\_\+t} & lednr \+: position of the L\+E\+D that should be set \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+the right color format is created using the colorconv8to24-\/function with the ledtype predefined; all other L\+E\+Ds are cleared so they are off 
+\end{DoxyNote}
+
+
+Definition at line \hyperlink{_lightstribe_8c_source_l00051}{51} of file \hyperlink{_lightstribe_8c_source}{Lightstribe.\+c}.
+
+\hypertarget{_lightstribe_8h_aac724dad670e4a26723daf71ce6a8d8a}{}\index{Lightstribe.\+h@{Lightstribe.\+h}!transmit2leds@{transmit2leds}}
+\index{transmit2leds@{transmit2leds}!Lightstribe.\+h@{Lightstribe.\+h}}
+\paragraph[{transmit2leds(uint8\+\_\+t lightdata[])}]{\setlength{\rightskip}{0pt plus 5cm}void transmit2leds (
+\begin{DoxyParamCaption}
+\item[{uint8\+\_\+t}]{lightdata\mbox{[}$\,$\mbox{]}}
+\end{DoxyParamCaption}
+)}\label{_lightstribe_8h_aac724dad670e4a26723daf71ce6a8d8a}
+
+
+transmit the color array to the stribe 
+
+To control the L\+E\+Ds of type W\+S2811/\+W\+S2812 a critical timing is necessary. To achieve the correct timing and to create effects the lightdata is stored in an array first. All operations effect the color array. If the color array is prepared it is transmitted to the stribes via a one-\/wire protocol using this function. This function generates the high and low times using assembler N\+O\+Ps to achieve the timing. The number of N\+O\+Ps are stored in macros for transmitting a Low Bit (S\+E\+T\+L\+O\+W) or a High Bit (S\+E\+T\+H\+I\+G\+H). This function should not be changed or optimized because of the timing! 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em uint8\+\_\+t} & lightdata\mbox{[}\mbox{]} \+: data with the colors for each L\+E\+D to control \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+This function should not be changed or optimized because of the timing! Do not use higher optimization than O1!!! Do not remove the \{\} brackets because S\+E\+T\+L\+O\+W/\+S\+E\+T\+H\+I\+G\+H are definitions with several commands! 
+\end{DoxyNote}
+
+
+Definition at line \hyperlink{_lightstribe_8c_source_l00096}{96} of file \hyperlink{_lightstribe_8c_source}{Lightstribe.\+c}.
+

@@ -1,0 +1,5 @@
+var searchData=
+[
+  ['use_20ws2811_2fws2812_20leds_20with_20an_20avr',['Use WS2811/WS2812 LEDs with an AVR',['../index.html',1,'']]],
+  ['uart_5fbuffer_5fsize',['UART_BUFFER_SIZE',['../globals_8h.html#a0d57378e32bf8278011460740bc29f7f',1,'globals.h']]]
+];
