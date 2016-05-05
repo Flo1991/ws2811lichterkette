@@ -2326,7 +2326,7 @@ file = {
       define-mem-prot = public;
       define-mem-name = 'EXTERN';
       define-mem-desc-file = 'C:/Users/Commander/Documents/Atmel Studio/6.2/ws2811lichterkette/ws2811lichterkette/ws2811lichterkette.c';
-      define-mem-desc-line = '70';
+      define-mem-desc-line = '117';
       define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
 _EnD_oF_dEf_TeXt_;
@@ -2344,7 +2344,7 @@ _EnD_oF_dEf_TeXt_;
 38400
 _EnD_oF_dEf_TeXt_;
       define-mem-desc-file = 'C:/Users/Commander/Documents/Atmel Studio/6.2/ws2811lichterkette/ws2811lichterkette/ws2811lichterkette.c';
-      define-mem-desc-line = '85';
+      define-mem-desc-line = '132';
       define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 Baudrate definition, choose 76800 or 38400, faster value prefered, the maximum speed of ESP8266 software-UART is 38400.
 _EnD_oF_dEf_TeXt_;
@@ -2362,7 +2362,7 @@ _EnD_oF_dEf_TeXt_;
 F_CPU/16/BAUD -1
 _EnD_oF_dEf_TeXt_;
       define-mem-desc-file = 'C:/Users/Commander/Documents/Atmel Studio/6.2/ws2811lichterkette/ws2811lichterkette/ws2811lichterkette.c';
-      define-mem-desc-line = '87';
+      define-mem-desc-line = '134';
       define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 calculate baudrate register value
 _EnD_oF_dEf_TeXt_;
@@ -2380,7 +2380,7 @@ _EnD_oF_dEf_TeXt_;
 (F_CPU/(16*(MYUBRR+1)))		/*real baudrate in this configuration*/
 _EnD_oF_dEf_TeXt_;
       define-mem-desc-file = 'C:/Users/Commander/Documents/Atmel Studio/6.2/ws2811lichterkette/ws2811lichterkette/ws2811lichterkette.c';
-      define-mem-desc-line = '89';
+      define-mem-desc-line = '136';
       define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
 _EnD_oF_dEf_TeXt_;
@@ -2398,7 +2398,7 @@ _EnD_oF_dEf_TeXt_;
 ((BAUD_REAL*1000)/BAUD)		/*calculate baudrate error*/
 _EnD_oF_dEf_TeXt_;
       define-mem-desc-file = 'C:/Users/Commander/Documents/Atmel Studio/6.2/ws2811lichterkette/ws2811lichterkette/ws2811lichterkette.c';
-      define-mem-desc-line = '90';
+      define-mem-desc-line = '137';
       define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
 _EnD_oF_dEf_TeXt_;
@@ -2416,7 +2416,7 @@ _EnD_oF_dEf_TeXt_;
 254
 _EnD_oF_dEf_TeXt_;
       define-mem-desc-file = 'C:/Users/Commander/Documents/Atmel Studio/6.2/ws2811lichterkette/ws2811lichterkette/ws2811lichterkette.c';
-      define-mem-desc-line = '105';
+      define-mem-desc-line = '152';
       define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 definition of the preamble is 254, no other data field must contain this value
 _EnD_oF_dEf_TeXt_;
@@ -2434,7 +2434,7 @@ _EnD_oF_dEf_TeXt_;
 1
 _EnD_oF_dEf_TeXt_;
       define-mem-desc-file = 'C:/Users/Commander/Documents/Atmel Studio/6.2/ws2811lichterkette/ws2811lichterkette/ws2811lichterkette.c';
-      define-mem-desc-line = '107';
+      define-mem-desc-line = '154';
       define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 definition of the second field; contains the total packet length (including the preamble)
 _EnD_oF_dEf_TeXt_;
@@ -2452,7 +2452,7 @@ _EnD_oF_dEf_TeXt_;
 2
 _EnD_oF_dEf_TeXt_;
       define-mem-desc-file = 'C:/Users/Commander/Documents/Atmel Studio/6.2/ws2811lichterkette/ws2811lichterkette/ws2811lichterkette.c';
-      define-mem-desc-line = '109';
+      define-mem-desc-line = '156';
       define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 definition of 1 Byte effect at third position, the MSBit is used to choose WS2811/WS2812 (color profile RGB or GRB)
 _EnD_oF_dEf_TeXt_;
@@ -2470,7 +2470,7 @@ _EnD_oF_dEf_TeXt_;
 3
 _EnD_oF_dEf_TeXt_;
       define-mem-desc-file = 'C:/Users/Commander/Documents/Atmel Studio/6.2/ws2811lichterkette/ws2811lichterkette/ws2811lichterkette.c';
-      define-mem-desc-line = '111';
+      define-mem-desc-line = '158';
       define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 definition of the delay field, contains the delay duplicator
 _EnD_oF_dEf_TeXt_;
@@ -2488,7 +2488,7 @@ _EnD_oF_dEf_TeXt_;
 4
 _EnD_oF_dEf_TeXt_;
       define-mem-desc-file = 'C:/Users/Commander/Documents/Atmel Studio/6.2/ws2811lichterkette/ws2811lichterkette/ws2811lichterkette.c';
-      define-mem-desc-line = '113';
+      define-mem-desc-line = '160';
       define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 field position for the number of LEDs to control, should be max. 200 (dynamic memory allocation for the lightdata array)
 _EnD_oF_dEf_TeXt_;
@@ -2513,7 +2513,7 @@ void
 _EnD_oF_dEf_TeXt_;
       }; /*        func-mem-param--param */
       func-mem-desc-file = 'C:/Users/Commander/Documents/Atmel Studio/6.2/ws2811lichterkette/ws2811lichterkette/ws2811lichterkette.c';
-      func-mem-desc-line = '127';
+      func-mem-desc-line = '174';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 Init the hardware UART with Baud = 76800/38400, depending on @link BAUD @endlink definition, 8 Databits, 1 Stopbit, no Parity.
 _EnD_oF_dEf_TeXt_;
@@ -2538,7 +2538,7 @@ void
 _EnD_oF_dEf_TeXt_;
       }; /*        func-mem-param--param */
       func-mem-desc-file = 'C:/Users/Commander/Documents/Atmel Studio/6.2/ws2811lichterkette/ws2811lichterkette/ws2811lichterkette.c';
-      func-mem-desc-line = '142';
+      func-mem-desc-line = '189';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 main function, should never end, effects are handled in main while
 _EnD_oF_dEf_TeXt_;
@@ -2561,7 +2561,7 @@ USART_RX_vect
 _EnD_oF_dEf_TeXt_;
       }; /*        func-mem-param--param */
       func-mem-desc-file = 'C:/Users/Commander/Documents/Atmel Studio/6.2/ws2811lichterkette/ws2811lichterkette/ws2811lichterkette.c';
-      func-mem-desc-line = '269';
+      func-mem-desc-line = '316';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 UART Interrupt handler, interrupts when new data is available in the RX buffer.
 _EnD_oF_dEf_TeXt_;

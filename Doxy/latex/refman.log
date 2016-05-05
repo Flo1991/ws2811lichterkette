@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.8.25)  5 JAN 2016 21:09
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.8.25)  5 MAY 2016 13:11
 entering extended mode
 **refman
 
@@ -1050,15 +1050,34 @@ LaTeX Font Info:    Font shape `T1/phv/b/n' will be
 (Font)              scaled to size 10.79993pt on input line 1.
 LaTeX Font Info:    Font shape `T1/phv/bc/n' will be
 (Font)              scaled to size 10.79993pt on input line 1.
+
+<Ws2811_Atmega328_schematic.png, id=224, 168.8709pt x 101.178pt>
+File: Ws2811_Atmega328_schematic.png Graphic file (type png)
+
+<use Ws2811_Atmega328_schematic.png>
+Package pdftex.def Info: Ws2811_Atmega328_schematic.png used on input line 7.
+(pdftex.def)             Requested size: 455.31586pt x 272.79977pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [1]
+<WS2812.png, id=239, 803.0pt x 127.47626pt>
+File: WS2812.png Graphic file (type png)
+ <use WS2812.png>
+Package pdftex.def Info: WS2812.png used on input line 14.
+(pdftex.def)             Requested size: 455.25195pt x 72.27124pt.
 LaTeX Font Info:    Font shape `T1/phv/bc/n' will be
-(Font)              scaled to size 8.99994pt on input line 3.
-)
+(Font)              scaled to size 8.99994pt on input line 19.
+ [2 <C:/Users/Commander/Documents/Atmel Studio/6.2/ws2811lichterkette/ws2811lic
+hterkette/Doxy/latex/Ws2811_Atmega328_schematic.png> <C:/Users/Commander/Docume
+nts/Atmel Studio/6.2/ws2811lichterkette/ws2811lichterkette/Doxy/latex/WS2812.pn
+g>])
 ("C:\Users\Commander\Documents\Atmel Studio\6.2\ws2811lichterkette\ws2811lichte
 rkette\Doxy\latex\annotated.tex")
 ("C:\Users\Commander\Documents\Atmel Studio\6.2\ws2811lichterkette\ws2811lichte
 rkette\Doxy\latex\files.tex")
 ("C:\Users\Commander\Documents\Atmel Studio\6.2\ws2811lichterkette\ws2811lichte
-rkette\Doxy\latex\structcolor24bit.tex" [1]
+rkette\Doxy\latex\structcolor24bit.tex"
 LaTeX Font Info:    Try loading font information for T1+pcr on input line 10.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\t1pcr.fd"
@@ -1071,7 +1090,7 @@ File: ts1phv.fd 2001/06/04 scalable font definitions for TS1/phv.
 )
 LaTeX Font Info:    Font shape `TS1/phv/m/n' will be
 (Font)              scaled to size 8.99994pt on input line 15.
-)
+ [3])
 ("C:\Users\Commander\Documents\Atmel Studio\6.2\ws2811lichterkette\ws2811lichte
 rkette\Doxy\latex\globals_8h.tex"
 Underfull \hbox (badness 10000) in paragraph at lines 8--9
@@ -1079,38 +1098,38 @@ Underfull \hbox (badness 10000) in paragraph at lines 8--9
  []
 
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <9> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 14.
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 23.
 LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
-(Font)              scaled to size 8.09995pt on input line 14.
+(Font)              scaled to size 8.09995pt on input line 23.
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <7> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 17.
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 26.
 LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
-(Font)              scaled to size 6.29996pt on input line 17.
-[2]
-Underfull \hbox (badness 10000) detected at line 71
+(Font)              scaled to size 6.29996pt on input line 26.
+[4]
+Underfull \hbox (badness 10000) detected at line 80
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) detected at line 74
+Underfull \hbox (badness 10000) detected at line 83
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) detected at line 77
+Underfull \hbox (badness 10000) detected at line 86
 [][][]
  []
 
 )
 ("C:\Users\Commander\Documents\Atmel Studio\6.2\ws2811lichterkette\ws2811lichte
-rkette\Doxy\latex\globals_8h_source.tex" [3])
+rkette\Doxy\latex\globals_8h_source.tex" [5])
 ("C:\Users\Commander\Documents\Atmel Studio\6.2\ws2811lichterkette\ws2811lichte
 rkette\Doxy\latex\_led_effects_8c.tex"
 Underfull \hbox (badness 10000) in paragraph at lines 8--12
 
  []
 
-[4]
+[6]
 Underfull \hbox (badness 10000) detected at line 56
 [][][]
  []
@@ -1129,7 +1148,7 @@ LaTeX Font Info:    Font shape `T1/phv/bc/it' in size <10> not available
 (Font)              Font shape `T1/phv/bc/sl' tried instead on input line 79.
 LaTeX Font Info:    Font shape `T1/phv/bc/sl' will be
 (Font)              scaled to size 8.99994pt on input line 79.
-[5]
+[7]
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <10> not available
 (Font)              Font shape `T1/phv/m/sl' tried instead on input line 86.
 LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
@@ -1164,7 +1183,7 @@ Underfull \hbox (badness 10000) detected at line 146
 [][][]
  []
 
-[6]
+[8]
 Underfull \hbox (badness 10000) detected at line 172
 [][][]
  []
@@ -1194,7 +1213,7 @@ Underfull \hbox (badness 10000) detected at line 230
 [][][]
  []
 
-[7] [8]
+[9] [10]
 Underfull \hbox (badness 10000) detected at line 259
 [][][]
  []
@@ -1224,7 +1243,7 @@ Underfull \hbox (badness 10000) detected at line 320
 [][][]
  []
 
-[9]
+[11]
 Underfull \hbox (badness 10000) detected at line 349
 [][][]
  []
@@ -1248,7 +1267,7 @@ Underfull \hbox (badness 10000) detected at line 390
 [][][]
  []
 
-[10]
+[12]
 Underfull \hbox (badness 10000) detected at line 416
 [][][]
  []
@@ -1278,7 +1297,7 @@ Underfull \hbox (badness 10000) detected at line 474
 [][][]
  []
 
-[11]
+[13]
 Underfull \hbox (badness 10000) detected at line 503
 [][][]
  []
@@ -1308,7 +1327,7 @@ Underfull \hbox (badness 10000) detected at line 561
 [][][]
  []
 
-[12] [13]
+[14] [15]
 Underfull \hbox (badness 10000) detected at line 587
 [][][]
  []
@@ -1320,13 +1339,13 @@ Underfull \hbox (badness 10000) detected at line 590
 
 )
 ("C:\Users\Commander\Documents\Atmel Studio\6.2\ws2811lichterkette\ws2811lichte
-rkette\Doxy\latex\_led_effects_8c_source.tex" [14]
+rkette\Doxy\latex\_led_effects_8c_source.tex" [16]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [15]
+ [17]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [16]
+ [18]
 Overfull \hbox (19.35555pt too wide) in paragraph at lines 264--265
 []\T1/pcr/m/n/7 00406         []//Increase the color values is they are lower t
 han the chosen color value, stop if all maximums are[] 
@@ -1335,14 +1354,14 @@ han the chosen color value, stop if all maximums are[]
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [17])
+ [19])
 ("C:\Users\Commander\Documents\Atmel Studio\6.2\ws2811lichterkette\ws2811lichte
 rkette\Doxy\latex\_led_effects_8h.tex"
 Underfull \hbox (badness 10000) in paragraph at lines 8--9
 
  []
 
-[18] [19]
+[20] [21]
 Underfull \hbox (badness 10000) detected at line 92
 [][][]
  []
@@ -1367,7 +1386,7 @@ Underfull \hbox (badness 10000) detected at line 130
 [][][]
  []
 
-[20]
+[22]
 Underfull \hbox (badness 10000) detected at line 153
 [][][]
  []
@@ -1397,7 +1416,7 @@ Underfull \hbox (badness 10000) detected at line 211
 [][][]
  []
 
-[21]
+[23]
 Underfull \hbox (badness 10000) detected at line 234
 [][][]
  []
@@ -1427,7 +1446,7 @@ Underfull \hbox (badness 10000) detected at line 298
 [][][]
  []
 
-[22]
+[24]
 Underfull \hbox (badness 10000) detected at line 327
 [][][]
  []
@@ -1447,7 +1466,7 @@ Underfull \hbox (badness 10000) detected at line 356
 [][][]
  []
 
-[23]
+[25]
 Underfull \hbox (badness 10000) detected at line 385
 [][][]
  []
@@ -1477,7 +1496,7 @@ Underfull \hbox (badness 10000) detected at line 455
 [][][]
  []
 
-[24]
+[26]
 Underfull \hbox (badness 10000) detected at line 478
 [][][]
  []
@@ -1507,7 +1526,7 @@ Underfull \hbox (badness 10000) detected at line 542
 [][][]
  []
 
-[25] [26]
+[27] [28]
 Underfull \hbox (badness 10000) detected at line 565
 [][][]
  []
@@ -1539,7 +1558,7 @@ Underfull \hbox (badness 10000) detected at line 626
 
 )
 ("C:\Users\Commander\Documents\Atmel Studio\6.2\ws2811lichterkette\ws2811lichte
-rkette\Doxy\latex\_led_effects_8h_source.tex" [27]
+rkette\Doxy\latex\_led_effects_8h_source.tex" [29]
 Overfull \hbox (44.55553pt too wide) in paragraph at lines 71--72
 []      \T1/pcr/m/n/7 lightdata);         []//fill the stribe step by step unti
 l the stribe has one color, the background color is filled[] 
@@ -1552,7 +1571,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 8--11
 
  []
 
-[28]
+[30]
 Underfull \hbox (badness 10000) detected at line 25
 [][][]
  []
@@ -1577,7 +1596,7 @@ Underfull \hbox (badness 10000) detected at line 66
 [][][]
  []
 
-[29] [30]
+[31] [32]
 Underfull \hbox (badness 10000) detected at line 95
 [][][]
  []
@@ -1599,10 +1618,10 @@ Underfull \hbox (badness 10000) detected at line 124
 
 )
 ("C:\Users\Commander\Documents\Atmel Studio\6.2\ws2811lichterkette\ws2811lichte
-rkette\Doxy\latex\_lightstribe_8c_source.tex" [31]
+rkette\Doxy\latex\_lightstribe_8c_source.tex" [33]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [32])
+ [34])
 ("C:\Users\Commander\Documents\Atmel Studio\6.2\ws2811lichterkette\ws2811lichte
 rkette\Doxy\latex\_lightstribe_8h.tex"
 Underfull \hbox (badness 10000) in paragraph at lines 8--10
@@ -1610,65 +1629,65 @@ Underfull \hbox (badness 10000) in paragraph at lines 8--10
  []
 
 
-Underfull \hbox (badness 10000) detected at line 36
+Underfull \hbox (badness 10000) detected at line 29
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) detected at line 39
+Underfull \hbox (badness 10000) detected at line 32
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) detected at line 42
+Underfull \hbox (badness 10000) detected at line 35
 [][][]
  []
 
-[33]
-Underfull \hbox (badness 10000) detected at line 137
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 140
-[][][]
- []
-
-[34]
-Underfull \hbox (badness 10000) detected at line 169
+[35]
+Underfull \hbox (badness 10000) detected at line 67
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) detected at line 172
+Underfull \hbox (badness 10000) detected at line 70
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) detected at line 195
+Underfull \hbox (badness 10000) detected at line 99
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) detected at line 198
+Underfull \hbox (badness 10000) detected at line 102
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 125
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 128
 [][][]
  []
 
 )
 ("C:\Users\Commander\Documents\Atmel Studio\6.2\ws2811lichterkette\ws2811lichte
-rkette\Doxy\latex\_lightstribe_8h_source.tex" [35])
+rkette\Doxy\latex\_lightstribe_8h_source.tex" [36] [37])
 ("C:\Users\Commander\Documents\Atmel Studio\6.2\ws2811lichterkette\ws2811lichte
 rkette\Doxy\latex\ws2811lichterkette_8c.tex"
 Underfull \hbox (badness 10000) in paragraph at lines 8--17
 
  []
 
-[36]
+
 Underfull \hbox (badness 10000) in paragraph at lines 66--78
 
  []
 
-[37]
+[38]
 Underfull \hbox (badness 10000) detected at line 80
 [][][]
  []
@@ -1688,31 +1707,26 @@ Underfull \hbox (badness 10000) detected at line 107
 [][][]
  []
 
-
+[39]
 Underfull \hbox (badness 10000) detected at line 110
 [][][]
  []
 
 )
 ("C:\Users\Commander\Documents\Atmel Studio\6.2\ws2811lichterkette\ws2811lichte
-rkette\Doxy\latex\ws2811lichterkette_8c_source.tex" [38]
+rkette\Doxy\latex\ws2811lichterkette_8c_source.tex" [40]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [39]
-Overfull \hbox (15.15555pt too wide) in paragraph at lines 180--180
-[]\T1/pcr/m/n/7 00232                 []//if the number of colors is smaller th
+ [41]
+Overfull \hbox (15.15555pt too wide) in paragraph at lines 191--191
+[]\T1/pcr/m/n/7 00291                 []//if the number of colors is smaller th
 an the number of LEDs the colors are repeated using[][] 
  []
 
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [40])
-[41] [42
-
-]
+) [42]
 ("C:\Users\Commander\Documents\Atmel Studio\6.2\ws2811lichterkette\ws2811lichte
 rkette\Doxy\latex\refman.ind" [43
+
 
 ] [44
 
@@ -1725,17 +1739,17 @@ rkette\Doxy\latex\refman.aux")
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 166.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 166.
 Package rerunfilecheck Info: File `refman.out' has not changed.
-(rerunfilecheck)             Checksum: 02B961C862EB17BAEB6160183554C5D8;7222.
+(rerunfilecheck)             Checksum: B6DAAB64E96A9C200D3AF7028DA5D9FC;7639.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 166.
  ) 
 Here is how much of TeX's memory you used:
- 13321 strings out of 493921
- 196269 string characters out of 3147270
- 279943 words of memory out of 3000000
- 16046 multiletter control sequences out of 15000+200000
+ 13350 strings out of 493921
+ 196700 string characters out of 3147270
+ 282201 words of memory out of 3000000
+ 16068 multiletter control sequences out of 15000+200000
  52532 words of font info for 61 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 48i,16n,43p,2245b,526s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 48i,16n,43p,2245b,530s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Program File
 s/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX
  2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Program Files/MiKTeX 2.9/font
@@ -1746,9 +1760,9 @@ er/ucrr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvb8a.pfb>
 iles/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvbo8ac.pfb><C:/Program Files/MiKTeX 
 2.9/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type
 1/urw/helvetic/uhvro8a.pfb>
-Output written on refman.pdf (46 pages, 449367 bytes).
+Output written on refman.pdf (46 pages, 764149 bytes).
 PDF statistics:
- 1599 PDF objects out of 1728 (max. 8388607)
- 319 named destinations out of 1000 (max. 500000)
- 305 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1595 PDF objects out of 1728 (max. 8388607)
+ 324 named destinations out of 1000 (max. 500000)
+ 339 words of extra memory for PDF output out of 10000 (max. 10000000)
 

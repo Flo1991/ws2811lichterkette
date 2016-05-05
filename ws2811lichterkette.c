@@ -3,21 +3,68 @@
  * \image html tree.png
  * \section intro_sec Introduction
  * This project is about using an WS2811 or WS2812 lightstribe with an AVR controller.
- * To handle up to 250 LEDs at the same time I chose an Atmega328p because of the RAM amount. If you
+ * It is possible to handle up to 250 LEDs at the same time, so I chose an Atmega328p with enough RAM amount. If you
  * want to handle less LEDs you can use most parts of this project with every AVR. The AVR is programmed
- * to receive the configuration data over UART so you can use the LEDs with an ESP8266 or every other thing
- * that provides such an interface. You can also use an FTDI to control the LEDs.
+ * to receive the light data over UART so you can control the LEDs by using a serial interface.
+ * The interface uses a specified simple protocol which is described in \ref protocol_sec section. Everything
+ * has been developed in a university course to control the lights of a Christmas tree. In the original
+ * implementation there were some further components included. This is a simplified version of the implementation
+ * so that everyone can use it. As an example for controlling the LEDs using a smart phone the \ref esp_sec
+ * section shows how this could be done by using a webserver on the ESP8266. You can use everything else that
+ * provide a serial interface (maybe connect with a bluetooth serial module). The structure of this documentation
+ * is split in a hardware part for the AVR that describes the basic hardware that should be used. The next part
+ * is about how the software is working on the AVR that handles the LEDs and different effects. You may include
+ * some more stuff in your own. After that you can see a small protocol overview, where you find which command
+ * can be sent to the AVR to control the LEDs. Be aware that at the initialization state all LEDs are off.
+ * At the last point you can find an example how to use the implementation with an ESP8266 with a webserver.
+ * You will find the source code for the ESP8266 and the basic hardware setup.
  
- * \section hardware_sec Hardware
- \image html  Ws2811_Atmega328.png
- * \section install_sec Installation
- *
- * \subsection step1 Step 1: Opening the box
- *
- * etc...
+ \section hardware_sec Hardware
+ The basic hardware you need is a AVR controller an some WS2811 or WS2812 LEDs you want to control. The AVR
+ controller should have an hardware UART, otherwise you need to write some code for a software serial. In the project
+ we chose an Atmega328p that has enough RAM to control 250 LEDs. The internal software structure buffers the color
+ data for the LEDs to achieve an accurate timing, see section \ref software_sec. The AVR can be used with the internal
+ clock at 8 MHz, remember to clear the clock divider fuse. Otherwise an external 8 MHz or 16 MHz clock source can be used,
+ the definition \ref F_CPU must be set to the frequency you chose (remember to set the fuses for an external clock source).
+ As an example the figure \ref one shows using an external 16 MHz crystal.
+ \anchor one
+ \image html  Ws2811_Atmega328_schematic.png "schematic of the AVR to controll WS2812/WS2811"
+ \image latex  Ws2811_Atmega328_schematic.png "schematic of the AVR to controll WS2812/WS2811"
+ \image rtf  Ws2811_Atmega328_schematic.png "schematic of the AVR to controll WS2812/WS2811"
+ 
+ As you can see in the picture the AVR is programmed by using the ISP interface. The WS2812/WS2811 get the same voltage as
+ the AVR, the light data is available at PinB0, you may change this if you like. Referring to the LEDs be aware of the current
+ amount they may draw if every LED has its full brightness. One WS2812 can draw up to 60 mA, so one meter with 30 LEDs already
+ need 1,8 A. If you want to control more LEDs you may have a problem with the voltage drop along the stribe. For example
+ if you control 180 LEDs at six meters you not only need 10,8 A, furthermore you will probably have a voltage drop up to 2 V.
+ To reduce the voltage drop you must increase the wire size with parallel wires to you stribe. You can see the voltage drop if
+ you set all LEDs to white. If you have only a small voltage drop every LED will have the same color. If the voltage drop
+ is too much you can see that the last LEDs will have less blue color, so they will light in a warm white color even up to red.
+ If you want to try out the LEDs with the AVR you can build up everything on a breadboard. Pinheaders can be soldered easy at the
+ light stribes as you can see in the figure \ref two.
+ \anchor two
+ \image html   WS2812.png "WS2812 stribe with pin header"
+ \image latex   WS2812.png "WS2812 stribe with pin header"
+ \image rtf   WS2812.png "WS2812 stribe with pin header"
+ The connect GND to the common ground with the AVR, 5 V should be connected to a power supply that can handle the current you need.
+ DI is the data in line, this should be connected to PinB0 at the AVR. The stribe is like a big shifting register, all the data
+ you sent is shifted bit by bit through the stribe. So DO is the data out pin, you see some data at this pin if all LEDs before
+ had already received their color data. The one wire protocol of the LEDs is described in the \ref software_sec section.
+ 
+ \section software_sec software implementation
+ 
+
+  \section install_sec Installation
   
+  \subsection step1 Step 1: Opening the box
   
+   etc...
   
+  \section protocol_sec protocol overview
+  
+   
+  
+  \section esp_sec control via ESP8266
   
   author: Florian Wank, 2016
  */

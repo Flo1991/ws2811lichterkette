@@ -1,167 +1,161 @@
 \begin{theindex}
 
   \item {blinkled}
-    \subitem {Led\+Effects.\+c}, \hyperpage{5}
-    \subitem {Led\+Effects.\+h}, \hyperpage{20}
+    \subitem {Led\+Effects.\+c}, \hyperpage{7}
+    \subitem {Led\+Effects.\+h}, \hyperpage{22}
   \item {blue}
-    \subitem {color24bit}, \hyperpage{2}
+    \subitem {color24bit}, \hyperpage{4}
 
   \indexspace
 
   \item {changeled}
-    \subitem {Lightstribe.\+c}, \hyperpage{29}
-    \subitem {Lightstribe.\+h}, \hyperpage{34}
-  \item {color24bit}, \hyperpage{2}
-    \subitem {blue}, \hyperpage{2}
-    \subitem {green}, \hyperpage{2}
-    \subitem {red}, \hyperpage{2}
+    \subitem {Lightstribe.\+c}, \hyperpage{31}
+    \subitem {Lightstribe.\+h}, \hyperpage{35}
+  \item {color24bit}, \hyperpage{3}
+    \subitem {blue}, \hyperpage{4}
+    \subitem {green}, \hyperpage{4}
+    \subitem {red}, \hyperpage{4}
   \item {colorconv8to24}
-    \subitem {Led\+Effects.\+c}, \hyperpage{6}
-    \subitem {Led\+Effects.\+h}, \hyperpage{20}
+    \subitem {Led\+Effects.\+c}, \hyperpage{8}
+    \subitem {Led\+Effects.\+h}, \hyperpage{22}
 
   \indexspace
 
   \item {easteregg}
-    \subitem {Led\+Effects.\+c}, \hyperpage{6}
-    \subitem {Led\+Effects.\+h}, \hyperpage{21}
+    \subitem {Led\+Effects.\+c}, \hyperpage{8}
+    \subitem {Led\+Effects.\+h}, \hyperpage{23}
   \item {eastereggbase}
-    \subitem {Led\+Effects.\+c}, \hyperpage{6}
-    \subitem {Led\+Effects.\+h}, \hyperpage{21}
+    \subitem {Led\+Effects.\+c}, \hyperpage{8}
+    \subitem {Led\+Effects.\+h}, \hyperpage{23}
   \item {effectdelay}
-    \subitem {Led\+Effects.\+c}, \hyperpage{7}
-    \subitem {Led\+Effects.\+h}, \hyperpage{21}
+    \subitem {Led\+Effects.\+c}, \hyperpage{9}
+    \subitem {Led\+Effects.\+h}, \hyperpage{23}
 
   \indexspace
 
   \item {faden}
-    \subitem {Led\+Effects.\+c}, \hyperpage{7}
-    \subitem {Led\+Effects.\+h}, \hyperpage{22}
+    \subitem {Led\+Effects.\+c}, \hyperpage{9}
+    \subitem {Led\+Effects.\+h}, \hyperpage{24}
   \item {fillup}
-    \subitem {Led\+Effects.\+c}, \hyperpage{7}
-    \subitem {Led\+Effects.\+h}, \hyperpage{22}
+    \subitem {Led\+Effects.\+c}, \hyperpage{9}
+    \subitem {Led\+Effects.\+h}, \hyperpage{24}
 
   \indexspace
 
-  \item {globals.\+h}, \hyperpage{2}
+  \item {globals.\+h}, \hyperpage{4}
   \item {green}
-    \subitem {color24bit}, \hyperpage{2}
+    \subitem {color24bit}, \hyperpage{4}
 
   \indexspace
 
   \item {init\+\_\+alternating}
-    \subitem {Led\+Effects.\+c}, \hyperpage{9}
-    \subitem {Led\+Effects.\+h}, \hyperpage{22}
+    \subitem {Led\+Effects.\+c}, \hyperpage{11}
+    \subitem {Led\+Effects.\+h}, \hyperpage{24}
   \item {init\+\_\+uart}
-    \subitem {ws2811lichterkette.\+c}, \hyperpage{38}
+    \subitem {ws2811lichterkette.\+c}, \hyperpage{39}
   \item {initrainbow}
-    \subitem {Led\+Effects.\+c}, \hyperpage{9}
-    \subitem {Led\+Effects.\+h}, \hyperpage{23}
+    \subitem {Led\+Effects.\+c}, \hyperpage{11}
+    \subitem {Led\+Effects.\+h}, \hyperpage{25}
   \item {initrunled}
-    \subitem {Led\+Effects.\+c}, \hyperpage{9}
-    \subitem {Led\+Effects.\+h}, \hyperpage{23}
+    \subitem {Led\+Effects.\+c}, \hyperpage{11}
+    \subitem {Led\+Effects.\+h}, \hyperpage{25}
 
   \indexspace
 
-  \item {Led\+Effects.\+c}, \hyperpage{4}
-    \subitem {blinkled}, \hyperpage{5}
-    \subitem {colorconv8to24}, \hyperpage{6}
-    \subitem {easteregg}, \hyperpage{6}
-    \subitem {eastereggbase}, \hyperpage{6}
-    \subitem {effectdelay}, \hyperpage{7}
-    \subitem {faden}, \hyperpage{7}
-    \subitem {fillup}, \hyperpage{7}
-    \subitem {init\+\_\+alternating}, \hyperpage{9}
-    \subitem {initrainbow}, \hyperpage{9}
-    \subitem {initrunled}, \hyperpage{9}
-    \subitem {map}, \hyperpage{10}
-    \subitem {recolor}, \hyperpage{10}
-    \subitem {resetstribe}, \hyperpage{11}
-    \subitem {rotate}, \hyperpage{11}
-    \subitem {rotate\+N}, \hyperpage{11}
-    \subitem {run\+\_\+alternating}, \hyperpage{12}
-    \subitem {runrunled}, \hyperpage{12}
-    \subitem {setfullcolor}, \hyperpage{12}
-  \item {Led\+Effects.\+h}, \hyperpage{18}
-    \subitem {blinkled}, \hyperpage{20}
-    \subitem {colorconv8to24}, \hyperpage{20}
-    \subitem {easteregg}, \hyperpage{21}
-    \subitem {eastereggbase}, \hyperpage{21}
-    \subitem {effectdelay}, \hyperpage{21}
-    \subitem {faden}, \hyperpage{22}
-    \subitem {fillup}, \hyperpage{22}
-    \subitem {init\+\_\+alternating}, \hyperpage{22}
-    \subitem {initrainbow}, \hyperpage{23}
-    \subitem {initrunled}, \hyperpage{23}
-    \subitem {map}, \hyperpage{24}
-    \subitem {recolor}, \hyperpage{24}
-    \subitem {resetstribe}, \hyperpage{24}
-    \subitem {rotate}, \hyperpage{25}
-    \subitem {rotate\+N}, \hyperpage{25}
-    \subitem {run\+\_\+alternating}, \hyperpage{25}
-    \subitem {runrunled}, \hyperpage{27}
-    \subitem {setfullcolor}, \hyperpage{27}
-  \item {Lightstribe.\+c}, \hyperpage{28}
-    \subitem {changeled}, \hyperpage{29}
-    \subitem {setled}, \hyperpage{29}
-    \subitem {transmit2leds}, \hyperpage{31}
-  \item {Lightstribe.\+h}, \hyperpage{33}
-    \subitem {changeled}, \hyperpage{34}
-    \subitem {S\+E\+T\+H\+I\+G\+H}, \hyperpage{34}
-    \subitem {S\+E\+T\+L\+O\+W}, \hyperpage{34}
-    \subitem {setled}, \hyperpage{35}
-    \subitem {transmit2leds}, \hyperpage{35}
+  \item {Led\+Effects.\+c}, \hyperpage{6}
+    \subitem {blinkled}, \hyperpage{7}
+    \subitem {colorconv8to24}, \hyperpage{8}
+    \subitem {easteregg}, \hyperpage{8}
+    \subitem {eastereggbase}, \hyperpage{8}
+    \subitem {effectdelay}, \hyperpage{9}
+    \subitem {faden}, \hyperpage{9}
+    \subitem {fillup}, \hyperpage{9}
+    \subitem {init\+\_\+alternating}, \hyperpage{11}
+    \subitem {initrainbow}, \hyperpage{11}
+    \subitem {initrunled}, \hyperpage{11}
+    \subitem {map}, \hyperpage{12}
+    \subitem {recolor}, \hyperpage{12}
+    \subitem {resetstribe}, \hyperpage{13}
+    \subitem {rotate}, \hyperpage{13}
+    \subitem {rotate\+N}, \hyperpage{13}
+    \subitem {run\+\_\+alternating}, \hyperpage{14}
+    \subitem {runrunled}, \hyperpage{14}
+    \subitem {setfullcolor}, \hyperpage{14}
+  \item {Led\+Effects.\+h}, \hyperpage{20}
+    \subitem {blinkled}, \hyperpage{22}
+    \subitem {colorconv8to24}, \hyperpage{22}
+    \subitem {easteregg}, \hyperpage{23}
+    \subitem {eastereggbase}, \hyperpage{23}
+    \subitem {effectdelay}, \hyperpage{23}
+    \subitem {faden}, \hyperpage{24}
+    \subitem {fillup}, \hyperpage{24}
+    \subitem {init\+\_\+alternating}, \hyperpage{24}
+    \subitem {initrainbow}, \hyperpage{25}
+    \subitem {initrunled}, \hyperpage{25}
+    \subitem {map}, \hyperpage{26}
+    \subitem {recolor}, \hyperpage{26}
+    \subitem {resetstribe}, \hyperpage{26}
+    \subitem {rotate}, \hyperpage{27}
+    \subitem {rotate\+N}, \hyperpage{27}
+    \subitem {run\+\_\+alternating}, \hyperpage{27}
+    \subitem {runrunled}, \hyperpage{29}
+    \subitem {setfullcolor}, \hyperpage{29}
+  \item {Lightstribe.\+c}, \hyperpage{30}
+    \subitem {changeled}, \hyperpage{31}
+    \subitem {setled}, \hyperpage{31}
+    \subitem {transmit2leds}, \hyperpage{33}
+  \item {Lightstribe.\+h}, \hyperpage{35}
+    \subitem {changeled}, \hyperpage{35}
+    \subitem {setled}, \hyperpage{36}
+    \subitem {transmit2leds}, \hyperpage{36}
 
   \indexspace
 
   \item {map}
-    \subitem {Led\+Effects.\+c}, \hyperpage{10}
-    \subitem {Led\+Effects.\+h}, \hyperpage{24}
+    \subitem {Led\+Effects.\+c}, \hyperpage{12}
+    \subitem {Led\+Effects.\+h}, \hyperpage{26}
 
   \indexspace
 
   \item {recolor}
-    \subitem {Led\+Effects.\+c}, \hyperpage{10}
-    \subitem {Led\+Effects.\+h}, \hyperpage{24}
+    \subitem {Led\+Effects.\+c}, \hyperpage{12}
+    \subitem {Led\+Effects.\+h}, \hyperpage{26}
   \item {red}
-    \subitem {color24bit}, \hyperpage{2}
+    \subitem {color24bit}, \hyperpage{4}
   \item {resetstribe}
-    \subitem {Led\+Effects.\+c}, \hyperpage{11}
-    \subitem {Led\+Effects.\+h}, \hyperpage{24}
+    \subitem {Led\+Effects.\+c}, \hyperpage{13}
+    \subitem {Led\+Effects.\+h}, \hyperpage{26}
   \item {rotate}
-    \subitem {Led\+Effects.\+c}, \hyperpage{11}
-    \subitem {Led\+Effects.\+h}, \hyperpage{25}
-  \item {rotate\+N}
-    \subitem {Led\+Effects.\+c}, \hyperpage{11}
-    \subitem {Led\+Effects.\+h}, \hyperpage{25}
-  \item {run\+\_\+alternating}
-    \subitem {Led\+Effects.\+c}, \hyperpage{12}
-    \subitem {Led\+Effects.\+h}, \hyperpage{25}
-  \item {runrunled}
-    \subitem {Led\+Effects.\+c}, \hyperpage{12}
+    \subitem {Led\+Effects.\+c}, \hyperpage{13}
     \subitem {Led\+Effects.\+h}, \hyperpage{27}
+  \item {rotate\+N}
+    \subitem {Led\+Effects.\+c}, \hyperpage{13}
+    \subitem {Led\+Effects.\+h}, \hyperpage{27}
+  \item {run\+\_\+alternating}
+    \subitem {Led\+Effects.\+c}, \hyperpage{14}
+    \subitem {Led\+Effects.\+h}, \hyperpage{27}
+  \item {runrunled}
+    \subitem {Led\+Effects.\+c}, \hyperpage{14}
+    \subitem {Led\+Effects.\+h}, \hyperpage{29}
 
   \indexspace
 
-  \item {S\+E\+T\+H\+I\+G\+H}
-    \subitem {Lightstribe.\+h}, \hyperpage{34}
-  \item {S\+E\+T\+L\+O\+W}
-    \subitem {Lightstribe.\+h}, \hyperpage{34}
   \item {setfullcolor}
-    \subitem {Led\+Effects.\+c}, \hyperpage{12}
-    \subitem {Led\+Effects.\+h}, \hyperpage{27}
+    \subitem {Led\+Effects.\+c}, \hyperpage{14}
+    \subitem {Led\+Effects.\+h}, \hyperpage{29}
   \item {setled}
-    \subitem {Lightstribe.\+c}, \hyperpage{29}
-    \subitem {Lightstribe.\+h}, \hyperpage{35}
+    \subitem {Lightstribe.\+c}, \hyperpage{31}
+    \subitem {Lightstribe.\+h}, \hyperpage{36}
 
   \indexspace
 
   \item {transmit2leds}
-    \subitem {Lightstribe.\+c}, \hyperpage{31}
-    \subitem {Lightstribe.\+h}, \hyperpage{35}
+    \subitem {Lightstribe.\+c}, \hyperpage{33}
+    \subitem {Lightstribe.\+h}, \hyperpage{36}
 
   \indexspace
 
-  \item {ws2811lichterkette.\+c}, \hyperpage{36}
-    \subitem {init\+\_\+uart}, \hyperpage{38}
+  \item {ws2811lichterkette.\+c}, \hyperpage{38}
+    \subitem {init\+\_\+uart}, \hyperpage{39}
 
 \end{theindex}

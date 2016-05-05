@@ -4,9 +4,12 @@ var NAVTREE =
     [ "Use WS2811/WS2812 LEDs with an AVR", "index.html", [
       [ "Introduction", "index.html#intro_sec", null ],
       [ "Hardware", "index.html#hardware_sec", null ],
+      [ "software implementation", "index.html#software_sec", null ],
       [ "Installation", "index.html#install_sec", [
         [ "Step 1: Opening the box", "index.html#step1", null ]
-      ] ]
+      ] ],
+      [ "protocol overview", "index.html#protocol_sec", null ],
+      [ "control via ESP8266", "index.html#esp_sec", null ]
     ] ],
     [ "Data Structures", "annotated.html", [
       [ "Data Structures", "annotated.html", "annotated_dup" ],
