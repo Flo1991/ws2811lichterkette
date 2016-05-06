@@ -1,0 +1,545 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="ws2811lichterkette_8c" kind="file" language="C++">
+    <compoundname>ws2811lichterkette.c</compoundname>
+    <includes refid="globals_8h" local="yes">globals.h</includes>
+    <includes local="no">avr/io.h</includes>
+    <includes local="no">util/delay.h</includes>
+    <includes local="no">avr/interrupt.h</includes>
+    <includes local="no">stdio.h</includes>
+    <includes local="no">stdlib.h</includes>
+    <includes local="no">string.h</includes>
+    <includes refid="_lightstribe_8h" local="yes">Lightstribe.h</includes>
+    <includes refid="_led_effects_8h" local="yes">LedEffects.h</includes>
+    <incdepgraph>
+      <node id="42">
+        <label>Lightstribe.h</label>
+        <link refid="_lightstribe_8h"/>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+      </node>
+      <node id="34">
+        <label>globals.h</label>
+        <link refid="globals_8h"/>
+        <childnode refid="35" relation="include">
+        </childnode>
+      </node>
+      <node id="35">
+        <label>stdint.h</label>
+      </node>
+      <node id="38">
+        <label>avr/interrupt.h</label>
+      </node>
+      <node id="40">
+        <label>stdlib.h</label>
+      </node>
+      <node id="36">
+        <label>avr/io.h</label>
+      </node>
+      <node id="37">
+        <label>util/delay.h</label>
+      </node>
+      <node id="41">
+        <label>string.h</label>
+      </node>
+      <node id="33">
+        <label>ws2811lichterkette.c</label>
+        <link refid="ws2811lichterkette.c"/>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+        <childnode refid="43" relation="include">
+        </childnode>
+      </node>
+      <node id="43">
+        <label>LedEffects.h</label>
+        <link refid="_led_effects_8h"/>
+        <childnode refid="35" relation="include">
+        </childnode>
+      </node>
+      <node id="39">
+        <label>stdio.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="ws2811lichterkette_8c_1a77366c1bd428629dc898e188bfd182a3" prot="public" static="no">
+        <name>EXTERN</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ws2811lichterkette.c" line="172" column="9" bodyfile="ws2811lichterkette.c" bodystart="172" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ws2811lichterkette_8c_1a62634036639f88eece6fbf226b45f84b" prot="public" static="no">
+        <name>BAUD</name>
+        <initializer>38400</initializer>
+        <briefdescription>
+<para>Baudrate definition, choose 76800 or 38400, faster value preferred, the maximum speed of ESP8266 software-UART is 38400. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ws2811lichterkette.c" line="187" column="9" bodyfile="ws2811lichterkette.c" bodystart="187" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ws2811lichterkette_8c_1a711e9130c825a7269c8c87dbb57a85e0" prot="public" static="no">
+        <name>MYUBRR</name>
+        <initializer><ref refid="globals_8h_1a43bafb28b29491ec7f871319b5a3b2f8" kindref="member">F_CPU</ref>/16/<ref refid="ws2811lichterkette_8c_1a62634036639f88eece6fbf226b45f84b" kindref="member">BAUD</ref> -1</initializer>
+        <briefdescription>
+<para>calculate baudrate register value </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ws2811lichterkette.c" line="189" column="9" bodyfile="ws2811lichterkette.c" bodystart="189" bodyend="-1"/>
+        <referencedby refid="ws2811lichterkette_8c_1ac7b3df0fa68526d64c732d5f916e34b1" compoundref="ws2811lichterkette_8c" startline="229" endline="241">init_uart</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="ws2811lichterkette_8c_1a0efa6385d653e699e90640b35a0c2b54" prot="public" static="no">
+        <name>BAUD_REAL</name>
+        <initializer>(<ref refid="globals_8h_1a43bafb28b29491ec7f871319b5a3b2f8" kindref="member">F_CPU</ref>/(16*(<ref refid="ws2811lichterkette_8c_1a711e9130c825a7269c8c87dbb57a85e0" kindref="member">MYUBRR</ref>+1)))		/*real baudrate in this configuration*/</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ws2811lichterkette.c" line="191" column="9" bodyfile="ws2811lichterkette.c" bodystart="191" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ws2811lichterkette_8c_1ac46ef58ff714ed839a5a324c358f2c8f" prot="public" static="no">
+        <name>BAUD_ERROR</name>
+        <initializer>((BAUD_REAL*1000)/<ref refid="ws2811lichterkette_8c_1a62634036639f88eece6fbf226b45f84b" kindref="member">BAUD</ref>)		/*calculate baudrate error*/</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ws2811lichterkette.c" line="192" column="9" bodyfile="ws2811lichterkette.c" bodystart="192" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ws2811lichterkette_8c_1a8aac8c5098aaf915463fb31715efa09f" prot="public" static="no">
+        <name>PREAMBLE</name>
+        <initializer>254</initializer>
+        <briefdescription>
+<para>definition of the preamble is 254, no other data field must contain this value </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ws2811lichterkette.c" line="207" column="9" bodyfile="ws2811lichterkette.c" bodystart="207" bodyend="-1"/>
+        <referencedby refid="ws2811lichterkette_8c_1a09ce999e15ad60b8a3f07d08af1946f9" compoundref="ws2811lichterkette_8c" startline="371" endline="393">ISR</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="ws2811lichterkette_8c_1aec9ae4a8d59e838ac8ed93ad0de8e827" prot="public" static="no">
+        <name>LENINDEX</name>
+        <initializer>1</initializer>
+        <briefdescription>
+<para>definition of the second field; contains the total packet length (including the preamble) </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ws2811lichterkette.c" line="209" column="9" bodyfile="ws2811lichterkette.c" bodystart="209" bodyend="-1"/>
+        <referencedby refid="ws2811lichterkette_8c_1a09ce999e15ad60b8a3f07d08af1946f9" compoundref="ws2811lichterkette_8c" startline="371" endline="393">ISR</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="ws2811lichterkette_8c_1a8d4e4cf47dd6136ace963623e1a8e27c" prot="public" static="no">
+        <name>EFFECTINDEX</name>
+        <initializer>2</initializer>
+        <briefdescription>
+<para>definition of 1 Byte effect at third position, the MSBit is used to choose WS2811/WS2812 (color profile RGB or GRB) </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ws2811lichterkette.c" line="211" column="9" bodyfile="ws2811lichterkette.c" bodystart="211" bodyend="-1"/>
+        <referencedby refid="ws2811lichterkette_8c_1a840291bc02cba5474a4cb46a9b9566fe" compoundref="ws2811lichterkette_8c" startline="244" endline="367">main</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="ws2811lichterkette_8c_1a9ff437877d0878dd16eacf103a1e1c40" prot="public" static="no">
+        <name>DELAYINDEX</name>
+        <initializer>3</initializer>
+        <briefdescription>
+<para>definition of the delay field, contains the delay duplicator </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ws2811lichterkette.c" line="213" column="9" bodyfile="ws2811lichterkette.c" bodystart="213" bodyend="-1"/>
+        <referencedby refid="ws2811lichterkette_8c_1a840291bc02cba5474a4cb46a9b9566fe" compoundref="ws2811lichterkette_8c" startline="244" endline="367">main</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="ws2811lichterkette_8c_1afbc75dc20761a05dda7cbb70b9b322dd" prot="public" static="no">
+        <name>NUMOFLEDINDEX</name>
+        <initializer>4</initializer>
+        <briefdescription>
+<para>field position for the number of LEDs to control, should be max. 200 (dynamic memory allocation for the lightdata array) </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ws2811lichterkette.c" line="215" column="9" bodyfile="ws2811lichterkette.c" bodystart="215" bodyend="-1"/>
+        <referencedby refid="ws2811lichterkette_8c_1a840291bc02cba5474a4cb46a9b9566fe" compoundref="ws2811lichterkette_8c" startline="244" endline="367">main</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="ws2811lichterkette_8c_1ac7b3df0fa68526d64c732d5f916e34b1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void init_uart</definition>
+        <argsstring>(void)</argsstring>
+        <name>init_uart</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Init the hardware UART with Baud = 76800/38400, depending on <ref refid="ws2811lichterkette_8c_1a62634036639f88eece6fbf226b45f84b" kindref="member">BAUD</ref> definition, 8 Databits, 1 Stopbit, no Parity. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>void </para></simplesect>
+<simplesect kind="note"><para>This function depends on the oscillator clock frequency and the <ref refid="ws2811lichterkette_8c_1a62634036639f88eece6fbf226b45f84b" kindref="member">BAUD</ref> defintion. If your UART is not working first check all frequency issues (Fuse settings, clock speed, clock divider, Baudrate) </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ws2811lichterkette.c" line="229" column="1" bodyfile="ws2811lichterkette.c" bodystart="229" bodyend="241"/>
+        <references refid="ws2811lichterkette_8c_1a711e9130c825a7269c8c87dbb57a85e0" compoundref="ws2811lichterkette_8c" startline="189">MYUBRR</references>
+        <referencedby refid="ws2811lichterkette_8c_1a840291bc02cba5474a4cb46a9b9566fe" compoundref="ws2811lichterkette_8c" startline="244" endline="367">main</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="ws2811lichterkette_8c_1a840291bc02cba5474a4cb46a9b9566fe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int main</definition>
+        <argsstring>(void)</argsstring>
+        <name>main</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>main function, should never end, effects are handled in main while </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ws2811lichterkette.c" line="244" column="1" bodyfile="ws2811lichterkette.c" bodystart="244" bodyend="367"/>
+        <references refid="globals_8h_1a0d57378e32bf8278011460740bc29f7f" compoundref="globals_8h" startline="37">UART_BUFFER_SIZE</references>
+        <references refid="globals_8h_1ad5db4045aed262ed4aae2af9d81fab98" compoundref="globals_8h" startline="25">NumOfLeds</references>
+        <references refid="globals_8h_1a1b09d1a5bcf4c8ab435bb3c9e36def59" compoundref="globals_8h" startline="53">PacketComplete</references>
+        <references refid="globals_8h_1a922ad5baed647eca43ad1a979e162ebd" compoundref="globals_8h" startline="57">IsReading</references>
+        <references refid="globals_8h_1aaa3bddd2273257ac5ec259197b62e984" compoundref="globals_8h" startline="55">PaketStart</references>
+        <references refid="globals_8h_1aa6fcb4d4fca4554ac73bef10668c23cd" compoundref="globals_8h" startline="44">BufferCounter</references>
+        <references refid="globals_8h_1a5d735865707e6694a8173d629e0b4d5c" compoundref="globals_8h" startline="42">RecBuffer</references>
+        <references refid="globals_8h_1a722e1eb38b661d1338ada3cc7a4049a0" compoundref="globals_8h" startline="29">ledtype</references>
+        <references refid="globals_8h_1af07a5ce170c7be13d096843960e7b9da" compoundref="globals_8h" startline="31">BASELEDTYPE</references>
+        <references refid="globals_8h_1ab5490074aaca289e986e9a00e0c25663" compoundref="globals_8h" startline="59">ReceivedChar</references>
+        <references refid="globals_8h_1ac2445d316b2972d381edeac44bb6a226" compoundref="globals_8h" startline="27">effectime</references>
+        <references refid="globals_8h_1a053b8e1f039c19251b90d60317db8aed" compoundref="globals_8h" startline="48">effect</references>
+        <references refid="ws2811lichterkette_8c_1ac7b3df0fa68526d64c732d5f916e34b1" compoundref="ws2811lichterkette_8c" startline="229" endline="241">init_uart</references>
+        <references refid="globals_8h_1aaa611e00c18e950be43a4cd5ce0ceeb1" compoundref="globals_8h" startline="46">DataLen</references>
+        <references refid="ws2811lichterkette_8c_1a8d4e4cf47dd6136ace963623e1a8e27c" compoundref="ws2811lichterkette_8c" startline="211">EFFECTINDEX</references>
+        <references refid="ws2811lichterkette_8c_1a9ff437877d0878dd16eacf103a1e1c40" compoundref="ws2811lichterkette_8c" startline="213">DELAYINDEX</references>
+        <references refid="ws2811lichterkette_8c_1afbc75dc20761a05dda7cbb70b9b322dd" compoundref="ws2811lichterkette_8c" startline="215">NUMOFLEDINDEX</references>
+        <references refid="globals_8h_1a159854edb9d0c7283013495d85bdf997" compoundref="globals_8h" startline="40">CompColorArray</references>
+        <references refid="_led_effects_8h_1a996334f1d53296a931624800377d5b01" compoundref="_led_effects_8h" startline="16">SETFULLCOLOR</references>
+        <references refid="_led_effects_8c_1a2d54d1a6c61fe667b7c68ff04a11c503" compoundref="_led_effects_8c" startline="96" endline="111">setfullcolor</references>
+        <references refid="_led_effects_8c_1a55291315ab0f2ca8d508f0e9da1920a7" compoundref="_led_effects_8c" startline="45" endline="65">colorconv8to24</references>
+        <references refid="_lightstribe_8c_1aac724dad670e4a26723daf71ce6a8d8a" compoundref="_lightstribe_8c" startline="96" endline="170">transmit2leds</references>
+        <references refid="_led_effects_8h_1a2f349ea8f5412514d90f138ede08da62" compoundref="_led_effects_8h" startline="18">FILLUP</references>
+        <references refid="_led_effects_8c_1a99174e2b381d7ec6667d29352e6eca1b" compoundref="_led_effects_8c" startline="549" endline="568">fillup</references>
+        <references refid="_led_effects_8h_1a38eec52a7dccb94ff563e30eda32c891" compoundref="_led_effects_8h" startline="20">BLINK</references>
+        <references refid="_led_effects_8c_1a9fd87d01d5cc4ce5fce6ddca55ebaf37" compoundref="_led_effects_8c" startline="278" endline="288">blinkled</references>
+        <references refid="_led_effects_8h_1ab6e06c8b4c17edc65d75be641a0fc39b" compoundref="_led_effects_8h" startline="22">RUNLED</references>
+        <references refid="_led_effects_8c_1aecba07ab559ab94e6f44c16e39012d80" compoundref="_led_effects_8c" startline="217" endline="221">initrunled</references>
+        <references refid="_led_effects_8c_1a35cfbfc36c975f98a7779a37b6ff63ce" compoundref="_led_effects_8c" startline="236" endline="267">runrunled</references>
+        <references refid="_led_effects_8h_1ac7190c598c8618207180d135c0650dac" compoundref="_led_effects_8h" startline="24">ALTERNATE</references>
+        <references refid="_led_effects_8c_1af67b7638a175e4971f25df5a5db3d8d0" compoundref="_led_effects_8c" startline="300" endline="311">init_alternating</references>
+        <references refid="_led_effects_8c_1a5bde1e9e7fc19a9916f1ec02d8fbcd6c" compoundref="_led_effects_8c" startline="323" endline="328">run_alternating</references>
+        <references refid="_led_effects_8h_1a6b71fe4d23960c3701fc935a3368a6cc" compoundref="_led_effects_8h" startline="26">RECOLOR</references>
+        <references refid="_led_effects_8c_1a448758d76f47ea6fed4beb349196363f" compoundref="_led_effects_8c" startline="340" endline="351">recolor</references>
+        <references refid="_led_effects_8h_1ad8150289b0e08f01126500379852a2a7" compoundref="_led_effects_8h" startline="28">FADE</references>
+        <references refid="_led_effects_8c_1a71d3b2ff21a63b48a01461e74be0c2b8" compoundref="_led_effects_8c" startline="366" endline="428">faden</references>
+        <references refid="_led_effects_8h_1a2805176df86592658ae06a508a558720" compoundref="_led_effects_8h" startline="30">INITRAINBOW</references>
+        <references refid="_led_effects_8c_1a9d0f91360c87b851925bf05be5352435" compoundref="_led_effects_8c" startline="442" endline="481">initrainbow</references>
+        <references refid="_led_effects_8h_1a85bd242525add173bd67847b7acac00b" compoundref="_led_effects_8h" startline="32">ROTATE_R</references>
+        <references refid="_led_effects_8c_1afd64325b08e785d37b4dfaf358e517f0" compoundref="_led_effects_8c" startline="138" endline="182">rotate</references>
+        <references refid="_led_effects_8c_1a6950e7657ba74d0d490ba36427533c4b" compoundref="_led_effects_8c" startline="72" endline="88">effectdelay</references>
+        <references refid="_led_effects_8h_1a4a0c329f45825186172aee0c62531423" compoundref="_led_effects_8h" startline="34">ROTATE_L</references>
+        <references refid="_led_effects_8h_1a686dea444026cbf1236c24e7edb3a96d" compoundref="_led_effects_8h" startline="36">CUSTOM</references>
+        <references refid="_lightstribe_8c_1a63fa595d401f0e85c1bba55ba2b1d66e" compoundref="_lightstribe_8c" startline="33" endline="41">changeled</references>
+        <references refid="_led_effects_8h_1a5645ec20d3cd39bfc1c9ad5ec99db2f2" compoundref="_led_effects_8h" startline="38">EASTEREGG</references>
+        <references refid="_led_effects_8c_1a25e09bcb1481b20ebc2a27e7098b5115" compoundref="_led_effects_8c" startline="514" endline="534">easteregg</references>
+      </memberdef>
+      <memberdef kind="function" id="ws2811lichterkette_8c_1a09ce999e15ad60b8a3f07d08af1946f9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ISR</definition>
+        <argsstring>(USART_RX_vect)</argsstring>
+        <name>ISR</name>
+        <param>
+          <type>USART_RX_vect</type>
+        </param>
+        <briefdescription>
+<para>UART Interrupt handler, interrupts when new data is available in the RX buffer. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ws2811lichterkette.c" line="371" column="1" bodyfile="ws2811lichterkette.c" bodystart="371" bodyend="393"/>
+        <references refid="globals_8h_1ab5490074aaca289e986e9a00e0c25663" compoundref="globals_8h" startline="59">ReceivedChar</references>
+        <references refid="ws2811lichterkette_8c_1a8aac8c5098aaf915463fb31715efa09f" compoundref="ws2811lichterkette_8c" startline="207">PREAMBLE</references>
+        <references refid="globals_8h_1a922ad5baed647eca43ad1a979e162ebd" compoundref="globals_8h" startline="57">IsReading</references>
+        <references refid="globals_8h_1a1b09d1a5bcf4c8ab435bb3c9e36def59" compoundref="globals_8h" startline="53">PacketComplete</references>
+        <references refid="globals_8h_1aaa3bddd2273257ac5ec259197b62e984" compoundref="globals_8h" startline="55">PaketStart</references>
+        <references refid="globals_8h_1a5d735865707e6694a8173d629e0b4d5c" compoundref="globals_8h" startline="42">RecBuffer</references>
+        <references refid="globals_8h_1a0d57378e32bf8278011460740bc29f7f" compoundref="globals_8h" startline="37">UART_BUFFER_SIZE</references>
+        <references refid="globals_8h_1aa6fcb4d4fca4554ac73bef10668c23cd" compoundref="globals_8h" startline="44">BufferCounter</references>
+        <references refid="globals_8h_1aaa611e00c18e950be43a4cd5ce0ceeb1" compoundref="globals_8h" startline="46">DataLen</references>
+        <references refid="ws2811lichterkette_8c_1aec9ae4a8d59e838ac8ed93ad0de8e827" compoundref="ws2811lichterkette_8c" startline="209">LENINDEX</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>main file for interfacing WS2811/WS2812 LEDs </para>    </briefdescription>
+    <detaileddescription>
+<para>This file contains the main environment for interfacing WS2811/WS2812 LEDs with an AVR. The implementation has been done for an atmega328p. You may use another controller but be aware of the memory you need for the color array (dynamically allocated). The AVR interfaces the one wire of the LEDs. All operations (effects, colorchange etc.) are done on an lightdata array, that needs to be transmitted to the LEDs after your operations. The reason for this is the critical timing for interfacing the LEDs. So also be aware if you change the clock speed. If you do so you have to change the number of NOPs in the macros of <ref refid="_lightstribe_8h" kindref="compound">Lightstribe.h</ref>. Because of the critical timing compile all files at optimization O1! Furthermore be aware of the <ref refid="ws2811lichterkette_8c_1a62634036639f88eece6fbf226b45f84b" kindref="member">BAUDRATE </ref> changes, the BAUD error may be to worse if you change the CPU frequency. <linebreak/>
+ The one wire output is on the PIN B0! You can change in the main and <ref refid="_lightstribe_8h" kindref="compound">Lightstribe.h</ref>. <linebreak/>
+ By default this file just initializes the AVR system, no updates to the LEDs are done by default. To change the LED configuration you need to access the AVR UART Interface with another controller (FTDI is also possible). Over the UART you send a message containing all relevant information for the system. Therefore a simple protocol is used: 1 Byte preamble (254) 1 Byte total packet length (including the preamble) 1 Byte effect 1 Byte effect delay (effect speed) 1 Byte number of LEDs to control n Bytes containing 8-Bit color values (RGB 3-3-2), depended on the effect, max. 50 values The preamble 254 must never be used at another position!!!<linebreak/>
+ Protocol examples:<linebreak/>
+ <ref refid="_led_effects_8h_1a996334f1d53296a931624800377d5b01" kindref="member">SETFULLCOLOR</ref>: 254 6 0 1 20 22 <linebreak/>
+ <ref refid="_led_effects_8h_1a2f349ea8f5412514d90f138ede08da62" kindref="member">FILLUP</ref>: 254 7 1 22 20 22 201 <linebreak/>
+ <ref refid="_led_effects_8h_1a38eec52a7dccb94ff563e30eda32c891" kindref="member">BLINK</ref>: 254 6 2 55 20 56 <linebreak/>
+ <ref refid="_led_effects_8h_1ab6e06c8b4c17edc65d75be641a0fc39b" kindref="member">RUNLED</ref>: 254 7 3 55 20 56 151 <linebreak/>
+ <ref refid="_led_effects_8h_1a2805176df86592658ae06a508a558720" kindref="member">INITRAINBOW</ref>: 254 5 9 0 20 <linebreak/>
+ <ref refid="_led_effects_8h_1a85bd242525add173bd67847b7acac00b" kindref="member">ROTATE_R</ref>: 254 5 11 23 20 <linebreak/>
+ <ref refid="_led_effects_8h_1a686dea444026cbf1236c24e7edb3a96d" kindref="member">CUSTOM</ref>: 254 8 12 1 20 22 201 60 <linebreak/>
+ <ref refid="_led_effects_8h_1a5645ec20d3cd39bfc1c9ad5ec99db2f2" kindref="member">EASTEREGG</ref>: 254 5 13 2 20 <linebreak/>
+</para><para>The UART communication is done by using an RX interrupt an storing the data into a temp array. In the main loop a flag shows if a data packet is complete. So you will get no update on the LEDs if the UART package was wrong (too short). In the project this programm has been written the UART was controlled by an ESP8266 or BLE113. Have Fun! <simplesect kind="version"><para>V1.00 </para></simplesect>
+<simplesect kind="date"><para>05.01.2016 </para></simplesect>
+<simplesect kind="authors"><para>Wank Florian </para></simplesect>
+</para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="126"><highlight class="comment">/**************************************************************************/</highlight></codeline>
+<codeline lineno="171"><highlight class="comment">//define<sp/>global<sp/>variables</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="172"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EXTERN</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="173"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="globals_8h" kindref="compound">globals.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="174"><highlight class="normal"></highlight></codeline>
+<codeline lineno="175"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;avr/io.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="176"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;util/delay.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="177"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;avr/interrupt.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="178"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdio.h&gt;</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="179"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdlib.h&gt;</highlight><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="180"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="181"><highlight class="normal"></highlight></codeline>
+<codeline lineno="182"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_lightstribe_8h" kindref="compound">Lightstribe.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="183"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_led_effects_8h" kindref="compound">LedEffects.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="184"><highlight class="normal"></highlight></codeline>
+<codeline lineno="185"><highlight class="normal"></highlight><highlight class="comment">//UART<sp/>basic<sp/>definitions</highlight></codeline>
+<codeline lineno="187" refid="ws2811lichterkette_8c_1a62634036639f88eece6fbf226b45f84b" refkind="member"><highlight class="comment"></highlight><highlight class="preprocessor">#define<sp/>BAUD<sp/>38400<sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="188"><highlight class="normal"></highlight></codeline>
+<codeline lineno="189" refid="ws2811lichterkette_8c_1a711e9130c825a7269c8c87dbb57a85e0" refkind="member"><highlight class="preprocessor">#define<sp/>MYUBRR<sp/>F_CPU/16/BAUD<sp/>-1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="190"><highlight class="normal"></highlight></codeline>
+<codeline lineno="191"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BAUD_REAL<sp/>(F_CPU/(16*(MYUBRR+1)))<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*real<sp/>baudrate<sp/>in<sp/>this<sp/>configuration*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="192"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BAUD_ERROR<sp/>((BAUD_REAL*1000)/BAUD)<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*calculate<sp/>baudrate<sp/>error*/</highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="193"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>((BAUD_ERROR&lt;990)<sp/>||<sp/>(BAUD_ERROR&gt;1010))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="194"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>baudrate<sp/>error<sp/>greater<sp/>1%<sp/>!<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*show<sp/>an<sp/>error<sp/>message<sp/>if<sp/>the<sp/>baudrate<sp/>error<sp/>is<sp/>greater<sp/>than<sp/>1%*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="195"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="196"><highlight class="normal"></highlight></codeline>
+<codeline lineno="197"><highlight class="normal"></highlight><highlight class="comment">//Protocol<sp/>definition<sp/>for<sp/>UART<sp/>communication</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="198"><highlight class="normal"></highlight><highlight class="comment">//The<sp/>protocol<sp/>is<sp/>defined<sp/>as:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="199"><highlight class="normal"></highlight><highlight class="comment">//1<sp/>Byte<sp/>preamble<sp/>(254)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="200"><highlight class="normal"></highlight><highlight class="comment">//1<sp/>Byte<sp/>total<sp/>packet<sp/>length<sp/>(including<sp/>the<sp/>preamble)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="201"><highlight class="normal"></highlight><highlight class="comment">//1<sp/>Byte<sp/>effect</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="202"><highlight class="normal"></highlight><highlight class="comment">//1<sp/>Byte<sp/>effect<sp/>delay<sp/>(effect<sp/>speed)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="203"><highlight class="normal"></highlight><highlight class="comment">//1<sp/>Byte<sp/>number<sp/>of<sp/>LEDs<sp/>to<sp/>control</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="204"><highlight class="normal"></highlight><highlight class="comment">//n<sp/>Bytes<sp/>containing<sp/>8-Bit<sp/>color<sp/>values<sp/>(RGB<sp/>3-3-2),<sp/>depended<sp/>on<sp/>the<sp/>effect,<sp/>max.<sp/>50<sp/>values</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="205"><highlight class="normal"></highlight></codeline>
+<codeline lineno="207" refid="ws2811lichterkette_8c_1a8aac8c5098aaf915463fb31715efa09f" refkind="member"><highlight class="preprocessor">#define<sp/>PREAMBLE<sp/>254<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="208"><highlight class="normal"></highlight></codeline>
+<codeline lineno="209" refid="ws2811lichterkette_8c_1aec9ae4a8d59e838ac8ed93ad0de8e827" refkind="member"><highlight class="preprocessor">#define<sp/>LENINDEX<sp/>1<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="210"><highlight class="normal"></highlight></codeline>
+<codeline lineno="211" refid="ws2811lichterkette_8c_1a8d4e4cf47dd6136ace963623e1a8e27c" refkind="member"><highlight class="preprocessor">#define<sp/>EFFECTINDEX<sp/>2<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="212"><highlight class="normal"></highlight></codeline>
+<codeline lineno="213" refid="ws2811lichterkette_8c_1a9ff437877d0878dd16eacf103a1e1c40" refkind="member"><highlight class="preprocessor">#define<sp/>DELAYINDEX<sp/>3<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="214"><highlight class="normal"></highlight></codeline>
+<codeline lineno="215" refid="ws2811lichterkette_8c_1afbc75dc20761a05dda7cbb70b9b322dd" refkind="member"><highlight class="preprocessor">#define<sp/>NUMOFLEDINDEX<sp/>4<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="216"><highlight class="normal"></highlight></codeline>
+<codeline lineno="217"><highlight class="normal"></highlight></codeline>
+<codeline lineno="218"><highlight class="normal"></highlight><highlight class="comment">//compiling<sp/>info<sp/>output</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="219"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>message(&quot;MYUBRR:<sp/>&quot;<sp/>_STR(MYUBRR))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="220"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>message(&quot;CPU<sp/>Frequency:<sp/>&quot;<sp/>_STR(F_CPU)<sp/>&quot;Hz&quot;)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="221"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>message(&quot;Baudrate:<sp/>&quot;<sp/>_STR(BAUD))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="222"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>message(&quot;Configuration:<sp/>MAXNUMCOLORS=&quot;<sp/>_STR(MAXNUMCOLORS)<sp/><sp/>&quot;<sp/>|<sp/>UART_BUFFER_SIZE=&quot;<sp/>_STR(UART_BUFFER_SIZE)<sp/>&quot;<sp/>|<sp/>PREAMBLE=&quot;<sp/>_STR(PREAMBLE))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="223"><highlight class="normal"></highlight></codeline>
+<codeline lineno="229" refid="ws2811lichterkette_8c_1ac7b3df0fa68526d64c732d5f916e34b1" refkind="member"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="ws2811lichterkette_8c_1ac7b3df0fa68526d64c732d5f916e34b1" kindref="member">init_uart</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="230"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/><sp/><sp/>DDRD<sp/>|=<sp/>_BV(PD1);</highlight></codeline>
+<codeline lineno="232"><highlight class="normal"><sp/><sp/><sp/><sp/>DDRD<sp/>&amp;=<sp/>~_BV(PD0);</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="234"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Set<sp/>BAUD</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>UBRR0H<sp/>=<sp/>((<ref refid="ws2811lichterkette_8c_1a711e9130c825a7269c8c87dbb57a85e0" kindref="member">MYUBRR</ref>)<sp/>&gt;&gt;<sp/>8);</highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>UBRR0L<sp/>=<sp/><ref refid="ws2811lichterkette_8c_1a711e9130c825a7269c8c87dbb57a85e0" kindref="member">MYUBRR</ref>;</highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="238"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>UCSR0B<sp/>|=<sp/>(1<sp/>&lt;&lt;<sp/>RXEN0)<sp/>;</highlight><highlight class="comment">//|<sp/>(1<sp/>&lt;&lt;<sp/>TXEN0);<sp/><sp/><sp/><sp/><sp/><sp/>//<sp/>Enable<sp/>receiver<sp/>(and<sp/>transmitter;<sp/>commited<sp/>out)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>UCSR0B<sp/>|=<sp/>(1<sp/>&lt;&lt;<sp/>RXCIE0);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Enable<sp/>the<sp/>receiver<sp/>interrupt</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="240"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>UCSR0C<sp/>|=<sp/>(1<sp/>&lt;&lt;<sp/>UCSZ01)<sp/>|<sp/>(1<sp/>&lt;&lt;<sp/>UCSZ00);<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>8<sp/>data<sp/>Bit,<sp/>one<sp/>stop<sp/>Bit</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="241"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="242"><highlight class="normal"></highlight></codeline>
+<codeline lineno="244" refid="ws2811lichterkette_8c_1a840291bc02cba5474a4cb46a9b9566fe" refkind="member"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="ws2811lichterkette_8c_1a840291bc02cba5474a4cb46a9b9566fe" kindref="member">main</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="245"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="246"><highlight class="normal"><sp/><sp/><sp/><sp/>uint16_t<sp/>i,j;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//helper<sp/>variables<sp/>(counters)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="247"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>TempBuffer[<ref refid="globals_8h_1a0d57378e32bf8278011460740bc29f7f" kindref="member">UART_BUFFER_SIZE</ref>];<sp/><sp/><sp/></highlight><highlight class="comment">//Temp.<sp/>buffer<sp/>for<sp/>copy<sp/>of<sp/>the<sp/>UART<sp/>data<sp/>to<sp/>achieve<sp/>data<sp/>consistency<sp/><sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="248"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>*lightdata;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//lightdata<sp/>pointer<sp/>for<sp/>lightdata<sp/>array;<sp/>the<sp/>array<sp/>size<sp/>is<sp/>dynamic<sp/>to<sp/>controll<sp/>different<sp/>numbers<sp/>of<sp/>LEDs</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="249"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="250"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="globals_8h_1ad5db4045aed262ed4aae2af9d81fab98" kindref="member">NumOfLeds</ref>=50;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//default<sp/>number<sp/>of<sp/>LEDs<sp/>is<sp/>50<sp/>=&gt;<sp/>one<sp/>stribe</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="251"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Flag<sp/>initializations</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="252"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="globals_8h_1a1b09d1a5bcf4c8ab435bb3c9e36def59" kindref="member">PacketComplete</ref>=0;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="253"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="globals_8h_1a922ad5baed647eca43ad1a979e162ebd" kindref="member">IsReading</ref>=0;</highlight></codeline>
+<codeline lineno="254"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="globals_8h_1aaa3bddd2273257ac5ec259197b62e984" kindref="member">PaketStart</ref>=0;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="255"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="globals_8h_1aa6fcb4d4fca4554ac73bef10668c23cd" kindref="member">BufferCounter</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="256"><highlight class="normal"></highlight></codeline>
+<codeline lineno="257"><highlight class="normal"><sp/><sp/><sp/><sp/>memset(<ref refid="globals_8h_1a5d735865707e6694a8173d629e0b4d5c" kindref="member">RecBuffer</ref>,0,</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="globals_8h_1a5d735865707e6694a8173d629e0b4d5c" kindref="member">RecBuffer</ref>[0])*<ref refid="globals_8h_1a0d57378e32bf8278011460740bc29f7f" kindref="member">UART_BUFFER_SIZE</ref>);<sp/><sp/></highlight><highlight class="comment">//clear<sp/>the<sp/>buffer<sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="258"><highlight class="normal"><sp/><sp/><sp/><sp/>memset(TempBuffer,0,</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="globals_8h_1a5d735865707e6694a8173d629e0b4d5c" kindref="member">RecBuffer</ref>[0])*UART_BUFFER_SIZE);<sp/></highlight><highlight class="comment">//clear<sp/>the<sp/>buffer</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="259"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="globals_8h_1a722e1eb38b661d1338ada3cc7a4049a0" kindref="member">ledtype</ref><sp/>=<sp/><ref refid="globals_8h_1af07a5ce170c7be13d096843960e7b9da" kindref="member">BASELEDTYPE</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//set<sp/>default<sp/>ledtype,<sp/>11<sp/>=&gt;WS2811,<sp/>12<sp/>=&gt;WS2812</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="260"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="261"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Set<sp/>the<sp/>LED<sp/>output<sp/>Port<sp/>(Pin<sp/>B0<sp/>is<sp/>used<sp/>for<sp/>LED<sp/>data<sp/>output)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="262"><highlight class="normal"><sp/><sp/><sp/><sp/>DDRB<sp/>=<sp/>0x01;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="263"><highlight class="normal"><sp/><sp/><sp/><sp/>PORTB<sp/>=<sp/>0x00;</highlight></codeline>
+<codeline lineno="264"><highlight class="normal"></highlight></codeline>
+<codeline lineno="265"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Basic<sp/>initializations</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="266"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="globals_8h_1ab5490074aaca289e986e9a00e0c25663" kindref="member">ReceivedChar</ref><sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="267"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="globals_8h_1ac2445d316b2972d381edeac44bb6a226" kindref="member">effectime</ref><sp/>=<sp/>10;</highlight></codeline>
+<codeline lineno="268"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="globals_8h_1a053b8e1f039c19251b90d60317db8aed" kindref="member">effect</ref>=255;</highlight></codeline>
+<codeline lineno="269"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="globals_8h_1aa6fcb4d4fca4554ac73bef10668c23cd" kindref="member">BufferCounter</ref>=0;</highlight></codeline>
+<codeline lineno="270"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="271"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ws2811lichterkette_8c_1ac7b3df0fa68526d64c732d5f916e34b1" kindref="member">init_uart</ref>();<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Init<sp/>the<sp/>hardware<sp/>UART</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="272"><highlight class="normal"><sp/><sp/><sp/><sp/>sei();<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//enable<sp/>global<sp/>interrupts</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="273"><highlight class="normal"></highlight></codeline>
+<codeline lineno="274"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//main<sp/>system<sp/>loop</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="275"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal">(1){</highlight></codeline>
+<codeline lineno="276"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="globals_8h_1a1b09d1a5bcf4c8ab435bb3c9e36def59" kindref="member">PacketComplete</ref>==1)<sp/><sp/></highlight><highlight class="comment">//new<sp/>UART<sp/>package<sp/>containing<sp/>color<sp/>and<sp/>effect<sp/>data<sp/>is<sp/>available</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="277"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="278"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Prohibit<sp/>the<sp/>access<sp/>to<sp/>the<sp/>UART<sp/>RecBuffer<sp/>while<sp/>copying<sp/>the<sp/>data<sp/>to<sp/>a<sp/>Temp<sp/>Buffer</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="279"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="globals_8h_1a922ad5baed647eca43ad1a979e162ebd" kindref="member">IsReading</ref>=1;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="280"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="globals_8h_1aaa3bddd2273257ac5ec259197b62e984" kindref="member">PaketStart</ref>=0;</highlight></codeline>
+<codeline lineno="281"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>memcpy(TempBuffer,<ref refid="globals_8h_1a5d735865707e6694a8173d629e0b4d5c" kindref="member">RecBuffer</ref>,<ref refid="globals_8h_1aaa611e00c18e950be43a4cd5ce0ceeb1" kindref="member">DataLen</ref>);<sp/><sp/><sp/></highlight><highlight class="comment">//Copy<sp/>the<sp/>UART<sp/>data<sp/>to<sp/>a<sp/>temp<sp/>array<sp/><sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="282"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="globals_8h_1a053b8e1f039c19251b90d60317db8aed" kindref="member">effect</ref>=TempBuffer[<ref refid="ws2811lichterkette_8c_1a8d4e4cf47dd6136ace963623e1a8e27c" kindref="member">EFFECTINDEX</ref>]<sp/>&amp;<sp/>0x7F;<sp/><sp/></highlight><highlight class="comment">//get<sp/>the<sp/>effect<sp/>from<sp/>the<sp/>temp<sp/>array</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="283"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="globals_8h_1ac2445d316b2972d381edeac44bb6a226" kindref="member">effectime</ref>=TempBuffer[<ref refid="ws2811lichterkette_8c_1a9ff437877d0878dd16eacf103a1e1c40" kindref="member">DELAYINDEX</ref>];<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//get<sp/>the<sp/>delay<sp/>time<sp/>for<sp/>the<sp/>effect<sp/>form<sp/>the<sp/>temp<sp/>array</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="284"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="globals_8h_1a722e1eb38b661d1338ada3cc7a4049a0" kindref="member">ledtype</ref>=<ref refid="globals_8h_1af07a5ce170c7be13d096843960e7b9da" kindref="member">BASELEDTYPE</ref>+((TempBuffer[<ref refid="ws2811lichterkette_8c_1a8d4e4cf47dd6136ace963623e1a8e27c" kindref="member">EFFECTINDEX</ref>]<sp/>&amp;<sp/>0x80)&gt;&gt;7);</highlight><highlight class="comment">//configure<sp/>the<sp/>ledtype<sp/>depending<sp/>on<sp/>the<sp/>MSBit<sp/>of<sp/>the<sp/>effect</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="285"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="globals_8h_1ad5db4045aed262ed4aae2af9d81fab98" kindref="member">NumOfLeds</ref>=TempBuffer[<ref refid="ws2811lichterkette_8c_1afbc75dc20761a05dda7cbb70b9b322dd" kindref="member">NUMOFLEDINDEX</ref>];<sp/><sp/><sp/><sp/></highlight><highlight class="comment">//get<sp/>the<sp/>number<sp/>of<sp/>leds<sp/>to<sp/>control</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="286"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="globals_8h_1a922ad5baed647eca43ad1a979e162ebd" kindref="member">IsReading</ref>=0;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//allow<sp/>access<sp/>to<sp/>the<sp/>UART<sp/>RecBuffer</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="287"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>memcpy(<ref refid="globals_8h_1a159854edb9d0c7283013495d85bdf997" kindref="member">CompColorArray</ref>,&amp;TempBuffer[5],<ref refid="globals_8h_1aaa611e00c18e950be43a4cd5ce0ceeb1" kindref="member">DataLen</ref>-5);<sp/><sp/><sp/><sp/></highlight><highlight class="comment">//generate<sp/>compressed<sp/>color<sp/>array</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="288"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(lightdata!=NULL)</highlight></codeline>
+<codeline lineno="289"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="290"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>free(lightdata);</highlight></codeline>
+<codeline lineno="291"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="292"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>lightdata<sp/>=<sp/>(uint8_t<sp/>*)<sp/>malloc<sp/>(<ref refid="globals_8h_1ad5db4045aed262ed4aae2af9d81fab98" kindref="member">NumOfLeds</ref>*3);<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//allocate<sp/>the<sp/>lightdata<sp/>array<sp/>for<sp/>uncompressed<sp/>colors</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="293"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="globals_8h_1a1b09d1a5bcf4c8ab435bb3c9e36def59" kindref="member">PacketComplete</ref>=0;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//reset<sp/>PacketComplete<sp/>flag</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="294"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="295"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="296"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="297"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//main<sp/>switch<sp/>for<sp/>effect<sp/>handling</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="298"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal">(<ref refid="globals_8h_1a053b8e1f039c19251b90d60317db8aed" kindref="member">effect</ref>)</highlight></codeline>
+<codeline lineno="299"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="300"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="_led_effects_8h_1a996334f1d53296a931624800377d5b01" kindref="member">SETFULLCOLOR</ref>:</highlight></codeline>
+<codeline lineno="301"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_led_effects_8c_1a2d54d1a6c61fe667b7c68ff04a11c503" kindref="member">setfullcolor</ref>(<ref refid="_led_effects_8c_1a55291315ab0f2ca8d508f0e9da1920a7" kindref="member">colorconv8to24</ref>(<ref refid="globals_8h_1a159854edb9d0c7283013495d85bdf997" kindref="member">CompColorArray</ref>[0]),lightdata);</highlight></codeline>
+<codeline lineno="302"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_lightstribe_8c_1aac724dad670e4a26723daf71ce6a8d8a" kindref="member">transmit2leds</ref>(lightdata);</highlight></codeline>
+<codeline lineno="303"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="304"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="_led_effects_8h_1a2f349ea8f5412514d90f138ede08da62" kindref="member">FILLUP</ref>:</highlight></codeline>
+<codeline lineno="305"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_led_effects_8c_1a99174e2b381d7ec6667d29352e6eca1b" kindref="member">fillup</ref>(<ref refid="_led_effects_8c_1a55291315ab0f2ca8d508f0e9da1920a7" kindref="member">colorconv8to24</ref>(<ref refid="globals_8h_1a159854edb9d0c7283013495d85bdf997" kindref="member">CompColorArray</ref>[0]),<ref refid="_led_effects_8c_1a55291315ab0f2ca8d508f0e9da1920a7" kindref="member">colorconv8to24</ref>(<ref refid="globals_8h_1a159854edb9d0c7283013495d85bdf997" kindref="member">CompColorArray</ref>[1]),lightdata);</highlight></codeline>
+<codeline lineno="306"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_lightstribe_8c_1aac724dad670e4a26723daf71ce6a8d8a" kindref="member">transmit2leds</ref>(lightdata);</highlight></codeline>
+<codeline lineno="307"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="308"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="_led_effects_8h_1a38eec52a7dccb94ff563e30eda32c891" kindref="member">BLINK</ref>:</highlight></codeline>
+<codeline lineno="309"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_led_effects_8c_1a9fd87d01d5cc4ce5fce6ddca55ebaf37" kindref="member">blinkled</ref>(<ref refid="_led_effects_8c_1a55291315ab0f2ca8d508f0e9da1920a7" kindref="member">colorconv8to24</ref>(<ref refid="globals_8h_1a159854edb9d0c7283013495d85bdf997" kindref="member">CompColorArray</ref>[0]),lightdata);</highlight></codeline>
+<codeline lineno="310"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="311"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="_led_effects_8h_1ab6e06c8b4c17edc65d75be641a0fc39b" kindref="member">RUNLED</ref>:</highlight></codeline>
+<codeline lineno="312"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_led_effects_8c_1aecba07ab559ab94e6f44c16e39012d80" kindref="member">initrunled</ref>(<ref refid="_led_effects_8c_1a55291315ab0f2ca8d508f0e9da1920a7" kindref="member">colorconv8to24</ref>(<ref refid="globals_8h_1a159854edb9d0c7283013495d85bdf997" kindref="member">CompColorArray</ref>[0]),lightdata,<ref refid="_led_effects_8c_1a55291315ab0f2ca8d508f0e9da1920a7" kindref="member">colorconv8to24</ref>(<ref refid="globals_8h_1a159854edb9d0c7283013495d85bdf997" kindref="member">CompColorArray</ref>[1]));</highlight></codeline>
+<codeline lineno="313"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="globals_8h_1a053b8e1f039c19251b90d60317db8aed" kindref="member">effect</ref>++;</highlight></codeline>
+<codeline lineno="314"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>4:</highlight></codeline>
+<codeline lineno="315"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_led_effects_8c_1a35cfbfc36c975f98a7779a37b6ff63ce" kindref="member">runrunled</ref>(lightdata,1);</highlight></codeline>
+<codeline lineno="316"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="317"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="_led_effects_8h_1ac7190c598c8618207180d135c0650dac" kindref="member">ALTERNATE</ref>:</highlight></codeline>
+<codeline lineno="318"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_led_effects_8c_1af67b7638a175e4971f25df5a5db3d8d0" kindref="member">init_alternating</ref>(<ref refid="_led_effects_8c_1a55291315ab0f2ca8d508f0e9da1920a7" kindref="member">colorconv8to24</ref>(<ref refid="globals_8h_1a159854edb9d0c7283013495d85bdf997" kindref="member">CompColorArray</ref>[0]),<ref refid="_led_effects_8c_1a55291315ab0f2ca8d508f0e9da1920a7" kindref="member">colorconv8to24</ref>(<ref refid="globals_8h_1a159854edb9d0c7283013495d85bdf997" kindref="member">CompColorArray</ref>[1]),lightdata);</highlight></codeline>
+<codeline lineno="319"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="globals_8h_1a053b8e1f039c19251b90d60317db8aed" kindref="member">effect</ref>++;</highlight></codeline>
+<codeline lineno="320"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>6:</highlight></codeline>
+<codeline lineno="321"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_led_effects_8c_1a5bde1e9e7fc19a9916f1ec02d8fbcd6c" kindref="member">run_alternating</ref>(lightdata);</highlight></codeline>
+<codeline lineno="322"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="323"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="_led_effects_8h_1a6b71fe4d23960c3701fc935a3368a6cc" kindref="member">RECOLOR</ref>:</highlight></codeline>
+<codeline lineno="324"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_led_effects_8c_1a448758d76f47ea6fed4beb349196363f" kindref="member">recolor</ref>(<ref refid="_led_effects_8c_1a55291315ab0f2ca8d508f0e9da1920a7" kindref="member">colorconv8to24</ref>(<ref refid="globals_8h_1a159854edb9d0c7283013495d85bdf997" kindref="member">CompColorArray</ref>[0]),lightdata);</highlight></codeline>
+<codeline lineno="325"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="globals_8h_1a053b8e1f039c19251b90d60317db8aed" kindref="member">effect</ref>=255;</highlight></codeline>
+<codeline lineno="326"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="327"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="_led_effects_8h_1ad8150289b0e08f01126500379852a2a7" kindref="member">FADE</ref>:</highlight></codeline>
+<codeline lineno="328"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_led_effects_8c_1a71d3b2ff21a63b48a01461e74be0c2b8" kindref="member">faden</ref>(<ref refid="_led_effects_8c_1a55291315ab0f2ca8d508f0e9da1920a7" kindref="member">colorconv8to24</ref>(<ref refid="globals_8h_1a159854edb9d0c7283013495d85bdf997" kindref="member">CompColorArray</ref>[0]),lightdata);</highlight></codeline>
+<codeline lineno="329"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="330"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="_led_effects_8h_1a2805176df86592658ae06a508a558720" kindref="member">INITRAINBOW</ref>:</highlight></codeline>
+<codeline lineno="331"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_led_effects_8c_1a9d0f91360c87b851925bf05be5352435" kindref="member">initrainbow</ref>(lightdata);</highlight></codeline>
+<codeline lineno="332"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_lightstribe_8c_1aac724dad670e4a26723daf71ce6a8d8a" kindref="member">transmit2leds</ref>(lightdata);</highlight></codeline>
+<codeline lineno="333"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="334"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="_led_effects_8h_1a85bd242525add173bd67847b7acac00b" kindref="member">ROTATE_R</ref>:</highlight></codeline>
+<codeline lineno="335"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_led_effects_8c_1afd64325b08e785d37b4dfaf358e517f0" kindref="member">rotate</ref>(lightdata,0);</highlight></codeline>
+<codeline lineno="336"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_led_effects_8c_1a6950e7657ba74d0d490ba36427533c4b" kindref="member">effectdelay</ref>(<ref refid="globals_8h_1ac2445d316b2972d381edeac44bb6a226" kindref="member">effectime</ref>);</highlight></codeline>
+<codeline lineno="337"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_lightstribe_8c_1aac724dad670e4a26723daf71ce6a8d8a" kindref="member">transmit2leds</ref>(lightdata);</highlight></codeline>
+<codeline lineno="338"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="339"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="_led_effects_8h_1a4a0c329f45825186172aee0c62531423" kindref="member">ROTATE_L</ref>:</highlight></codeline>
+<codeline lineno="340"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_led_effects_8c_1afd64325b08e785d37b4dfaf358e517f0" kindref="member">rotate</ref>(lightdata,1);</highlight></codeline>
+<codeline lineno="341"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_led_effects_8c_1a6950e7657ba74d0d490ba36427533c4b" kindref="member">effectdelay</ref>(<ref refid="globals_8h_1ac2445d316b2972d381edeac44bb6a226" kindref="member">effectime</ref>);</highlight></codeline>
+<codeline lineno="342"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_lightstribe_8c_1aac724dad670e4a26723daf71ce6a8d8a" kindref="member">transmit2leds</ref>(lightdata);</highlight></codeline>
+<codeline lineno="343"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="344"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="_led_effects_8h_1a686dea444026cbf1236c24e7edb3a96d" kindref="member">CUSTOM</ref>:</highlight></codeline>
+<codeline lineno="345"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//The<sp/>custom<sp/>effect<sp/>assigns<sp/>up<sp/>to<sp/>MAXNUMCOLORS<sp/>individual<sp/>colors<sp/>to<sp/>the<sp/>stribe</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="346"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//if<sp/>the<sp/>number<sp/>of<sp/>colors<sp/>is<sp/>smaller<sp/>than<sp/>the<sp/>number<sp/>of<sp/>LEDs<sp/>the<sp/>colors<sp/>are<sp/>repeated<sp/>using</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="347"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//modulo<sp/>operation</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="348"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(i=0;i&lt;<ref refid="globals_8h_1ad5db4045aed262ed4aae2af9d81fab98" kindref="member">NumOfLeds</ref>;i++)</highlight></codeline>
+<codeline lineno="349"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="350"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>j<sp/>=<sp/>i<sp/>%<sp/>(<ref refid="globals_8h_1aaa611e00c18e950be43a4cd5ce0ceeb1" kindref="member">DataLen</ref>-5);</highlight></codeline>
+<codeline lineno="351"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_lightstribe_8c_1a63fa595d401f0e85c1bba55ba2b1d66e" kindref="member">changeled</ref>(<ref refid="_led_effects_8c_1a55291315ab0f2ca8d508f0e9da1920a7" kindref="member">colorconv8to24</ref>(<ref refid="globals_8h_1a159854edb9d0c7283013495d85bdf997" kindref="member">CompColorArray</ref>[j]),lightdata,i);</highlight></codeline>
+<codeline lineno="352"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="353"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_lightstribe_8c_1aac724dad670e4a26723daf71ce6a8d8a" kindref="member">transmit2leds</ref>(lightdata);</highlight></codeline>
+<codeline lineno="354"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="globals_8h_1a053b8e1f039c19251b90d60317db8aed" kindref="member">effect</ref>=255;</highlight></codeline>
+<codeline lineno="355"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="356"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="_led_effects_8h_1a5645ec20d3cd39bfc1c9ad5ec99db2f2" kindref="member">EASTEREGG</ref>:</highlight></codeline>
+<codeline lineno="357"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_led_effects_8c_1a25e09bcb1481b20ebc2a27e7098b5115" kindref="member">easteregg</ref>(lightdata);</highlight></codeline>
+<codeline lineno="358"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="359"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">:<sp/><sp/><sp/><sp/></highlight><highlight class="comment">//do<sp/>nothing</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="360"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="361"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="362"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="363"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="364"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="365"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="366"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="367"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="368"><highlight class="normal"></highlight></codeline>
+<codeline lineno="369"><highlight class="normal"></highlight></codeline>
+<codeline lineno="371" refid="ws2811lichterkette_8c_1a09ce999e15ad60b8a3f07d08af1946f9" refkind="member"><highlight class="normal"><ref refid="ws2811lichterkette_8c_1a09ce999e15ad60b8a3f07d08af1946f9" kindref="member">ISR</ref><sp/>(USART_RX_vect)</highlight></codeline>
+<codeline lineno="372"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="373"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="globals_8h_1ab5490074aaca289e986e9a00e0c25663" kindref="member">ReceivedChar</ref><sp/>=<sp/>UDR0;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Read<sp/>data<sp/>from<sp/>the<sp/>RX<sp/>buffer<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="374"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="globals_8h_1ab5490074aaca289e986e9a00e0c25663" kindref="member">ReceivedChar</ref>==<ref refid="ws2811lichterkette_8c_1a8aac8c5098aaf915463fb31715efa09f" kindref="member">PREAMBLE</ref><sp/>&amp;&amp;<sp/><ref refid="globals_8h_1a922ad5baed647eca43ad1a979e162ebd" kindref="member">IsReading</ref>==0)<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Store<sp/>data<sp/>in<sp/>the<sp/>RecBuffer<sp/>array<sp/>only<sp/>if<sp/>it<sp/>is<sp/>not<sp/>accessed<sp/>by<sp/>the<sp/>main<sp/>function</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="375"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="376"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="globals_8h_1a1b09d1a5bcf4c8ab435bb3c9e36def59" kindref="member">PacketComplete</ref>=0;</highlight></codeline>
+<codeline lineno="377"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="globals_8h_1aaa3bddd2273257ac5ec259197b62e984" kindref="member">PaketStart</ref>=1;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Set<sp/>packet<sp/>start<sp/>flag<sp/>(--&gt;254=PREAMBLE<sp/>has<sp/>been<sp/>received)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="378"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>memset(<ref refid="globals_8h_1a5d735865707e6694a8173d629e0b4d5c" kindref="member">RecBuffer</ref>,0,</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="globals_8h_1a5d735865707e6694a8173d629e0b4d5c" kindref="member">RecBuffer</ref>[0])*<ref refid="globals_8h_1a0d57378e32bf8278011460740bc29f7f" kindref="member">UART_BUFFER_SIZE</ref>);</highlight><highlight class="comment">//clear<sp/>the<sp/>buffer<sp/><sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="379"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="globals_8h_1aa6fcb4d4fca4554ac73bef10668c23cd" kindref="member">BufferCounter</ref>=0;</highlight></codeline>
+<codeline lineno="380"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="globals_8h_1a5d735865707e6694a8173d629e0b4d5c" kindref="member">RecBuffer</ref>[0]=<ref refid="globals_8h_1ab5490074aaca289e986e9a00e0c25663" kindref="member">ReceivedChar</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Store<sp/>the<sp/>preamble</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="381"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="382"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="globals_8h_1aaa3bddd2273257ac5ec259197b62e984" kindref="member">PaketStart</ref>==1)</highlight></codeline>
+<codeline lineno="383"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="384"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Store<sp/>all<sp/>Bytes<sp/>after<sp/>the<sp/>preamble</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="385"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="globals_8h_1aa6fcb4d4fca4554ac73bef10668c23cd" kindref="member">BufferCounter</ref>++;<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="386"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="globals_8h_1a5d735865707e6694a8173d629e0b4d5c" kindref="member">RecBuffer</ref>[<ref refid="globals_8h_1aa6fcb4d4fca4554ac73bef10668c23cd" kindref="member">BufferCounter</ref>]=<ref refid="globals_8h_1ab5490074aaca289e986e9a00e0c25663" kindref="member">ReceivedChar</ref>;</highlight></codeline>
+<codeline lineno="387"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="globals_8h_1aaa611e00c18e950be43a4cd5ce0ceeb1" kindref="member">DataLen</ref>=<ref refid="globals_8h_1a5d735865707e6694a8173d629e0b4d5c" kindref="member">RecBuffer</ref>[<ref refid="ws2811lichterkette_8c_1aec9ae4a8d59e838ac8ed93ad0de8e827" kindref="member">LENINDEX</ref>];<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Store<sp/>data<sp/>len<sp/>of<sp/>the<sp/>data<sp/>packet<sp/>(preamble<sp/>included)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="388"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="globals_8h_1aaa611e00c18e950be43a4cd5ce0ceeb1" kindref="member">DataLen</ref>==<ref refid="globals_8h_1aa6fcb4d4fca4554ac73bef10668c23cd" kindref="member">BufferCounter</ref>+1)</highlight></codeline>
+<codeline lineno="389"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="390"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="globals_8h_1a1b09d1a5bcf4c8ab435bb3c9e36def59" kindref="member">PacketComplete</ref>=1;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//a<sp/>whole<sp/>packet<sp/>has<sp/>been<sp/>received,<sp/>update<sp/>the<sp/>effect<sp/>in<sp/>main</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="391"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="392"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="393"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="ws2811lichterkette.c"/>
+  </compounddef>
+</doxygen>

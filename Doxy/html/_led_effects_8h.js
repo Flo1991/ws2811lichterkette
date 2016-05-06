@@ -4,7 +4,7 @@ var _led_effects_8h =
     [ "BLINK", "_led_effects_8h.html#a38eec52a7dccb94ff563e30eda32c891", null ],
     [ "CUSTOM", "_led_effects_8h.html#a686dea444026cbf1236c24e7edb3a96d", null ],
     [ "EASTEREGG", "_led_effects_8h.html#a5645ec20d3cd39bfc1c9ad5ec99db2f2", null ],
-    [ "FADEN", "_led_effects_8h.html#ac64e9d348f9ff60935a2275f477020dc", null ],
+    [ "FADE", "_led_effects_8h.html#ad8150289b0e08f01126500379852a2a7", null ],
     [ "FILLUP", "_led_effects_8h.html#a2f349ea8f5412514d90f138ede08da62", null ],
     [ "INITRAINBOW", "_led_effects_8h.html#a2805176df86592658ae06a508a558720", null ],
     [ "RECOLOR", "_led_effects_8h.html#a6b71fe4d23960c3701fc935a3368a6cc", null ],

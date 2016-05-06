@@ -1,0 +1,1047 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="_led_effects_8h" kind="file" language="C++">
+    <compoundname>LedEffects.h</compoundname>
+    <includes local="no">stdint.h</includes>
+    <includedby refid="_led_effects_8c" local="yes">LedEffects.c</includedby>
+    <includedby refid="ws2811lichterkette_8c" local="yes">ws2811lichterkette.c</includedby>
+    <incdepgraph>
+      <node id="15">
+        <label>stdint.h</label>
+      </node>
+      <node id="14">
+        <label>LedEffects.h</label>
+        <link refid="LedEffects.h"/>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="18">
+        <label>ws2811lichterkette.c</label>
+        <link refid="ws2811lichterkette_8c"/>
+      </node>
+      <node id="17">
+        <label>LedEffects.c</label>
+        <link refid="_led_effects_8c"/>
+      </node>
+      <node id="16">
+        <label>LedEffects.h</label>
+        <link refid="LedEffects.h"/>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="_led_effects_8h_1a996334f1d53296a931624800377d5b01" prot="public" static="no">
+        <name>SETFULLCOLOR</name>
+        <initializer>0</initializer>
+        <briefdescription>
+<para>define for the setfullcolor effect, used for main switch </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="LedEffects.h" line="16" column="9" bodyfile="LedEffects.h" bodystart="16" bodyend="-1"/>
+        <referencedby refid="ws2811lichterkette_8c_1a840291bc02cba5474a4cb46a9b9566fe" compoundref="ws2811lichterkette_8c" startline="244" endline="367">main</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="_led_effects_8h_1a2f349ea8f5412514d90f138ede08da62" prot="public" static="no">
+        <name>FILLUP</name>
+        <initializer>1</initializer>
+        <briefdescription>
+<para>define for the the fillup effect, used for main switch </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="LedEffects.h" line="18" column="9" bodyfile="LedEffects.h" bodystart="18" bodyend="-1"/>
+        <referencedby refid="ws2811lichterkette_8c_1a840291bc02cba5474a4cb46a9b9566fe" compoundref="ws2811lichterkette_8c" startline="244" endline="367">main</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="_led_effects_8h_1a38eec52a7dccb94ff563e30eda32c891" prot="public" static="no">
+        <name>BLINK</name>
+        <initializer>2</initializer>
+        <briefdescription>
+<para>define for the blink effect, used for main switch </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="LedEffects.h" line="20" column="9" bodyfile="LedEffects.h" bodystart="20" bodyend="-1"/>
+        <referencedby refid="ws2811lichterkette_8c_1a840291bc02cba5474a4cb46a9b9566fe" compoundref="ws2811lichterkette_8c" startline="244" endline="367">main</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="_led_effects_8h_1ab6e06c8b4c17edc65d75be641a0fc39b" prot="public" static="no">
+        <name>RUNLED</name>
+        <initializer>3</initializer>
+        <briefdescription>
+<para>define for the runled effect, used for main switch, refers to the runled init </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="LedEffects.h" line="22" column="9" bodyfile="LedEffects.h" bodystart="22" bodyend="-1"/>
+        <referencedby refid="ws2811lichterkette_8c_1a840291bc02cba5474a4cb46a9b9566fe" compoundref="ws2811lichterkette_8c" startline="244" endline="367">main</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="_led_effects_8h_1ac7190c598c8618207180d135c0650dac" prot="public" static="no">
+        <name>ALTERNATE</name>
+        <initializer>5</initializer>
+        <briefdescription>
+<para>define for the alternating effect, used for main switch, refers to the alternate init </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="LedEffects.h" line="24" column="9" bodyfile="LedEffects.h" bodystart="24" bodyend="-1"/>
+        <referencedby refid="ws2811lichterkette_8c_1a840291bc02cba5474a4cb46a9b9566fe" compoundref="ws2811lichterkette_8c" startline="244" endline="367">main</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="_led_effects_8h_1a6b71fe4d23960c3701fc935a3368a6cc" prot="public" static="no">
+        <name>RECOLOR</name>
+        <initializer>7</initializer>
+        <briefdescription>
+<para>define for the recolor effect, used for main switch </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="LedEffects.h" line="26" column="9" bodyfile="LedEffects.h" bodystart="26" bodyend="-1"/>
+        <referencedby refid="ws2811lichterkette_8c_1a840291bc02cba5474a4cb46a9b9566fe" compoundref="ws2811lichterkette_8c" startline="244" endline="367">main</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="_led_effects_8h_1ad8150289b0e08f01126500379852a2a7" prot="public" static="no">
+        <name>FADE</name>
+        <initializer>8</initializer>
+        <briefdescription>
+<para>define for the fade effect, used for main switch </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="LedEffects.h" line="28" column="9" bodyfile="LedEffects.h" bodystart="28" bodyend="-1"/>
+        <referencedby refid="ws2811lichterkette_8c_1a840291bc02cba5474a4cb46a9b9566fe" compoundref="ws2811lichterkette_8c" startline="244" endline="367">main</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="_led_effects_8h_1a2805176df86592658ae06a508a558720" prot="public" static="no">
+        <name>INITRAINBOW</name>
+        <initializer>9</initializer>
+        <briefdescription>
+<para>define for the initrainbow function, used for main switch </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="LedEffects.h" line="30" column="9" bodyfile="LedEffects.h" bodystart="30" bodyend="-1"/>
+        <referencedby refid="ws2811lichterkette_8c_1a840291bc02cba5474a4cb46a9b9566fe" compoundref="ws2811lichterkette_8c" startline="244" endline="367">main</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="_led_effects_8h_1a85bd242525add173bd67847b7acac00b" prot="public" static="no">
+        <name>ROTATE_R</name>
+        <initializer>10</initializer>
+        <briefdescription>
+<para>define for the the rotate function right, used for main switch </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="LedEffects.h" line="32" column="9" bodyfile="LedEffects.h" bodystart="32" bodyend="-1"/>
+        <referencedby refid="ws2811lichterkette_8c_1a840291bc02cba5474a4cb46a9b9566fe" compoundref="ws2811lichterkette_8c" startline="244" endline="367">main</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="_led_effects_8h_1a4a0c329f45825186172aee0c62531423" prot="public" static="no">
+        <name>ROTATE_L</name>
+        <initializer>11</initializer>
+        <briefdescription>
+<para>define for the the rotate function left, used for main switch </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="LedEffects.h" line="34" column="9" bodyfile="LedEffects.h" bodystart="34" bodyend="-1"/>
+        <referencedby refid="ws2811lichterkette_8c_1a840291bc02cba5474a4cb46a9b9566fe" compoundref="ws2811lichterkette_8c" startline="244" endline="367">main</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="_led_effects_8h_1a686dea444026cbf1236c24e7edb3a96d" prot="public" static="no">
+        <name>CUSTOM</name>
+        <initializer>12</initializer>
+        <briefdescription>
+<para>define for the custom effect, used for main switch, every LED is filled in a userdefined color (up to MAXNUMCOLORS, then reloop the colors) </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="LedEffects.h" line="36" column="9" bodyfile="LedEffects.h" bodystart="36" bodyend="-1"/>
+        <referencedby refid="ws2811lichterkette_8c_1a840291bc02cba5474a4cb46a9b9566fe" compoundref="ws2811lichterkette_8c" startline="244" endline="367">main</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="_led_effects_8h_1a5645ec20d3cd39bfc1c9ad5ec99db2f2" prot="public" static="no">
+        <name>EASTEREGG</name>
+        <initializer>13</initializer>
+        <briefdescription>
+<para>define for the easteregg effect, used for main switch </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="LedEffects.h" line="38" column="9" bodyfile="LedEffects.h" bodystart="38" bodyend="-1"/>
+        <referencedby refid="ws2811lichterkette_8c_1a840291bc02cba5474a4cb46a9b9566fe" compoundref="ws2811lichterkette_8c" startline="244" endline="367">main</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="_led_effects_8h_1ad67a4e660b5122ed454e101432bbdba0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t map</definition>
+        <argsstring>(uint8_t x, uint8_t in_min, uint8_t in_max, uint8_t out_min, uint8_t out_max)</argsstring>
+        <name>map</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>in_min</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>in_max</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>out_min</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>out_max</declname>
+        </param>
+        <briefdescription>
+<para>Arduino map function; used for color conversion. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">uint8_t</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>x: value to map </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">uint8_t</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>in_min : minimum value input reference </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">uint8_t</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>in_max : maximum value input reference </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">uint8_t</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>out_min : minimum value output reference </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">uint8_t</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>out_max : maximum value output reference </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>uint8_t : mapped value referring to the input </para></simplesect>
+<simplesect kind="note"><para>This function is used for color conversion from 8 Bit to 24 Bit colors; How it works: in_min &lt; x &lt; in_max convert to out_min &lt; returnvalue &lt; out_max by positioning the x proportionally in the new number range </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="LedEffects.h" line="40" column="1" bodyfile="LedEffects.c" bodystart="33" bodyend="36"/>
+        <referencedby refid="_led_effects_8h_1a55291315ab0f2ca8d508f0e9da1920a7" compoundref="_led_effects_8c" startline="45" endline="65">colorconv8to24</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_led_effects_8h_1a55291315ab0f2ca8d508f0e9da1920a7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>struct <ref refid="structcolor24bit" kindref="compound">color24bit</ref></type>
+        <definition>struct color24bit colorconv8to24</definition>
+        <argsstring>(uint8_t startcolor)</argsstring>
+        <name>colorconv8to24</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>startcolor</declname>
+        </param>
+        <briefdescription>
+<para>color conversion function; converts a 8 Bit color (RGB 3-3-2) to a 24 Bit color (RGB 8-8-8) </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">uint8_t</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>startcolor: 8 Bit color to convert </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>struct <ref refid="structcolor24bit" kindref="compound">color24bit</ref> : 24 Bit color result </para></simplesect>
+<simplesect kind="note"><para>This function converts the 8 Bit color to a 24 Bit color depending on the ledtype. This is neccessary because of differnt color formats (WS2811-&gt;RGB ; WS2812-&gt;GRB). Original the whole environment was for WS2812 LEDs! </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="LedEffects.h" line="40" column="1" bodyfile="LedEffects.c" bodystart="45" bodyend="65"/>
+        <references refid="structcolor24bit_1a287b397e90d7b995c81ff54e741f96b2" compoundref="_lightstribe_8h" startline="19">color24bit::blue</references>
+        <references refid="structcolor24bit_1a90d21fa503b626c00cdc8d94863d5877" compoundref="_lightstribe_8h" startline="18">color24bit::green</references>
+        <references refid="globals_8h_1a722e1eb38b661d1338ada3cc7a4049a0" compoundref="globals_8h" startline="29">ledtype</references>
+        <references refid="_led_effects_8c_1ad67a4e660b5122ed454e101432bbdba0" compoundref="_led_effects_8c" startline="33" endline="36">map</references>
+        <references refid="structcolor24bit_1ad47d918910aaa51c73160ac85999d09c" compoundref="_lightstribe_8h" startline="17">color24bit::red</references>
+        <referencedby refid="_led_effects_8h_1a25e09bcb1481b20ebc2a27e7098b5115" compoundref="_led_effects_8c" startline="514" endline="534">easteregg</referencedby>
+        <referencedby refid="ws2811lichterkette_8c_1a840291bc02cba5474a4cb46a9b9566fe" compoundref="ws2811lichterkette_8c" startline="244" endline="367">main</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_led_effects_8h_1a6950e7657ba74d0d490ba36427533c4b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void effectdelay</definition>
+        <argsstring>(uint16_t delay)</argsstring>
+        <name>effectdelay</name>
+        <param>
+          <type>uint16_t</type>
+          <declname>delay</declname>
+        </param>
+        <briefdescription>
+<para>simple delay function; no concrete delay time </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">uint16_t</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>delay : delay value </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void </para></simplesect>
+<simplesect kind="note"><para>This function is just a variable delay, there is no coherence with a concrete time (i.e. s, ms) </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="LedEffects.h" line="42" column="1" bodyfile="LedEffects.c" bodystart="72" bodyend="88"/>
+        <references refid="globals_8h_1a1b09d1a5bcf4c8ab435bb3c9e36def59" compoundref="globals_8h" startline="53">PacketComplete</references>
+        <referencedby refid="_led_effects_8h_1a9fd87d01d5cc4ce5fce6ddca55ebaf37" compoundref="_led_effects_8c" startline="278" endline="288">blinkled</referencedby>
+        <referencedby refid="_led_effects_8h_1ac83bd19da7ebd3c475e3667e4229db41" compoundref="_led_effects_8c" startline="489" endline="507">eastereggbase</referencedby>
+        <referencedby refid="_led_effects_8h_1a71d3b2ff21a63b48a01461e74be0c2b8" compoundref="_led_effects_8c" startline="366" endline="428">faden</referencedby>
+        <referencedby refid="_led_effects_8h_1a99174e2b381d7ec6667d29352e6eca1b" compoundref="_led_effects_8c" startline="549" endline="568">fillup</referencedby>
+        <referencedby refid="ws2811lichterkette_8c_1a840291bc02cba5474a4cb46a9b9566fe" compoundref="ws2811lichterkette_8c" startline="244" endline="367">main</referencedby>
+        <referencedby refid="_led_effects_8h_1a448758d76f47ea6fed4beb349196363f" compoundref="_led_effects_8c" startline="340" endline="351">recolor</referencedby>
+        <referencedby refid="_led_effects_8h_1a5bde1e9e7fc19a9916f1ec02d8fbcd6c" compoundref="_led_effects_8c" startline="323" endline="328">run_alternating</referencedby>
+        <referencedby refid="_led_effects_8h_1a35cfbfc36c975f98a7779a37b6ff63ce" compoundref="_led_effects_8c" startline="236" endline="267">runrunled</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_led_effects_8h_1a2d54d1a6c61fe667b7c68ff04a11c503" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void setfullcolor</definition>
+        <argsstring>(struct color24bit color, uint8_t *lightdata)</argsstring>
+        <name>setfullcolor</name>
+        <param>
+          <type>struct <ref refid="structcolor24bit" kindref="compound">color24bit</ref></type>
+          <declname>color</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>lightdata</declname>
+        </param>
+        <briefdescription>
+<para>Set all LEDs to the chosen color; run transmit2leds afterwards to update the LEDs. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">struct</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="structcolor24bit" kindref="compound">color24bit</ref> color : color to set </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">uint8_t</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>*lightdata : lightdata array that holds the color values for the stribe </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void </para></simplesect>
+<simplesect kind="note"><para>This function sets the lightdata array. To update the stribe run transmit2leds afterwards! </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="LedEffects.h" line="43" column="1" bodyfile="LedEffects.c" bodystart="96" bodyend="111"/>
+        <references refid="structcolor24bit_1a287b397e90d7b995c81ff54e741f96b2" compoundref="_lightstribe_8h" startline="19">color24bit::blue</references>
+        <references refid="structcolor24bit_1a90d21fa503b626c00cdc8d94863d5877" compoundref="_lightstribe_8h" startline="18">color24bit::green</references>
+        <references refid="globals_8h_1ad5db4045aed262ed4aae2af9d81fab98" compoundref="globals_8h" startline="25">NumOfLeds</references>
+        <references refid="structcolor24bit_1ad47d918910aaa51c73160ac85999d09c" compoundref="_lightstribe_8h" startline="17">color24bit::red</references>
+        <referencedby refid="_led_effects_8h_1a9fd87d01d5cc4ce5fce6ddca55ebaf37" compoundref="_led_effects_8c" startline="278" endline="288">blinkled</referencedby>
+        <referencedby refid="_led_effects_8h_1a71d3b2ff21a63b48a01461e74be0c2b8" compoundref="_led_effects_8c" startline="366" endline="428">faden</referencedby>
+        <referencedby refid="_led_effects_8h_1af67b7638a175e4971f25df5a5db3d8d0" compoundref="_led_effects_8c" startline="300" endline="311">init_alternating</referencedby>
+        <referencedby refid="_led_effects_8h_1aecba07ab559ab94e6f44c16e39012d80" compoundref="_led_effects_8c" startline="217" endline="221">initrunled</referencedby>
+        <referencedby refid="ws2811lichterkette_8c_1a840291bc02cba5474a4cb46a9b9566fe" compoundref="ws2811lichterkette_8c" startline="244" endline="367">main</referencedby>
+        <referencedby refid="_led_effects_8h_1a1c5e6b0f45c1787c25f8eafa8b9c6247" compoundref="_led_effects_8c" startline="118" endline="125">resetstribe</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_led_effects_8h_1a1c5e6b0f45c1787c25f8eafa8b9c6247" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void resetstribe</definition>
+        <argsstring>(uint8_t *lightdata)</argsstring>
+        <name>resetstribe</name>
+        <param>
+          <type>uint8_t *</type>
+          <declname>lightdata</declname>
+        </param>
+        <briefdescription>
+<para>Set all LEDs off; run transmit2leds afterwards to update the LEDs. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">uint8_t</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>*lightdata : lightdata array that holds the color values for the stribe </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void </para></simplesect>
+<simplesect kind="note"><para>This function sets the lightdata array to 0x00. To update the stribe run transmit2leds afterwards! </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="LedEffects.h" line="44" column="1" bodyfile="LedEffects.c" bodystart="118" bodyend="125"/>
+        <references refid="structcolor24bit_1a287b397e90d7b995c81ff54e741f96b2" compoundref="_lightstribe_8h" startline="19">color24bit::blue</references>
+        <references refid="structcolor24bit_1a90d21fa503b626c00cdc8d94863d5877" compoundref="_lightstribe_8h" startline="18">color24bit::green</references>
+        <references refid="structcolor24bit_1ad47d918910aaa51c73160ac85999d09c" compoundref="_lightstribe_8h" startline="17">color24bit::red</references>
+        <references refid="_led_effects_8c_1a2d54d1a6c61fe667b7c68ff04a11c503" compoundref="_led_effects_8c" startline="96" endline="111">setfullcolor</references>
+        <referencedby refid="_led_effects_8h_1a9fd87d01d5cc4ce5fce6ddca55ebaf37" compoundref="_led_effects_8c" startline="278" endline="288">blinkled</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_led_effects_8h_1afd64325b08e785d37b4dfaf358e517f0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void rotate</definition>
+        <argsstring>(uint8_t *lightdata, uint8_t direction)</argsstring>
+        <name>rotate</name>
+        <param>
+          <type>uint8_t *</type>
+          <declname>lightdata</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>direction</declname>
+        </param>
+        <briefdescription>
+<para>Rotate the lightdata for 1 LED Position; run transmit2leds afterwards to update the LEDs. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">uint8_t</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>*lightdata : lightdata array that holds the color values for the stribe </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">uint8_t</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>direction : direction to rotate </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void </para></simplesect>
+<simplesect kind="note"><para>This function rotates lightdata array. To update the stribe run transmit2leds afterwards! The rotation &quot;moves every LED&quot; by one step, the overflowing LED is appended at the other ending. Example: RED BLUE YELLOW GREEN ... rotate... BLUE YELLOW GREEN RED other direction: RED BLUE YELLOW GREEN ... rotate... GREEN RED BLUE YELLOW </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="LedEffects.h" line="45" column="1" bodyfile="LedEffects.c" bodystart="138" bodyend="182"/>
+        <references refid="globals_8h_1ad5db4045aed262ed4aae2af9d81fab98" compoundref="globals_8h" startline="25">NumOfLeds</references>
+        <referencedby refid="_led_effects_8h_1ac83bd19da7ebd3c475e3667e4229db41" compoundref="_led_effects_8c" startline="489" endline="507">eastereggbase</referencedby>
+        <referencedby refid="ws2811lichterkette_8c_1a840291bc02cba5474a4cb46a9b9566fe" compoundref="ws2811lichterkette_8c" startline="244" endline="367">main</referencedby>
+        <referencedby refid="_led_effects_8h_1a1fa5e03cb24195a46dcdc5948f596181" compoundref="_led_effects_8c" startline="196" endline="203">rotateN</referencedby>
+        <referencedby refid="_led_effects_8h_1a5bde1e9e7fc19a9916f1ec02d8fbcd6c" compoundref="_led_effects_8c" startline="323" endline="328">run_alternating</referencedby>
+        <referencedby refid="_led_effects_8h_1a35cfbfc36c975f98a7779a37b6ff63ce" compoundref="_led_effects_8c" startline="236" endline="267">runrunled</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_led_effects_8h_1a1fa5e03cb24195a46dcdc5948f596181" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void rotateN</definition>
+        <argsstring>(uint8_t *lightdata, uint8_t direction, uint8_t width)</argsstring>
+        <name>rotateN</name>
+        <param>
+          <type>uint8_t *</type>
+          <declname>lightdata</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>direction</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>width</declname>
+        </param>
+        <briefdescription>
+<para>Rotate the lightdata for n LED Positions; run transmit2leds afterwards to update the LEDs. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">uint8_t</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>*lightdata : lightdata array that holds the color values for the stribe </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">uint8_t</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>direction : direction to rotate </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">uint8_t</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>width : width to rotate </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void </para></simplesect>
+<simplesect kind="note"><para>This function rotates lightdata array. To update the stribe run transmit2leds afterwards! The rotation &quot;moves every LED&quot; by n steps, the overflowing LEDs are appended at the other ending. Example: RED BLUE YELLOW GREEN PINK ... rotate 2 ... YELLOW GREEN PINK RED BLUE other direction: RED BLUE YELLOW GREEN PINK ... rotate 2 ... GREEN PINK RED BLUE YELLOW </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="LedEffects.h" line="46" column="1" bodyfile="LedEffects.c" bodystart="196" bodyend="203"/>
+        <references refid="_led_effects_8c_1afd64325b08e785d37b4dfaf358e517f0" compoundref="_led_effects_8c" startline="138" endline="182">rotate</references>
+      </memberdef>
+      <memberdef kind="function" id="_led_effects_8h_1aecba07ab559ab94e6f44c16e39012d80" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void initrunled</definition>
+        <argsstring>(struct color24bit color, uint8_t *lightdata, struct color24bit background)</argsstring>
+        <name>initrunled</name>
+        <param>
+          <type>struct <ref refid="structcolor24bit" kindref="compound">color24bit</ref></type>
+          <declname>color</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>lightdata</declname>
+        </param>
+        <param>
+          <type>struct <ref refid="structcolor24bit" kindref="compound">color24bit</ref></type>
+          <declname>background</declname>
+        </param>
+        <briefdescription>
+<para>init the runled effect; run runrunled afterwards to start the effect </para>        </briefdescription>
+        <detaileddescription>
+<para>This function initializes the running LED effect. The running LED effect has a background color that is used for all LEDs except one. One LED is in the foreground color an moves stepwise along the stribe. The initialization prepares the lightdata array by setting one LED at the start position and filling the others with the background color. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">struct</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="structcolor24bit" kindref="compound">color24bit</ref> color : 24 Bit color for the effect </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">uint8_t</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>*lightdata : lightdata array that holds the color values for the stribe </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">struct</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="structcolor24bit" kindref="compound">color24bit</ref> background : 24 Bit color for the effect background </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void </para></simplesect>
+<simplesect kind="note"><para>Run runrunled afterwards to start the effect! </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="LedEffects.h" line="47" column="1" bodyfile="LedEffects.c" bodystart="217" bodyend="221"/>
+        <references refid="_lightstribe_8c_1a63fa595d401f0e85c1bba55ba2b1d66e" compoundref="_lightstribe_8c" startline="33" endline="41">changeled</references>
+        <references refid="_led_effects_8c_1a2d54d1a6c61fe667b7c68ff04a11c503" compoundref="_led_effects_8c" startline="96" endline="111">setfullcolor</references>
+        <referencedby refid="ws2811lichterkette_8c_1a840291bc02cba5474a4cb46a9b9566fe" compoundref="ws2811lichterkette_8c" startline="244" endline="367">main</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_led_effects_8h_1a35cfbfc36c975f98a7779a37b6ff63ce" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void runrunled</definition>
+        <argsstring>(uint8_t *lightdata, uint8_t direction)</argsstring>
+        <name>runrunled</name>
+        <param>
+          <type>uint8_t *</type>
+          <declname>lightdata</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>direction</declname>
+        </param>
+        <briefdescription>
+<para>Do the runled effect; before this function is called the lightdata needs to be initiliazed using initrunled! </para>        </briefdescription>
+        <detaileddescription>
+<para>This function runs the running LED effect. The running LED effect has a background color that is used for all LEDs except one. The one LED moves stepwise to the next position depending on the chosen direction. Direction 0/1 are right/left, direction 2 runs from left to right an back again. For direction 0/1 the running LED overflows and begins on the other ending. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">uint8_t</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>*lightdata : lightdata array that holds the color values for the stribe </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">uint8_t</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>direction : movement direction, 0/1 = right/left, 2 = left-&gt;right and back </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void </para></simplesect>
+<simplesect kind="note"><para>No need to run transmit2leds afterwards! This is already done in the function. The function is interrupted if a new UART package is completely received so a new effect gets active. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="LedEffects.h" line="48" column="1" bodyfile="LedEffects.c" bodystart="236" bodyend="267"/>
+        <references refid="_led_effects_8c_1a6950e7657ba74d0d490ba36427533c4b" compoundref="_led_effects_8c" startline="72" endline="88">effectdelay</references>
+        <references refid="globals_8h_1ac2445d316b2972d381edeac44bb6a226" compoundref="globals_8h" startline="27">effectime</references>
+        <references refid="globals_8h_1ad5db4045aed262ed4aae2af9d81fab98" compoundref="globals_8h" startline="25">NumOfLeds</references>
+        <references refid="globals_8h_1a1b09d1a5bcf4c8ab435bb3c9e36def59" compoundref="globals_8h" startline="53">PacketComplete</references>
+        <references refid="_led_effects_8c_1afd64325b08e785d37b4dfaf358e517f0" compoundref="_led_effects_8c" startline="138" endline="182">rotate</references>
+        <references refid="_lightstribe_8c_1aac724dad670e4a26723daf71ce6a8d8a" compoundref="_lightstribe_8c" startline="96" endline="170">transmit2leds</references>
+        <referencedby refid="ws2811lichterkette_8c_1a840291bc02cba5474a4cb46a9b9566fe" compoundref="ws2811lichterkette_8c" startline="244" endline="367">main</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_led_effects_8h_1a9fd87d01d5cc4ce5fce6ddca55ebaf37" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void blinkled</definition>
+        <argsstring>(struct color24bit color, uint8_t *lightdata)</argsstring>
+        <name>blinkled</name>
+        <param>
+          <type>struct <ref refid="structcolor24bit" kindref="compound">color24bit</ref></type>
+          <declname>color</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>lightdata</declname>
+        </param>
+        <briefdescription>
+<para>blink the whole stribe; this function does not need another function call </para>        </briefdescription>
+        <detaileddescription>
+<para>This function creates a blinking effect. First all LEDs are set to the chosen color, after the defined delay the LEDs are turned off. This is repeated in the main while loop. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">struct</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="structcolor24bit" kindref="compound">color24bit</ref> color : color for the blink effect </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">uint8_t</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>*lightdata : lightdata array that holds the color values for the stribe </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void </para></simplesect>
+<simplesect kind="note"><para>No need to run transmit2leds afterwards! This is already done in the function. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="LedEffects.h" line="49" column="1" bodyfile="LedEffects.c" bodystart="278" bodyend="288"/>
+        <references refid="_led_effects_8c_1a6950e7657ba74d0d490ba36427533c4b" compoundref="_led_effects_8c" startline="72" endline="88">effectdelay</references>
+        <references refid="globals_8h_1ac2445d316b2972d381edeac44bb6a226" compoundref="globals_8h" startline="27">effectime</references>
+        <references refid="_led_effects_8c_1a1c5e6b0f45c1787c25f8eafa8b9c6247" compoundref="_led_effects_8c" startline="118" endline="125">resetstribe</references>
+        <references refid="_led_effects_8c_1a2d54d1a6c61fe667b7c68ff04a11c503" compoundref="_led_effects_8c" startline="96" endline="111">setfullcolor</references>
+        <references refid="_lightstribe_8c_1aac724dad670e4a26723daf71ce6a8d8a" compoundref="_lightstribe_8c" startline="96" endline="170">transmit2leds</references>
+        <referencedby refid="ws2811lichterkette_8c_1a840291bc02cba5474a4cb46a9b9566fe" compoundref="ws2811lichterkette_8c" startline="244" endline="367">main</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_led_effects_8h_1af67b7638a175e4971f25df5a5db3d8d0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void init_alternating</definition>
+        <argsstring>(struct color24bit color, struct color24bit backcolor, uint8_t *lightdata)</argsstring>
+        <name>init_alternating</name>
+        <param>
+          <type>struct <ref refid="structcolor24bit" kindref="compound">color24bit</ref></type>
+          <declname>color</declname>
+        </param>
+        <param>
+          <type>struct <ref refid="structcolor24bit" kindref="compound">color24bit</ref></type>
+          <declname>backcolor</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>lightdata</declname>
+        </param>
+        <briefdescription>
+<para>initialize the alternating function; call run_alternating afterwards </para>        </briefdescription>
+        <detaileddescription>
+<para>This function initializes the alternating effect. The effect assigns every even LED number in one color and the odd numbers in the background color. If the effect is running, the odd and even LED switch positions. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">struct</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="structcolor24bit" kindref="compound">color24bit</ref> color : color for the alternate effect (Init even LEDs) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">struct</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="structcolor24bit" kindref="compound">color24bit</ref> backcolor : color for the alternate effect bakckground (Init odd LEDs) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">uint8_t</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>*lightdata : lightdata array that holds the color values for the stribe </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void </para></simplesect>
+<simplesect kind="note"><para>Run run_alternating afterwards to start the effect! </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="LedEffects.h" line="50" column="1" bodyfile="LedEffects.c" bodystart="300" bodyend="311"/>
+        <references refid="_lightstribe_8c_1a63fa595d401f0e85c1bba55ba2b1d66e" compoundref="_lightstribe_8c" startline="33" endline="41">changeled</references>
+        <references refid="globals_8h_1ad5db4045aed262ed4aae2af9d81fab98" compoundref="globals_8h" startline="25">NumOfLeds</references>
+        <references refid="_led_effects_8c_1a2d54d1a6c61fe667b7c68ff04a11c503" compoundref="_led_effects_8c" startline="96" endline="111">setfullcolor</references>
+        <referencedby refid="ws2811lichterkette_8c_1a840291bc02cba5474a4cb46a9b9566fe" compoundref="ws2811lichterkette_8c" startline="244" endline="367">main</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_led_effects_8h_1a5bde1e9e7fc19a9916f1ec02d8fbcd6c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void run_alternating</definition>
+        <argsstring>(uint8_t *lightdata)</argsstring>
+        <name>run_alternating</name>
+        <param>
+          <type>uint8_t *</type>
+          <declname>lightdata</declname>
+        </param>
+        <briefdescription>
+<para>Run the alternating effect; call init_alternating before. </para>        </briefdescription>
+        <detaileddescription>
+<para>This function runs the alternating effect. The effect assigns every even LED number in one color and the odd numbers in the background color. If the effect is running, the odd and even LED switch positions. This function rotates the LEDs by one position to achieve the effect. The rotation direction is not of importance. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">uint8_t</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>*lightdata : lightdata array that holds the color values for the stribe </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void </para></simplesect>
+<simplesect kind="note"><para>No need to run transmit2leds afterwards! The effect is generated by the main while loop. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="LedEffects.h" line="51" column="1" bodyfile="LedEffects.c" bodystart="323" bodyend="328"/>
+        <references refid="_led_effects_8c_1a6950e7657ba74d0d490ba36427533c4b" compoundref="_led_effects_8c" startline="72" endline="88">effectdelay</references>
+        <references refid="globals_8h_1ac2445d316b2972d381edeac44bb6a226" compoundref="globals_8h" startline="27">effectime</references>
+        <references refid="_led_effects_8c_1afd64325b08e785d37b4dfaf358e517f0" compoundref="_led_effects_8c" startline="138" endline="182">rotate</references>
+        <references refid="_lightstribe_8c_1aac724dad670e4a26723daf71ce6a8d8a" compoundref="_lightstribe_8c" startline="96" endline="170">transmit2leds</references>
+        <referencedby refid="ws2811lichterkette_8c_1a840291bc02cba5474a4cb46a9b9566fe" compoundref="ws2811lichterkette_8c" startline="244" endline="367">main</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_led_effects_8h_1a448758d76f47ea6fed4beb349196363f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void recolor</definition>
+        <argsstring>(struct color24bit color, uint8_t *lightdata)</argsstring>
+        <name>recolor</name>
+        <param>
+          <type>struct <ref refid="structcolor24bit" kindref="compound">color24bit</ref></type>
+          <declname>color</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>lightdata</declname>
+        </param>
+        <briefdescription>
+<para>Recolor the LED stribe; no other function call is necessary. </para>        </briefdescription>
+        <detaileddescription>
+<para>This function generates a recolor effect. The old configuration of the LEDs is overwritten with the new color step by step. When the whole stribe is filled with the new color the effect ends. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">struct</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="structcolor24bit" kindref="compound">color24bit</ref> color : color that is used for recoloring </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">uint8_t</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>*lightdata : lightdata array that holds the color values for the stribe </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void </para></simplesect>
+<simplesect kind="note"><para>No need to run transmit2leds afterwards! The effect is standalone and ends if the stribe is recolored. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="LedEffects.h" line="52" column="1" bodyfile="LedEffects.c" bodystart="340" bodyend="351"/>
+        <references refid="_lightstribe_8c_1a63fa595d401f0e85c1bba55ba2b1d66e" compoundref="_lightstribe_8c" startline="33" endline="41">changeled</references>
+        <references refid="_led_effects_8c_1a6950e7657ba74d0d490ba36427533c4b" compoundref="_led_effects_8c" startline="72" endline="88">effectdelay</references>
+        <references refid="globals_8h_1ac2445d316b2972d381edeac44bb6a226" compoundref="globals_8h" startline="27">effectime</references>
+        <references refid="globals_8h_1ad5db4045aed262ed4aae2af9d81fab98" compoundref="globals_8h" startline="25">NumOfLeds</references>
+        <references refid="globals_8h_1a1b09d1a5bcf4c8ab435bb3c9e36def59" compoundref="globals_8h" startline="53">PacketComplete</references>
+        <references refid="_lightstribe_8c_1aac724dad670e4a26723daf71ce6a8d8a" compoundref="_lightstribe_8c" startline="96" endline="170">transmit2leds</references>
+        <referencedby refid="ws2811lichterkette_8c_1a840291bc02cba5474a4cb46a9b9566fe" compoundref="ws2811lichterkette_8c" startline="244" endline="367">main</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_led_effects_8h_1a71d3b2ff21a63b48a01461e74be0c2b8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void faden</definition>
+        <argsstring>(struct color24bit color, uint8_t *lightdata)</argsstring>
+        <name>faden</name>
+        <param>
+          <type>struct <ref refid="structcolor24bit" kindref="compound">color24bit</ref></type>
+          <declname>color</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>lightdata</declname>
+        </param>
+        <briefdescription>
+<para>Generate a fading color effect. No other function call is necessary. </para>        </briefdescription>
+        <detaileddescription>
+<para>This function generates a fading color effect. At the beginning the whole stribe is filled with the chosen color. The color intensity of each color channel (blue, red, green) is decreased until the stribe is off. After that the color values are increased until the chosen color values are reached. The effect looks different depending on the chosen color because the color value proportion is not kept over the whole effect. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">struct</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="structcolor24bit" kindref="compound">color24bit</ref> color : color that is used for the fading effect </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">uint8_t</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>*lightdata : lightdata array that holds the color values for the stribe </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void </para></simplesect>
+<simplesect kind="note"><para>No need to run transmit2leds afterwards! The effect is standalone and ends is looped in the main while loop. The color value proportion is not kept over the whole effect. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="LedEffects.h" line="53" column="1" bodyfile="LedEffects.c" bodystart="366" bodyend="428"/>
+        <references refid="structcolor24bit_1a287b397e90d7b995c81ff54e741f96b2" compoundref="_lightstribe_8h" startline="19">color24bit::blue</references>
+        <references refid="_led_effects_8c_1a6950e7657ba74d0d490ba36427533c4b" compoundref="_led_effects_8c" startline="72" endline="88">effectdelay</references>
+        <references refid="globals_8h_1ac2445d316b2972d381edeac44bb6a226" compoundref="globals_8h" startline="27">effectime</references>
+        <references refid="structcolor24bit_1a90d21fa503b626c00cdc8d94863d5877" compoundref="_lightstribe_8h" startline="18">color24bit::green</references>
+        <references refid="globals_8h_1a1b09d1a5bcf4c8ab435bb3c9e36def59" compoundref="globals_8h" startline="53">PacketComplete</references>
+        <references refid="structcolor24bit_1ad47d918910aaa51c73160ac85999d09c" compoundref="_lightstribe_8h" startline="17">color24bit::red</references>
+        <references refid="_led_effects_8c_1a2d54d1a6c61fe667b7c68ff04a11c503" compoundref="_led_effects_8c" startline="96" endline="111">setfullcolor</references>
+        <references refid="_lightstribe_8c_1aac724dad670e4a26723daf71ce6a8d8a" compoundref="_lightstribe_8c" startline="96" endline="170">transmit2leds</references>
+        <referencedby refid="ws2811lichterkette_8c_1a840291bc02cba5474a4cb46a9b9566fe" compoundref="ws2811lichterkette_8c" startline="244" endline="367">main</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_led_effects_8h_1a9d0f91360c87b851925bf05be5352435" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void initrainbow</definition>
+        <argsstring>(uint8_t *lightdata)</argsstring>
+        <name>initrainbow</name>
+        <param>
+          <type>uint8_t *</type>
+          <declname>lightdata</declname>
+        </param>
+        <briefdescription>
+<para>Initialize a rainbow on the color array; to show the rainbow run transmit2leds afterwards. </para>        </briefdescription>
+        <detaileddescription>
+<para>This function fills the color array with rainbow colors. For this effect the color array is filled with different colors that are calculated by increasing and decreasing the color channels to loop over a RGB palette. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">uint8_t</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>*lightdata : lightdata array that holds the color values for the stribe </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void </para></simplesect>
+<simplesect kind="note"><para>Run transmit2leds afterwards! A nice effect is to rotate the array stepwise after the rainbow initialization (run transmit2leds after every rotation). The effect directly sets color values, so there may be a problem with the color profiles (RGB vs. GRB). The function was primary written for WS2812 LEDs (GRB)! The effect needs a minimum number of 20 LEDs to look nice! </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="LedEffects.h" line="54" column="1" bodyfile="LedEffects.c" bodystart="442" bodyend="481"/>
+        <references refid="structcolor24bit_1a287b397e90d7b995c81ff54e741f96b2" compoundref="_lightstribe_8h" startline="19">color24bit::blue</references>
+        <references refid="_lightstribe_8c_1a63fa595d401f0e85c1bba55ba2b1d66e" compoundref="_lightstribe_8c" startline="33" endline="41">changeled</references>
+        <references refid="structcolor24bit_1a90d21fa503b626c00cdc8d94863d5877" compoundref="_lightstribe_8h" startline="18">color24bit::green</references>
+        <references refid="globals_8h_1ad5db4045aed262ed4aae2af9d81fab98" compoundref="globals_8h" startline="25">NumOfLeds</references>
+        <references refid="structcolor24bit_1ad47d918910aaa51c73160ac85999d09c" compoundref="_lightstribe_8h" startline="17">color24bit::red</references>
+        <referencedby refid="ws2811lichterkette_8c_1a840291bc02cba5474a4cb46a9b9566fe" compoundref="ws2811lichterkette_8c" startline="244" endline="367">main</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_led_effects_8h_1ac83bd19da7ebd3c475e3667e4229db41" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void eastereggbase</definition>
+        <argsstring>(struct color24bit color, uint8_t *lightdata)</argsstring>
+        <name>eastereggbase</name>
+        <param>
+          <type>struct <ref refid="structcolor24bit" kindref="compound">color24bit</ref></type>
+          <declname>color</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>lightdata</declname>
+        </param>
+        <briefdescription>
+<para>Initialize the easteregg; do not use directly; this function is used by the easteregg function. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">struct</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="structcolor24bit" kindref="compound">color24bit</ref> color : color for the easteregg </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">uint8_t</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>*lightdata : lightdata array that holds the color values for the stribe </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void </para></simplesect>
+<simplesect kind="note"><para>Do not use this function directly; this function is used by the easteregg function </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="LedEffects.h" line="55" column="1" bodyfile="LedEffects.c" bodystart="489" bodyend="507"/>
+        <references refid="_lightstribe_8c_1a63fa595d401f0e85c1bba55ba2b1d66e" compoundref="_lightstribe_8c" startline="33" endline="41">changeled</references>
+        <references refid="_led_effects_8c_1a6950e7657ba74d0d490ba36427533c4b" compoundref="_led_effects_8c" startline="72" endline="88">effectdelay</references>
+        <references refid="globals_8h_1ac2445d316b2972d381edeac44bb6a226" compoundref="globals_8h" startline="27">effectime</references>
+        <references refid="globals_8h_1ad5db4045aed262ed4aae2af9d81fab98" compoundref="globals_8h" startline="25">NumOfLeds</references>
+        <references refid="globals_8h_1a1b09d1a5bcf4c8ab435bb3c9e36def59" compoundref="globals_8h" startline="53">PacketComplete</references>
+        <references refid="_led_effects_8c_1afd64325b08e785d37b4dfaf358e517f0" compoundref="_led_effects_8c" startline="138" endline="182">rotate</references>
+        <references refid="_lightstribe_8c_1aac724dad670e4a26723daf71ce6a8d8a" compoundref="_lightstribe_8c" startline="96" endline="170">transmit2leds</references>
+        <referencedby refid="_led_effects_8h_1a25e09bcb1481b20ebc2a27e7098b5115" compoundref="_led_effects_8c" startline="514" endline="534">easteregg</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_led_effects_8h_1a25e09bcb1481b20ebc2a27e7098b5115" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void easteregg</definition>
+        <argsstring>(uint8_t *lightdata)</argsstring>
+        <name>easteregg</name>
+        <param>
+          <type>uint8_t *</type>
+          <declname>lightdata</declname>
+        </param>
+        <briefdescription>
+<para>Run the easteregg; No other function call is necessary. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">uint8_t</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>*lightdata : lightdata array that holds the color values for the stribe </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void </para></simplesect>
+<simplesect kind="note"><para>Just try it :-) funny looking effect </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="LedEffects.h" line="56" column="1" bodyfile="LedEffects.c" bodystart="514" bodyend="534"/>
+        <references refid="_led_effects_8c_1a55291315ab0f2ca8d508f0e9da1920a7" compoundref="_led_effects_8c" startline="45" endline="65">colorconv8to24</references>
+        <references refid="_led_effects_8c_1ac83bd19da7ebd3c475e3667e4229db41" compoundref="_led_effects_8c" startline="489" endline="507">eastereggbase</references>
+        <references refid="globals_8h_1a1b09d1a5bcf4c8ab435bb3c9e36def59" compoundref="globals_8h" startline="53">PacketComplete</references>
+        <referencedby refid="ws2811lichterkette_8c_1a840291bc02cba5474a4cb46a9b9566fe" compoundref="ws2811lichterkette_8c" startline="244" endline="367">main</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="_led_effects_8h_1a99174e2b381d7ec6667d29352e6eca1b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void fillup</definition>
+        <argsstring>(struct color24bit color, struct color24bit backcolor, uint8_t *lightdata)</argsstring>
+        <name>fillup</name>
+        <param>
+          <type>struct <ref refid="structcolor24bit" kindref="compound">color24bit</ref></type>
+          <declname>color</declname>
+        </param>
+        <param>
+          <type>struct <ref refid="structcolor24bit" kindref="compound">color24bit</ref></type>
+          <declname>backcolor</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>lightdata</declname>
+        </param>
+        <briefdescription>
+<para>This function fills up the stribe; No other function call is necessary. </para>        </briefdescription>
+        <detaileddescription>
+<para>This function fills up the whole stribe and beginns again if it is finished. First one LED moves in the chosen color stepwise through the whole stribe and recolors all LEDs in the background color which have already been passed. At the end of the stribe the LED stays an the next single LED is going to move to the last-1 position. The next LED to the last-2 position. This is going on until the whole stribe is colored. Then the effect restarts (main while loop). <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">struct</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="structcolor24bit" kindref="compound">color24bit</ref> color : foreground color for the moving LED </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">struct</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="structcolor24bit" kindref="compound">color24bit</ref> backcolor : background color </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">uint8_t</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>*lightdata : lightdata array that holds the color values for the stribe </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void </para></simplesect>
+<simplesect kind="note"><para>This is a standalone effect. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="LedEffects.h" line="57" column="1" bodyfile="LedEffects.c" bodystart="549" bodyend="568"/>
+        <references refid="_lightstribe_8c_1a63fa595d401f0e85c1bba55ba2b1d66e" compoundref="_lightstribe_8c" startline="33" endline="41">changeled</references>
+        <references refid="_led_effects_8c_1a6950e7657ba74d0d490ba36427533c4b" compoundref="_led_effects_8c" startline="72" endline="88">effectdelay</references>
+        <references refid="globals_8h_1ac2445d316b2972d381edeac44bb6a226" compoundref="globals_8h" startline="27">effectime</references>
+        <references refid="globals_8h_1ad5db4045aed262ed4aae2af9d81fab98" compoundref="globals_8h" startline="25">NumOfLeds</references>
+        <references refid="globals_8h_1a1b09d1a5bcf4c8ab435bb3c9e36def59" compoundref="globals_8h" startline="53">PacketComplete</references>
+        <references refid="_lightstribe_8c_1aac724dad670e4a26723daf71ce6a8d8a" compoundref="_lightstribe_8c" startline="96" endline="170">transmit2leds</references>
+        <referencedby refid="ws2811lichterkette_8c_1a840291bc02cba5474a4cb46a9b9566fe" compoundref="ws2811lichterkette_8c" startline="244" endline="367">main</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>file that contains different effect definitions for the lightstribe </para>    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="version"><para>V1.00 </para></simplesect>
+<simplesect kind="date"><para>05.01.2016 </para></simplesect>
+<simplesect kind="authors"><para>Wank Florian </para></simplesect>
+</para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/**************************************************************************/</highlight></codeline>
+<codeline lineno="9"><highlight class="preprocessor">#include<sp/>&lt;stdint.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>LEDEFFECTS_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LEDEFFECTS_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="comment">//EFFECTS</highlight></codeline>
+<codeline lineno="16" refid="_led_effects_8h_1a996334f1d53296a931624800377d5b01" refkind="member"><highlight class="comment"></highlight><highlight class="preprocessor">#define<sp/>SETFULLCOLOR<sp/>0<sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18" refid="_led_effects_8h_1a2f349ea8f5412514d90f138ede08da62" refkind="member"><highlight class="preprocessor">#define<sp/>FILLUP<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20" refid="_led_effects_8h_1a38eec52a7dccb94ff563e30eda32c891" refkind="member"><highlight class="preprocessor">#define<sp/>BLINK<sp/>2<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22" refid="_led_effects_8h_1ab6e06c8b4c17edc65d75be641a0fc39b" refkind="member"><highlight class="preprocessor">#define<sp/>RUNLED<sp/>3<sp/><sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24" refid="_led_effects_8h_1ac7190c598c8618207180d135c0650dac" refkind="member"><highlight class="preprocessor">#define<sp/>ALTERNATE<sp/>5<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26" refid="_led_effects_8h_1a6b71fe4d23960c3701fc935a3368a6cc" refkind="member"><highlight class="preprocessor">#define<sp/>RECOLOR<sp/>7<sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28" refid="_led_effects_8h_1ad8150289b0e08f01126500379852a2a7" refkind="member"><highlight class="preprocessor">#define<sp/>FADE<sp/>8<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30" refid="_led_effects_8h_1a2805176df86592658ae06a508a558720" refkind="member"><highlight class="preprocessor">#define<sp/>INITRAINBOW<sp/>9<sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32" refid="_led_effects_8h_1a85bd242525add173bd67847b7acac00b" refkind="member"><highlight class="preprocessor">#define<sp/>ROTATE_R<sp/>10<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34" refid="_led_effects_8h_1a4a0c329f45825186172aee0c62531423" refkind="member"><highlight class="preprocessor">#define<sp/>ROTATE_L<sp/>11<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36" refid="_led_effects_8h_1a686dea444026cbf1236c24e7edb3a96d" refkind="member"><highlight class="preprocessor">#define<sp/>CUSTOM<sp/>12<sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38" refid="_led_effects_8h_1a5645ec20d3cd39bfc1c9ad5ec99db2f2" refkind="member"><highlight class="preprocessor">#define<sp/>EASTEREGG<sp/>13<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal">uint8_t<sp/><ref refid="_led_effects_8h_1ad67a4e660b5122ed454e101432bbdba0" kindref="member">map</ref>(uint8_t<sp/>x,<sp/>uint8_t<sp/>in_min,<sp/>uint8_t<sp/>in_max,<sp/>uint8_t<sp/>out_min,<sp/>uint8_t<sp/>out_max);<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Map<sp/>function<sp/>for<sp/>color<sp/>conversion;<sp/>calcualates<sp/>a<sp/>value<sp/>in<sp/>a<sp/>new<sp/>number<sp/>range</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structcolor24bit" kindref="compound">color24bit</ref><sp/><ref refid="_led_effects_8h_1a55291315ab0f2ca8d508f0e9da1920a7" kindref="member">colorconv8to24</ref>(uint8_t<sp/>startcolor);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Convert<sp/>a<sp/>8<sp/>Bit<sp/>color<sp/>(RGB<sp/>3-3-2)<sp/>to<sp/>24<sp/>Bit<sp/>color<sp/>(RGB<sp/>8-8-8);<sp/>color<sp/>assignment<sp/>depends<sp/>on<sp/>the<sp/>ledtype</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_led_effects_8h_1a6950e7657ba74d0d490ba36427533c4b" kindref="member">effectdelay</ref>(uint16_t<sp/>delay);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//a<sp/>simple<sp/>variable<sp/>delay<sp/>function</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_led_effects_8h_1a2d54d1a6c61fe667b7c68ff04a11c503" kindref="member">setfullcolor</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structcolor24bit" kindref="compound">color24bit</ref><sp/>color,<sp/>uint8_t<sp/>*lightdata);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//set<sp/>the<sp/>whole<sp/>stribe<sp/>in<sp/>one<sp/>color,<sp/>call<sp/>transmit2leds<sp/>afterwards</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_led_effects_8h_1a1c5e6b0f45c1787c25f8eafa8b9c6247" kindref="member">resetstribe</ref>(uint8_t<sp/>*lightdata);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//set<sp/>the<sp/>whole<sp/>stribe<sp/>off,<sp/>call<sp/>transmit2leds<sp/>afterwards</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_led_effects_8h_1afd64325b08e785d37b4dfaf358e517f0" kindref="member">rotate</ref>(uint8_t<sp/>*lightdata,<sp/>uint8_t<sp/>direction);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//rotate<sp/>the<sp/>color<sp/>array<sp/>by<sp/>one<sp/>position</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_led_effects_8h_1a1fa5e03cb24195a46dcdc5948f596181" kindref="member">rotateN</ref>(uint8_t<sp/>*lightdata,<sp/>uint8_t<sp/>direction,<sp/>uint8_t<sp/>width);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//rotate<sp/>the<sp/>color<sp/>array<sp/>by<sp/>n<sp/>positions</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_led_effects_8h_1aecba07ab559ab94e6f44c16e39012d80" kindref="member">initrunled</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structcolor24bit" kindref="compound">color24bit</ref><sp/>color,<sp/>uint8_t<sp/>*lightdata,<sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structcolor24bit" kindref="compound">color24bit</ref><sp/>background);<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//initialize<sp/>the<sp/>runled<sp/>effect,<sp/>call<sp/>runrunled<sp/>afterwards</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_led_effects_8h_1a35cfbfc36c975f98a7779a37b6ff63ce" kindref="member">runrunled</ref>(uint8_t<sp/>*lightdata,<sp/>uint8_t<sp/>direction);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//runs<sp/>the<sp/>runled<sp/>effect,<sp/>call<sp/>initrunled<sp/>before</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_led_effects_8h_1a9fd87d01d5cc4ce5fce6ddca55ebaf37" kindref="member">blinkled</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structcolor24bit" kindref="compound">color24bit</ref><sp/>color,<sp/>uint8_t<sp/>*lightdata);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//generate<sp/>a<sp/>blinking<sp/>effect</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_led_effects_8h_1af67b7638a175e4971f25df5a5db3d8d0" kindref="member">init_alternating</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structcolor24bit" kindref="compound">color24bit</ref><sp/>color,<sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structcolor24bit" kindref="compound">color24bit</ref><sp/>backcolor,<sp/>uint8_t<sp/>*lightdata);</highlight><highlight class="comment">//initialize<sp/>the<sp/>alternating<sp/>effect,<sp/>call<sp/>run_alternating<sp/>afterwards</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_led_effects_8h_1a5bde1e9e7fc19a9916f1ec02d8fbcd6c" kindref="member">run_alternating</ref>(uint8_t<sp/>*lightdata<sp/>);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//run<sp/>the<sp/>alternating<sp/>effect,<sp/>call<sp/>init_alternating<sp/>before</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_led_effects_8h_1a448758d76f47ea6fed4beb349196363f" kindref="member">recolor</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structcolor24bit" kindref="compound">color24bit</ref><sp/>color,<sp/>uint8_t<sp/>*lightdata);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//recolor<sp/>the<sp/>stribe<sp/>step<sp/>by<sp/>step,<sp/>stand<sp/>alone<sp/>function,<sp/>ends<sp/>after<sp/>execution</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_led_effects_8h_1a71d3b2ff21a63b48a01461e74be0c2b8" kindref="member">faden</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structcolor24bit" kindref="compound">color24bit</ref><sp/>color,<sp/>uint8_t<sp/>*lightdata);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//color<sp/>fading<sp/>effect,<sp/>stand<sp/>alone<sp/>effect</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_led_effects_8h_1a9d0f91360c87b851925bf05be5352435" kindref="member">initrainbow</ref>(uint8_t<sp/>*lightdata);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//init<sp/>the<sp/>stribe<sp/>with<sp/>rainbow<sp/>colors,<sp/>call<sp/>transmit2leds<sp/>afterwards</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_led_effects_8h_1ac83bd19da7ebd3c475e3667e4229db41" kindref="member">eastereggbase</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structcolor24bit" kindref="compound">color24bit</ref><sp/>color,<sp/>uint8_t<sp/>*lightdata);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//part<sp/>of<sp/>the<sp/>easteregg<sp/>effect,<sp/>do<sp/>not<sp/>call<sp/>directly</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_led_effects_8h_1a25e09bcb1481b20ebc2a27e7098b5115" kindref="member">easteregg</ref>(uint8_t<sp/>*lightdata);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//easteregg<sp/>effect,<sp/>try<sp/>out<sp/>and<sp/>have<sp/>fun<sp/>:-)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_led_effects_8h_1a99174e2b381d7ec6667d29352e6eca1b" kindref="member">fillup</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structcolor24bit" kindref="compound">color24bit</ref><sp/>color,</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structcolor24bit" kindref="compound">color24bit</ref><sp/>backcolor,<sp/>uint8_t<sp/>*lightdata);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//fill<sp/>the<sp/>stribe<sp/>step<sp/>by<sp/>step<sp/>until<sp/>the<sp/>stribe<sp/>has<sp/>one<sp/>color,<sp/>the<sp/>background<sp/>color<sp/>is<sp/>filled<sp/>behind</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>LEDEFFECTS_H_<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="LedEffects.h"/>
+  </compounddef>
+</doxygen>

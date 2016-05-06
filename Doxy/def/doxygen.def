@@ -21,6 +21,41 @@ _EnD_oF_dEf_TeXt_;
       sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
 8 Bit red 
 _EnD_oF_dEf_TeXt_;
+      sec-mem-referenceby = {
+        sec-mem-ref-id = '_lightstribe_8c_1a63fa595d401f0e85c1bba55ba2b1d66e';
+        sec-mem-ref-line = '33';
+        sec-mem-ref-name = 'changeled';
+    };
+      sec-mem-referenceby = {
+        sec-mem-ref-id = '_led_effects_8c_1a55291315ab0f2ca8d508f0e9da1920a7';
+        sec-mem-ref-line = '45';
+        sec-mem-ref-name = 'colorconv8to24';
+    };
+      sec-mem-referenceby = {
+        sec-mem-ref-id = '_led_effects_8c_1a71d3b2ff21a63b48a01461e74be0c2b8';
+        sec-mem-ref-line = '366';
+        sec-mem-ref-name = 'faden';
+    };
+      sec-mem-referenceby = {
+        sec-mem-ref-id = '_led_effects_8c_1a9d0f91360c87b851925bf05be5352435';
+        sec-mem-ref-line = '442';
+        sec-mem-ref-name = 'initrainbow';
+    };
+      sec-mem-referenceby = {
+        sec-mem-ref-id = '_led_effects_8c_1a1c5e6b0f45c1787c25f8eafa8b9c6247';
+        sec-mem-ref-line = '118';
+        sec-mem-ref-name = 'resetstribe';
+    };
+      sec-mem-referenceby = {
+        sec-mem-ref-id = '_led_effects_8c_1a2d54d1a6c61fe667b7c68ff04a11c503';
+        sec-mem-ref-line = '96';
+        sec-mem-ref-name = 'setfullcolor';
+    };
+      sec-mem-referenceby = {
+        sec-mem-ref-id = '_lightstribe_8c_1abba9462833e30ef725eaf18c3d01eb71';
+        sec-mem-ref-line = '51';
+        sec-mem-ref-name = 'setled';
+    };
     }; /* sec-member */
     sec-member = {
       sec-mem-kind = 'variable';
@@ -39,6 +74,41 @@ _EnD_oF_dEf_TeXt_;
       sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
 8 Bit green 
 _EnD_oF_dEf_TeXt_;
+      sec-mem-referenceby = {
+        sec-mem-ref-id = '_lightstribe_8c_1a63fa595d401f0e85c1bba55ba2b1d66e';
+        sec-mem-ref-line = '33';
+        sec-mem-ref-name = 'changeled';
+    };
+      sec-mem-referenceby = {
+        sec-mem-ref-id = '_led_effects_8c_1a55291315ab0f2ca8d508f0e9da1920a7';
+        sec-mem-ref-line = '45';
+        sec-mem-ref-name = 'colorconv8to24';
+    };
+      sec-mem-referenceby = {
+        sec-mem-ref-id = '_led_effects_8c_1a71d3b2ff21a63b48a01461e74be0c2b8';
+        sec-mem-ref-line = '366';
+        sec-mem-ref-name = 'faden';
+    };
+      sec-mem-referenceby = {
+        sec-mem-ref-id = '_led_effects_8c_1a9d0f91360c87b851925bf05be5352435';
+        sec-mem-ref-line = '442';
+        sec-mem-ref-name = 'initrainbow';
+    };
+      sec-mem-referenceby = {
+        sec-mem-ref-id = '_led_effects_8c_1a1c5e6b0f45c1787c25f8eafa8b9c6247';
+        sec-mem-ref-line = '118';
+        sec-mem-ref-name = 'resetstribe';
+    };
+      sec-mem-referenceby = {
+        sec-mem-ref-id = '_led_effects_8c_1a2d54d1a6c61fe667b7c68ff04a11c503';
+        sec-mem-ref-line = '96';
+        sec-mem-ref-name = 'setfullcolor';
+    };
+      sec-mem-referenceby = {
+        sec-mem-ref-id = '_lightstribe_8c_1abba9462833e30ef725eaf18c3d01eb71';
+        sec-mem-ref-line = '51';
+        sec-mem-ref-name = 'setled';
+    };
     }; /* sec-member */
     sec-member = {
       sec-mem-kind = 'variable';
@@ -57,6 +127,41 @@ _EnD_oF_dEf_TeXt_;
       sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
 8 Bit blue 
 _EnD_oF_dEf_TeXt_;
+      sec-mem-referenceby = {
+        sec-mem-ref-id = '_lightstribe_8c_1a63fa595d401f0e85c1bba55ba2b1d66e';
+        sec-mem-ref-line = '33';
+        sec-mem-ref-name = 'changeled';
+    };
+      sec-mem-referenceby = {
+        sec-mem-ref-id = '_led_effects_8c_1a55291315ab0f2ca8d508f0e9da1920a7';
+        sec-mem-ref-line = '45';
+        sec-mem-ref-name = 'colorconv8to24';
+    };
+      sec-mem-referenceby = {
+        sec-mem-ref-id = '_led_effects_8c_1a71d3b2ff21a63b48a01461e74be0c2b8';
+        sec-mem-ref-line = '366';
+        sec-mem-ref-name = 'faden';
+    };
+      sec-mem-referenceby = {
+        sec-mem-ref-id = '_led_effects_8c_1a9d0f91360c87b851925bf05be5352435';
+        sec-mem-ref-line = '442';
+        sec-mem-ref-name = 'initrainbow';
+    };
+      sec-mem-referenceby = {
+        sec-mem-ref-id = '_led_effects_8c_1a1c5e6b0f45c1787c25f8eafa8b9c6247';
+        sec-mem-ref-line = '118';
+        sec-mem-ref-name = 'resetstribe';
+    };
+      sec-mem-referenceby = {
+        sec-mem-ref-id = '_led_effects_8c_1a2d54d1a6c61fe667b7c68ff04a11c503';
+        sec-mem-ref-line = '96';
+        sec-mem-ref-name = 'setfullcolor';
+    };
+      sec-mem-referenceby = {
+        sec-mem-ref-id = '_lightstribe_8c_1abba9462833e30ef725eaf18c3d01eb71';
+        sec-mem-ref-line = '51';
+        sec-mem-ref-name = 'setled';
+    };
     }; /* sec-member */
   }; /* cp-section */
   cp-filename  = 'C:/Users/Commander/Documents/Atmel Studio/6.2/ws2811lichterkette/ws2811lichterkette/Lightstribe.h';
@@ -170,6 +275,11 @@ _EnD_oF_dEf_TeXt_;
       define-mem-documentation = <<_EnD_oF_dEf_TeXt_
 
 _EnD_oF_dEf_TeXt_;
+      define-mem-referenceby = {
+        define-mem-ref-id = 'ws2811lichterkette_8c_1a840291bc02cba5474a4cb46a9b9566fe';
+        define-mem-ref-line = '249';
+        define-mem-ref-name = 'main';
+    };
     }; /* define-member */
     define-member = {
       define-mem-kind = 'define';
@@ -184,7 +294,7 @@ _EnD_oF_dEf_TeXt_;
       define-mem-desc-line = '35';
       define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 definition for maximum number of different colors that can be handled at the same time 
-        (the maximum value should be 50, a higher value may result in an memory overflow refering to 2kByte (atmega328p))
+        (the maximum value should be 250, a higher value may result in an memory overflow refering to 2kByte (atmega328p))
 _EnD_oF_dEf_TeXt_;
       define-mem-documentation = <<_EnD_oF_dEf_TeXt_
 
@@ -207,6 +317,16 @@ _EnD_oF_dEf_TeXt_;
       define-mem-documentation = <<_EnD_oF_dEf_TeXt_
 
 _EnD_oF_dEf_TeXt_;
+      define-mem-referenceby = {
+        define-mem-ref-id = 'ws2811lichterkette_8c_1a840291bc02cba5474a4cb46a9b9566fe';
+        define-mem-ref-line = '249';
+        define-mem-ref-name = 'main';
+    };
+      define-mem-referenceby = {
+        define-mem-ref-id = 'ws2811lichterkette_8c_1a09ce999e15ad60b8a3f07d08af1946f9';
+        define-mem-ref-line = '376';
+        define-mem-ref-name = 'ISR';
+    };
     }; /* define-member */
     define-member = {
       define-mem-kind = 'define';
@@ -245,6 +365,66 @@ _EnD_oF_dEf_TeXt_;
       var-mem-documentation = <<_EnD_oF_dEf_TeXt_
 
 _EnD_oF_dEf_TeXt_;
+      var-mem-referenceby = {
+        var-mem-ref-id = '_led_effects_8c_1a2d54d1a6c61fe667b7c68ff04a11c503';
+        var-mem-ref-line = '96';
+        var-mem-ref-name = 'setfullcolor';
+    };
+      var-mem-referenceby = {
+        var-mem-ref-id = '_led_effects_8c_1afd64325b08e785d37b4dfaf358e517f0';
+        var-mem-ref-line = '138';
+        var-mem-ref-name = 'rotate';
+    };
+      var-mem-referenceby = {
+        var-mem-ref-id = '_led_effects_8c_1a35cfbfc36c975f98a7779a37b6ff63ce';
+        var-mem-ref-line = '236';
+        var-mem-ref-name = 'runrunled';
+    };
+      var-mem-referenceby = {
+        var-mem-ref-id = '_led_effects_8c_1af67b7638a175e4971f25df5a5db3d8d0';
+        var-mem-ref-line = '300';
+        var-mem-ref-name = 'init_alternating';
+    };
+      var-mem-referenceby = {
+        var-mem-ref-id = '_led_effects_8c_1a448758d76f47ea6fed4beb349196363f';
+        var-mem-ref-line = '340';
+        var-mem-ref-name = 'recolor';
+    };
+      var-mem-referenceby = {
+        var-mem-ref-id = '_led_effects_8c_1a9d0f91360c87b851925bf05be5352435';
+        var-mem-ref-line = '442';
+        var-mem-ref-name = 'initrainbow';
+    };
+      var-mem-referenceby = {
+        var-mem-ref-id = '_led_effects_8c_1ac83bd19da7ebd3c475e3667e4229db41';
+        var-mem-ref-line = '489';
+        var-mem-ref-name = 'eastereggbase';
+    };
+      var-mem-referenceby = {
+        var-mem-ref-id = '_led_effects_8c_1a99174e2b381d7ec6667d29352e6eca1b';
+        var-mem-ref-line = '549';
+        var-mem-ref-name = 'fillup';
+    };
+      var-mem-referenceby = {
+        var-mem-ref-id = '_lightstribe_8c_1a63fa595d401f0e85c1bba55ba2b1d66e';
+        var-mem-ref-line = '33';
+        var-mem-ref-name = 'changeled';
+    };
+      var-mem-referenceby = {
+        var-mem-ref-id = '_lightstribe_8c_1abba9462833e30ef725eaf18c3d01eb71';
+        var-mem-ref-line = '51';
+        var-mem-ref-name = 'setled';
+    };
+      var-mem-referenceby = {
+        var-mem-ref-id = '_lightstribe_8c_1aac724dad670e4a26723daf71ce6a8d8a';
+        var-mem-ref-line = '96';
+        var-mem-ref-name = 'transmit2leds';
+    };
+      var-mem-referenceby = {
+        var-mem-ref-id = 'ws2811lichterkette_8c_1a840291bc02cba5474a4cb46a9b9566fe';
+        var-mem-ref-line = '249';
+        var-mem-ref-name = 'main';
+    };
     }; /* var-member */
     var-member = {
       var-mem-kind = 'variable';
@@ -263,6 +443,46 @@ _EnD_oF_dEf_TeXt_;
       var-mem-documentation = <<_EnD_oF_dEf_TeXt_
 
 _EnD_oF_dEf_TeXt_;
+      var-mem-referenceby = {
+        var-mem-ref-id = '_led_effects_8c_1a35cfbfc36c975f98a7779a37b6ff63ce';
+        var-mem-ref-line = '236';
+        var-mem-ref-name = 'runrunled';
+    };
+      var-mem-referenceby = {
+        var-mem-ref-id = '_led_effects_8c_1a9fd87d01d5cc4ce5fce6ddca55ebaf37';
+        var-mem-ref-line = '278';
+        var-mem-ref-name = 'blinkled';
+    };
+      var-mem-referenceby = {
+        var-mem-ref-id = '_led_effects_8c_1a5bde1e9e7fc19a9916f1ec02d8fbcd6c';
+        var-mem-ref-line = '323';
+        var-mem-ref-name = 'run_alternating';
+    };
+      var-mem-referenceby = {
+        var-mem-ref-id = '_led_effects_8c_1a448758d76f47ea6fed4beb349196363f';
+        var-mem-ref-line = '340';
+        var-mem-ref-name = 'recolor';
+    };
+      var-mem-referenceby = {
+        var-mem-ref-id = '_led_effects_8c_1a71d3b2ff21a63b48a01461e74be0c2b8';
+        var-mem-ref-line = '366';
+        var-mem-ref-name = 'faden';
+    };
+      var-mem-referenceby = {
+        var-mem-ref-id = '_led_effects_8c_1ac83bd19da7ebd3c475e3667e4229db41';
+        var-mem-ref-line = '489';
+        var-mem-ref-name = 'eastereggbase';
+    };
+      var-mem-referenceby = {
+        var-mem-ref-id = '_led_effects_8c_1a99174e2b381d7ec6667d29352e6eca1b';
+        var-mem-ref-line = '549';
+        var-mem-ref-name = 'fillup';
+    };
+      var-mem-referenceby = {
+        var-mem-ref-id = 'ws2811lichterkette_8c_1a840291bc02cba5474a4cb46a9b9566fe';
+        var-mem-ref-line = '249';
+        var-mem-ref-name = 'main';
+    };
     }; /* var-member */
     var-member = {
       var-mem-kind = 'variable';
@@ -281,6 +501,16 @@ _EnD_oF_dEf_TeXt_;
       var-mem-documentation = <<_EnD_oF_dEf_TeXt_
 
 _EnD_oF_dEf_TeXt_;
+      var-mem-referenceby = {
+        var-mem-ref-id = '_led_effects_8c_1a55291315ab0f2ca8d508f0e9da1920a7';
+        var-mem-ref-line = '45';
+        var-mem-ref-name = 'colorconv8to24';
+    };
+      var-mem-referenceby = {
+        var-mem-ref-id = 'ws2811lichterkette_8c_1a840291bc02cba5474a4cb46a9b9566fe';
+        var-mem-ref-line = '249';
+        var-mem-ref-name = 'main';
+    };
     }; /* var-member */
     var-member = {
       var-mem-kind = 'variable';
@@ -299,6 +529,11 @@ _EnD_oF_dEf_TeXt_;
       var-mem-documentation = <<_EnD_oF_dEf_TeXt_
 
 _EnD_oF_dEf_TeXt_;
+      var-mem-referenceby = {
+        var-mem-ref-id = 'ws2811lichterkette_8c_1a840291bc02cba5474a4cb46a9b9566fe';
+        var-mem-ref-line = '249';
+        var-mem-ref-name = 'main';
+    };
     }; /* var-member */
     var-member = {
       var-mem-kind = 'variable';
@@ -317,6 +552,16 @@ _EnD_oF_dEf_TeXt_;
       var-mem-documentation = <<_EnD_oF_dEf_TeXt_
 
 _EnD_oF_dEf_TeXt_;
+      var-mem-referenceby = {
+        var-mem-ref-id = 'ws2811lichterkette_8c_1a840291bc02cba5474a4cb46a9b9566fe';
+        var-mem-ref-line = '249';
+        var-mem-ref-name = 'main';
+    };
+      var-mem-referenceby = {
+        var-mem-ref-id = 'ws2811lichterkette_8c_1a09ce999e15ad60b8a3f07d08af1946f9';
+        var-mem-ref-line = '376';
+        var-mem-ref-name = 'ISR';
+    };
     }; /* var-member */
     var-member = {
       var-mem-kind = 'variable';
@@ -335,6 +580,16 @@ _EnD_oF_dEf_TeXt_;
       var-mem-documentation = <<_EnD_oF_dEf_TeXt_
 
 _EnD_oF_dEf_TeXt_;
+      var-mem-referenceby = {
+        var-mem-ref-id = 'ws2811lichterkette_8c_1a840291bc02cba5474a4cb46a9b9566fe';
+        var-mem-ref-line = '249';
+        var-mem-ref-name = 'main';
+    };
+      var-mem-referenceby = {
+        var-mem-ref-id = 'ws2811lichterkette_8c_1a09ce999e15ad60b8a3f07d08af1946f9';
+        var-mem-ref-line = '376';
+        var-mem-ref-name = 'ISR';
+    };
     }; /* var-member */
     var-member = {
       var-mem-kind = 'variable';
@@ -353,6 +608,16 @@ _EnD_oF_dEf_TeXt_;
       var-mem-documentation = <<_EnD_oF_dEf_TeXt_
 
 _EnD_oF_dEf_TeXt_;
+      var-mem-referenceby = {
+        var-mem-ref-id = 'ws2811lichterkette_8c_1a840291bc02cba5474a4cb46a9b9566fe';
+        var-mem-ref-line = '249';
+        var-mem-ref-name = 'main';
+    };
+      var-mem-referenceby = {
+        var-mem-ref-id = 'ws2811lichterkette_8c_1a09ce999e15ad60b8a3f07d08af1946f9';
+        var-mem-ref-line = '376';
+        var-mem-ref-name = 'ISR';
+    };
     }; /* var-member */
     var-member = {
       var-mem-kind = 'variable';
@@ -371,6 +636,11 @@ _EnD_oF_dEf_TeXt_;
       var-mem-documentation = <<_EnD_oF_dEf_TeXt_
 
 _EnD_oF_dEf_TeXt_;
+      var-mem-referenceby = {
+        var-mem-ref-id = 'ws2811lichterkette_8c_1a840291bc02cba5474a4cb46a9b9566fe';
+        var-mem-ref-line = '249';
+        var-mem-ref-name = 'main';
+    };
     }; /* var-member */
     var-member = {
       var-mem-kind = 'variable';
@@ -389,6 +659,51 @@ _EnD_oF_dEf_TeXt_;
       var-mem-documentation = <<_EnD_oF_dEf_TeXt_
 
 _EnD_oF_dEf_TeXt_;
+      var-mem-referenceby = {
+        var-mem-ref-id = '_led_effects_8c_1a6950e7657ba74d0d490ba36427533c4b';
+        var-mem-ref-line = '72';
+        var-mem-ref-name = 'effectdelay';
+    };
+      var-mem-referenceby = {
+        var-mem-ref-id = '_led_effects_8c_1a35cfbfc36c975f98a7779a37b6ff63ce';
+        var-mem-ref-line = '236';
+        var-mem-ref-name = 'runrunled';
+    };
+      var-mem-referenceby = {
+        var-mem-ref-id = '_led_effects_8c_1a448758d76f47ea6fed4beb349196363f';
+        var-mem-ref-line = '340';
+        var-mem-ref-name = 'recolor';
+    };
+      var-mem-referenceby = {
+        var-mem-ref-id = '_led_effects_8c_1a71d3b2ff21a63b48a01461e74be0c2b8';
+        var-mem-ref-line = '366';
+        var-mem-ref-name = 'faden';
+    };
+      var-mem-referenceby = {
+        var-mem-ref-id = '_led_effects_8c_1ac83bd19da7ebd3c475e3667e4229db41';
+        var-mem-ref-line = '489';
+        var-mem-ref-name = 'eastereggbase';
+    };
+      var-mem-referenceby = {
+        var-mem-ref-id = '_led_effects_8c_1a25e09bcb1481b20ebc2a27e7098b5115';
+        var-mem-ref-line = '514';
+        var-mem-ref-name = 'easteregg';
+    };
+      var-mem-referenceby = {
+        var-mem-ref-id = '_led_effects_8c_1a99174e2b381d7ec6667d29352e6eca1b';
+        var-mem-ref-line = '549';
+        var-mem-ref-name = 'fillup';
+    };
+      var-mem-referenceby = {
+        var-mem-ref-id = 'ws2811lichterkette_8c_1a840291bc02cba5474a4cb46a9b9566fe';
+        var-mem-ref-line = '249';
+        var-mem-ref-name = 'main';
+    };
+      var-mem-referenceby = {
+        var-mem-ref-id = 'ws2811lichterkette_8c_1a09ce999e15ad60b8a3f07d08af1946f9';
+        var-mem-ref-line = '376';
+        var-mem-ref-name = 'ISR';
+    };
     }; /* var-member */
     var-member = {
       var-mem-kind = 'variable';
@@ -407,6 +722,16 @@ _EnD_oF_dEf_TeXt_;
       var-mem-documentation = <<_EnD_oF_dEf_TeXt_
 
 _EnD_oF_dEf_TeXt_;
+      var-mem-referenceby = {
+        var-mem-ref-id = 'ws2811lichterkette_8c_1a840291bc02cba5474a4cb46a9b9566fe';
+        var-mem-ref-line = '249';
+        var-mem-ref-name = 'main';
+    };
+      var-mem-referenceby = {
+        var-mem-ref-id = 'ws2811lichterkette_8c_1a09ce999e15ad60b8a3f07d08af1946f9';
+        var-mem-ref-line = '376';
+        var-mem-ref-name = 'ISR';
+    };
     }; /* var-member */
     var-member = {
       var-mem-kind = 'variable';
@@ -425,6 +750,16 @@ _EnD_oF_dEf_TeXt_;
       var-mem-documentation = <<_EnD_oF_dEf_TeXt_
 
 _EnD_oF_dEf_TeXt_;
+      var-mem-referenceby = {
+        var-mem-ref-id = 'ws2811lichterkette_8c_1a840291bc02cba5474a4cb46a9b9566fe';
+        var-mem-ref-line = '249';
+        var-mem-ref-name = 'main';
+    };
+      var-mem-referenceby = {
+        var-mem-ref-id = 'ws2811lichterkette_8c_1a09ce999e15ad60b8a3f07d08af1946f9';
+        var-mem-ref-line = '376';
+        var-mem-ref-name = 'ISR';
+    };
     }; /* var-member */
     var-member = {
       var-mem-kind = 'variable';
@@ -443,12 +778,22 @@ _EnD_oF_dEf_TeXt_;
       var-mem-documentation = <<_EnD_oF_dEf_TeXt_
 
 _EnD_oF_dEf_TeXt_;
+      var-mem-referenceby = {
+        var-mem-ref-id = 'ws2811lichterkette_8c_1a840291bc02cba5474a4cb46a9b9566fe';
+        var-mem-ref-line = '249';
+        var-mem-ref-name = 'main';
+    };
+      var-mem-referenceby = {
+        var-mem-ref-id = 'ws2811lichterkette_8c_1a09ce999e15ad60b8a3f07d08af1946f9';
+        var-mem-ref-line = '376';
+        var-mem-ref-name = 'ISR';
+    };
     }; /* var-member */
     };
   file-full-name  = 'C:/Users/Commander/Documents/Atmel Studio/6.2/ws2811lichterkette/ws2811lichterkette/globals.h';
   file-first-line = '1';
   file-briefdesc  = <<_EnD_oF_dEf_TeXt_
-file that contains basic and global definitions, no changes should be done here
+file that contains basic and global definitions, changes should be done carefully
 _EnD_oF_dEf_TeXt_;
   file-documentation = <<_EnD_oF_dEf_TeXt_
 @version  V1.00
@@ -516,6 +861,11 @@ _EnD_oF_dEf_TeXt_;
                 in_min < x < in_max convert to out_min < returnvalue < out_max
                 by positioning the x proportionally in the new number range
 _EnD_oF_dEf_TeXt_;
+      func-mem-referenceby = {
+        func-mem-ref-id = '_led_effects_8c_1a55291315ab0f2ca8d508f0e9da1920a7';
+        func-mem-ref-line = '45';
+        func-mem-ref-name = 'colorconv8to24';
+    };
     }; /* func-member */
     func-member = {
       func-mem-kind = 'function';
@@ -544,6 +894,41 @@ _EnD_oF_dEf_TeXt_;
                 This is neccessary because of differnt color formats (WS2811->RGB ; WS2812->GRB).
                 Original the whole environment was for WS2812 LEDs!             
 _EnD_oF_dEf_TeXt_;
+      func-mem-referenceto = {
+        func-mem-ref-id = '_lightstribe_8h_1a287b397e90d7b995c81ff54e741f96b2';
+        func-mem-ref-line = '19';
+        func-mem-ref-name = 'color24bit::blue';
+    };
+      func-mem-referenceto = {
+        func-mem-ref-id = '_lightstribe_8h_1a90d21fa503b626c00cdc8d94863d5877';
+        func-mem-ref-line = '18';
+        func-mem-ref-name = 'color24bit::green';
+    };
+      func-mem-referenceto = {
+        func-mem-ref-id = 'globals_8h_1a722e1eb38b661d1338ada3cc7a4049a0';
+        func-mem-ref-line = '29';
+        func-mem-ref-name = 'ledtype';
+    };
+      func-mem-referenceto = {
+        func-mem-ref-id = '_led_effects_8c_1ad67a4e660b5122ed454e101432bbdba0';
+        func-mem-ref-line = '33';
+        func-mem-ref-name = 'map';
+    };
+      func-mem-referenceto = {
+        func-mem-ref-id = '_lightstribe_8h_1ad47d918910aaa51c73160ac85999d09c';
+        func-mem-ref-line = '17';
+        func-mem-ref-name = 'color24bit::red';
+    };
+      func-mem-referenceby = {
+        func-mem-ref-id = '_led_effects_8c_1a25e09bcb1481b20ebc2a27e7098b5115';
+        func-mem-ref-line = '514';
+        func-mem-ref-name = 'easteregg';
+    };
+      func-mem-referenceby = {
+        func-mem-ref-id = 'ws2811lichterkette_8c_1a840291bc02cba5474a4cb46a9b9566fe';
+        func-mem-ref-line = '249';
+        func-mem-ref-name = 'main';
+    };
     }; /* func-member */
     func-member = {
       func-mem-kind = 'function';
@@ -570,6 +955,51 @@ _EnD_oF_dEf_TeXt_;
 \return         void
 \note           This function is just a variable delay, there is no coherence with a concrete time (i.e. s, ms)         
 _EnD_oF_dEf_TeXt_;
+      func-mem-referenceto = {
+        func-mem-ref-id = 'globals_8h_1a1b09d1a5bcf4c8ab435bb3c9e36def59';
+        func-mem-ref-line = '53';
+        func-mem-ref-name = 'PacketComplete';
+    };
+      func-mem-referenceby = {
+        func-mem-ref-id = '_led_effects_8c_1a9fd87d01d5cc4ce5fce6ddca55ebaf37';
+        func-mem-ref-line = '278';
+        func-mem-ref-name = 'blinkled';
+    };
+      func-mem-referenceby = {
+        func-mem-ref-id = '_led_effects_8c_1ac83bd19da7ebd3c475e3667e4229db41';
+        func-mem-ref-line = '489';
+        func-mem-ref-name = 'eastereggbase';
+    };
+      func-mem-referenceby = {
+        func-mem-ref-id = '_led_effects_8c_1a71d3b2ff21a63b48a01461e74be0c2b8';
+        func-mem-ref-line = '366';
+        func-mem-ref-name = 'faden';
+    };
+      func-mem-referenceby = {
+        func-mem-ref-id = '_led_effects_8c_1a99174e2b381d7ec6667d29352e6eca1b';
+        func-mem-ref-line = '549';
+        func-mem-ref-name = 'fillup';
+    };
+      func-mem-referenceby = {
+        func-mem-ref-id = 'ws2811lichterkette_8c_1a840291bc02cba5474a4cb46a9b9566fe';
+        func-mem-ref-line = '249';
+        func-mem-ref-name = 'main';
+    };
+      func-mem-referenceby = {
+        func-mem-ref-id = '_led_effects_8c_1a448758d76f47ea6fed4beb349196363f';
+        func-mem-ref-line = '340';
+        func-mem-ref-name = 'recolor';
+    };
+      func-mem-referenceby = {
+        func-mem-ref-id = '_led_effects_8c_1a5bde1e9e7fc19a9916f1ec02d8fbcd6c';
+        func-mem-ref-line = '323';
+        func-mem-ref-name = 'run_alternating';
+    };
+      func-mem-referenceby = {
+        func-mem-ref-id = '_led_effects_8c_1a35cfbfc36c975f98a7779a37b6ff63ce';
+        func-mem-ref-line = '236';
+        func-mem-ref-name = 'runrunled';
+    };
     }; /* func-member */
     func-member = {
       func-mem-kind = 'function';
@@ -603,6 +1033,56 @@ _EnD_oF_dEf_TeXt_;
 \return         void
 \note           This function sets the lightdata array. To update the stribe run transmit2leds afterwards!      
 _EnD_oF_dEf_TeXt_;
+      func-mem-referenceto = {
+        func-mem-ref-id = '_lightstribe_8h_1a287b397e90d7b995c81ff54e741f96b2';
+        func-mem-ref-line = '19';
+        func-mem-ref-name = 'color24bit::blue';
+    };
+      func-mem-referenceto = {
+        func-mem-ref-id = '_lightstribe_8h_1a90d21fa503b626c00cdc8d94863d5877';
+        func-mem-ref-line = '18';
+        func-mem-ref-name = 'color24bit::green';
+    };
+      func-mem-referenceto = {
+        func-mem-ref-id = 'globals_8h_1ad5db4045aed262ed4aae2af9d81fab98';
+        func-mem-ref-line = '25';
+        func-mem-ref-name = 'NumOfLeds';
+    };
+      func-mem-referenceto = {
+        func-mem-ref-id = '_lightstribe_8h_1ad47d918910aaa51c73160ac85999d09c';
+        func-mem-ref-line = '17';
+        func-mem-ref-name = 'color24bit::red';
+    };
+      func-mem-referenceby = {
+        func-mem-ref-id = '_led_effects_8c_1a9fd87d01d5cc4ce5fce6ddca55ebaf37';
+        func-mem-ref-line = '278';
+        func-mem-ref-name = 'blinkled';
+    };
+      func-mem-referenceby = {
+        func-mem-ref-id = '_led_effects_8c_1a71d3b2ff21a63b48a01461e74be0c2b8';
+        func-mem-ref-line = '366';
+        func-mem-ref-name = 'faden';
+    };
+      func-mem-referenceby = {
+        func-mem-ref-id = '_led_effects_8c_1af67b7638a175e4971f25df5a5db3d8d0';
+        func-mem-ref-line = '300';
+        func-mem-ref-name = 'init_alternating';
+    };
+      func-mem-referenceby = {
+        func-mem-ref-id = '_led_effects_8c_1aecba07ab559ab94e6f44c16e39012d80';
+        func-mem-ref-line = '217';
+        func-mem-ref-name = 'initrunled';
+    };
+      func-mem-referenceby = {
+        func-mem-ref-id = 'ws2811lichterkette_8c_1a840291bc02cba5474a4cb46a9b9566fe';
+        func-mem-ref-line = '249';
+        func-mem-ref-name = 'main';
+    };
+      func-mem-referenceby = {
+        func-mem-ref-id = '_led_effects_8c_1a1c5e6b0f45c1787c25f8eafa8b9c6247';
+        func-mem-ref-line = '118';
+        func-mem-ref-name = 'resetstribe';
+    };
     }; /* func-member */
     func-member = {
       func-mem-kind = 'function';
@@ -629,6 +1109,31 @@ _EnD_oF_dEf_TeXt_;
 \return         void
 \note           This function sets the lightdata array to 0x00. To update the stribe run transmit2leds afterwards!      
 _EnD_oF_dEf_TeXt_;
+      func-mem-referenceto = {
+        func-mem-ref-id = '_lightstribe_8h_1a287b397e90d7b995c81ff54e741f96b2';
+        func-mem-ref-line = '19';
+        func-mem-ref-name = 'color24bit::blue';
+    };
+      func-mem-referenceto = {
+        func-mem-ref-id = '_lightstribe_8h_1a90d21fa503b626c00cdc8d94863d5877';
+        func-mem-ref-line = '18';
+        func-mem-ref-name = 'color24bit::green';
+    };
+      func-mem-referenceto = {
+        func-mem-ref-id = '_lightstribe_8h_1ad47d918910aaa51c73160ac85999d09c';
+        func-mem-ref-line = '17';
+        func-mem-ref-name = 'color24bit::red';
+    };
+      func-mem-referenceto = {
+        func-mem-ref-id = '_led_effects_8c_1a2d54d1a6c61fe667b7c68ff04a11c503';
+        func-mem-ref-line = '96';
+        func-mem-ref-name = 'setfullcolor';
+    };
+      func-mem-referenceby = {
+        func-mem-ref-id = '_led_effects_8c_1a9fd87d01d5cc4ce5fce6ddca55ebaf37';
+        func-mem-ref-line = '278';
+        func-mem-ref-name = 'blinkled';
+    };
     }; /* func-member */
     func-member = {
       func-mem-kind = 'function';
@@ -667,6 +1172,36 @@ _EnD_oF_dEf_TeXt_;
                 other direction:
                 RED BLUE YELLOW GREEN ... rotate... GREEN RED BLUE YELLOW
 _EnD_oF_dEf_TeXt_;
+      func-mem-referenceto = {
+        func-mem-ref-id = 'globals_8h_1ad5db4045aed262ed4aae2af9d81fab98';
+        func-mem-ref-line = '25';
+        func-mem-ref-name = 'NumOfLeds';
+    };
+      func-mem-referenceby = {
+        func-mem-ref-id = '_led_effects_8c_1ac83bd19da7ebd3c475e3667e4229db41';
+        func-mem-ref-line = '489';
+        func-mem-ref-name = 'eastereggbase';
+    };
+      func-mem-referenceby = {
+        func-mem-ref-id = 'ws2811lichterkette_8c_1a840291bc02cba5474a4cb46a9b9566fe';
+        func-mem-ref-line = '249';
+        func-mem-ref-name = 'main';
+    };
+      func-mem-referenceby = {
+        func-mem-ref-id = '_led_effects_8c_1a1fa5e03cb24195a46dcdc5948f596181';
+        func-mem-ref-line = '196';
+        func-mem-ref-name = 'rotateN';
+    };
+      func-mem-referenceby = {
+        func-mem-ref-id = '_led_effects_8c_1a5bde1e9e7fc19a9916f1ec02d8fbcd6c';
+        func-mem-ref-line = '323';
+        func-mem-ref-name = 'run_alternating';
+    };
+      func-mem-referenceby = {
+        func-mem-ref-id = '_led_effects_8c_1a35cfbfc36c975f98a7779a37b6ff63ce';
+        func-mem-ref-line = '236';
+        func-mem-ref-name = 'runrunled';
+    };
     }; /* func-member */
     func-member = {
       func-mem-kind = 'function';
@@ -712,6 +1247,11 @@ _EnD_oF_dEf_TeXt_;
                 other direction:
                 RED BLUE YELLOW GREEN PINK ... rotate 2 ... GREEN PINK RED BLUE YELLOW
 _EnD_oF_dEf_TeXt_;
+      func-mem-referenceto = {
+        func-mem-ref-id = '_led_effects_8c_1afd64325b08e785d37b4dfaf358e517f0';
+        func-mem-ref-line = '138';
+        func-mem-ref-name = 'rotate';
+    };
     }; /* func-member */
     func-member = {
       func-mem-kind = 'function';
@@ -757,6 +1297,21 @@ This function initializes the running LED effect. The running LED effect has
 \return         void
 \note           Run runrunled afterwards to start the effect! 
 _EnD_oF_dEf_TeXt_;
+      func-mem-referenceto = {
+        func-mem-ref-id = '_lightstribe_8c_1a63fa595d401f0e85c1bba55ba2b1d66e';
+        func-mem-ref-line = '33';
+        func-mem-ref-name = 'changeled';
+    };
+      func-mem-referenceto = {
+        func-mem-ref-id = '_led_effects_8c_1a2d54d1a6c61fe667b7c68ff04a11c503';
+        func-mem-ref-line = '96';
+        func-mem-ref-name = 'setfullcolor';
+    };
+      func-mem-referenceby = {
+        func-mem-ref-id = 'ws2811lichterkette_8c_1a840291bc02cba5474a4cb46a9b9566fe';
+        func-mem-ref-line = '249';
+        func-mem-ref-name = 'main';
+    };
     }; /* func-member */
     func-member = {
       func-mem-kind = 'function';
@@ -797,6 +1352,41 @@ This function runs the running LED effect. The running LED effect has
                 The function is interrupted if a new UART package is completely received so a new
                 effect gets active.
 _EnD_oF_dEf_TeXt_;
+      func-mem-referenceto = {
+        func-mem-ref-id = '_led_effects_8c_1a6950e7657ba74d0d490ba36427533c4b';
+        func-mem-ref-line = '72';
+        func-mem-ref-name = 'effectdelay';
+    };
+      func-mem-referenceto = {
+        func-mem-ref-id = 'globals_8h_1ac2445d316b2972d381edeac44bb6a226';
+        func-mem-ref-line = '27';
+        func-mem-ref-name = 'effectime';
+    };
+      func-mem-referenceto = {
+        func-mem-ref-id = 'globals_8h_1ad5db4045aed262ed4aae2af9d81fab98';
+        func-mem-ref-line = '25';
+        func-mem-ref-name = 'NumOfLeds';
+    };
+      func-mem-referenceto = {
+        func-mem-ref-id = 'globals_8h_1a1b09d1a5bcf4c8ab435bb3c9e36def59';
+        func-mem-ref-line = '53';
+        func-mem-ref-name = 'PacketComplete';
+    };
+      func-mem-referenceto = {
+        func-mem-ref-id = '_led_effects_8c_1afd64325b08e785d37b4dfaf358e517f0';
+        func-mem-ref-line = '138';
+        func-mem-ref-name = 'rotate';
+    };
+      func-mem-referenceto = {
+        func-mem-ref-id = '_lightstribe_8c_1aac724dad670e4a26723daf71ce6a8d8a';
+        func-mem-ref-line = '96';
+        func-mem-ref-name = 'transmit2leds';
+    };
+      func-mem-referenceby = {
+        func-mem-ref-id = 'ws2811lichterkette_8c_1a840291bc02cba5474a4cb46a9b9566fe';
+        func-mem-ref-line = '249';
+        func-mem-ref-name = 'main';
+    };
     }; /* func-member */
     func-member = {
       func-mem-kind = 'function';
@@ -833,6 +1423,36 @@ This function creates a blinking effect. First all LEDs are set to the
 \return         void
 \note           No need to run transmit2leds afterwards! This is already done in the function.
 _EnD_oF_dEf_TeXt_;
+      func-mem-referenceto = {
+        func-mem-ref-id = '_led_effects_8c_1a6950e7657ba74d0d490ba36427533c4b';
+        func-mem-ref-line = '72';
+        func-mem-ref-name = 'effectdelay';
+    };
+      func-mem-referenceto = {
+        func-mem-ref-id = 'globals_8h_1ac2445d316b2972d381edeac44bb6a226';
+        func-mem-ref-line = '27';
+        func-mem-ref-name = 'effectime';
+    };
+      func-mem-referenceto = {
+        func-mem-ref-id = '_led_effects_8c_1a1c5e6b0f45c1787c25f8eafa8b9c6247';
+        func-mem-ref-line = '118';
+        func-mem-ref-name = 'resetstribe';
+    };
+      func-mem-referenceto = {
+        func-mem-ref-id = '_led_effects_8c_1a2d54d1a6c61fe667b7c68ff04a11c503';
+        func-mem-ref-line = '96';
+        func-mem-ref-name = 'setfullcolor';
+    };
+      func-mem-referenceto = {
+        func-mem-ref-id = '_lightstribe_8c_1aac724dad670e4a26723daf71ce6a8d8a';
+        func-mem-ref-line = '96';
+        func-mem-ref-name = 'transmit2leds';
+    };
+      func-mem-referenceby = {
+        func-mem-ref-id = 'ws2811lichterkette_8c_1a840291bc02cba5474a4cb46a9b9566fe';
+        func-mem-ref-line = '249';
+        func-mem-ref-name = 'main';
+    };
     }; /* func-member */
     func-member = {
       func-mem-kind = 'function';
@@ -876,6 +1496,26 @@ This function initializes the alternating effect. The effect assigns
 \return         void
 \note           Run run_alternating afterwards to start the effect!
 _EnD_oF_dEf_TeXt_;
+      func-mem-referenceto = {
+        func-mem-ref-id = '_lightstribe_8c_1a63fa595d401f0e85c1bba55ba2b1d66e';
+        func-mem-ref-line = '33';
+        func-mem-ref-name = 'changeled';
+    };
+      func-mem-referenceto = {
+        func-mem-ref-id = 'globals_8h_1ad5db4045aed262ed4aae2af9d81fab98';
+        func-mem-ref-line = '25';
+        func-mem-ref-name = 'NumOfLeds';
+    };
+      func-mem-referenceto = {
+        func-mem-ref-id = '_led_effects_8c_1a2d54d1a6c61fe667b7c68ff04a11c503';
+        func-mem-ref-line = '96';
+        func-mem-ref-name = 'setfullcolor';
+    };
+      func-mem-referenceby = {
+        func-mem-ref-id = 'ws2811lichterkette_8c_1a840291bc02cba5474a4cb46a9b9566fe';
+        func-mem-ref-line = '249';
+        func-mem-ref-name = 'main';
+    };
     }; /* func-member */
     func-member = {
       func-mem-kind = 'function';
@@ -907,6 +1547,31 @@ This function runs the alternating effect. The effect assigns
 \return         void
 \note           No need to run transmit2leds afterwards! The effect is generated by the main while loop.
 _EnD_oF_dEf_TeXt_;
+      func-mem-referenceto = {
+        func-mem-ref-id = '_led_effects_8c_1a6950e7657ba74d0d490ba36427533c4b';
+        func-mem-ref-line = '72';
+        func-mem-ref-name = 'effectdelay';
+    };
+      func-mem-referenceto = {
+        func-mem-ref-id = 'globals_8h_1ac2445d316b2972d381edeac44bb6a226';
+        func-mem-ref-line = '27';
+        func-mem-ref-name = 'effectime';
+    };
+      func-mem-referenceto = {
+        func-mem-ref-id = '_led_effects_8c_1afd64325b08e785d37b4dfaf358e517f0';
+        func-mem-ref-line = '138';
+        func-mem-ref-name = 'rotate';
+    };
+      func-mem-referenceto = {
+        func-mem-ref-id = '_lightstribe_8c_1aac724dad670e4a26723daf71ce6a8d8a';
+        func-mem-ref-line = '96';
+        func-mem-ref-name = 'transmit2leds';
+    };
+      func-mem-referenceby = {
+        func-mem-ref-id = 'ws2811lichterkette_8c_1a840291bc02cba5474a4cb46a9b9566fe';
+        func-mem-ref-line = '249';
+        func-mem-ref-name = 'main';
+    };
     }; /* func-member */
     func-member = {
       func-mem-kind = 'function';
@@ -944,6 +1609,41 @@ This function generates a recolor effect. The old configuration of the
 \note           No need to run transmit2leds afterwards! The effect is standalone and ends if the stribe 
                 is recolored.
 _EnD_oF_dEf_TeXt_;
+      func-mem-referenceto = {
+        func-mem-ref-id = '_lightstribe_8c_1a63fa595d401f0e85c1bba55ba2b1d66e';
+        func-mem-ref-line = '33';
+        func-mem-ref-name = 'changeled';
+    };
+      func-mem-referenceto = {
+        func-mem-ref-id = '_led_effects_8c_1a6950e7657ba74d0d490ba36427533c4b';
+        func-mem-ref-line = '72';
+        func-mem-ref-name = 'effectdelay';
+    };
+      func-mem-referenceto = {
+        func-mem-ref-id = 'globals_8h_1ac2445d316b2972d381edeac44bb6a226';
+        func-mem-ref-line = '27';
+        func-mem-ref-name = 'effectime';
+    };
+      func-mem-referenceto = {
+        func-mem-ref-id = 'globals_8h_1ad5db4045aed262ed4aae2af9d81fab98';
+        func-mem-ref-line = '25';
+        func-mem-ref-name = 'NumOfLeds';
+    };
+      func-mem-referenceto = {
+        func-mem-ref-id = 'globals_8h_1a1b09d1a5bcf4c8ab435bb3c9e36def59';
+        func-mem-ref-line = '53';
+        func-mem-ref-name = 'PacketComplete';
+    };
+      func-mem-referenceto = {
+        func-mem-ref-id = '_lightstribe_8c_1aac724dad670e4a26723daf71ce6a8d8a';
+        func-mem-ref-line = '96';
+        func-mem-ref-name = 'transmit2leds';
+    };
+      func-mem-referenceby = {
+        func-mem-ref-id = 'ws2811lichterkette_8c_1a840291bc02cba5474a4cb46a9b9566fe';
+        func-mem-ref-line = '249';
+        func-mem-ref-name = 'main';
+    };
     }; /* func-member */
     func-member = {
       func-mem-kind = 'function';
@@ -984,6 +1684,51 @@ This function generates a fading color effect. At the beginning the whole
 \note           No need to run transmit2leds afterwards! The effect is standalone and ends is looped
                 in the main while loop. The color value proportion is not kept over the whole effect.
 _EnD_oF_dEf_TeXt_;
+      func-mem-referenceto = {
+        func-mem-ref-id = '_lightstribe_8h_1a287b397e90d7b995c81ff54e741f96b2';
+        func-mem-ref-line = '19';
+        func-mem-ref-name = 'color24bit::blue';
+    };
+      func-mem-referenceto = {
+        func-mem-ref-id = '_led_effects_8c_1a6950e7657ba74d0d490ba36427533c4b';
+        func-mem-ref-line = '72';
+        func-mem-ref-name = 'effectdelay';
+    };
+      func-mem-referenceto = {
+        func-mem-ref-id = 'globals_8h_1ac2445d316b2972d381edeac44bb6a226';
+        func-mem-ref-line = '27';
+        func-mem-ref-name = 'effectime';
+    };
+      func-mem-referenceto = {
+        func-mem-ref-id = '_lightstribe_8h_1a90d21fa503b626c00cdc8d94863d5877';
+        func-mem-ref-line = '18';
+        func-mem-ref-name = 'color24bit::green';
+    };
+      func-mem-referenceto = {
+        func-mem-ref-id = 'globals_8h_1a1b09d1a5bcf4c8ab435bb3c9e36def59';
+        func-mem-ref-line = '53';
+        func-mem-ref-name = 'PacketComplete';
+    };
+      func-mem-referenceto = {
+        func-mem-ref-id = '_lightstribe_8h_1ad47d918910aaa51c73160ac85999d09c';
+        func-mem-ref-line = '17';
+        func-mem-ref-name = 'color24bit::red';
+    };
+      func-mem-referenceto = {
+        func-mem-ref-id = '_led_effects_8c_1a2d54d1a6c61fe667b7c68ff04a11c503';
+        func-mem-ref-line = '96';
+        func-mem-ref-name = 'setfullcolor';
+    };
+      func-mem-referenceto = {
+        func-mem-ref-id = '_lightstribe_8c_1aac724dad670e4a26723daf71ce6a8d8a';
+        func-mem-ref-line = '96';
+        func-mem-ref-name = 'transmit2leds';
+    };
+      func-mem-referenceby = {
+        func-mem-ref-id = 'ws2811lichterkette_8c_1a840291bc02cba5474a4cb46a9b9566fe';
+        func-mem-ref-line = '249';
+        func-mem-ref-name = 'main';
+    };
     }; /* func-member */
     func-member = {
       func-mem-kind = 'function';
@@ -1017,6 +1762,36 @@ This function fills the color array with rainbow colors. For this effect the col
                 (RGB vs. GRB). The function was primary written for WS2812 LEDs (GRB)! 
                 The effect needs a minimum number of 20 LEDs to look nice!              
 _EnD_oF_dEf_TeXt_;
+      func-mem-referenceto = {
+        func-mem-ref-id = '_lightstribe_8h_1a287b397e90d7b995c81ff54e741f96b2';
+        func-mem-ref-line = '19';
+        func-mem-ref-name = 'color24bit::blue';
+    };
+      func-mem-referenceto = {
+        func-mem-ref-id = '_lightstribe_8c_1a63fa595d401f0e85c1bba55ba2b1d66e';
+        func-mem-ref-line = '33';
+        func-mem-ref-name = 'changeled';
+    };
+      func-mem-referenceto = {
+        func-mem-ref-id = '_lightstribe_8h_1a90d21fa503b626c00cdc8d94863d5877';
+        func-mem-ref-line = '18';
+        func-mem-ref-name = 'color24bit::green';
+    };
+      func-mem-referenceto = {
+        func-mem-ref-id = 'globals_8h_1ad5db4045aed262ed4aae2af9d81fab98';
+        func-mem-ref-line = '25';
+        func-mem-ref-name = 'NumOfLeds';
+    };
+      func-mem-referenceto = {
+        func-mem-ref-id = '_lightstribe_8h_1ad47d918910aaa51c73160ac85999d09c';
+        func-mem-ref-line = '17';
+        func-mem-ref-name = 'color24bit::red';
+    };
+      func-mem-referenceby = {
+        func-mem-ref-id = 'ws2811lichterkette_8c_1a840291bc02cba5474a4cb46a9b9566fe';
+        func-mem-ref-line = '249';
+        func-mem-ref-name = 'main';
+    };
     }; /* func-member */
     func-member = {
       func-mem-kind = 'function';
@@ -1050,6 +1825,46 @@ _EnD_oF_dEf_TeXt_;
 \return         void
 \note           Do not use this function directly; this function is used by the easteregg function  
 _EnD_oF_dEf_TeXt_;
+      func-mem-referenceto = {
+        func-mem-ref-id = '_lightstribe_8c_1a63fa595d401f0e85c1bba55ba2b1d66e';
+        func-mem-ref-line = '33';
+        func-mem-ref-name = 'changeled';
+    };
+      func-mem-referenceto = {
+        func-mem-ref-id = '_led_effects_8c_1a6950e7657ba74d0d490ba36427533c4b';
+        func-mem-ref-line = '72';
+        func-mem-ref-name = 'effectdelay';
+    };
+      func-mem-referenceto = {
+        func-mem-ref-id = 'globals_8h_1ac2445d316b2972d381edeac44bb6a226';
+        func-mem-ref-line = '27';
+        func-mem-ref-name = 'effectime';
+    };
+      func-mem-referenceto = {
+        func-mem-ref-id = 'globals_8h_1ad5db4045aed262ed4aae2af9d81fab98';
+        func-mem-ref-line = '25';
+        func-mem-ref-name = 'NumOfLeds';
+    };
+      func-mem-referenceto = {
+        func-mem-ref-id = 'globals_8h_1a1b09d1a5bcf4c8ab435bb3c9e36def59';
+        func-mem-ref-line = '53';
+        func-mem-ref-name = 'PacketComplete';
+    };
+      func-mem-referenceto = {
+        func-mem-ref-id = '_led_effects_8c_1afd64325b08e785d37b4dfaf358e517f0';
+        func-mem-ref-line = '138';
+        func-mem-ref-name = 'rotate';
+    };
+      func-mem-referenceto = {
+        func-mem-ref-id = '_lightstribe_8c_1aac724dad670e4a26723daf71ce6a8d8a';
+        func-mem-ref-line = '96';
+        func-mem-ref-name = 'transmit2leds';
+    };
+      func-mem-referenceby = {
+        func-mem-ref-id = '_led_effects_8c_1a25e09bcb1481b20ebc2a27e7098b5115';
+        func-mem-ref-line = '514';
+        func-mem-ref-name = 'easteregg';
+    };
     }; /* func-member */
     func-member = {
       func-mem-kind = 'function';
@@ -1076,6 +1891,26 @@ _EnD_oF_dEf_TeXt_;
 \return         void
 \note           Just try it :-) funny looking effect    
 _EnD_oF_dEf_TeXt_;
+      func-mem-referenceto = {
+        func-mem-ref-id = '_led_effects_8c_1a55291315ab0f2ca8d508f0e9da1920a7';
+        func-mem-ref-line = '45';
+        func-mem-ref-name = 'colorconv8to24';
+    };
+      func-mem-referenceto = {
+        func-mem-ref-id = '_led_effects_8c_1ac83bd19da7ebd3c475e3667e4229db41';
+        func-mem-ref-line = '489';
+        func-mem-ref-name = 'eastereggbase';
+    };
+      func-mem-referenceto = {
+        func-mem-ref-id = 'globals_8h_1a1b09d1a5bcf4c8ab435bb3c9e36def59';
+        func-mem-ref-line = '53';
+        func-mem-ref-name = 'PacketComplete';
+    };
+      func-mem-referenceby = {
+        func-mem-ref-id = 'ws2811lichterkette_8c_1a840291bc02cba5474a4cb46a9b9566fe';
+        func-mem-ref-line = '249';
+        func-mem-ref-name = 'main';
+    };
     }; /* func-member */
     func-member = {
       func-mem-kind = 'function';
@@ -1122,6 +1957,41 @@ This function fills up the whole stribe and beginns again if it is finished.
 \return         void
 \note           This is a standalone effect.
 _EnD_oF_dEf_TeXt_;
+      func-mem-referenceto = {
+        func-mem-ref-id = '_lightstribe_8c_1a63fa595d401f0e85c1bba55ba2b1d66e';
+        func-mem-ref-line = '33';
+        func-mem-ref-name = 'changeled';
+    };
+      func-mem-referenceto = {
+        func-mem-ref-id = '_led_effects_8c_1a6950e7657ba74d0d490ba36427533c4b';
+        func-mem-ref-line = '72';
+        func-mem-ref-name = 'effectdelay';
+    };
+      func-mem-referenceto = {
+        func-mem-ref-id = 'globals_8h_1ac2445d316b2972d381edeac44bb6a226';
+        func-mem-ref-line = '27';
+        func-mem-ref-name = 'effectime';
+    };
+      func-mem-referenceto = {
+        func-mem-ref-id = 'globals_8h_1ad5db4045aed262ed4aae2af9d81fab98';
+        func-mem-ref-line = '25';
+        func-mem-ref-name = 'NumOfLeds';
+    };
+      func-mem-referenceto = {
+        func-mem-ref-id = 'globals_8h_1a1b09d1a5bcf4c8ab435bb3c9e36def59';
+        func-mem-ref-line = '53';
+        func-mem-ref-name = 'PacketComplete';
+    };
+      func-mem-referenceto = {
+        func-mem-ref-id = '_lightstribe_8c_1aac724dad670e4a26723daf71ce6a8d8a';
+        func-mem-ref-line = '96';
+        func-mem-ref-name = 'transmit2leds';
+    };
+      func-mem-referenceby = {
+        func-mem-ref-id = 'ws2811lichterkette_8c_1a840291bc02cba5474a4cb46a9b9566fe';
+        func-mem-ref-line = '249';
+        func-mem-ref-name = 'main';
+    };
     }; /* func-member */
     };
   file-full-name  = 'C:/Users/Commander/Documents/Atmel Studio/6.2/ws2811lichterkette/ws2811lichterkette/LedEffects.c';
@@ -1163,6 +2033,11 @@ _EnD_oF_dEf_TeXt_;
       define-mem-documentation = <<_EnD_oF_dEf_TeXt_
 
 _EnD_oF_dEf_TeXt_;
+      define-mem-referenceby = {
+        define-mem-ref-id = 'ws2811lichterkette_8c_1a840291bc02cba5474a4cb46a9b9566fe';
+        define-mem-ref-line = '249';
+        define-mem-ref-name = 'main';
+    };
     }; /* define-member */
     define-member = {
       define-mem-kind = 'define';
@@ -1181,6 +2056,11 @@ _EnD_oF_dEf_TeXt_;
       define-mem-documentation = <<_EnD_oF_dEf_TeXt_
 
 _EnD_oF_dEf_TeXt_;
+      define-mem-referenceby = {
+        define-mem-ref-id = 'ws2811lichterkette_8c_1a840291bc02cba5474a4cb46a9b9566fe';
+        define-mem-ref-line = '249';
+        define-mem-ref-name = 'main';
+    };
     }; /* define-member */
     define-member = {
       define-mem-kind = 'define';
@@ -1199,6 +2079,11 @@ _EnD_oF_dEf_TeXt_;
       define-mem-documentation = <<_EnD_oF_dEf_TeXt_
 
 _EnD_oF_dEf_TeXt_;
+      define-mem-referenceby = {
+        define-mem-ref-id = 'ws2811lichterkette_8c_1a840291bc02cba5474a4cb46a9b9566fe';
+        define-mem-ref-line = '249';
+        define-mem-ref-name = 'main';
+    };
     }; /* define-member */
     define-member = {
       define-mem-kind = 'define';
@@ -1217,6 +2102,11 @@ _EnD_oF_dEf_TeXt_;
       define-mem-documentation = <<_EnD_oF_dEf_TeXt_
 
 _EnD_oF_dEf_TeXt_;
+      define-mem-referenceby = {
+        define-mem-ref-id = 'ws2811lichterkette_8c_1a840291bc02cba5474a4cb46a9b9566fe';
+        define-mem-ref-line = '249';
+        define-mem-ref-name = 'main';
+    };
     }; /* define-member */
     define-member = {
       define-mem-kind = 'define';
@@ -1235,6 +2125,11 @@ _EnD_oF_dEf_TeXt_;
       define-mem-documentation = <<_EnD_oF_dEf_TeXt_
 
 _EnD_oF_dEf_TeXt_;
+      define-mem-referenceby = {
+        define-mem-ref-id = 'ws2811lichterkette_8c_1a840291bc02cba5474a4cb46a9b9566fe';
+        define-mem-ref-line = '249';
+        define-mem-ref-name = 'main';
+    };
     }; /* define-member */
     define-member = {
       define-mem-kind = 'define';
@@ -1253,13 +2148,18 @@ _EnD_oF_dEf_TeXt_;
       define-mem-documentation = <<_EnD_oF_dEf_TeXt_
 
 _EnD_oF_dEf_TeXt_;
+      define-mem-referenceby = {
+        define-mem-ref-id = 'ws2811lichterkette_8c_1a840291bc02cba5474a4cb46a9b9566fe';
+        define-mem-ref-line = '249';
+        define-mem-ref-name = 'main';
+    };
     }; /* define-member */
     define-member = {
       define-mem-kind = 'define';
-      define-mem-id   = '_led_effects_8h_1ac64e9d348f9ff60935a2275f477020dc';
+      define-mem-id   = '_led_effects_8h_1ad8150289b0e08f01126500379852a2a7';
       define-mem-virt = normal;
       define-mem-prot = public;
-      define-mem-name = 'FADEN';
+      define-mem-name = 'FADE';
       define-mem-initializer = <<_EnD_oF_dEf_TeXt_
 8
 _EnD_oF_dEf_TeXt_;
@@ -1271,6 +2171,11 @@ _EnD_oF_dEf_TeXt_;
       define-mem-documentation = <<_EnD_oF_dEf_TeXt_
 
 _EnD_oF_dEf_TeXt_;
+      define-mem-referenceby = {
+        define-mem-ref-id = 'ws2811lichterkette_8c_1a840291bc02cba5474a4cb46a9b9566fe';
+        define-mem-ref-line = '249';
+        define-mem-ref-name = 'main';
+    };
     }; /* define-member */
     define-member = {
       define-mem-kind = 'define';
@@ -1289,6 +2194,11 @@ _EnD_oF_dEf_TeXt_;
       define-mem-documentation = <<_EnD_oF_dEf_TeXt_
 
 _EnD_oF_dEf_TeXt_;
+      define-mem-referenceby = {
+        define-mem-ref-id = 'ws2811lichterkette_8c_1a840291bc02cba5474a4cb46a9b9566fe';
+        define-mem-ref-line = '249';
+        define-mem-ref-name = 'main';
+    };
     }; /* define-member */
     define-member = {
       define-mem-kind = 'define';
@@ -1307,6 +2217,11 @@ _EnD_oF_dEf_TeXt_;
       define-mem-documentation = <<_EnD_oF_dEf_TeXt_
 
 _EnD_oF_dEf_TeXt_;
+      define-mem-referenceby = {
+        define-mem-ref-id = 'ws2811lichterkette_8c_1a840291bc02cba5474a4cb46a9b9566fe';
+        define-mem-ref-line = '249';
+        define-mem-ref-name = 'main';
+    };
     }; /* define-member */
     define-member = {
       define-mem-kind = 'define';
@@ -1325,6 +2240,11 @@ _EnD_oF_dEf_TeXt_;
       define-mem-documentation = <<_EnD_oF_dEf_TeXt_
 
 _EnD_oF_dEf_TeXt_;
+      define-mem-referenceby = {
+        define-mem-ref-id = 'ws2811lichterkette_8c_1a840291bc02cba5474a4cb46a9b9566fe';
+        define-mem-ref-line = '249';
+        define-mem-ref-name = 'main';
+    };
     }; /* define-member */
     define-member = {
       define-mem-kind = 'define';
@@ -1343,6 +2263,11 @@ _EnD_oF_dEf_TeXt_;
       define-mem-documentation = <<_EnD_oF_dEf_TeXt_
 
 _EnD_oF_dEf_TeXt_;
+      define-mem-referenceby = {
+        define-mem-ref-id = 'ws2811lichterkette_8c_1a840291bc02cba5474a4cb46a9b9566fe';
+        define-mem-ref-line = '249';
+        define-mem-ref-name = 'main';
+    };
     }; /* define-member */
     define-member = {
       define-mem-kind = 'define';
@@ -1361,6 +2286,11 @@ _EnD_oF_dEf_TeXt_;
       define-mem-documentation = <<_EnD_oF_dEf_TeXt_
 
 _EnD_oF_dEf_TeXt_;
+      define-mem-referenceby = {
+        define-mem-ref-id = 'ws2811lichterkette_8c_1a840291bc02cba5474a4cb46a9b9566fe';
+        define-mem-ref-line = '249';
+        define-mem-ref-name = 'main';
+    };
     }; /* define-member */
     };
     func = {
@@ -1420,6 +2350,11 @@ _EnD_oF_dEf_TeXt_;
                 in_min < x < in_max convert to out_min < returnvalue < out_max
                 by positioning the x proportionally in the new number range
 _EnD_oF_dEf_TeXt_;
+      func-mem-referenceby = {
+        func-mem-ref-id = '_led_effects_8c_1a55291315ab0f2ca8d508f0e9da1920a7';
+        func-mem-ref-line = '45';
+        func-mem-ref-name = 'colorconv8to24';
+    };
     }; /* func-member */
     func-member = {
       func-mem-kind = 'function';
@@ -1448,6 +2383,41 @@ _EnD_oF_dEf_TeXt_;
                 This is neccessary because of differnt color formats (WS2811->RGB ; WS2812->GRB).
                 Original the whole environment was for WS2812 LEDs!             
 _EnD_oF_dEf_TeXt_;
+      func-mem-referenceto = {
+        func-mem-ref-id = '_lightstribe_8h_1a287b397e90d7b995c81ff54e741f96b2';
+        func-mem-ref-line = '19';
+        func-mem-ref-name = 'color24bit::blue';
+    };
+      func-mem-referenceto = {
+        func-mem-ref-id = '_lightstribe_8h_1a90d21fa503b626c00cdc8d94863d5877';
+        func-mem-ref-line = '18';
+        func-mem-ref-name = 'color24bit::green';
+    };
+      func-mem-referenceto = {
+        func-mem-ref-id = 'globals_8h_1a722e1eb38b661d1338ada3cc7a4049a0';
+        func-mem-ref-line = '29';
+        func-mem-ref-name = 'ledtype';
+    };
+      func-mem-referenceto = {
+        func-mem-ref-id = '_led_effects_8c_1ad67a4e660b5122ed454e101432bbdba0';
+        func-mem-ref-line = '33';
+        func-mem-ref-name = 'map';
+    };
+      func-mem-referenceto = {
+        func-mem-ref-id = '_lightstribe_8h_1ad47d918910aaa51c73160ac85999d09c';
+        func-mem-ref-line = '17';
+        func-mem-ref-name = 'color24bit::red';
+    };
+      func-mem-referenceby = {
+        func-mem-ref-id = '_led_effects_8c_1a25e09bcb1481b20ebc2a27e7098b5115';
+        func-mem-ref-line = '514';
+        func-mem-ref-name = 'easteregg';
+    };
+      func-mem-referenceby = {
+        func-mem-ref-id = 'ws2811lichterkette_8c_1a840291bc02cba5474a4cb46a9b9566fe';
+        func-mem-ref-line = '249';
+        func-mem-ref-name = 'main';
+    };
     }; /* func-member */
     func-member = {
       func-mem-kind = 'function';
@@ -1474,6 +2444,51 @@ _EnD_oF_dEf_TeXt_;
 \return         void
 \note           This function is just a variable delay, there is no coherence with a concrete time (i.e. s, ms)         
 _EnD_oF_dEf_TeXt_;
+      func-mem-referenceto = {
+        func-mem-ref-id = 'globals_8h_1a1b09d1a5bcf4c8ab435bb3c9e36def59';
+        func-mem-ref-line = '53';
+        func-mem-ref-name = 'PacketComplete';
+    };
+      func-mem-referenceby = {
+        func-mem-ref-id = '_led_effects_8c_1a9fd87d01d5cc4ce5fce6ddca55ebaf37';
+        func-mem-ref-line = '278';
+        func-mem-ref-name = 'blinkled';
+    };
+      func-mem-referenceby = {
+        func-mem-ref-id = '_led_effects_8c_1ac83bd19da7ebd3c475e3667e4229db41';
+        func-mem-ref-line = '489';
+        func-mem-ref-name = 'eastereggbase';
+    };
+      func-mem-referenceby = {
+        func-mem-ref-id = '_led_effects_8c_1a71d3b2ff21a63b48a01461e74be0c2b8';
+        func-mem-ref-line = '366';
+        func-mem-ref-name = 'faden';
+    };
+      func-mem-referenceby = {
+        func-mem-ref-id = '_led_effects_8c_1a99174e2b381d7ec6667d29352e6eca1b';
+        func-mem-ref-line = '549';
+        func-mem-ref-name = 'fillup';
+    };
+      func-mem-referenceby = {
+        func-mem-ref-id = 'ws2811lichterkette_8c_1a840291bc02cba5474a4cb46a9b9566fe';
+        func-mem-ref-line = '249';
+        func-mem-ref-name = 'main';
+    };
+      func-mem-referenceby = {
+        func-mem-ref-id = '_led_effects_8c_1a448758d76f47ea6fed4beb349196363f';
+        func-mem-ref-line = '340';
+        func-mem-ref-name = 'recolor';
+    };
+      func-mem-referenceby = {
+        func-mem-ref-id = '_led_effects_8c_1a5bde1e9e7fc19a9916f1ec02d8fbcd6c';
+        func-mem-ref-line = '323';
+        func-mem-ref-name = 'run_alternating';
+    };
+      func-mem-referenceby = {
+        func-mem-ref-id = '_led_effects_8c_1a35cfbfc36c975f98a7779a37b6ff63ce';
+        func-mem-ref-line = '236';
+        func-mem-ref-name = 'runrunled';
+    };
     }; /* func-member */
     func-member = {
       func-mem-kind = 'function';
@@ -1507,6 +2522,56 @@ _EnD_oF_dEf_TeXt_;
 \return         void
 \note           This function sets the lightdata array. To update the stribe run transmit2leds afterwards!      
 _EnD_oF_dEf_TeXt_;
+      func-mem-referenceto = {
+        func-mem-ref-id = '_lightstribe_8h_1a287b397e90d7b995c81ff54e741f96b2';
+        func-mem-ref-line = '19';
+        func-mem-ref-name = 'color24bit::blue';
+    };
+      func-mem-referenceto = {
+        func-mem-ref-id = '_lightstribe_8h_1a90d21fa503b626c00cdc8d94863d5877';
+        func-mem-ref-line = '18';
+        func-mem-ref-name = 'color24bit::green';
+    };
+      func-mem-referenceto = {
+        func-mem-ref-id = 'globals_8h_1ad5db4045aed262ed4aae2af9d81fab98';
+        func-mem-ref-line = '25';
+        func-mem-ref-name = 'NumOfLeds';
+    };
+      func-mem-referenceto = {
+        func-mem-ref-id = '_lightstribe_8h_1ad47d918910aaa51c73160ac85999d09c';
+        func-mem-ref-line = '17';
+        func-mem-ref-name = 'color24bit::red';
+    };
+      func-mem-referenceby = {
+        func-mem-ref-id = '_led_effects_8c_1a9fd87d01d5cc4ce5fce6ddca55ebaf37';
+        func-mem-ref-line = '278';
+        func-mem-ref-name = 'blinkled';
+    };
+      func-mem-referenceby = {
+        func-mem-ref-id = '_led_effects_8c_1a71d3b2ff21a63b48a01461e74be0c2b8';
+        func-mem-ref-line = '366';
+        func-mem-ref-name = 'faden';
+    };
+      func-mem-referenceby = {
+        func-mem-ref-id = '_led_effects_8c_1af67b7638a175e4971f25df5a5db3d8d0';
+        func-mem-ref-line = '300';
+        func-mem-ref-name = 'init_alternating';
+    };
+      func-mem-referenceby = {
+        func-mem-ref-id = '_led_effects_8c_1aecba07ab559ab94e6f44c16e39012d80';
+        func-mem-ref-line = '217';
+        func-mem-ref-name = 'initrunled';
+    };
+      func-mem-referenceby = {
+        func-mem-ref-id = 'ws2811lichterkette_8c_1a840291bc02cba5474a4cb46a9b9566fe';
+        func-mem-ref-line = '249';
+        func-mem-ref-name = 'main';
+    };
+      func-mem-referenceby = {
+        func-mem-ref-id = '_led_effects_8c_1a1c5e6b0f45c1787c25f8eafa8b9c6247';
+        func-mem-ref-line = '118';
+        func-mem-ref-name = 'resetstribe';
+    };
     }; /* func-member */
     func-member = {
       func-mem-kind = 'function';
@@ -1533,6 +2598,31 @@ _EnD_oF_dEf_TeXt_;
 \return         void
 \note           This function sets the lightdata array to 0x00. To update the stribe run transmit2leds afterwards!      
 _EnD_oF_dEf_TeXt_;
+      func-mem-referenceto = {
+        func-mem-ref-id = '_lightstribe_8h_1a287b397e90d7b995c81ff54e741f96b2';
+        func-mem-ref-line = '19';
+        func-mem-ref-name = 'color24bit::blue';
+    };
+      func-mem-referenceto = {
+        func-mem-ref-id = '_lightstribe_8h_1a90d21fa503b626c00cdc8d94863d5877';
+        func-mem-ref-line = '18';
+        func-mem-ref-name = 'color24bit::green';
+    };
+      func-mem-referenceto = {
+        func-mem-ref-id = '_lightstribe_8h_1ad47d918910aaa51c73160ac85999d09c';
+        func-mem-ref-line = '17';
+        func-mem-ref-name = 'color24bit::red';
+    };
+      func-mem-referenceto = {
+        func-mem-ref-id = '_led_effects_8c_1a2d54d1a6c61fe667b7c68ff04a11c503';
+        func-mem-ref-line = '96';
+        func-mem-ref-name = 'setfullcolor';
+    };
+      func-mem-referenceby = {
+        func-mem-ref-id = '_led_effects_8c_1a9fd87d01d5cc4ce5fce6ddca55ebaf37';
+        func-mem-ref-line = '278';
+        func-mem-ref-name = 'blinkled';
+    };
     }; /* func-member */
     func-member = {
       func-mem-kind = 'function';
@@ -1571,6 +2661,36 @@ _EnD_oF_dEf_TeXt_;
                 other direction:
                 RED BLUE YELLOW GREEN ... rotate... GREEN RED BLUE YELLOW
 _EnD_oF_dEf_TeXt_;
+      func-mem-referenceto = {
+        func-mem-ref-id = 'globals_8h_1ad5db4045aed262ed4aae2af9d81fab98';
+        func-mem-ref-line = '25';
+        func-mem-ref-name = 'NumOfLeds';
+    };
+      func-mem-referenceby = {
+        func-mem-ref-id = '_led_effects_8c_1ac83bd19da7ebd3c475e3667e4229db41';
+        func-mem-ref-line = '489';
+        func-mem-ref-name = 'eastereggbase';
+    };
+      func-mem-referenceby = {
+        func-mem-ref-id = 'ws2811lichterkette_8c_1a840291bc02cba5474a4cb46a9b9566fe';
+        func-mem-ref-line = '249';
+        func-mem-ref-name = 'main';
+    };
+      func-mem-referenceby = {
+        func-mem-ref-id = '_led_effects_8c_1a1fa5e03cb24195a46dcdc5948f596181';
+        func-mem-ref-line = '196';
+        func-mem-ref-name = 'rotateN';
+    };
+      func-mem-referenceby = {
+        func-mem-ref-id = '_led_effects_8c_1a5bde1e9e7fc19a9916f1ec02d8fbcd6c';
+        func-mem-ref-line = '323';
+        func-mem-ref-name = 'run_alternating';
+    };
+      func-mem-referenceby = {
+        func-mem-ref-id = '_led_effects_8c_1a35cfbfc36c975f98a7779a37b6ff63ce';
+        func-mem-ref-line = '236';
+        func-mem-ref-name = 'runrunled';
+    };
     }; /* func-member */
     func-member = {
       func-mem-kind = 'function';
@@ -1616,6 +2736,11 @@ _EnD_oF_dEf_TeXt_;
                 other direction:
                 RED BLUE YELLOW GREEN PINK ... rotate 2 ... GREEN PINK RED BLUE YELLOW
 _EnD_oF_dEf_TeXt_;
+      func-mem-referenceto = {
+        func-mem-ref-id = '_led_effects_8c_1afd64325b08e785d37b4dfaf358e517f0';
+        func-mem-ref-line = '138';
+        func-mem-ref-name = 'rotate';
+    };
     }; /* func-member */
     func-member = {
       func-mem-kind = 'function';
@@ -1661,6 +2786,21 @@ This function initializes the running LED effect. The running LED effect has
 \return         void
 \note           Run runrunled afterwards to start the effect! 
 _EnD_oF_dEf_TeXt_;
+      func-mem-referenceto = {
+        func-mem-ref-id = '_lightstribe_8c_1a63fa595d401f0e85c1bba55ba2b1d66e';
+        func-mem-ref-line = '33';
+        func-mem-ref-name = 'changeled';
+    };
+      func-mem-referenceto = {
+        func-mem-ref-id = '_led_effects_8c_1a2d54d1a6c61fe667b7c68ff04a11c503';
+        func-mem-ref-line = '96';
+        func-mem-ref-name = 'setfullcolor';
+    };
+      func-mem-referenceby = {
+        func-mem-ref-id = 'ws2811lichterkette_8c_1a840291bc02cba5474a4cb46a9b9566fe';
+        func-mem-ref-line = '249';
+        func-mem-ref-name = 'main';
+    };
     }; /* func-member */
     func-member = {
       func-mem-kind = 'function';
@@ -1701,6 +2841,41 @@ This function runs the running LED effect. The running LED effect has
                 The function is interrupted if a new UART package is completely received so a new
                 effect gets active.
 _EnD_oF_dEf_TeXt_;
+      func-mem-referenceto = {
+        func-mem-ref-id = '_led_effects_8c_1a6950e7657ba74d0d490ba36427533c4b';
+        func-mem-ref-line = '72';
+        func-mem-ref-name = 'effectdelay';
+    };
+      func-mem-referenceto = {
+        func-mem-ref-id = 'globals_8h_1ac2445d316b2972d381edeac44bb6a226';
+        func-mem-ref-line = '27';
+        func-mem-ref-name = 'effectime';
+    };
+      func-mem-referenceto = {
+        func-mem-ref-id = 'globals_8h_1ad5db4045aed262ed4aae2af9d81fab98';
+        func-mem-ref-line = '25';
+        func-mem-ref-name = 'NumOfLeds';
+    };
+      func-mem-referenceto = {
+        func-mem-ref-id = 'globals_8h_1a1b09d1a5bcf4c8ab435bb3c9e36def59';
+        func-mem-ref-line = '53';
+        func-mem-ref-name = 'PacketComplete';
+    };
+      func-mem-referenceto = {
+        func-mem-ref-id = '_led_effects_8c_1afd64325b08e785d37b4dfaf358e517f0';
+        func-mem-ref-line = '138';
+        func-mem-ref-name = 'rotate';
+    };
+      func-mem-referenceto = {
+        func-mem-ref-id = '_lightstribe_8c_1aac724dad670e4a26723daf71ce6a8d8a';
+        func-mem-ref-line = '96';
+        func-mem-ref-name = 'transmit2leds';
+    };
+      func-mem-referenceby = {
+        func-mem-ref-id = 'ws2811lichterkette_8c_1a840291bc02cba5474a4cb46a9b9566fe';
+        func-mem-ref-line = '249';
+        func-mem-ref-name = 'main';
+    };
     }; /* func-member */
     func-member = {
       func-mem-kind = 'function';
@@ -1737,6 +2912,36 @@ This function creates a blinking effect. First all LEDs are set to the
 \return         void
 \note           No need to run transmit2leds afterwards! This is already done in the function.
 _EnD_oF_dEf_TeXt_;
+      func-mem-referenceto = {
+        func-mem-ref-id = '_led_effects_8c_1a6950e7657ba74d0d490ba36427533c4b';
+        func-mem-ref-line = '72';
+        func-mem-ref-name = 'effectdelay';
+    };
+      func-mem-referenceto = {
+        func-mem-ref-id = 'globals_8h_1ac2445d316b2972d381edeac44bb6a226';
+        func-mem-ref-line = '27';
+        func-mem-ref-name = 'effectime';
+    };
+      func-mem-referenceto = {
+        func-mem-ref-id = '_led_effects_8c_1a1c5e6b0f45c1787c25f8eafa8b9c6247';
+        func-mem-ref-line = '118';
+        func-mem-ref-name = 'resetstribe';
+    };
+      func-mem-referenceto = {
+        func-mem-ref-id = '_led_effects_8c_1a2d54d1a6c61fe667b7c68ff04a11c503';
+        func-mem-ref-line = '96';
+        func-mem-ref-name = 'setfullcolor';
+    };
+      func-mem-referenceto = {
+        func-mem-ref-id = '_lightstribe_8c_1aac724dad670e4a26723daf71ce6a8d8a';
+        func-mem-ref-line = '96';
+        func-mem-ref-name = 'transmit2leds';
+    };
+      func-mem-referenceby = {
+        func-mem-ref-id = 'ws2811lichterkette_8c_1a840291bc02cba5474a4cb46a9b9566fe';
+        func-mem-ref-line = '249';
+        func-mem-ref-name = 'main';
+    };
     }; /* func-member */
     func-member = {
       func-mem-kind = 'function';
@@ -1780,6 +2985,26 @@ This function initializes the alternating effect. The effect assigns
 \return         void
 \note           Run run_alternating afterwards to start the effect!
 _EnD_oF_dEf_TeXt_;
+      func-mem-referenceto = {
+        func-mem-ref-id = '_lightstribe_8c_1a63fa595d401f0e85c1bba55ba2b1d66e';
+        func-mem-ref-line = '33';
+        func-mem-ref-name = 'changeled';
+    };
+      func-mem-referenceto = {
+        func-mem-ref-id = 'globals_8h_1ad5db4045aed262ed4aae2af9d81fab98';
+        func-mem-ref-line = '25';
+        func-mem-ref-name = 'NumOfLeds';
+    };
+      func-mem-referenceto = {
+        func-mem-ref-id = '_led_effects_8c_1a2d54d1a6c61fe667b7c68ff04a11c503';
+        func-mem-ref-line = '96';
+        func-mem-ref-name = 'setfullcolor';
+    };
+      func-mem-referenceby = {
+        func-mem-ref-id = 'ws2811lichterkette_8c_1a840291bc02cba5474a4cb46a9b9566fe';
+        func-mem-ref-line = '249';
+        func-mem-ref-name = 'main';
+    };
     }; /* func-member */
     func-member = {
       func-mem-kind = 'function';
@@ -1811,6 +3036,31 @@ This function runs the alternating effect. The effect assigns
 \return         void
 \note           No need to run transmit2leds afterwards! The effect is generated by the main while loop.
 _EnD_oF_dEf_TeXt_;
+      func-mem-referenceto = {
+        func-mem-ref-id = '_led_effects_8c_1a6950e7657ba74d0d490ba36427533c4b';
+        func-mem-ref-line = '72';
+        func-mem-ref-name = 'effectdelay';
+    };
+      func-mem-referenceto = {
+        func-mem-ref-id = 'globals_8h_1ac2445d316b2972d381edeac44bb6a226';
+        func-mem-ref-line = '27';
+        func-mem-ref-name = 'effectime';
+    };
+      func-mem-referenceto = {
+        func-mem-ref-id = '_led_effects_8c_1afd64325b08e785d37b4dfaf358e517f0';
+        func-mem-ref-line = '138';
+        func-mem-ref-name = 'rotate';
+    };
+      func-mem-referenceto = {
+        func-mem-ref-id = '_lightstribe_8c_1aac724dad670e4a26723daf71ce6a8d8a';
+        func-mem-ref-line = '96';
+        func-mem-ref-name = 'transmit2leds';
+    };
+      func-mem-referenceby = {
+        func-mem-ref-id = 'ws2811lichterkette_8c_1a840291bc02cba5474a4cb46a9b9566fe';
+        func-mem-ref-line = '249';
+        func-mem-ref-name = 'main';
+    };
     }; /* func-member */
     func-member = {
       func-mem-kind = 'function';
@@ -1848,6 +3098,41 @@ This function generates a recolor effect. The old configuration of the
 \note           No need to run transmit2leds afterwards! The effect is standalone and ends if the stribe 
                 is recolored.
 _EnD_oF_dEf_TeXt_;
+      func-mem-referenceto = {
+        func-mem-ref-id = '_lightstribe_8c_1a63fa595d401f0e85c1bba55ba2b1d66e';
+        func-mem-ref-line = '33';
+        func-mem-ref-name = 'changeled';
+    };
+      func-mem-referenceto = {
+        func-mem-ref-id = '_led_effects_8c_1a6950e7657ba74d0d490ba36427533c4b';
+        func-mem-ref-line = '72';
+        func-mem-ref-name = 'effectdelay';
+    };
+      func-mem-referenceto = {
+        func-mem-ref-id = 'globals_8h_1ac2445d316b2972d381edeac44bb6a226';
+        func-mem-ref-line = '27';
+        func-mem-ref-name = 'effectime';
+    };
+      func-mem-referenceto = {
+        func-mem-ref-id = 'globals_8h_1ad5db4045aed262ed4aae2af9d81fab98';
+        func-mem-ref-line = '25';
+        func-mem-ref-name = 'NumOfLeds';
+    };
+      func-mem-referenceto = {
+        func-mem-ref-id = 'globals_8h_1a1b09d1a5bcf4c8ab435bb3c9e36def59';
+        func-mem-ref-line = '53';
+        func-mem-ref-name = 'PacketComplete';
+    };
+      func-mem-referenceto = {
+        func-mem-ref-id = '_lightstribe_8c_1aac724dad670e4a26723daf71ce6a8d8a';
+        func-mem-ref-line = '96';
+        func-mem-ref-name = 'transmit2leds';
+    };
+      func-mem-referenceby = {
+        func-mem-ref-id = 'ws2811lichterkette_8c_1a840291bc02cba5474a4cb46a9b9566fe';
+        func-mem-ref-line = '249';
+        func-mem-ref-name = 'main';
+    };
     }; /* func-member */
     func-member = {
       func-mem-kind = 'function';
@@ -1888,6 +3173,51 @@ This function generates a fading color effect. At the beginning the whole
 \note           No need to run transmit2leds afterwards! The effect is standalone and ends is looped
                 in the main while loop. The color value proportion is not kept over the whole effect.
 _EnD_oF_dEf_TeXt_;
+      func-mem-referenceto = {
+        func-mem-ref-id = '_lightstribe_8h_1a287b397e90d7b995c81ff54e741f96b2';
+        func-mem-ref-line = '19';
+        func-mem-ref-name = 'color24bit::blue';
+    };
+      func-mem-referenceto = {
+        func-mem-ref-id = '_led_effects_8c_1a6950e7657ba74d0d490ba36427533c4b';
+        func-mem-ref-line = '72';
+        func-mem-ref-name = 'effectdelay';
+    };
+      func-mem-referenceto = {
+        func-mem-ref-id = 'globals_8h_1ac2445d316b2972d381edeac44bb6a226';
+        func-mem-ref-line = '27';
+        func-mem-ref-name = 'effectime';
+    };
+      func-mem-referenceto = {
+        func-mem-ref-id = '_lightstribe_8h_1a90d21fa503b626c00cdc8d94863d5877';
+        func-mem-ref-line = '18';
+        func-mem-ref-name = 'color24bit::green';
+    };
+      func-mem-referenceto = {
+        func-mem-ref-id = 'globals_8h_1a1b09d1a5bcf4c8ab435bb3c9e36def59';
+        func-mem-ref-line = '53';
+        func-mem-ref-name = 'PacketComplete';
+    };
+      func-mem-referenceto = {
+        func-mem-ref-id = '_lightstribe_8h_1ad47d918910aaa51c73160ac85999d09c';
+        func-mem-ref-line = '17';
+        func-mem-ref-name = 'color24bit::red';
+    };
+      func-mem-referenceto = {
+        func-mem-ref-id = '_led_effects_8c_1a2d54d1a6c61fe667b7c68ff04a11c503';
+        func-mem-ref-line = '96';
+        func-mem-ref-name = 'setfullcolor';
+    };
+      func-mem-referenceto = {
+        func-mem-ref-id = '_lightstribe_8c_1aac724dad670e4a26723daf71ce6a8d8a';
+        func-mem-ref-line = '96';
+        func-mem-ref-name = 'transmit2leds';
+    };
+      func-mem-referenceby = {
+        func-mem-ref-id = 'ws2811lichterkette_8c_1a840291bc02cba5474a4cb46a9b9566fe';
+        func-mem-ref-line = '249';
+        func-mem-ref-name = 'main';
+    };
     }; /* func-member */
     func-member = {
       func-mem-kind = 'function';
@@ -1921,6 +3251,36 @@ This function fills the color array with rainbow colors. For this effect the col
                 (RGB vs. GRB). The function was primary written for WS2812 LEDs (GRB)! 
                 The effect needs a minimum number of 20 LEDs to look nice!              
 _EnD_oF_dEf_TeXt_;
+      func-mem-referenceto = {
+        func-mem-ref-id = '_lightstribe_8h_1a287b397e90d7b995c81ff54e741f96b2';
+        func-mem-ref-line = '19';
+        func-mem-ref-name = 'color24bit::blue';
+    };
+      func-mem-referenceto = {
+        func-mem-ref-id = '_lightstribe_8c_1a63fa595d401f0e85c1bba55ba2b1d66e';
+        func-mem-ref-line = '33';
+        func-mem-ref-name = 'changeled';
+    };
+      func-mem-referenceto = {
+        func-mem-ref-id = '_lightstribe_8h_1a90d21fa503b626c00cdc8d94863d5877';
+        func-mem-ref-line = '18';
+        func-mem-ref-name = 'color24bit::green';
+    };
+      func-mem-referenceto = {
+        func-mem-ref-id = 'globals_8h_1ad5db4045aed262ed4aae2af9d81fab98';
+        func-mem-ref-line = '25';
+        func-mem-ref-name = 'NumOfLeds';
+    };
+      func-mem-referenceto = {
+        func-mem-ref-id = '_lightstribe_8h_1ad47d918910aaa51c73160ac85999d09c';
+        func-mem-ref-line = '17';
+        func-mem-ref-name = 'color24bit::red';
+    };
+      func-mem-referenceby = {
+        func-mem-ref-id = 'ws2811lichterkette_8c_1a840291bc02cba5474a4cb46a9b9566fe';
+        func-mem-ref-line = '249';
+        func-mem-ref-name = 'main';
+    };
     }; /* func-member */
     func-member = {
       func-mem-kind = 'function';
@@ -1954,6 +3314,46 @@ _EnD_oF_dEf_TeXt_;
 \return         void
 \note           Do not use this function directly; this function is used by the easteregg function  
 _EnD_oF_dEf_TeXt_;
+      func-mem-referenceto = {
+        func-mem-ref-id = '_lightstribe_8c_1a63fa595d401f0e85c1bba55ba2b1d66e';
+        func-mem-ref-line = '33';
+        func-mem-ref-name = 'changeled';
+    };
+      func-mem-referenceto = {
+        func-mem-ref-id = '_led_effects_8c_1a6950e7657ba74d0d490ba36427533c4b';
+        func-mem-ref-line = '72';
+        func-mem-ref-name = 'effectdelay';
+    };
+      func-mem-referenceto = {
+        func-mem-ref-id = 'globals_8h_1ac2445d316b2972d381edeac44bb6a226';
+        func-mem-ref-line = '27';
+        func-mem-ref-name = 'effectime';
+    };
+      func-mem-referenceto = {
+        func-mem-ref-id = 'globals_8h_1ad5db4045aed262ed4aae2af9d81fab98';
+        func-mem-ref-line = '25';
+        func-mem-ref-name = 'NumOfLeds';
+    };
+      func-mem-referenceto = {
+        func-mem-ref-id = 'globals_8h_1a1b09d1a5bcf4c8ab435bb3c9e36def59';
+        func-mem-ref-line = '53';
+        func-mem-ref-name = 'PacketComplete';
+    };
+      func-mem-referenceto = {
+        func-mem-ref-id = '_led_effects_8c_1afd64325b08e785d37b4dfaf358e517f0';
+        func-mem-ref-line = '138';
+        func-mem-ref-name = 'rotate';
+    };
+      func-mem-referenceto = {
+        func-mem-ref-id = '_lightstribe_8c_1aac724dad670e4a26723daf71ce6a8d8a';
+        func-mem-ref-line = '96';
+        func-mem-ref-name = 'transmit2leds';
+    };
+      func-mem-referenceby = {
+        func-mem-ref-id = '_led_effects_8c_1a25e09bcb1481b20ebc2a27e7098b5115';
+        func-mem-ref-line = '514';
+        func-mem-ref-name = 'easteregg';
+    };
     }; /* func-member */
     func-member = {
       func-mem-kind = 'function';
@@ -1980,6 +3380,26 @@ _EnD_oF_dEf_TeXt_;
 \return         void
 \note           Just try it :-) funny looking effect    
 _EnD_oF_dEf_TeXt_;
+      func-mem-referenceto = {
+        func-mem-ref-id = '_led_effects_8c_1a55291315ab0f2ca8d508f0e9da1920a7';
+        func-mem-ref-line = '45';
+        func-mem-ref-name = 'colorconv8to24';
+    };
+      func-mem-referenceto = {
+        func-mem-ref-id = '_led_effects_8c_1ac83bd19da7ebd3c475e3667e4229db41';
+        func-mem-ref-line = '489';
+        func-mem-ref-name = 'eastereggbase';
+    };
+      func-mem-referenceto = {
+        func-mem-ref-id = 'globals_8h_1a1b09d1a5bcf4c8ab435bb3c9e36def59';
+        func-mem-ref-line = '53';
+        func-mem-ref-name = 'PacketComplete';
+    };
+      func-mem-referenceby = {
+        func-mem-ref-id = 'ws2811lichterkette_8c_1a840291bc02cba5474a4cb46a9b9566fe';
+        func-mem-ref-line = '249';
+        func-mem-ref-name = 'main';
+    };
     }; /* func-member */
     func-member = {
       func-mem-kind = 'function';
@@ -2026,6 +3446,41 @@ This function fills up the whole stribe and beginns again if it is finished.
 \return         void
 \note           This is a standalone effect.
 _EnD_oF_dEf_TeXt_;
+      func-mem-referenceto = {
+        func-mem-ref-id = '_lightstribe_8c_1a63fa595d401f0e85c1bba55ba2b1d66e';
+        func-mem-ref-line = '33';
+        func-mem-ref-name = 'changeled';
+    };
+      func-mem-referenceto = {
+        func-mem-ref-id = '_led_effects_8c_1a6950e7657ba74d0d490ba36427533c4b';
+        func-mem-ref-line = '72';
+        func-mem-ref-name = 'effectdelay';
+    };
+      func-mem-referenceto = {
+        func-mem-ref-id = 'globals_8h_1ac2445d316b2972d381edeac44bb6a226';
+        func-mem-ref-line = '27';
+        func-mem-ref-name = 'effectime';
+    };
+      func-mem-referenceto = {
+        func-mem-ref-id = 'globals_8h_1ad5db4045aed262ed4aae2af9d81fab98';
+        func-mem-ref-line = '25';
+        func-mem-ref-name = 'NumOfLeds';
+    };
+      func-mem-referenceto = {
+        func-mem-ref-id = 'globals_8h_1a1b09d1a5bcf4c8ab435bb3c9e36def59';
+        func-mem-ref-line = '53';
+        func-mem-ref-name = 'PacketComplete';
+    };
+      func-mem-referenceto = {
+        func-mem-ref-id = '_lightstribe_8c_1aac724dad670e4a26723daf71ce6a8d8a';
+        func-mem-ref-line = '96';
+        func-mem-ref-name = 'transmit2leds';
+    };
+      func-mem-referenceby = {
+        func-mem-ref-id = 'ws2811lichterkette_8c_1a840291bc02cba5474a4cb46a9b9566fe';
+        func-mem-ref-line = '249';
+        func-mem-ref-name = 'main';
+    };
     }; /* func-member */
     };
   file-full-name  = 'C:/Users/Commander/Documents/Atmel Studio/6.2/ws2811lichterkette/ws2811lichterkette/LedEffects.h';
@@ -2082,6 +3537,61 @@ _EnD_oF_dEf_TeXt_;
 \return         void
 \note           the right color format is created using the colorconv8to24-function with the ledtype predefined
 _EnD_oF_dEf_TeXt_;
+      func-mem-referenceto = {
+        func-mem-ref-id = '_lightstribe_8h_1a287b397e90d7b995c81ff54e741f96b2';
+        func-mem-ref-line = '19';
+        func-mem-ref-name = 'color24bit::blue';
+    };
+      func-mem-referenceto = {
+        func-mem-ref-id = '_lightstribe_8h_1a90d21fa503b626c00cdc8d94863d5877';
+        func-mem-ref-line = '18';
+        func-mem-ref-name = 'color24bit::green';
+    };
+      func-mem-referenceto = {
+        func-mem-ref-id = 'globals_8h_1ad5db4045aed262ed4aae2af9d81fab98';
+        func-mem-ref-line = '25';
+        func-mem-ref-name = 'NumOfLeds';
+    };
+      func-mem-referenceto = {
+        func-mem-ref-id = '_lightstribe_8h_1ad47d918910aaa51c73160ac85999d09c';
+        func-mem-ref-line = '17';
+        func-mem-ref-name = 'color24bit::red';
+    };
+      func-mem-referenceby = {
+        func-mem-ref-id = '_led_effects_8c_1ac83bd19da7ebd3c475e3667e4229db41';
+        func-mem-ref-line = '489';
+        func-mem-ref-name = 'eastereggbase';
+    };
+      func-mem-referenceby = {
+        func-mem-ref-id = '_led_effects_8c_1a99174e2b381d7ec6667d29352e6eca1b';
+        func-mem-ref-line = '549';
+        func-mem-ref-name = 'fillup';
+    };
+      func-mem-referenceby = {
+        func-mem-ref-id = '_led_effects_8c_1af67b7638a175e4971f25df5a5db3d8d0';
+        func-mem-ref-line = '300';
+        func-mem-ref-name = 'init_alternating';
+    };
+      func-mem-referenceby = {
+        func-mem-ref-id = '_led_effects_8c_1a9d0f91360c87b851925bf05be5352435';
+        func-mem-ref-line = '442';
+        func-mem-ref-name = 'initrainbow';
+    };
+      func-mem-referenceby = {
+        func-mem-ref-id = '_led_effects_8c_1aecba07ab559ab94e6f44c16e39012d80';
+        func-mem-ref-line = '217';
+        func-mem-ref-name = 'initrunled';
+    };
+      func-mem-referenceby = {
+        func-mem-ref-id = 'ws2811lichterkette_8c_1a840291bc02cba5474a4cb46a9b9566fe';
+        func-mem-ref-line = '249';
+        func-mem-ref-name = 'main';
+    };
+      func-mem-referenceby = {
+        func-mem-ref-id = '_led_effects_8c_1a448758d76f47ea6fed4beb349196363f';
+        func-mem-ref-line = '340';
+        func-mem-ref-name = 'recolor';
+    };
     }; /* func-member */
     func-member = {
       func-mem-kind = 'function';
@@ -2123,6 +3633,26 @@ _EnD_oF_dEf_TeXt_;
 \note           the right color format is created using the colorconv8to24-function with the ledtype predefined;
                 all other LEDs are cleared so they are off
 _EnD_oF_dEf_TeXt_;
+      func-mem-referenceto = {
+        func-mem-ref-id = '_lightstribe_8h_1a287b397e90d7b995c81ff54e741f96b2';
+        func-mem-ref-line = '19';
+        func-mem-ref-name = 'color24bit::blue';
+    };
+      func-mem-referenceto = {
+        func-mem-ref-id = '_lightstribe_8h_1a90d21fa503b626c00cdc8d94863d5877';
+        func-mem-ref-line = '18';
+        func-mem-ref-name = 'color24bit::green';
+    };
+      func-mem-referenceto = {
+        func-mem-ref-id = 'globals_8h_1ad5db4045aed262ed4aae2af9d81fab98';
+        func-mem-ref-line = '25';
+        func-mem-ref-name = 'NumOfLeds';
+    };
+      func-mem-referenceto = {
+        func-mem-ref-id = '_lightstribe_8h_1ad47d918910aaa51c73160ac85999d09c';
+        func-mem-ref-line = '17';
+        func-mem-ref-name = 'color24bit::red';
+    };
     }; /* func-member */
     func-member = {
       func-mem-kind = 'function';
@@ -2158,6 +3688,51 @@ To control the LEDs of type WS2811/WS2812 a critical timing is necessary. To ach
                 Do not use higher optimization than O1!!!
                 Do not remove the {} brackets because SETLOW/SETHIGH are definitions with several commands!
 _EnD_oF_dEf_TeXt_;
+      func-mem-referenceto = {
+        func-mem-ref-id = 'globals_8h_1ad5db4045aed262ed4aae2af9d81fab98';
+        func-mem-ref-line = '25';
+        func-mem-ref-name = 'NumOfLeds';
+    };
+      func-mem-referenceby = {
+        func-mem-ref-id = '_led_effects_8c_1a9fd87d01d5cc4ce5fce6ddca55ebaf37';
+        func-mem-ref-line = '278';
+        func-mem-ref-name = 'blinkled';
+    };
+      func-mem-referenceby = {
+        func-mem-ref-id = '_led_effects_8c_1ac83bd19da7ebd3c475e3667e4229db41';
+        func-mem-ref-line = '489';
+        func-mem-ref-name = 'eastereggbase';
+    };
+      func-mem-referenceby = {
+        func-mem-ref-id = '_led_effects_8c_1a71d3b2ff21a63b48a01461e74be0c2b8';
+        func-mem-ref-line = '366';
+        func-mem-ref-name = 'faden';
+    };
+      func-mem-referenceby = {
+        func-mem-ref-id = '_led_effects_8c_1a99174e2b381d7ec6667d29352e6eca1b';
+        func-mem-ref-line = '549';
+        func-mem-ref-name = 'fillup';
+    };
+      func-mem-referenceby = {
+        func-mem-ref-id = 'ws2811lichterkette_8c_1a840291bc02cba5474a4cb46a9b9566fe';
+        func-mem-ref-line = '249';
+        func-mem-ref-name = 'main';
+    };
+      func-mem-referenceby = {
+        func-mem-ref-id = '_led_effects_8c_1a448758d76f47ea6fed4beb349196363f';
+        func-mem-ref-line = '340';
+        func-mem-ref-name = 'recolor';
+    };
+      func-mem-referenceby = {
+        func-mem-ref-id = '_led_effects_8c_1a5bde1e9e7fc19a9916f1ec02d8fbcd6c';
+        func-mem-ref-line = '323';
+        func-mem-ref-name = 'run_alternating';
+    };
+      func-mem-referenceby = {
+        func-mem-ref-id = '_led_effects_8c_1a35cfbfc36c975f98a7779a37b6ff63ce';
+        func-mem-ref-line = '236';
+        func-mem-ref-name = 'runrunled';
+    };
     }; /* func-member */
     };
   file-full-name  = 'C:/Users/Commander/Documents/Atmel Studio/6.2/ws2811lichterkette/ws2811lichterkette/Lightstribe.c';
@@ -2215,7 +3790,7 @@ _EnD_oF_dEf_TeXt_;
         func-mem-param-declname = 'lednr';
       }; /*        func-mem-param--param */
       func-mem-desc-file = 'C:/Users/Commander/Documents/Atmel Studio/6.2/ws2811lichterkette/ws2811lichterkette/Lightstribe.h';
-      func-mem-desc-line = '87';
+      func-mem-desc-line = '89';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 change the color of one LED at a specific position; run transmit2leds afterwards to update the LEDs
 _EnD_oF_dEf_TeXt_;
@@ -2226,6 +3801,61 @@ _EnD_oF_dEf_TeXt_;
 \return         void
 \note           the right color format is created using the colorconv8to24-function with the ledtype predefined
 _EnD_oF_dEf_TeXt_;
+      func-mem-referenceto = {
+        func-mem-ref-id = '_lightstribe_8h_1a287b397e90d7b995c81ff54e741f96b2';
+        func-mem-ref-line = '19';
+        func-mem-ref-name = 'color24bit::blue';
+    };
+      func-mem-referenceto = {
+        func-mem-ref-id = '_lightstribe_8h_1a90d21fa503b626c00cdc8d94863d5877';
+        func-mem-ref-line = '18';
+        func-mem-ref-name = 'color24bit::green';
+    };
+      func-mem-referenceto = {
+        func-mem-ref-id = 'globals_8h_1ad5db4045aed262ed4aae2af9d81fab98';
+        func-mem-ref-line = '25';
+        func-mem-ref-name = 'NumOfLeds';
+    };
+      func-mem-referenceto = {
+        func-mem-ref-id = '_lightstribe_8h_1ad47d918910aaa51c73160ac85999d09c';
+        func-mem-ref-line = '17';
+        func-mem-ref-name = 'color24bit::red';
+    };
+      func-mem-referenceby = {
+        func-mem-ref-id = '_led_effects_8c_1ac83bd19da7ebd3c475e3667e4229db41';
+        func-mem-ref-line = '489';
+        func-mem-ref-name = 'eastereggbase';
+    };
+      func-mem-referenceby = {
+        func-mem-ref-id = '_led_effects_8c_1a99174e2b381d7ec6667d29352e6eca1b';
+        func-mem-ref-line = '549';
+        func-mem-ref-name = 'fillup';
+    };
+      func-mem-referenceby = {
+        func-mem-ref-id = '_led_effects_8c_1af67b7638a175e4971f25df5a5db3d8d0';
+        func-mem-ref-line = '300';
+        func-mem-ref-name = 'init_alternating';
+    };
+      func-mem-referenceby = {
+        func-mem-ref-id = '_led_effects_8c_1a9d0f91360c87b851925bf05be5352435';
+        func-mem-ref-line = '442';
+        func-mem-ref-name = 'initrainbow';
+    };
+      func-mem-referenceby = {
+        func-mem-ref-id = '_led_effects_8c_1aecba07ab559ab94e6f44c16e39012d80';
+        func-mem-ref-line = '217';
+        func-mem-ref-name = 'initrunled';
+    };
+      func-mem-referenceby = {
+        func-mem-ref-id = 'ws2811lichterkette_8c_1a840291bc02cba5474a4cb46a9b9566fe';
+        func-mem-ref-line = '249';
+        func-mem-ref-name = 'main';
+    };
+      func-mem-referenceby = {
+        func-mem-ref-id = '_led_effects_8c_1a448758d76f47ea6fed4beb349196363f';
+        func-mem-ref-line = '340';
+        func-mem-ref-name = 'recolor';
+    };
     }; /* func-member */
     func-member = {
       func-mem-kind = 'function';
@@ -2255,7 +3885,7 @@ _EnD_oF_dEf_TeXt_;
         func-mem-param-declname = 'lednr';
       }; /*        func-mem-param--param */
       func-mem-desc-file = 'C:/Users/Commander/Documents/Atmel Studio/6.2/ws2811lichterkette/ws2811lichterkette/Lightstribe.h';
-      func-mem-desc-line = '89';
+      func-mem-desc-line = '91';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 set the color of one LED at a specific position, all others are off; run transmit2leds afterwards to update the LEDs
 _EnD_oF_dEf_TeXt_;
@@ -2267,6 +3897,26 @@ _EnD_oF_dEf_TeXt_;
 \note           the right color format is created using the colorconv8to24-function with the ledtype predefined;
                 all other LEDs are cleared so they are off
 _EnD_oF_dEf_TeXt_;
+      func-mem-referenceto = {
+        func-mem-ref-id = '_lightstribe_8h_1a287b397e90d7b995c81ff54e741f96b2';
+        func-mem-ref-line = '19';
+        func-mem-ref-name = 'color24bit::blue';
+    };
+      func-mem-referenceto = {
+        func-mem-ref-id = '_lightstribe_8h_1a90d21fa503b626c00cdc8d94863d5877';
+        func-mem-ref-line = '18';
+        func-mem-ref-name = 'color24bit::green';
+    };
+      func-mem-referenceto = {
+        func-mem-ref-id = 'globals_8h_1ad5db4045aed262ed4aae2af9d81fab98';
+        func-mem-ref-line = '25';
+        func-mem-ref-name = 'NumOfLeds';
+    };
+      func-mem-referenceto = {
+        func-mem-ref-id = '_lightstribe_8h_1ad47d918910aaa51c73160ac85999d09c';
+        func-mem-ref-line = '17';
+        func-mem-ref-name = 'color24bit::red';
+    };
     }; /* func-member */
     func-member = {
       func-mem-kind = 'function';
@@ -2285,7 +3935,7 @@ _EnD_oF_dEf_TeXt_;
         func-mem-param-array = '[]';
       }; /*        func-mem-param--param */
       func-mem-desc-file = 'C:/Users/Commander/Documents/Atmel Studio/6.2/ws2811lichterkette/ws2811lichterkette/Lightstribe.h';
-      func-mem-desc-line = '91';
+      func-mem-desc-line = '93';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 transmit the color array to the stribe
 _EnD_oF_dEf_TeXt_;
@@ -2302,6 +3952,51 @@ To control the LEDs of type WS2811/WS2812 a critical timing is necessary. To ach
                 Do not use higher optimization than O1!!!
                 Do not remove the {} brackets because SETLOW/SETHIGH are definitions with several commands!
 _EnD_oF_dEf_TeXt_;
+      func-mem-referenceto = {
+        func-mem-ref-id = 'globals_8h_1ad5db4045aed262ed4aae2af9d81fab98';
+        func-mem-ref-line = '25';
+        func-mem-ref-name = 'NumOfLeds';
+    };
+      func-mem-referenceby = {
+        func-mem-ref-id = '_led_effects_8c_1a9fd87d01d5cc4ce5fce6ddca55ebaf37';
+        func-mem-ref-line = '278';
+        func-mem-ref-name = 'blinkled';
+    };
+      func-mem-referenceby = {
+        func-mem-ref-id = '_led_effects_8c_1ac83bd19da7ebd3c475e3667e4229db41';
+        func-mem-ref-line = '489';
+        func-mem-ref-name = 'eastereggbase';
+    };
+      func-mem-referenceby = {
+        func-mem-ref-id = '_led_effects_8c_1a71d3b2ff21a63b48a01461e74be0c2b8';
+        func-mem-ref-line = '366';
+        func-mem-ref-name = 'faden';
+    };
+      func-mem-referenceby = {
+        func-mem-ref-id = '_led_effects_8c_1a99174e2b381d7ec6667d29352e6eca1b';
+        func-mem-ref-line = '549';
+        func-mem-ref-name = 'fillup';
+    };
+      func-mem-referenceby = {
+        func-mem-ref-id = 'ws2811lichterkette_8c_1a840291bc02cba5474a4cb46a9b9566fe';
+        func-mem-ref-line = '249';
+        func-mem-ref-name = 'main';
+    };
+      func-mem-referenceby = {
+        func-mem-ref-id = '_led_effects_8c_1a448758d76f47ea6fed4beb349196363f';
+        func-mem-ref-line = '340';
+        func-mem-ref-name = 'recolor';
+    };
+      func-mem-referenceby = {
+        func-mem-ref-id = '_led_effects_8c_1a5bde1e9e7fc19a9916f1ec02d8fbcd6c';
+        func-mem-ref-line = '323';
+        func-mem-ref-name = 'run_alternating';
+    };
+      func-mem-referenceby = {
+        func-mem-ref-id = '_led_effects_8c_1a35cfbfc36c975f98a7779a37b6ff63ce';
+        func-mem-ref-line = '236';
+        func-mem-ref-name = 'runrunled';
+    };
     }; /* func-member */
     };
   file-full-name  = 'C:/Users/Commander/Documents/Atmel Studio/6.2/ws2811lichterkette/ws2811lichterkette/Lightstribe.h';
@@ -2326,7 +4021,7 @@ file = {
       define-mem-prot = public;
       define-mem-name = 'EXTERN';
       define-mem-desc-file = 'C:/Users/Commander/Documents/Atmel Studio/6.2/ws2811lichterkette/ws2811lichterkette/ws2811lichterkette.c';
-      define-mem-desc-line = '117';
+      define-mem-desc-line = '177';
       define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
 _EnD_oF_dEf_TeXt_;
@@ -2344,9 +4039,9 @@ _EnD_oF_dEf_TeXt_;
 38400
 _EnD_oF_dEf_TeXt_;
       define-mem-desc-file = 'C:/Users/Commander/Documents/Atmel Studio/6.2/ws2811lichterkette/ws2811lichterkette/ws2811lichterkette.c';
-      define-mem-desc-line = '132';
+      define-mem-desc-line = '192';
       define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
-Baudrate definition, choose 76800 or 38400, faster value prefered, the maximum speed of ESP8266 software-UART is 38400.
+Baudrate definition, choose 76800 or 38400, faster value preferred, the maximum speed of ESP8266 software-UART is 38400.
 _EnD_oF_dEf_TeXt_;
       define-mem-documentation = <<_EnD_oF_dEf_TeXt_
 
@@ -2362,13 +4057,18 @@ _EnD_oF_dEf_TeXt_;
 F_CPU/16/BAUD -1
 _EnD_oF_dEf_TeXt_;
       define-mem-desc-file = 'C:/Users/Commander/Documents/Atmel Studio/6.2/ws2811lichterkette/ws2811lichterkette/ws2811lichterkette.c';
-      define-mem-desc-line = '134';
+      define-mem-desc-line = '194';
       define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 calculate baudrate register value
 _EnD_oF_dEf_TeXt_;
       define-mem-documentation = <<_EnD_oF_dEf_TeXt_
 
 _EnD_oF_dEf_TeXt_;
+      define-mem-referenceby = {
+        define-mem-ref-id = 'ws2811lichterkette_8c_1ac7b3df0fa68526d64c732d5f916e34b1';
+        define-mem-ref-line = '234';
+        define-mem-ref-name = 'init_uart';
+    };
     }; /* define-member */
     define-member = {
       define-mem-kind = 'define';
@@ -2380,7 +4080,7 @@ _EnD_oF_dEf_TeXt_;
 (F_CPU/(16*(MYUBRR+1)))		/*real baudrate in this configuration*/
 _EnD_oF_dEf_TeXt_;
       define-mem-desc-file = 'C:/Users/Commander/Documents/Atmel Studio/6.2/ws2811lichterkette/ws2811lichterkette/ws2811lichterkette.c';
-      define-mem-desc-line = '136';
+      define-mem-desc-line = '196';
       define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
 _EnD_oF_dEf_TeXt_;
@@ -2398,7 +4098,7 @@ _EnD_oF_dEf_TeXt_;
 ((BAUD_REAL*1000)/BAUD)		/*calculate baudrate error*/
 _EnD_oF_dEf_TeXt_;
       define-mem-desc-file = 'C:/Users/Commander/Documents/Atmel Studio/6.2/ws2811lichterkette/ws2811lichterkette/ws2811lichterkette.c';
-      define-mem-desc-line = '137';
+      define-mem-desc-line = '197';
       define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
 _EnD_oF_dEf_TeXt_;
@@ -2416,13 +4116,18 @@ _EnD_oF_dEf_TeXt_;
 254
 _EnD_oF_dEf_TeXt_;
       define-mem-desc-file = 'C:/Users/Commander/Documents/Atmel Studio/6.2/ws2811lichterkette/ws2811lichterkette/ws2811lichterkette.c';
-      define-mem-desc-line = '152';
+      define-mem-desc-line = '212';
       define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 definition of the preamble is 254, no other data field must contain this value
 _EnD_oF_dEf_TeXt_;
       define-mem-documentation = <<_EnD_oF_dEf_TeXt_
 
 _EnD_oF_dEf_TeXt_;
+      define-mem-referenceby = {
+        define-mem-ref-id = 'ws2811lichterkette_8c_1a09ce999e15ad60b8a3f07d08af1946f9';
+        define-mem-ref-line = '376';
+        define-mem-ref-name = 'ISR';
+    };
     }; /* define-member */
     define-member = {
       define-mem-kind = 'define';
@@ -2434,13 +4139,18 @@ _EnD_oF_dEf_TeXt_;
 1
 _EnD_oF_dEf_TeXt_;
       define-mem-desc-file = 'C:/Users/Commander/Documents/Atmel Studio/6.2/ws2811lichterkette/ws2811lichterkette/ws2811lichterkette.c';
-      define-mem-desc-line = '154';
+      define-mem-desc-line = '214';
       define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 definition of the second field; contains the total packet length (including the preamble)
 _EnD_oF_dEf_TeXt_;
       define-mem-documentation = <<_EnD_oF_dEf_TeXt_
 
 _EnD_oF_dEf_TeXt_;
+      define-mem-referenceby = {
+        define-mem-ref-id = 'ws2811lichterkette_8c_1a09ce999e15ad60b8a3f07d08af1946f9';
+        define-mem-ref-line = '376';
+        define-mem-ref-name = 'ISR';
+    };
     }; /* define-member */
     define-member = {
       define-mem-kind = 'define';
@@ -2452,13 +4162,18 @@ _EnD_oF_dEf_TeXt_;
 2
 _EnD_oF_dEf_TeXt_;
       define-mem-desc-file = 'C:/Users/Commander/Documents/Atmel Studio/6.2/ws2811lichterkette/ws2811lichterkette/ws2811lichterkette.c';
-      define-mem-desc-line = '156';
+      define-mem-desc-line = '216';
       define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 definition of 1 Byte effect at third position, the MSBit is used to choose WS2811/WS2812 (color profile RGB or GRB)
 _EnD_oF_dEf_TeXt_;
       define-mem-documentation = <<_EnD_oF_dEf_TeXt_
 
 _EnD_oF_dEf_TeXt_;
+      define-mem-referenceby = {
+        define-mem-ref-id = 'ws2811lichterkette_8c_1a840291bc02cba5474a4cb46a9b9566fe';
+        define-mem-ref-line = '249';
+        define-mem-ref-name = 'main';
+    };
     }; /* define-member */
     define-member = {
       define-mem-kind = 'define';
@@ -2470,13 +4185,18 @@ _EnD_oF_dEf_TeXt_;
 3
 _EnD_oF_dEf_TeXt_;
       define-mem-desc-file = 'C:/Users/Commander/Documents/Atmel Studio/6.2/ws2811lichterkette/ws2811lichterkette/ws2811lichterkette.c';
-      define-mem-desc-line = '158';
+      define-mem-desc-line = '218';
       define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 definition of the delay field, contains the delay duplicator
 _EnD_oF_dEf_TeXt_;
       define-mem-documentation = <<_EnD_oF_dEf_TeXt_
 
 _EnD_oF_dEf_TeXt_;
+      define-mem-referenceby = {
+        define-mem-ref-id = 'ws2811lichterkette_8c_1a840291bc02cba5474a4cb46a9b9566fe';
+        define-mem-ref-line = '249';
+        define-mem-ref-name = 'main';
+    };
     }; /* define-member */
     define-member = {
       define-mem-kind = 'define';
@@ -2488,13 +4208,18 @@ _EnD_oF_dEf_TeXt_;
 4
 _EnD_oF_dEf_TeXt_;
       define-mem-desc-file = 'C:/Users/Commander/Documents/Atmel Studio/6.2/ws2811lichterkette/ws2811lichterkette/ws2811lichterkette.c';
-      define-mem-desc-line = '160';
+      define-mem-desc-line = '220';
       define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 field position for the number of LEDs to control, should be max. 200 (dynamic memory allocation for the lightdata array)
 _EnD_oF_dEf_TeXt_;
       define-mem-documentation = <<_EnD_oF_dEf_TeXt_
 
 _EnD_oF_dEf_TeXt_;
+      define-mem-referenceby = {
+        define-mem-ref-id = 'ws2811lichterkette_8c_1a840291bc02cba5474a4cb46a9b9566fe';
+        define-mem-ref-line = '249';
+        define-mem-ref-name = 'main';
+    };
     }; /* define-member */
     };
     func = {
@@ -2513,7 +4238,7 @@ void
 _EnD_oF_dEf_TeXt_;
       }; /*        func-mem-param--param */
       func-mem-desc-file = 'C:/Users/Commander/Documents/Atmel Studio/6.2/ws2811lichterkette/ws2811lichterkette/ws2811lichterkette.c';
-      func-mem-desc-line = '174';
+      func-mem-desc-line = '234';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 Init the hardware UART with Baud = 76800/38400, depending on @link BAUD @endlink definition, 8 Databits, 1 Stopbit, no Parity.
 _EnD_oF_dEf_TeXt_;
@@ -2522,6 +4247,16 @@ _EnD_oF_dEf_TeXt_;
 \note           This function depends on the oscillator clock frequency and the @link BAUD @endlink defintion.
                 If your UART is not working first check all frequency issues (Fuse settings, clock speed, clock divider, Baudrate)          
 _EnD_oF_dEf_TeXt_;
+      func-mem-referenceto = {
+        func-mem-ref-id = 'ws2811lichterkette_8c_1a711e9130c825a7269c8c87dbb57a85e0';
+        func-mem-ref-line = '194';
+        func-mem-ref-name = 'MYUBRR';
+    };
+      func-mem-referenceby = {
+        func-mem-ref-id = 'ws2811lichterkette_8c_1a840291bc02cba5474a4cb46a9b9566fe';
+        func-mem-ref-line = '249';
+        func-mem-ref-name = 'main';
+    };
     }; /* func-member */
     func-member = {
       func-mem-kind = 'function';
@@ -2538,13 +4273,243 @@ void
 _EnD_oF_dEf_TeXt_;
       }; /*        func-mem-param--param */
       func-mem-desc-file = 'C:/Users/Commander/Documents/Atmel Studio/6.2/ws2811lichterkette/ws2811lichterkette/ws2811lichterkette.c';
-      func-mem-desc-line = '189';
+      func-mem-desc-line = '249';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 main function, should never end, effects are handled in main while
 _EnD_oF_dEf_TeXt_;
       func-mem-documentation = <<_EnD_oF_dEf_TeXt_
 
 _EnD_oF_dEf_TeXt_;
+      func-mem-referenceto = {
+        func-mem-ref-id = 'globals_8h_1a0d57378e32bf8278011460740bc29f7f';
+        func-mem-ref-line = '37';
+        func-mem-ref-name = 'UART_BUFFER_SIZE';
+    };
+      func-mem-referenceto = {
+        func-mem-ref-id = 'globals_8h_1ad5db4045aed262ed4aae2af9d81fab98';
+        func-mem-ref-line = '25';
+        func-mem-ref-name = 'NumOfLeds';
+    };
+      func-mem-referenceto = {
+        func-mem-ref-id = 'globals_8h_1a1b09d1a5bcf4c8ab435bb3c9e36def59';
+        func-mem-ref-line = '53';
+        func-mem-ref-name = 'PacketComplete';
+    };
+      func-mem-referenceto = {
+        func-mem-ref-id = 'globals_8h_1a922ad5baed647eca43ad1a979e162ebd';
+        func-mem-ref-line = '57';
+        func-mem-ref-name = 'IsReading';
+    };
+      func-mem-referenceto = {
+        func-mem-ref-id = 'globals_8h_1aaa3bddd2273257ac5ec259197b62e984';
+        func-mem-ref-line = '55';
+        func-mem-ref-name = 'PaketStart';
+    };
+      func-mem-referenceto = {
+        func-mem-ref-id = 'globals_8h_1aa6fcb4d4fca4554ac73bef10668c23cd';
+        func-mem-ref-line = '44';
+        func-mem-ref-name = 'BufferCounter';
+    };
+      func-mem-referenceto = {
+        func-mem-ref-id = 'globals_8h_1a5d735865707e6694a8173d629e0b4d5c';
+        func-mem-ref-line = '42';
+        func-mem-ref-name = 'RecBuffer';
+    };
+      func-mem-referenceto = {
+        func-mem-ref-id = 'globals_8h_1a722e1eb38b661d1338ada3cc7a4049a0';
+        func-mem-ref-line = '29';
+        func-mem-ref-name = 'ledtype';
+    };
+      func-mem-referenceto = {
+        func-mem-ref-id = 'globals_8h_1af07a5ce170c7be13d096843960e7b9da';
+        func-mem-ref-line = '31';
+        func-mem-ref-name = 'BASELEDTYPE';
+    };
+      func-mem-referenceto = {
+        func-mem-ref-id = 'globals_8h_1ab5490074aaca289e986e9a00e0c25663';
+        func-mem-ref-line = '59';
+        func-mem-ref-name = 'ReceivedChar';
+    };
+      func-mem-referenceto = {
+        func-mem-ref-id = 'globals_8h_1ac2445d316b2972d381edeac44bb6a226';
+        func-mem-ref-line = '27';
+        func-mem-ref-name = 'effectime';
+    };
+      func-mem-referenceto = {
+        func-mem-ref-id = 'globals_8h_1a053b8e1f039c19251b90d60317db8aed';
+        func-mem-ref-line = '48';
+        func-mem-ref-name = 'effect';
+    };
+      func-mem-referenceto = {
+        func-mem-ref-id = 'ws2811lichterkette_8c_1ac7b3df0fa68526d64c732d5f916e34b1';
+        func-mem-ref-line = '234';
+        func-mem-ref-name = 'init_uart';
+    };
+      func-mem-referenceto = {
+        func-mem-ref-id = 'globals_8h_1aaa611e00c18e950be43a4cd5ce0ceeb1';
+        func-mem-ref-line = '46';
+        func-mem-ref-name = 'DataLen';
+    };
+      func-mem-referenceto = {
+        func-mem-ref-id = 'ws2811lichterkette_8c_1a8d4e4cf47dd6136ace963623e1a8e27c';
+        func-mem-ref-line = '216';
+        func-mem-ref-name = 'EFFECTINDEX';
+    };
+      func-mem-referenceto = {
+        func-mem-ref-id = 'ws2811lichterkette_8c_1a9ff437877d0878dd16eacf103a1e1c40';
+        func-mem-ref-line = '218';
+        func-mem-ref-name = 'DELAYINDEX';
+    };
+      func-mem-referenceto = {
+        func-mem-ref-id = 'ws2811lichterkette_8c_1afbc75dc20761a05dda7cbb70b9b322dd';
+        func-mem-ref-line = '220';
+        func-mem-ref-name = 'NUMOFLEDINDEX';
+    };
+      func-mem-referenceto = {
+        func-mem-ref-id = 'globals_8h_1a159854edb9d0c7283013495d85bdf997';
+        func-mem-ref-line = '40';
+        func-mem-ref-name = 'CompColorArray';
+    };
+      func-mem-referenceto = {
+        func-mem-ref-id = '_led_effects_8h_1a996334f1d53296a931624800377d5b01';
+        func-mem-ref-line = '16';
+        func-mem-ref-name = 'SETFULLCOLOR';
+    };
+      func-mem-referenceto = {
+        func-mem-ref-id = '_led_effects_8c_1a2d54d1a6c61fe667b7c68ff04a11c503';
+        func-mem-ref-line = '96';
+        func-mem-ref-name = 'setfullcolor';
+    };
+      func-mem-referenceto = {
+        func-mem-ref-id = '_led_effects_8c_1a55291315ab0f2ca8d508f0e9da1920a7';
+        func-mem-ref-line = '45';
+        func-mem-ref-name = 'colorconv8to24';
+    };
+      func-mem-referenceto = {
+        func-mem-ref-id = '_lightstribe_8c_1aac724dad670e4a26723daf71ce6a8d8a';
+        func-mem-ref-line = '96';
+        func-mem-ref-name = 'transmit2leds';
+    };
+      func-mem-referenceto = {
+        func-mem-ref-id = '_led_effects_8h_1a2f349ea8f5412514d90f138ede08da62';
+        func-mem-ref-line = '18';
+        func-mem-ref-name = 'FILLUP';
+    };
+      func-mem-referenceto = {
+        func-mem-ref-id = '_led_effects_8c_1a99174e2b381d7ec6667d29352e6eca1b';
+        func-mem-ref-line = '549';
+        func-mem-ref-name = 'fillup';
+    };
+      func-mem-referenceto = {
+        func-mem-ref-id = '_led_effects_8h_1a38eec52a7dccb94ff563e30eda32c891';
+        func-mem-ref-line = '20';
+        func-mem-ref-name = 'BLINK';
+    };
+      func-mem-referenceto = {
+        func-mem-ref-id = '_led_effects_8c_1a9fd87d01d5cc4ce5fce6ddca55ebaf37';
+        func-mem-ref-line = '278';
+        func-mem-ref-name = 'blinkled';
+    };
+      func-mem-referenceto = {
+        func-mem-ref-id = '_led_effects_8h_1ab6e06c8b4c17edc65d75be641a0fc39b';
+        func-mem-ref-line = '22';
+        func-mem-ref-name = 'RUNLED';
+    };
+      func-mem-referenceto = {
+        func-mem-ref-id = '_led_effects_8c_1aecba07ab559ab94e6f44c16e39012d80';
+        func-mem-ref-line = '217';
+        func-mem-ref-name = 'initrunled';
+    };
+      func-mem-referenceto = {
+        func-mem-ref-id = '_led_effects_8c_1a35cfbfc36c975f98a7779a37b6ff63ce';
+        func-mem-ref-line = '236';
+        func-mem-ref-name = 'runrunled';
+    };
+      func-mem-referenceto = {
+        func-mem-ref-id = '_led_effects_8h_1ac7190c598c8618207180d135c0650dac';
+        func-mem-ref-line = '24';
+        func-mem-ref-name = 'ALTERNATE';
+    };
+      func-mem-referenceto = {
+        func-mem-ref-id = '_led_effects_8c_1af67b7638a175e4971f25df5a5db3d8d0';
+        func-mem-ref-line = '300';
+        func-mem-ref-name = 'init_alternating';
+    };
+      func-mem-referenceto = {
+        func-mem-ref-id = '_led_effects_8c_1a5bde1e9e7fc19a9916f1ec02d8fbcd6c';
+        func-mem-ref-line = '323';
+        func-mem-ref-name = 'run_alternating';
+    };
+      func-mem-referenceto = {
+        func-mem-ref-id = '_led_effects_8h_1a6b71fe4d23960c3701fc935a3368a6cc';
+        func-mem-ref-line = '26';
+        func-mem-ref-name = 'RECOLOR';
+    };
+      func-mem-referenceto = {
+        func-mem-ref-id = '_led_effects_8c_1a448758d76f47ea6fed4beb349196363f';
+        func-mem-ref-line = '340';
+        func-mem-ref-name = 'recolor';
+    };
+      func-mem-referenceto = {
+        func-mem-ref-id = '_led_effects_8h_1ad8150289b0e08f01126500379852a2a7';
+        func-mem-ref-line = '28';
+        func-mem-ref-name = 'FADE';
+    };
+      func-mem-referenceto = {
+        func-mem-ref-id = '_led_effects_8c_1a71d3b2ff21a63b48a01461e74be0c2b8';
+        func-mem-ref-line = '366';
+        func-mem-ref-name = 'faden';
+    };
+      func-mem-referenceto = {
+        func-mem-ref-id = '_led_effects_8h_1a2805176df86592658ae06a508a558720';
+        func-mem-ref-line = '30';
+        func-mem-ref-name = 'INITRAINBOW';
+    };
+      func-mem-referenceto = {
+        func-mem-ref-id = '_led_effects_8c_1a9d0f91360c87b851925bf05be5352435';
+        func-mem-ref-line = '442';
+        func-mem-ref-name = 'initrainbow';
+    };
+      func-mem-referenceto = {
+        func-mem-ref-id = '_led_effects_8h_1a85bd242525add173bd67847b7acac00b';
+        func-mem-ref-line = '32';
+        func-mem-ref-name = 'ROTATE_R';
+    };
+      func-mem-referenceto = {
+        func-mem-ref-id = '_led_effects_8c_1afd64325b08e785d37b4dfaf358e517f0';
+        func-mem-ref-line = '138';
+        func-mem-ref-name = 'rotate';
+    };
+      func-mem-referenceto = {
+        func-mem-ref-id = '_led_effects_8c_1a6950e7657ba74d0d490ba36427533c4b';
+        func-mem-ref-line = '72';
+        func-mem-ref-name = 'effectdelay';
+    };
+      func-mem-referenceto = {
+        func-mem-ref-id = '_led_effects_8h_1a4a0c329f45825186172aee0c62531423';
+        func-mem-ref-line = '34';
+        func-mem-ref-name = 'ROTATE_L';
+    };
+      func-mem-referenceto = {
+        func-mem-ref-id = '_led_effects_8h_1a686dea444026cbf1236c24e7edb3a96d';
+        func-mem-ref-line = '36';
+        func-mem-ref-name = 'CUSTOM';
+    };
+      func-mem-referenceto = {
+        func-mem-ref-id = '_lightstribe_8c_1a63fa595d401f0e85c1bba55ba2b1d66e';
+        func-mem-ref-line = '33';
+        func-mem-ref-name = 'changeled';
+    };
+      func-mem-referenceto = {
+        func-mem-ref-id = '_led_effects_8h_1a5645ec20d3cd39bfc1c9ad5ec99db2f2';
+        func-mem-ref-line = '38';
+        func-mem-ref-name = 'EASTEREGG';
+    };
+      func-mem-referenceto = {
+        func-mem-ref-id = '_led_effects_8c_1a25e09bcb1481b20ebc2a27e7098b5115';
+        func-mem-ref-line = '514';
+        func-mem-ref-name = 'easteregg';
+    };
     }; /* func-member */
     func-member = {
       func-mem-kind = 'function';
@@ -2561,13 +4526,63 @@ USART_RX_vect
 _EnD_oF_dEf_TeXt_;
       }; /*        func-mem-param--param */
       func-mem-desc-file = 'C:/Users/Commander/Documents/Atmel Studio/6.2/ws2811lichterkette/ws2811lichterkette/ws2811lichterkette.c';
-      func-mem-desc-line = '316';
+      func-mem-desc-line = '376';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 UART Interrupt handler, interrupts when new data is available in the RX buffer.
 _EnD_oF_dEf_TeXt_;
       func-mem-documentation = <<_EnD_oF_dEf_TeXt_
 
 _EnD_oF_dEf_TeXt_;
+      func-mem-referenceto = {
+        func-mem-ref-id = 'globals_8h_1ab5490074aaca289e986e9a00e0c25663';
+        func-mem-ref-line = '59';
+        func-mem-ref-name = 'ReceivedChar';
+    };
+      func-mem-referenceto = {
+        func-mem-ref-id = 'ws2811lichterkette_8c_1a8aac8c5098aaf915463fb31715efa09f';
+        func-mem-ref-line = '212';
+        func-mem-ref-name = 'PREAMBLE';
+    };
+      func-mem-referenceto = {
+        func-mem-ref-id = 'globals_8h_1a922ad5baed647eca43ad1a979e162ebd';
+        func-mem-ref-line = '57';
+        func-mem-ref-name = 'IsReading';
+    };
+      func-mem-referenceto = {
+        func-mem-ref-id = 'globals_8h_1a1b09d1a5bcf4c8ab435bb3c9e36def59';
+        func-mem-ref-line = '53';
+        func-mem-ref-name = 'PacketComplete';
+    };
+      func-mem-referenceto = {
+        func-mem-ref-id = 'globals_8h_1aaa3bddd2273257ac5ec259197b62e984';
+        func-mem-ref-line = '55';
+        func-mem-ref-name = 'PaketStart';
+    };
+      func-mem-referenceto = {
+        func-mem-ref-id = 'globals_8h_1a5d735865707e6694a8173d629e0b4d5c';
+        func-mem-ref-line = '42';
+        func-mem-ref-name = 'RecBuffer';
+    };
+      func-mem-referenceto = {
+        func-mem-ref-id = 'globals_8h_1a0d57378e32bf8278011460740bc29f7f';
+        func-mem-ref-line = '37';
+        func-mem-ref-name = 'UART_BUFFER_SIZE';
+    };
+      func-mem-referenceto = {
+        func-mem-ref-id = 'globals_8h_1aa6fcb4d4fca4554ac73bef10668c23cd';
+        func-mem-ref-line = '44';
+        func-mem-ref-name = 'BufferCounter';
+    };
+      func-mem-referenceto = {
+        func-mem-ref-id = 'globals_8h_1aaa611e00c18e950be43a4cd5ce0ceeb1';
+        func-mem-ref-line = '46';
+        func-mem-ref-name = 'DataLen';
+    };
+      func-mem-referenceto = {
+        func-mem-ref-id = 'ws2811lichterkette_8c_1aec9ae4a8d59e838ac8ed93ad0de8e827';
+        func-mem-ref-line = '214';
+        func-mem-ref-name = 'LENINDEX';
+    };
     }; /* func-member */
     };
   file-full-name  = 'C:/Users/Commander/Documents/Atmel Studio/6.2/ws2811lichterkette/ws2811lichterkette/ws2811lichterkette.c';

@@ -2,243 +2,243 @@
 
 \begin{DoxyCode}
 00001 
-00071 \textcolor{comment}{/**************************************************************************/}
-00116 \textcolor{comment}{//define global variables}
-00117 \textcolor{preprocessor}{#define EXTERN}
-00118 \textcolor{preprocessor}{#include "\hyperlink{globals_8h}{globals.h}"}
-00119 
-00120 \textcolor{preprocessor}{#include <avr/io.h>}
-00121 \textcolor{preprocessor}{#include <util/delay.h>}
-00122 \textcolor{preprocessor}{#include <avr/interrupt.h>}
-00123 \textcolor{preprocessor}{#include <stdio.h>}      
-00124 \textcolor{preprocessor}{#include <stdlib.h>}    
-00125 \textcolor{preprocessor}{#include <string.h>}
-00126 
-00127 \textcolor{preprocessor}{#include "\hyperlink{_lightstribe_8h}{Lightstribe.h}"}
-00128 \textcolor{preprocessor}{#include "\hyperlink{_led_effects_8h}{LedEffects.h}"}
-00129 
-00130 \textcolor{comment}{//UART basic definitions}
-\hypertarget{ws2811lichterkette_8c_source_l00132}{}\hyperlink{ws2811lichterkette_8c_a62634036639f88eece6fbf226b45f84b}{00132} \textcolor{comment}{}\textcolor{preprocessor}{#define BAUD 38400  }
-00133 
-\hypertarget{ws2811lichterkette_8c_source_l00134}{}\hyperlink{ws2811lichterkette_8c_a711e9130c825a7269c8c87dbb57a85e0}{00134} \textcolor{preprocessor}{#define MYUBRR F\_CPU/16/BAUD -1}
-00135 
-00136 \textcolor{preprocessor}{#define BAUD\_REAL (F\_CPU/(16*(MYUBRR+1)))       }\textcolor{comment}{/*real baudrate in this configuration*/}\textcolor{preprocessor}{}
-00137 \textcolor{preprocessor}{#define BAUD\_ERROR ((BAUD\_REAL*1000)/BAUD)      }\textcolor{comment}{/*calculate baudrate error*/}\textcolor{preprocessor}{    }
-00138 \textcolor{preprocessor}{#if ((BAUD\_ERROR<990) || (BAUD\_ERROR>1010))}
-00139 \textcolor{preprocessor}{    #error baudrate error greater 1% !          }\textcolor{comment}{/*show an error message if the baudrate error is greater
+00131 \textcolor{comment}{/**************************************************************************/}
+00176 \textcolor{comment}{//define global variables}
+00177 \textcolor{preprocessor}{#define EXTERN}
+00178 \textcolor{preprocessor}{#include "\hyperlink{globals_8h}{globals.h}"}
+00179 
+00180 \textcolor{preprocessor}{#include <avr/io.h>}
+00181 \textcolor{preprocessor}{#include <util/delay.h>}
+00182 \textcolor{preprocessor}{#include <avr/interrupt.h>}
+00183 \textcolor{preprocessor}{#include <stdio.h>}      
+00184 \textcolor{preprocessor}{#include <stdlib.h>}    
+00185 \textcolor{preprocessor}{#include <string.h>}
+00186 
+00187 \textcolor{preprocessor}{#include "\hyperlink{_lightstribe_8h}{Lightstribe.h}"}
+00188 \textcolor{preprocessor}{#include "\hyperlink{_led_effects_8h}{LedEffects.h}"}
+00189 
+00190 \textcolor{comment}{//UART basic definitions}
+\hypertarget{ws2811lichterkette_8c_source_l00192}{}\hyperlink{ws2811lichterkette_8c_a62634036639f88eece6fbf226b45f84b}{00192} \textcolor{comment}{}\textcolor{preprocessor}{#define BAUD 38400  }
+00193 
+\hypertarget{ws2811lichterkette_8c_source_l00194}{}\hyperlink{ws2811lichterkette_8c_a711e9130c825a7269c8c87dbb57a85e0}{00194} \textcolor{preprocessor}{#define MYUBRR F\_CPU/16/BAUD -1}
+00195 
+00196 \textcolor{preprocessor}{#define BAUD\_REAL (F\_CPU/(16*(MYUBRR+1)))       }\textcolor{comment}{/*real baudrate in this configuration*/}\textcolor{preprocessor}{}
+00197 \textcolor{preprocessor}{#define BAUD\_ERROR ((BAUD\_REAL*1000)/BAUD)      }\textcolor{comment}{/*calculate baudrate error*/}\textcolor{preprocessor}{    }
+00198 \textcolor{preprocessor}{#if ((BAUD\_ERROR<990) || (BAUD\_ERROR>1010))}
+00199 \textcolor{preprocessor}{    #error baudrate error greater 1% !          }\textcolor{comment}{/*show an error message if the baudrate error is greater
        than 1%*/}\textcolor{preprocessor}{}
-00140 \textcolor{preprocessor}{#endif}
-00141 
-00142 \textcolor{comment}{//Protocol definition for UART communication}
-00143 \textcolor{comment}{//The protocol is defined as:}
-00144 \textcolor{comment}{//1 Byte preamble (254)}
-00145 \textcolor{comment}{//1 Byte total packet length (including the preamble)}
-00146 \textcolor{comment}{//1 Byte effect}
-00147 \textcolor{comment}{//1 Byte effect delay (effect speed)}
-00148 \textcolor{comment}{//1 Byte number of LEDs to control}
-00149 \textcolor{comment}{//n Bytes containing 8-Bit color values (RGB 3-3-2), depended on the effect, max. 50 values}
-00150 
-\hypertarget{ws2811lichterkette_8c_source_l00152}{}\hyperlink{ws2811lichterkette_8c_a8aac8c5098aaf915463fb31715efa09f}{00152} \textcolor{preprocessor}{#define PREAMBLE 254        }
-00153 
-\hypertarget{ws2811lichterkette_8c_source_l00154}{}\hyperlink{ws2811lichterkette_8c_aec9ae4a8d59e838ac8ed93ad0de8e827}{00154} \textcolor{preprocessor}{#define LENINDEX 1          }
-00155 
-\hypertarget{ws2811lichterkette_8c_source_l00156}{}\hyperlink{ws2811lichterkette_8c_a8d4e4cf47dd6136ace963623e1a8e27c}{00156} \textcolor{preprocessor}{#define EFFECTINDEX 2       }
-00157 
-\hypertarget{ws2811lichterkette_8c_source_l00158}{}\hyperlink{ws2811lichterkette_8c_a9ff437877d0878dd16eacf103a1e1c40}{00158} \textcolor{preprocessor}{#define DELAYINDEX 3        }
-00159 
-\hypertarget{ws2811lichterkette_8c_source_l00160}{}\hyperlink{ws2811lichterkette_8c_afbc75dc20761a05dda7cbb70b9b322dd}{00160} \textcolor{preprocessor}{#define NUMOFLEDINDEX 4     }
-00161 
-00162 
-00163 \textcolor{comment}{//compiling info output}
-00164 \textcolor{preprocessor}{#pragma message("MYUBRR: " \_STR(MYUBRR))}
-00165 \textcolor{preprocessor}{#pragma message("CPU Frequency: " \_STR(F\_CPU) "Hz")}
-00166 \textcolor{preprocessor}{#pragma message("Baudrate: " \_STR(BAUD))}
-00167 \textcolor{preprocessor}{#pragma message("Configuration: MAXNUMCOLORS=" \_STR(MAXNUMCOLORS)  " | UART\_BUFFER\_SIZE="
-       \_STR(UART\_BUFFER\_SIZE) " | PREAMBLE=" \_STR(PREAMBLE))}
-00168 
-\hypertarget{ws2811lichterkette_8c_source_l00174}{}\hyperlink{ws2811lichterkette_8c_ac7b3df0fa68526d64c732d5f916e34b1}{00174} \textcolor{keywordtype}{void} \hyperlink{ws2811lichterkette_8c_ac7b3df0fa68526d64c732d5f916e34b1}{init\_uart}(\textcolor{keywordtype}{void})
-00175 \{
-00176     DDRD |= \_BV(PD1);
-00177     DDRD &= ~\_BV(PD0);
-00178     
-00179      \textcolor{comment}{//Set BAUD}
-00180      UBRR0H = ((\hyperlink{ws2811lichterkette_8c_a711e9130c825a7269c8c87dbb57a85e0}{MYUBRR}) >> 8);
-00181      UBRR0L = \hyperlink{ws2811lichterkette_8c_a711e9130c825a7269c8c87dbb57a85e0}{MYUBRR};
-00182      
-00183      UCSR0B |= (1 << RXEN0) ;\textcolor{comment}{//| (1 << TXEN0);     // Enable receiver and transmitter}
-00184      UCSR0B |= (1 << RXCIE0);                   \textcolor{comment}{// Enable the receiver interrupt}
-00185      UCSR0C |= (1 << UCSZ01) | (1 << UCSZ00);   \textcolor{comment}{// 8 data Bit, one stop Bit}
-00186 \}
-00187 
-\hypertarget{ws2811lichterkette_8c_source_l00189}{}\hyperlink{ws2811lichterkette_8c_a840291bc02cba5474a4cb46a9b9566fe}{00189} \textcolor{keywordtype}{int} \hyperlink{ws2811lichterkette_8c_a840291bc02cba5474a4cb46a9b9566fe}{main}(\textcolor{keywordtype}{void})
-00190 \{
-00191     uint16\_t i,j;                           \textcolor{comment}{//helper variables (counters)}
-00192     uint8\_t TempBuffer[\hyperlink{globals_8h_a0d57378e32bf8278011460740bc29f7f}{UART\_BUFFER\_SIZE}];   \textcolor{comment}{//Temp. buffer for copy of the UART data to
-       achieve data consistency    }
-00193     uint8\_t *lightdata;                     \textcolor{comment}{//lightdata pointer for lightdata array; the array size is
-       dynamic to controll different numbers of LEDs}
-00194     
-00195     \hyperlink{globals_8h_ad5db4045aed262ed4aae2af9d81fab98}{NumOfLeds}=50;                          \textcolor{comment}{//default number of LEDs is 50 => one stribe}
-00196     \textcolor{comment}{//Flag initializations}
-00197     \hyperlink{globals_8h_a1b09d1a5bcf4c8ab435bb3c9e36def59}{PacketComplete}=0;                         
-00198     \hyperlink{globals_8h_a922ad5baed647eca43ad1a979e162ebd}{IsReading}=0;
-00199     \hyperlink{globals_8h_aaa3bddd2273257ac5ec259197b62e984}{PaketStart}=0; 
-00200     \hyperlink{globals_8h_aa6fcb4d4fca4554ac73bef10668c23cd}{BufferCounter} = 0;
+00200 \textcolor{preprocessor}{#endif}
 00201 
-00202     memset(\hyperlink{globals_8h_a5d735865707e6694a8173d629e0b4d5c}{RecBuffer},0,\textcolor{keyword}{sizeof}(\hyperlink{globals_8h_a5d735865707e6694a8173d629e0b4d5c}{RecBuffer}[0])*\hyperlink{globals_8h_a0d57378e32bf8278011460740bc29f7f}{UART\_BUFFER\_SIZE});    \textcolor{comment}{//clear
+00202 \textcolor{comment}{//Protocol definition for UART communication}
+00203 \textcolor{comment}{//The protocol is defined as:}
+00204 \textcolor{comment}{//1 Byte preamble (254)}
+00205 \textcolor{comment}{//1 Byte total packet length (including the preamble)}
+00206 \textcolor{comment}{//1 Byte effect}
+00207 \textcolor{comment}{//1 Byte effect delay (effect speed)}
+00208 \textcolor{comment}{//1 Byte number of LEDs to control}
+00209 \textcolor{comment}{//n Bytes containing 8-Bit color values (RGB 3-3-2), depended on the effect, max. 50 values}
+00210 
+\hypertarget{ws2811lichterkette_8c_source_l00212}{}\hyperlink{ws2811lichterkette_8c_a8aac8c5098aaf915463fb31715efa09f}{00212} \textcolor{preprocessor}{#define PREAMBLE 254        }
+00213 
+\hypertarget{ws2811lichterkette_8c_source_l00214}{}\hyperlink{ws2811lichterkette_8c_aec9ae4a8d59e838ac8ed93ad0de8e827}{00214} \textcolor{preprocessor}{#define LENINDEX 1          }
+00215 
+\hypertarget{ws2811lichterkette_8c_source_l00216}{}\hyperlink{ws2811lichterkette_8c_a8d4e4cf47dd6136ace963623e1a8e27c}{00216} \textcolor{preprocessor}{#define EFFECTINDEX 2       }
+00217 
+\hypertarget{ws2811lichterkette_8c_source_l00218}{}\hyperlink{ws2811lichterkette_8c_a9ff437877d0878dd16eacf103a1e1c40}{00218} \textcolor{preprocessor}{#define DELAYINDEX 3        }
+00219 
+\hypertarget{ws2811lichterkette_8c_source_l00220}{}\hyperlink{ws2811lichterkette_8c_afbc75dc20761a05dda7cbb70b9b322dd}{00220} \textcolor{preprocessor}{#define NUMOFLEDINDEX 4     }
+00221 
+00222 
+00223 \textcolor{comment}{//compiling info output}
+00224 \textcolor{preprocessor}{#pragma message("MYUBRR: " \_STR(MYUBRR))}
+00225 \textcolor{preprocessor}{#pragma message("CPU Frequency: " \_STR(F\_CPU) "Hz")}
+00226 \textcolor{preprocessor}{#pragma message("Baudrate: " \_STR(BAUD))}
+00227 \textcolor{preprocessor}{#pragma message("Configuration: MAXNUMCOLORS=" \_STR(MAXNUMCOLORS)  " | UART\_BUFFER\_SIZE="
+       \_STR(UART\_BUFFER\_SIZE) " | PREAMBLE=" \_STR(PREAMBLE))}
+00228 
+\hypertarget{ws2811lichterkette_8c_source_l00234}{}\hyperlink{ws2811lichterkette_8c_ac7b3df0fa68526d64c732d5f916e34b1}{00234} \textcolor{keywordtype}{void} \hyperlink{ws2811lichterkette_8c_ac7b3df0fa68526d64c732d5f916e34b1}{init\_uart}(\textcolor{keywordtype}{void})
+00235 \{
+00236     DDRD |= \_BV(PD1);
+00237     DDRD &= ~\_BV(PD0);
+00238     
+00239      \textcolor{comment}{//Set BAUD}
+00240      UBRR0H = ((\hyperlink{ws2811lichterkette_8c_a711e9130c825a7269c8c87dbb57a85e0}{MYUBRR}) >> 8);
+00241      UBRR0L = \hyperlink{ws2811lichterkette_8c_a711e9130c825a7269c8c87dbb57a85e0}{MYUBRR};
+00242      
+00243      UCSR0B |= (1 << RXEN0) ;\textcolor{comment}{//| (1 << TXEN0);      // Enable receiver (and transmitter; commited out)}
+00244      UCSR0B |= (1 << RXCIE0);                       \textcolor{comment}{// Enable the receiver interrupt}
+00245      UCSR0C |= (1 << UCSZ01) | (1 << UCSZ00);       \textcolor{comment}{// 8 data Bit, one stop Bit}
+00246 \}
+00247 
+\hypertarget{ws2811lichterkette_8c_source_l00249}{}\hyperlink{ws2811lichterkette_8c_a840291bc02cba5474a4cb46a9b9566fe}{00249} \textcolor{keywordtype}{int} \hyperlink{ws2811lichterkette_8c_a840291bc02cba5474a4cb46a9b9566fe}{main}(\textcolor{keywordtype}{void})
+00250 \{
+00251     uint16\_t i,j;                           \textcolor{comment}{//helper variables (counters)}
+00252     uint8\_t TempBuffer[\hyperlink{globals_8h_a0d57378e32bf8278011460740bc29f7f}{UART\_BUFFER\_SIZE}];   \textcolor{comment}{//Temp. buffer for copy of the UART data to
+       achieve data consistency    }
+00253     uint8\_t *lightdata;                     \textcolor{comment}{//lightdata pointer for lightdata array; the array size is
+       dynamic to controll different numbers of LEDs}
+00254     
+00255     \hyperlink{globals_8h_ad5db4045aed262ed4aae2af9d81fab98}{NumOfLeds}=50;                          \textcolor{comment}{//default number of LEDs is 50 => one stribe}
+00256     \textcolor{comment}{//Flag initializations}
+00257     \hyperlink{globals_8h_a1b09d1a5bcf4c8ab435bb3c9e36def59}{PacketComplete}=0;                         
+00258     \hyperlink{globals_8h_a922ad5baed647eca43ad1a979e162ebd}{IsReading}=0;
+00259     \hyperlink{globals_8h_aaa3bddd2273257ac5ec259197b62e984}{PaketStart}=0; 
+00260     \hyperlink{globals_8h_aa6fcb4d4fca4554ac73bef10668c23cd}{BufferCounter} = 0;
+00261 
+00262     memset(\hyperlink{globals_8h_a5d735865707e6694a8173d629e0b4d5c}{RecBuffer},0,\textcolor{keyword}{sizeof}(\hyperlink{globals_8h_a5d735865707e6694a8173d629e0b4d5c}{RecBuffer}[0])*\hyperlink{globals_8h_a0d57378e32bf8278011460740bc29f7f}{UART\_BUFFER\_SIZE});    \textcolor{comment}{//clear
        the buffer  }
-00203     memset(TempBuffer,0,\textcolor{keyword}{sizeof}(\hyperlink{globals_8h_a5d735865707e6694a8173d629e0b4d5c}{RecBuffer}[0])*UART\_BUFFER\_SIZE);    \textcolor{comment}{//clear the buffer}
-00204     \hyperlink{globals_8h_a722e1eb38b661d1338ada3cc7a4049a0}{ledtype} = \hyperlink{globals_8h_af07a5ce170c7be13d096843960e7b9da}{BASELEDTYPE};                    \textcolor{comment}{//set default ledtype, 11 =>WS2811, 12
+00263     memset(TempBuffer,0,\textcolor{keyword}{sizeof}(\hyperlink{globals_8h_a5d735865707e6694a8173d629e0b4d5c}{RecBuffer}[0])*UART\_BUFFER\_SIZE);    \textcolor{comment}{//clear the buffer}
+00264     \hyperlink{globals_8h_a722e1eb38b661d1338ada3cc7a4049a0}{ledtype} = \hyperlink{globals_8h_af07a5ce170c7be13d096843960e7b9da}{BASELEDTYPE};                    \textcolor{comment}{//set default ledtype, 11 =>WS2811, 12
        =>WS2812}
-00205     
-00206     \textcolor{comment}{//Set the LED output Port (Pin B0 is used for LED data output)}
-00207     DDRB = 0x01;                        
-00208     PORTB = 0x00;
-00209 
-00210     \textcolor{comment}{//Basic initializations}
-00211     \hyperlink{globals_8h_ab5490074aaca289e986e9a00e0c25663}{ReceivedChar} = 1;
-00212     \hyperlink{globals_8h_ac2445d316b2972d381edeac44bb6a226}{effectime} = 10;
-00213     \hyperlink{globals_8h_a053b8e1f039c19251b90d60317db8aed}{effect}=255;
-00214     \hyperlink{globals_8h_aa6fcb4d4fca4554ac73bef10668c23cd}{BufferCounter}=0;
-00215     
-00216     \hyperlink{ws2811lichterkette_8c_ac7b3df0fa68526d64c732d5f916e34b1}{init\_uart}();                           \textcolor{comment}{//Init the hardware UART}
-00217     sei();                                  \textcolor{comment}{//enable global interrupts}
-00218 
-00219     \textcolor{comment}{//main system loop}
-00220     \textcolor{keywordflow}{while}(1)\{
-00221         \textcolor{keywordflow}{if} (\hyperlink{globals_8h_a1b09d1a5bcf4c8ab435bb3c9e36def59}{PacketComplete}==1)    \textcolor{comment}{//new UART package containing color and effect data is
+00265     
+00266     \textcolor{comment}{//Set the LED output Port (Pin B0 is used for LED data output)}
+00267     DDRB = 0x01;                        
+00268     PORTB = 0x00;
+00269 
+00270     \textcolor{comment}{//Basic initializations}
+00271     \hyperlink{globals_8h_ab5490074aaca289e986e9a00e0c25663}{ReceivedChar} = 1;
+00272     \hyperlink{globals_8h_ac2445d316b2972d381edeac44bb6a226}{effectime} = 10;
+00273     \hyperlink{globals_8h_a053b8e1f039c19251b90d60317db8aed}{effect}=255;
+00274     \hyperlink{globals_8h_aa6fcb4d4fca4554ac73bef10668c23cd}{BufferCounter}=0;
+00275     
+00276     \hyperlink{ws2811lichterkette_8c_ac7b3df0fa68526d64c732d5f916e34b1}{init\_uart}();                           \textcolor{comment}{//Init the hardware UART}
+00277     sei();                                  \textcolor{comment}{//enable global interrupts}
+00278 
+00279     \textcolor{comment}{//main system loop}
+00280     \textcolor{keywordflow}{while}(1)\{
+00281         \textcolor{keywordflow}{if} (\hyperlink{globals_8h_a1b09d1a5bcf4c8ab435bb3c9e36def59}{PacketComplete}==1)    \textcolor{comment}{//new UART package containing color and effect data is
        available}
-00222         \{
-00223             \textcolor{comment}{//Prohibit the access to the UART RecBuffer while copying the data to a Temp Buffer}
-00224             \hyperlink{globals_8h_a922ad5baed647eca43ad1a979e162ebd}{IsReading}=1;       
-00225             \hyperlink{globals_8h_aaa3bddd2273257ac5ec259197b62e984}{PaketStart}=0;
-00226             memcpy(TempBuffer,\hyperlink{globals_8h_a5d735865707e6694a8173d629e0b4d5c}{RecBuffer},\hyperlink{globals_8h_aaa611e00c18e950be43a4cd5ce0ceeb1}{DataLen});   \textcolor{comment}{//Copy the UART data to a temp array    }
-00227             \hyperlink{globals_8h_a053b8e1f039c19251b90d60317db8aed}{effect}=TempBuffer[\hyperlink{ws2811lichterkette_8c_a8d4e4cf47dd6136ace963623e1a8e27c}{EFFECTINDEX}] & 0x7F; \textcolor{comment}{//get the effect from the temp array}
-00228             \hyperlink{globals_8h_ac2445d316b2972d381edeac44bb6a226}{effectime}=TempBuffer[\hyperlink{ws2811lichterkette_8c_a9ff437877d0878dd16eacf103a1e1c40}{DELAYINDEX}];        \textcolor{comment}{//get the delay time for the effect
+00282         \{
+00283             \textcolor{comment}{//Prohibit the access to the UART RecBuffer while copying the data to a Temp Buffer}
+00284             \hyperlink{globals_8h_a922ad5baed647eca43ad1a979e162ebd}{IsReading}=1;       
+00285             \hyperlink{globals_8h_aaa3bddd2273257ac5ec259197b62e984}{PaketStart}=0;
+00286             memcpy(TempBuffer,\hyperlink{globals_8h_a5d735865707e6694a8173d629e0b4d5c}{RecBuffer},\hyperlink{globals_8h_aaa611e00c18e950be43a4cd5ce0ceeb1}{DataLen});   \textcolor{comment}{//Copy the UART data to a temp array    }
+00287             \hyperlink{globals_8h_a053b8e1f039c19251b90d60317db8aed}{effect}=TempBuffer[\hyperlink{ws2811lichterkette_8c_a8d4e4cf47dd6136ace963623e1a8e27c}{EFFECTINDEX}] & 0x7F; \textcolor{comment}{//get the effect from the temp array}
+00288             \hyperlink{globals_8h_ac2445d316b2972d381edeac44bb6a226}{effectime}=TempBuffer[\hyperlink{ws2811lichterkette_8c_a9ff437877d0878dd16eacf103a1e1c40}{DELAYINDEX}];        \textcolor{comment}{//get the delay time for the effect
        form the temp array}
-00229             \hyperlink{globals_8h_a722e1eb38b661d1338ada3cc7a4049a0}{ledtype}=\hyperlink{globals_8h_af07a5ce170c7be13d096843960e7b9da}{BASELEDTYPE}+((TempBuffer[\hyperlink{ws2811lichterkette_8c_a8d4e4cf47dd6136ace963623e1a8e27c}{EFFECTINDEX}] & 0x80)>>7);\textcolor{comment}{//
+00289             \hyperlink{globals_8h_a722e1eb38b661d1338ada3cc7a4049a0}{ledtype}=\hyperlink{globals_8h_af07a5ce170c7be13d096843960e7b9da}{BASELEDTYPE}+((TempBuffer[\hyperlink{ws2811lichterkette_8c_a8d4e4cf47dd6136ace963623e1a8e27c}{EFFECTINDEX}] & 0x80)>>7);\textcolor{comment}{//
       configure the ledtype depending on the MSBit of the effect}
-00230             \hyperlink{globals_8h_ad5db4045aed262ed4aae2af9d81fab98}{NumOfLeds}=TempBuffer[\hyperlink{ws2811lichterkette_8c_afbc75dc20761a05dda7cbb70b9b322dd}{NUMOFLEDINDEX}];  \textcolor{comment}{//get the number of leds to control}
-00231             \hyperlink{globals_8h_a922ad5baed647eca43ad1a979e162ebd}{IsReading}=0;                           \textcolor{comment}{//allow access to the UART RecBuffer}
-00232             memcpy(\hyperlink{globals_8h_a159854edb9d0c7283013495d85bdf997}{CompColorArray},&TempBuffer[5],\hyperlink{globals_8h_aaa611e00c18e950be43a4cd5ce0ceeb1}{DataLen}-5);   \textcolor{comment}{//generate compressed
+00290             \hyperlink{globals_8h_ad5db4045aed262ed4aae2af9d81fab98}{NumOfLeds}=TempBuffer[\hyperlink{ws2811lichterkette_8c_afbc75dc20761a05dda7cbb70b9b322dd}{NUMOFLEDINDEX}];  \textcolor{comment}{//get the number of leds to control}
+00291             \hyperlink{globals_8h_a922ad5baed647eca43ad1a979e162ebd}{IsReading}=0;                           \textcolor{comment}{//allow access to the UART RecBuffer}
+00292             memcpy(\hyperlink{globals_8h_a159854edb9d0c7283013495d85bdf997}{CompColorArray},&TempBuffer[5],\hyperlink{globals_8h_aaa611e00c18e950be43a4cd5ce0ceeb1}{DataLen}-5);   \textcolor{comment}{//generate compressed
        color array}
-00233             \textcolor{keywordflow}{if} (lightdata!=NULL)
-00234             \{
-00235                 free(lightdata);
-00236             \}
-00237             lightdata = (uint8\_t *) malloc (\hyperlink{globals_8h_ad5db4045aed262ed4aae2af9d81fab98}{NumOfLeds}*3);      \textcolor{comment}{//allocate the lightdata array for
+00293             \textcolor{keywordflow}{if} (lightdata!=NULL)
+00294             \{
+00295                 free(lightdata);
+00296             \}
+00297             lightdata = (uint8\_t *) malloc (\hyperlink{globals_8h_ad5db4045aed262ed4aae2af9d81fab98}{NumOfLeds}*3);      \textcolor{comment}{//allocate the lightdata array for
        uncompressed colors}
-00238             \hyperlink{globals_8h_a1b09d1a5bcf4c8ab435bb3c9e36def59}{PacketComplete}=0;                     \textcolor{comment}{//reset PacketComplete flag}
-00239         \}
-00240         \textcolor{keywordflow}{else}
-00241         \{
-00242             \textcolor{comment}{//main switch for effect handling}
-00243             \textcolor{keywordflow}{switch}(\hyperlink{globals_8h_a053b8e1f039c19251b90d60317db8aed}{effect})
-00244             \{
-00245                 \textcolor{keywordflow}{case} \hyperlink{_led_effects_8h_a996334f1d53296a931624800377d5b01}{SETFULLCOLOR}:
-00246                     \hyperlink{_led_effects_8c_a2d54d1a6c61fe667b7c68ff04a11c503}{setfullcolor}(\hyperlink{_led_effects_8c_a55291315ab0f2ca8d508f0e9da1920a7}{colorconv8to24}(
+00298             \hyperlink{globals_8h_a1b09d1a5bcf4c8ab435bb3c9e36def59}{PacketComplete}=0;                     \textcolor{comment}{//reset PacketComplete flag}
+00299         \}
+00300         \textcolor{keywordflow}{else}
+00301         \{
+00302             \textcolor{comment}{//main switch for effect handling}
+00303             \textcolor{keywordflow}{switch}(\hyperlink{globals_8h_a053b8e1f039c19251b90d60317db8aed}{effect})
+00304             \{
+00305                 \textcolor{keywordflow}{case} \hyperlink{_led_effects_8h_a996334f1d53296a931624800377d5b01}{SETFULLCOLOR}:
+00306                     \hyperlink{_led_effects_8c_a2d54d1a6c61fe667b7c68ff04a11c503}{setfullcolor}(\hyperlink{_led_effects_8c_a55291315ab0f2ca8d508f0e9da1920a7}{colorconv8to24}(
       \hyperlink{globals_8h_a159854edb9d0c7283013495d85bdf997}{CompColorArray}[0]),lightdata);
-00247                     \hyperlink{_lightstribe_8c_aac724dad670e4a26723daf71ce6a8d8a}{transmit2leds}(lightdata);
-00248                     \textcolor{keywordflow}{break};
-00249                 \textcolor{keywordflow}{case} \hyperlink{_led_effects_8h_a2f349ea8f5412514d90f138ede08da62}{FILLUP}:
-00250                     \hyperlink{_led_effects_8c_a99174e2b381d7ec6667d29352e6eca1b}{fillup}(\hyperlink{_led_effects_8c_a55291315ab0f2ca8d508f0e9da1920a7}{colorconv8to24}(\hyperlink{globals_8h_a159854edb9d0c7283013495d85bdf997}{CompColorArray}[0]),
+00307                     \hyperlink{_lightstribe_8c_aac724dad670e4a26723daf71ce6a8d8a}{transmit2leds}(lightdata);
+00308                     \textcolor{keywordflow}{break};
+00309                 \textcolor{keywordflow}{case} \hyperlink{_led_effects_8h_a2f349ea8f5412514d90f138ede08da62}{FILLUP}:
+00310                     \hyperlink{_led_effects_8c_a99174e2b381d7ec6667d29352e6eca1b}{fillup}(\hyperlink{_led_effects_8c_a55291315ab0f2ca8d508f0e9da1920a7}{colorconv8to24}(\hyperlink{globals_8h_a159854edb9d0c7283013495d85bdf997}{CompColorArray}[0]),
       \hyperlink{_led_effects_8c_a55291315ab0f2ca8d508f0e9da1920a7}{colorconv8to24}(\hyperlink{globals_8h_a159854edb9d0c7283013495d85bdf997}{CompColorArray}[1]),lightdata);
-00251                     \hyperlink{_lightstribe_8c_aac724dad670e4a26723daf71ce6a8d8a}{transmit2leds}(lightdata);
-00252                     \textcolor{keywordflow}{break};
-00253                 \textcolor{keywordflow}{case} \hyperlink{_led_effects_8h_a38eec52a7dccb94ff563e30eda32c891}{BLINK}:
-00254                     \hyperlink{_led_effects_8c_a9fd87d01d5cc4ce5fce6ddca55ebaf37}{blinkled}(\hyperlink{_led_effects_8c_a55291315ab0f2ca8d508f0e9da1920a7}{colorconv8to24}(\hyperlink{globals_8h_a159854edb9d0c7283013495d85bdf997}{CompColorArray}[0]),
+00311                     \hyperlink{_lightstribe_8c_aac724dad670e4a26723daf71ce6a8d8a}{transmit2leds}(lightdata);
+00312                     \textcolor{keywordflow}{break};
+00313                 \textcolor{keywordflow}{case} \hyperlink{_led_effects_8h_a38eec52a7dccb94ff563e30eda32c891}{BLINK}:
+00314                     \hyperlink{_led_effects_8c_a9fd87d01d5cc4ce5fce6ddca55ebaf37}{blinkled}(\hyperlink{_led_effects_8c_a55291315ab0f2ca8d508f0e9da1920a7}{colorconv8to24}(\hyperlink{globals_8h_a159854edb9d0c7283013495d85bdf997}{CompColorArray}[0]),
       lightdata);
-00255                     \textcolor{keywordflow}{break};
-00256                 \textcolor{keywordflow}{case} \hyperlink{_led_effects_8h_ab6e06c8b4c17edc65d75be641a0fc39b}{RUNLED}:
-00257                     \hyperlink{_led_effects_8c_aecba07ab559ab94e6f44c16e39012d80}{initrunled}(\hyperlink{_led_effects_8c_a55291315ab0f2ca8d508f0e9da1920a7}{colorconv8to24}(
+00315                     \textcolor{keywordflow}{break};
+00316                 \textcolor{keywordflow}{case} \hyperlink{_led_effects_8h_ab6e06c8b4c17edc65d75be641a0fc39b}{RUNLED}:
+00317                     \hyperlink{_led_effects_8c_aecba07ab559ab94e6f44c16e39012d80}{initrunled}(\hyperlink{_led_effects_8c_a55291315ab0f2ca8d508f0e9da1920a7}{colorconv8to24}(
       \hyperlink{globals_8h_a159854edb9d0c7283013495d85bdf997}{CompColorArray}[0]),lightdata,\hyperlink{_led_effects_8c_a55291315ab0f2ca8d508f0e9da1920a7}{colorconv8to24}(
       \hyperlink{globals_8h_a159854edb9d0c7283013495d85bdf997}{CompColorArray}[1]));
-00258                     \hyperlink{globals_8h_a053b8e1f039c19251b90d60317db8aed}{effect}++;
-00259                 \textcolor{keywordflow}{case} 4:
-00260                     \hyperlink{_led_effects_8c_a35cfbfc36c975f98a7779a37b6ff63ce}{runrunled}(lightdata,1);
-00261                     \textcolor{keywordflow}{break};
-00262                 \textcolor{keywordflow}{case} \hyperlink{_led_effects_8h_ac7190c598c8618207180d135c0650dac}{ALTERNATE}:
-00263                     \hyperlink{_led_effects_8c_af67b7638a175e4971f25df5a5db3d8d0}{init\_alternating}(\hyperlink{_led_effects_8c_a55291315ab0f2ca8d508f0e9da1920a7}{colorconv8to24}(
+00318                     \hyperlink{globals_8h_a053b8e1f039c19251b90d60317db8aed}{effect}++;
+00319                 \textcolor{keywordflow}{case} 4:
+00320                     \hyperlink{_led_effects_8c_a35cfbfc36c975f98a7779a37b6ff63ce}{runrunled}(lightdata,1);
+00321                     \textcolor{keywordflow}{break};
+00322                 \textcolor{keywordflow}{case} \hyperlink{_led_effects_8h_ac7190c598c8618207180d135c0650dac}{ALTERNATE}:
+00323                     \hyperlink{_led_effects_8c_af67b7638a175e4971f25df5a5db3d8d0}{init\_alternating}(\hyperlink{_led_effects_8c_a55291315ab0f2ca8d508f0e9da1920a7}{colorconv8to24}(
       \hyperlink{globals_8h_a159854edb9d0c7283013495d85bdf997}{CompColorArray}[0]),\hyperlink{_led_effects_8c_a55291315ab0f2ca8d508f0e9da1920a7}{colorconv8to24}(\hyperlink{globals_8h_a159854edb9d0c7283013495d85bdf997}{CompColorArray}[1]),lightdata);
-00264                     \hyperlink{globals_8h_a053b8e1f039c19251b90d60317db8aed}{effect}++;
-00265                 \textcolor{keywordflow}{case} 6:
-00266                     \hyperlink{_led_effects_8c_a5bde1e9e7fc19a9916f1ec02d8fbcd6c}{run\_alternating}(lightdata);
-00267                     \textcolor{keywordflow}{break};
-00268                 \textcolor{keywordflow}{case} \hyperlink{_led_effects_8h_a6b71fe4d23960c3701fc935a3368a6cc}{RECOLOR}:
-00269                     \hyperlink{_led_effects_8c_a448758d76f47ea6fed4beb349196363f}{recolor}(\hyperlink{_led_effects_8c_a55291315ab0f2ca8d508f0e9da1920a7}{colorconv8to24}(\hyperlink{globals_8h_a159854edb9d0c7283013495d85bdf997}{CompColorArray}[0]),lightdata)
+00324                     \hyperlink{globals_8h_a053b8e1f039c19251b90d60317db8aed}{effect}++;
+00325                 \textcolor{keywordflow}{case} 6:
+00326                     \hyperlink{_led_effects_8c_a5bde1e9e7fc19a9916f1ec02d8fbcd6c}{run\_alternating}(lightdata);
+00327                     \textcolor{keywordflow}{break};
+00328                 \textcolor{keywordflow}{case} \hyperlink{_led_effects_8h_a6b71fe4d23960c3701fc935a3368a6cc}{RECOLOR}:
+00329                     \hyperlink{_led_effects_8c_a448758d76f47ea6fed4beb349196363f}{recolor}(\hyperlink{_led_effects_8c_a55291315ab0f2ca8d508f0e9da1920a7}{colorconv8to24}(\hyperlink{globals_8h_a159854edb9d0c7283013495d85bdf997}{CompColorArray}[0]),lightdata)
       ;
-00270                     \hyperlink{globals_8h_a053b8e1f039c19251b90d60317db8aed}{effect}=255;
-00271                     \textcolor{keywordflow}{break};
-00272                 \textcolor{keywordflow}{case} \hyperlink{_led_effects_8h_ac64e9d348f9ff60935a2275f477020dc}{FADEN}:
-00273                     \hyperlink{_led_effects_8c_a71d3b2ff21a63b48a01461e74be0c2b8}{faden}(\hyperlink{_led_effects_8c_a55291315ab0f2ca8d508f0e9da1920a7}{colorconv8to24}(\hyperlink{globals_8h_a159854edb9d0c7283013495d85bdf997}{CompColorArray}[0]),lightdata);
-00274                     \textcolor{keywordflow}{break};
-00275                 \textcolor{keywordflow}{case} \hyperlink{_led_effects_8h_a2805176df86592658ae06a508a558720}{INITRAINBOW}:
-00276                     \hyperlink{_led_effects_8c_a9d0f91360c87b851925bf05be5352435}{initrainbow}(lightdata);
-00277                     \hyperlink{_lightstribe_8c_aac724dad670e4a26723daf71ce6a8d8a}{transmit2leds}(lightdata);
-00278                     \textcolor{keywordflow}{break};
-00279                 \textcolor{keywordflow}{case} \hyperlink{_led_effects_8h_a85bd242525add173bd67847b7acac00b}{ROTATE\_R}:
-00280                     \hyperlink{_led_effects_8c_afd64325b08e785d37b4dfaf358e517f0}{rotate}(lightdata,0);
-00281                     \hyperlink{_led_effects_8c_a6950e7657ba74d0d490ba36427533c4b}{effectdelay}(\hyperlink{globals_8h_ac2445d316b2972d381edeac44bb6a226}{effectime});
-00282                     \hyperlink{_lightstribe_8c_aac724dad670e4a26723daf71ce6a8d8a}{transmit2leds}(lightdata);
-00283                     \textcolor{keywordflow}{break};
-00284                 \textcolor{keywordflow}{case} \hyperlink{_led_effects_8h_a4a0c329f45825186172aee0c62531423}{ROTATE\_L}:
-00285                     \hyperlink{_led_effects_8c_afd64325b08e785d37b4dfaf358e517f0}{rotate}(lightdata,1);
-00286                     \hyperlink{_led_effects_8c_a6950e7657ba74d0d490ba36427533c4b}{effectdelay}(\hyperlink{globals_8h_ac2445d316b2972d381edeac44bb6a226}{effectime});
-00287                     \hyperlink{_lightstribe_8c_aac724dad670e4a26723daf71ce6a8d8a}{transmit2leds}(lightdata);
-00288                     \textcolor{keywordflow}{break};
-00289                 \textcolor{keywordflow}{case} \hyperlink{_led_effects_8h_a686dea444026cbf1236c24e7edb3a96d}{CUSTOM}:
-00290                 \textcolor{comment}{//The custom effect assigns up to MAXNUMCOLORS=50 individual colors to the stribe}
-00291                 \textcolor{comment}{//if the number of colors is smaller than the number of LEDs the colors are repeated using}
-00292                 \textcolor{comment}{//modulo operation}
-00293                     \textcolor{keywordflow}{for} (i=0;i<\hyperlink{globals_8h_ad5db4045aed262ed4aae2af9d81fab98}{NumOfLeds};i++)
-00294                     \{
-00295                         j = i % (\hyperlink{globals_8h_aaa611e00c18e950be43a4cd5ce0ceeb1}{DataLen}-5);
-00296                         \hyperlink{_lightstribe_8c_a63fa595d401f0e85c1bba55ba2b1d66e}{changeled}(\hyperlink{_led_effects_8c_a55291315ab0f2ca8d508f0e9da1920a7}{colorconv8to24}(
+00330                     \hyperlink{globals_8h_a053b8e1f039c19251b90d60317db8aed}{effect}=255;
+00331                     \textcolor{keywordflow}{break};
+00332                 \textcolor{keywordflow}{case} \hyperlink{_led_effects_8h_ad8150289b0e08f01126500379852a2a7}{FADE}:
+00333                     \hyperlink{_led_effects_8c_a71d3b2ff21a63b48a01461e74be0c2b8}{faden}(\hyperlink{_led_effects_8c_a55291315ab0f2ca8d508f0e9da1920a7}{colorconv8to24}(\hyperlink{globals_8h_a159854edb9d0c7283013495d85bdf997}{CompColorArray}[0]),lightdata);
+00334                     \textcolor{keywordflow}{break};
+00335                 \textcolor{keywordflow}{case} \hyperlink{_led_effects_8h_a2805176df86592658ae06a508a558720}{INITRAINBOW}:
+00336                     \hyperlink{_led_effects_8c_a9d0f91360c87b851925bf05be5352435}{initrainbow}(lightdata);
+00337                     \hyperlink{_lightstribe_8c_aac724dad670e4a26723daf71ce6a8d8a}{transmit2leds}(lightdata);
+00338                     \textcolor{keywordflow}{break};
+00339                 \textcolor{keywordflow}{case} \hyperlink{_led_effects_8h_a85bd242525add173bd67847b7acac00b}{ROTATE\_R}:
+00340                     \hyperlink{_led_effects_8c_afd64325b08e785d37b4dfaf358e517f0}{rotate}(lightdata,0);
+00341                     \hyperlink{_led_effects_8c_a6950e7657ba74d0d490ba36427533c4b}{effectdelay}(\hyperlink{globals_8h_ac2445d316b2972d381edeac44bb6a226}{effectime});
+00342                     \hyperlink{_lightstribe_8c_aac724dad670e4a26723daf71ce6a8d8a}{transmit2leds}(lightdata);
+00343                     \textcolor{keywordflow}{break};
+00344                 \textcolor{keywordflow}{case} \hyperlink{_led_effects_8h_a4a0c329f45825186172aee0c62531423}{ROTATE\_L}:
+00345                     \hyperlink{_led_effects_8c_afd64325b08e785d37b4dfaf358e517f0}{rotate}(lightdata,1);
+00346                     \hyperlink{_led_effects_8c_a6950e7657ba74d0d490ba36427533c4b}{effectdelay}(\hyperlink{globals_8h_ac2445d316b2972d381edeac44bb6a226}{effectime});
+00347                     \hyperlink{_lightstribe_8c_aac724dad670e4a26723daf71ce6a8d8a}{transmit2leds}(lightdata);
+00348                     \textcolor{keywordflow}{break};
+00349                 \textcolor{keywordflow}{case} \hyperlink{_led_effects_8h_a686dea444026cbf1236c24e7edb3a96d}{CUSTOM}:
+00350                 \textcolor{comment}{//The custom effect assigns up to MAXNUMCOLORS individual colors to the stribe}
+00351                 \textcolor{comment}{//if the number of colors is smaller than the number of LEDs the colors are repeated using}
+00352                 \textcolor{comment}{//modulo operation}
+00353                     \textcolor{keywordflow}{for} (i=0;i<\hyperlink{globals_8h_ad5db4045aed262ed4aae2af9d81fab98}{NumOfLeds};i++)
+00354                     \{
+00355                         j = i % (\hyperlink{globals_8h_aaa611e00c18e950be43a4cd5ce0ceeb1}{DataLen}-5);
+00356                         \hyperlink{_lightstribe_8c_a63fa595d401f0e85c1bba55ba2b1d66e}{changeled}(\hyperlink{_led_effects_8c_a55291315ab0f2ca8d508f0e9da1920a7}{colorconv8to24}(
       \hyperlink{globals_8h_a159854edb9d0c7283013495d85bdf997}{CompColorArray}[j]),lightdata,i);
-00297                     \}
-00298                     \hyperlink{_lightstribe_8c_aac724dad670e4a26723daf71ce6a8d8a}{transmit2leds}(lightdata);
-00299                     \hyperlink{globals_8h_a053b8e1f039c19251b90d60317db8aed}{effect}=255;
-00300                     \textcolor{keywordflow}{break};
-00301                 \textcolor{keywordflow}{case} \hyperlink{_led_effects_8h_a5645ec20d3cd39bfc1c9ad5ec99db2f2}{EASTEREGG}:
-00302                     \hyperlink{_led_effects_8c_a25e09bcb1481b20ebc2a27e7098b5115}{easteregg}(lightdata);
-00303                     \textcolor{keywordflow}{break};
-00304                 \textcolor{keywordflow}{default}:    \textcolor{comment}{//do nothing}
-00305                     \textcolor{keywordflow}{break};
-00306             \}
-00307         \}
-00308         
-00309         
-00310     \}
-00311       
-00312 \}
-00313 
-00314 
-\hypertarget{ws2811lichterkette_8c_source_l00316}{}\hyperlink{ws2811lichterkette_8c_a09ce999e15ad60b8a3f07d08af1946f9}{00316} \hyperlink{ws2811lichterkette_8c_a09ce999e15ad60b8a3f07d08af1946f9}{ISR} (USART\_RX\_vect)
-00317 \{
-00318     \hyperlink{globals_8h_ab5490074aaca289e986e9a00e0c25663}{ReceivedChar} = UDR0;                            \textcolor{comment}{//Read data from the RX buffer     }
-00319     \textcolor{keywordflow}{if} (\hyperlink{globals_8h_ab5490074aaca289e986e9a00e0c25663}{ReceivedChar}==\hyperlink{ws2811lichterkette_8c_a8aac8c5098aaf915463fb31715efa09f}{PREAMBLE} && \hyperlink{globals_8h_a922ad5baed647eca43ad1a979e162ebd}{IsReading}==0)        \textcolor{comment}{//Store data in the
+00357                     \}
+00358                     \hyperlink{_lightstribe_8c_aac724dad670e4a26723daf71ce6a8d8a}{transmit2leds}(lightdata);
+00359                     \hyperlink{globals_8h_a053b8e1f039c19251b90d60317db8aed}{effect}=255;
+00360                     \textcolor{keywordflow}{break};
+00361                 \textcolor{keywordflow}{case} \hyperlink{_led_effects_8h_a5645ec20d3cd39bfc1c9ad5ec99db2f2}{EASTEREGG}:
+00362                     \hyperlink{_led_effects_8c_a25e09bcb1481b20ebc2a27e7098b5115}{easteregg}(lightdata);
+00363                     \textcolor{keywordflow}{break};
+00364                 \textcolor{keywordflow}{default}:    \textcolor{comment}{//do nothing}
+00365                     \textcolor{keywordflow}{break};
+00366             \}
+00367         \}
+00368         
+00369         
+00370     \}
+00371       
+00372 \}
+00373 
+00374 
+\hypertarget{ws2811lichterkette_8c_source_l00376}{}\hyperlink{ws2811lichterkette_8c_a09ce999e15ad60b8a3f07d08af1946f9}{00376} \hyperlink{ws2811lichterkette_8c_a09ce999e15ad60b8a3f07d08af1946f9}{ISR} (USART\_RX\_vect)
+00377 \{
+00378     \hyperlink{globals_8h_ab5490074aaca289e986e9a00e0c25663}{ReceivedChar} = UDR0;                            \textcolor{comment}{//Read data from the RX buffer     }
+00379     \textcolor{keywordflow}{if} (\hyperlink{globals_8h_ab5490074aaca289e986e9a00e0c25663}{ReceivedChar}==\hyperlink{ws2811lichterkette_8c_a8aac8c5098aaf915463fb31715efa09f}{PREAMBLE} && \hyperlink{globals_8h_a922ad5baed647eca43ad1a979e162ebd}{IsReading}==0)        \textcolor{comment}{//Store data in the
        RecBuffer array only if it is not accessed by the main function}
-00320     \{
-00321         \hyperlink{globals_8h_a1b09d1a5bcf4c8ab435bb3c9e36def59}{PacketComplete}=0;
-00322         \hyperlink{globals_8h_aaa3bddd2273257ac5ec259197b62e984}{PaketStart}=1;                             \textcolor{comment}{//Set packet start flag (-->254=PREAMBLE has
+00380     \{
+00381         \hyperlink{globals_8h_a1b09d1a5bcf4c8ab435bb3c9e36def59}{PacketComplete}=0;
+00382         \hyperlink{globals_8h_aaa3bddd2273257ac5ec259197b62e984}{PaketStart}=1;                             \textcolor{comment}{//Set packet start flag (-->254=PREAMBLE has
        been received)}
-00323         memset(\hyperlink{globals_8h_a5d735865707e6694a8173d629e0b4d5c}{RecBuffer},0,\textcolor{keyword}{sizeof}(\hyperlink{globals_8h_a5d735865707e6694a8173d629e0b4d5c}{RecBuffer}[0])*
+00383         memset(\hyperlink{globals_8h_a5d735865707e6694a8173d629e0b4d5c}{RecBuffer},0,\textcolor{keyword}{sizeof}(\hyperlink{globals_8h_a5d735865707e6694a8173d629e0b4d5c}{RecBuffer}[0])*
       \hyperlink{globals_8h_a0d57378e32bf8278011460740bc29f7f}{UART\_BUFFER\_SIZE});\textcolor{comment}{//clear the buffer    }
-00324         \hyperlink{globals_8h_aa6fcb4d4fca4554ac73bef10668c23cd}{BufferCounter}=0;
-00325         \hyperlink{globals_8h_a5d735865707e6694a8173d629e0b4d5c}{RecBuffer}[0]=\hyperlink{globals_8h_ab5490074aaca289e986e9a00e0c25663}{ReceivedChar};                 \textcolor{comment}{//Store the preamble}
-00326     \}
-00327     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (\hyperlink{globals_8h_aaa3bddd2273257ac5ec259197b62e984}{PaketStart}==1)
-00328     \{
-00329         \textcolor{comment}{//Store all Bytes after the preamble}
-00330         \hyperlink{globals_8h_aa6fcb4d4fca4554ac73bef10668c23cd}{BufferCounter}++;    
-00331         \hyperlink{globals_8h_a5d735865707e6694a8173d629e0b4d5c}{RecBuffer}[\hyperlink{globals_8h_aa6fcb4d4fca4554ac73bef10668c23cd}{BufferCounter}]=\hyperlink{globals_8h_ab5490074aaca289e986e9a00e0c25663}{ReceivedChar};
-00332         \hyperlink{globals_8h_aaa611e00c18e950be43a4cd5ce0ceeb1}{DataLen}=\hyperlink{globals_8h_a5d735865707e6694a8173d629e0b4d5c}{RecBuffer}[\hyperlink{ws2811lichterkette_8c_aec9ae4a8d59e838ac8ed93ad0de8e827}{LENINDEX}];                \textcolor{comment}{//Store data len of the data
+00384         \hyperlink{globals_8h_aa6fcb4d4fca4554ac73bef10668c23cd}{BufferCounter}=0;
+00385         \hyperlink{globals_8h_a5d735865707e6694a8173d629e0b4d5c}{RecBuffer}[0]=\hyperlink{globals_8h_ab5490074aaca289e986e9a00e0c25663}{ReceivedChar};                 \textcolor{comment}{//Store the preamble}
+00386     \}
+00387     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (\hyperlink{globals_8h_aaa3bddd2273257ac5ec259197b62e984}{PaketStart}==1)
+00388     \{
+00389         \textcolor{comment}{//Store all Bytes after the preamble}
+00390         \hyperlink{globals_8h_aa6fcb4d4fca4554ac73bef10668c23cd}{BufferCounter}++;    
+00391         \hyperlink{globals_8h_a5d735865707e6694a8173d629e0b4d5c}{RecBuffer}[\hyperlink{globals_8h_aa6fcb4d4fca4554ac73bef10668c23cd}{BufferCounter}]=\hyperlink{globals_8h_ab5490074aaca289e986e9a00e0c25663}{ReceivedChar};
+00392         \hyperlink{globals_8h_aaa611e00c18e950be43a4cd5ce0ceeb1}{DataLen}=\hyperlink{globals_8h_a5d735865707e6694a8173d629e0b4d5c}{RecBuffer}[\hyperlink{ws2811lichterkette_8c_aec9ae4a8d59e838ac8ed93ad0de8e827}{LENINDEX}];                \textcolor{comment}{//Store data len of the data
        packet (preamble included)}
-00333         \textcolor{keywordflow}{if} (\hyperlink{globals_8h_aaa611e00c18e950be43a4cd5ce0ceeb1}{DataLen}==\hyperlink{globals_8h_aa6fcb4d4fca4554ac73bef10668c23cd}{BufferCounter}+1)
-00334         \{
-00335             \hyperlink{globals_8h_a1b09d1a5bcf4c8ab435bb3c9e36def59}{PacketComplete}=1;                     \textcolor{comment}{//a whole packet has been received, update
+00393         \textcolor{keywordflow}{if} (\hyperlink{globals_8h_aaa611e00c18e950be43a4cd5ce0ceeb1}{DataLen}==\hyperlink{globals_8h_aa6fcb4d4fca4554ac73bef10668c23cd}{BufferCounter}+1)
+00394         \{
+00395             \hyperlink{globals_8h_a1b09d1a5bcf4c8ab435bb3c9e36def59}{PacketComplete}=1;                     \textcolor{comment}{//a whole packet has been received, update
        the effect in main}
-00336         \}        
-00337     \}    
-00338 \}
+00396         \}        
+00397     \}    
+00398 \}
 \end{DoxyCode}

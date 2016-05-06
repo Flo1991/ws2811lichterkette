@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="indexpage" kind="page">
+    <compoundname>index</compoundname>
+    <title>Use WS2811/WS2812 LEDs with an AVR</title>
+    <detaileddescription>
+<para><image type="html" name="tree.png"></image>
+ </para><sect1 id="index_1intro_sec">
+<title>Introduction</title>
+<para>This project is about using an WS2811 or WS2812 lightstribe with an AVR controller. It is possible to handle up to 250 LEDs at the same time, so I chose an Atmega328p with enough RAM amount. If you want to handle less LEDs you can use most parts of this project with every AVR. The AVR is programmed to receive the light data over UART so you can control the LEDs by using a serial interface. The interface uses a specified simple protocol which is described in <ref refid="index_1protocol_sec" kindref="member">Protocol overview</ref> section. Everything has been developed in a university course to control the lights of a Christmas tree. In the original implementation there were some further components included. This is a simplified version of the implementation so that everyone can use it. As an example for controlling the LEDs using a smart phone the <ref refid="index_1esp_sec" kindref="member">control via ESP8266</ref> section shows how this could be done by using a webserver on the ESP8266. You can use everything else that provide a serial interface (maybe connect with a bluetooth serial module). The structure of this documentation is split in a hardware part for the AVR that describes the basic hardware that should be used. The next part is about how the software is working on the AVR that handles the LEDs and different effects. You may include some more stuff in your own. After that you can see a small protocol overview, where you find which command can be sent to the AVR to control the LEDs. Be aware that at the initialization state all LEDs are off. At the last point you can find an example how to use the implementation with an ESP8266 with a webserver. You will find the source code for the ESP8266 and the basic hardware setup.</para></sect1>
+<sect1 id="index_1usage_sec">
+<title>Basic usage</title>
+<para>For using this implementation follow this steps: <itemizedlist>
+<listitem>
+<para>set up the hardware as descriped in section <ref refid="index_1hardware_sec" kindref="member">Hardware</ref> </para></listitem>
+<listitem>
+<para>set the <ref refid="globals_8h_1a43bafb28b29491ec7f871319b5a3b2f8" kindref="member">F_CPU</ref> clock to the value for your hardware </para></listitem>
+<listitem>
+<para>set the <ref refid="ws2811lichterkette_8c_1a62634036639f88eece6fbf226b45f84b" kindref="member">BAUD</ref> to the value you like, 76800 or 38400 are suggested </para></listitem>
+<listitem>
+<para>compile your implementation (only O1 optimization is supported) </para></listitem>
+<listitem>
+<para>program your AVR with your binaries </para></listitem>
+<listitem>
+<para>set the clock divider fuse and the clock source fuse referring to your implementation </para></listitem>
+<listitem>
+<para>send protocol data (see section <ref refid="index_1protocol_sec" kindref="member">Protocol overview</ref>) to the RX pin of the AVR over a serial device, e.g. an FTDI, ESP8266 or Arduino (UART is 8N1 on your chosen <ref refid="ws2811lichterkette_8c_1a62634036639f88eece6fbf226b45f84b" kindref="member">BAUD</ref>) </para></listitem>
+</itemizedlist>
+</para></sect1>
+<sect1 id="index_1hardware_sec">
+<title>Hardware</title>
+<para>The basic hardware you need is a AVR controller an some WS2811 or WS2812 LEDs you want to control. The AVR controller should have an hardware UART, otherwise you need to write some code for a software serial. In the project we chose an Atmega328p that has enough RAM to control 250 LEDs. The internal software structure buffers the color data for the LEDs to achieve an accurate timing, see section <ref refid="index_1software_sec" kindref="member">Software implementation</ref>. The AVR can be used with the internal clock at 8 MHz, remember to clear the clock divider fuse. Otherwise an external 8 MHz or 16 MHz clock source can be used, the definition <ref refid="globals_8h_1a43bafb28b29491ec7f871319b5a3b2f8" kindref="member">F_CPU</ref> must be set to the frequency you chose (remember to set the fuses for an external clock source). As an example figure <ref refid="index_1one" kindref="member">1</ref> shows using an external 16 MHz crystal. <anchor id="index_1one"/> <image type="html" name="Ws2811_Atmega328_schematic.png">schematic of the AVR to controll WS2812/WS2811</image>
+ <image type="latex" name="Ws2811_Atmega328_schematic.png">schematic of the AVR to controll WS2812/WS2811</image>
+ <image type="rtf" name="Ws2811_Atmega328_schematic.png">schematic of the AVR to controll WS2812/WS2811</image>
+ As you can see in the picture the AVR is programmed by using the ISP interface. The WS2812/WS2811 get the same voltage as the AVR, the light data is available at PinB0, you may change this if you like. Referring to the LEDs be aware of the current amount they may draw if every LED has its full brightness. One WS2812 can draw up to 60 mA, so one meter with 30 LEDs already need 1,8 A. If you want to control more LEDs you may have a problem with the voltage drop along the stribe. For example if you control 180 LEDs at six meters you not only need 10,8 A, furthermore you will probably have a voltage drop up to 2 V. To reduce the voltage drop you must increase the wire size with parallel wires to you stribe. You can see the voltage drop if you set all LEDs to white. If you have only a small voltage drop every LED will have the same color. If the voltage drop is too much you can see that the last LEDs will have less blue color, so they will light in a warm white color even up to red. If you want to try out the LEDs with the AVR you can build up everything on a breadboard. Pinheaders can be soldered easy at the light stribes as you can see in figure <ref refid="index_1two" kindref="member">2</ref>. <anchor id="index_1two"/> <image type="html" name="WS2812.png">WS2812 stribe with pin header</image>
+ <image type="latex" name="WS2812.png">WS2812 stribe with pin header</image>
+ <image type="rtf" name="WS2812.png">WS2812 stribe with pin header</image>
+ The connect GND to the common ground with the AVR, 5 V should be connected to a power supply that can handle the current you need. DI is the data in line, this should be connected to PinB0 at the AVR. The stribe is like a big shifting register, all the data you sent is shifted bit by bit through the stribe. So DO is the data out pin, you see some data at this pin if all LEDs before had already received their color data. The one wire protocol of the LEDs is described in the next section <ref refid="index_1software_sec" kindref="member">Software implementation</ref>.</para></sect1>
+<sect1 id="index_1software_sec">
+<title>Software implementation</title>
+<para>If your hardware is ready you must flash your AVR device with the provided software. Therefore the ISP-6 connector should be used. To get the right timing remember to set the <ref refid="globals_8h_1a43bafb28b29491ec7f871319b5a3b2f8" kindref="member">F_CPU</ref> definition to the frequency you are working at. Furthermore set the fuses of the AVR referring to your implementation. This means you have to clear the clock divider fuse and may have to change the clock source. I suggest to use the AtmelStudio to program your AVR and its fuses. <linebreak/>
+ The WS2812/WS2811 are controlled by one data line that works with a one wire protocol. Because of the missing clock line the timing is really important, this can either be achieved by doing some trick with the hardware interfaces (e.g. using the spi interface) or by bit banging. In this implementation bit banging is used. To get a good timing all color data must be transmitted in one block that is not interrupted by some other code. The timing specifications of the WS2812/WS2811 LEDs can be found in table <ref refid="index_1timingtable" kindref="member">1</ref> which refers to the datasheet.<linebreak/>
+</para><para><anchor id="index_1timingtable"/> <table rows="7" cols="3"><row>
+<entry thead="yes"><para>Information </para></entry><entry thead="yes"><para>Timing </para></entry><entry thead="yes"><para>Tolerance +/- </para></entry></row>
+<row>
+<entry thead="no"><para>Transfer 1 Bit </para></entry><entry thead="no"><para>HighTime+LowTime=1,25 µs </para></entry><entry thead="no"><para>600 ns </para></entry></row>
+<row>
+<entry thead="no"><para>send 0, high time </para></entry><entry thead="no"><para>0,35 µs </para></entry><entry thead="no"><para>150 ns </para></entry></row>
+<row>
+<entry thead="no"><para>send 0, low time </para></entry><entry thead="no"><para>0,8 µs </para></entry><entry thead="no"><para>150 ns </para></entry></row>
+<row>
+<entry thead="no"><para>send 1, high time </para></entry><entry thead="no"><para>0,7 µs </para></entry><entry thead="no"><para>150 ns </para></entry></row>
+<row>
+<entry thead="no"><para>send 1, low time </para></entry><entry thead="no"><para>0,6 µs </para></entry><entry thead="no"><para>150 ns </para></entry></row>
+<row>
+<entry thead="no"><para>data transmission complete, low time </para></entry><entry thead="no"><para>&gt;50 µs </para></entry><entry thead="no"><para>- </para></entry></row>
+<caption>Timing table for WS2812/WS2811 one wire protocol</caption>
+</table>
+</para><para>The timing is done by setting the output and wait the required time by doing nothing (call assembly NOPs). So it is important to compile the provided software at O1, other optimization levels may influence the timing. To send one bit (either high or low) two different macros are defined in <ref refid="_lightstribe_8h" kindref="compound">Lightstribe.h</ref> (SETHIGH and SETLOW), one LED needs 24 color bits. The macros depend on the value of <ref refid="globals_8h_1a43bafb28b29491ec7f871319b5a3b2f8" kindref="member">F_CPU</ref> you entered in <ref refid="globals_8h" kindref="compound">globals.h</ref>. Furthermore the header file Lightstrib.h declares a color struct to handle 24 bit colors (<ref refid="structcolor24bit" kindref="compound">color24bit</ref>) and three basic functions to control the LEDs. The corresponding c file <ref refid="_lightstribe_8c" kindref="compound">Lightstribe.c</ref> implements these functions. The most important function is the <ref refid="_lightstribe_8h_1aac724dad670e4a26723daf71ce6a8d8a" kindref="member">transmit2leds</ref> function. This function and only this function transmits data to the stribe. All other functions either call this function or manipulate the color array. To achieve the right timing all effects and operations are done on a color array that stores the color information for the LEDs. The information is sent to the LEDs by calling transmit2leds with the lightdata pointer that points to an dynamically allocated array that stores the color information depending on the number of LEDs you want to control. Therefore your color array must at least be able to contain 24 bits x your number of LEDs. It can be bigger, what will allow you to create even more effects (e.g. if you rotate a rainbow array). So the effects that are implemented in <ref refid="_led_effects_8c" kindref="compound">LedEffects.c</ref> change the color array and afterwards the <ref refid="_lightstribe_8h_1aac724dad670e4a26723daf71ce6a8d8a" kindref="member">transmit2leds</ref> is called. The c file <ref refid="_led_effects_8c" kindref="compound">LedEffects.c</ref> not only contains effects but also different necessary functions for the effects and the serial color handling. The <ref refid="_led_effects_8h_1a55291315ab0f2ca8d508f0e9da1920a7" kindref="member">colorconv8to24</ref> function converts the received 8 bit colors from the serial port to 24 bit colors for the lightstribes. So you only sent 8 bit colors over the serial port to the AVR to reduce data size. Further information can be found in the <ref refid="index_1protocol_sec" kindref="member">Protocol overview</ref> section. The colors are decompressed with a simple <ref refid="_led_effects_8h_1ad67a4e660b5122ed454e101432bbdba0" kindref="member">map</ref> function you may know from Arduino. The main.c file initializes the hardware and handles the LEDs. A serial interrupt stores the data temporary. If the data transmission is complete the main function will extract the information and set the new configuration for the lightstribe.<linebreak/>
+ The last points to be mentioned in this section are some things you need to be careful. The first thing is that the 8 bit colors are in an RGB 3-3-2 format. The 24 bit color format depend on the LEDs. WS2812 LEDs use a GRB color scheme while WS2811 use a RGB color scheme. This is important, to achieve the right color the protocol includes a bit that decides the color scheme. The right color is resolved by the decompressing function <ref refid="_led_effects_8h_1a55291315ab0f2ca8d508f0e9da1920a7" kindref="member">colorconv8to24</ref>. Another thing is that the colors are not linearized, what means that you cannot say that a color you got from a color table will be look like this. As an example you picked an orange from a 3-3-2 rgb color table. This orange will not be the same orange on the LED stribe. This depends on many parameters so linearizing is too much effort and almost impossible (to achieve linearization you would have to measure each color, compare it and evaluate correction parameters).</para></sect1>
+<sect1 id="index_1protocol_sec">
+<title>Protocol overview</title>
+<para>This section gives an overview of the implemented serial protocol. The goal of the protocol was to be as simple as possible, to be easily implemented on the AVR and to use as less resources as possible.</para></sect1>
+<sect1 id="index_1owneffects_sec">
+<title>Implement further effects</title>
+</sect1>
+<sect1 id="index_1esp_sec">
+<title>control via ESP8266</title>
+<para>author: Florian Wank, 2016 </para></sect1>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

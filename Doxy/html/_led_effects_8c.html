@@ -227,6 +227,10 @@ Functions</h2></td></tr>
 
 <p>Definition at line <a class="el" href="_led_effects_8c_source.html#l00278">278</a> of file <a class="el" href="_led_effects_8c_source.html">LedEffects.c</a>.</p>
 
+<p>References <a class="el" href="_led_effects_8c_source.html#l00072">effectdelay()</a>, <a class="el" href="globals_8h_source.html#l00027">effectime</a>, <a class="el" href="_led_effects_8c_source.html#l00118">resetstribe()</a>, <a class="el" href="_led_effects_8c_source.html#l00096">setfullcolor()</a>, and <a class="el" href="_lightstribe_8c_source.html#l00096">transmit2leds()</a>.</p>
+
+<p>Referenced by <a class="el" href="ws2811lichterkette_8c_source.html#l00249">main()</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="a55291315ab0f2ca8d508f0e9da1920a7"></a>
@@ -255,6 +259,10 @@ Functions</h2></td></tr>
 
 <p>Definition at line <a class="el" href="_led_effects_8c_source.html#l00045">45</a> of file <a class="el" href="_led_effects_8c_source.html">LedEffects.c</a>.</p>
 
+<p>References <a class="el" href="_lightstribe_8h_source.html#l00019">color24bit::blue</a>, <a class="el" href="_lightstribe_8h_source.html#l00018">color24bit::green</a>, <a class="el" href="globals_8h_source.html#l00029">ledtype</a>, <a class="el" href="_led_effects_8c_source.html#l00033">map()</a>, and <a class="el" href="_lightstribe_8h_source.html#l00017">color24bit::red</a>.</p>
+
+<p>Referenced by <a class="el" href="_led_effects_8c_source.html#l00514">easteregg()</a>, and <a class="el" href="ws2811lichterkette_8c_source.html#l00249">main()</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="a25e09bcb1481b20ebc2a27e7098b5115"></a>
@@ -282,6 +290,10 @@ Functions</h2></td></tr>
 <dl class="section note"><dt>Note</dt><dd>Just try it :-) funny looking effect </dd></dl>
 
 <p>Definition at line <a class="el" href="_led_effects_8c_source.html#l00514">514</a> of file <a class="el" href="_led_effects_8c_source.html">LedEffects.c</a>.</p>
+
+<p>References <a class="el" href="_led_effects_8c_source.html#l00045">colorconv8to24()</a>, <a class="el" href="_led_effects_8c_source.html#l00489">eastereggbase()</a>, and <a class="el" href="globals_8h_source.html#l00053">PacketComplete</a>.</p>
+
+<p>Referenced by <a class="el" href="ws2811lichterkette_8c_source.html#l00249">main()</a>.</p>
 
 </div>
 </div>
@@ -322,6 +334,10 @@ Functions</h2></td></tr>
 
 <p>Definition at line <a class="el" href="_led_effects_8c_source.html#l00489">489</a> of file <a class="el" href="_led_effects_8c_source.html">LedEffects.c</a>.</p>
 
+<p>References <a class="el" href="_lightstribe_8c_source.html#l00033">changeled()</a>, <a class="el" href="_led_effects_8c_source.html#l00072">effectdelay()</a>, <a class="el" href="globals_8h_source.html#l00027">effectime</a>, <a class="el" href="globals_8h_source.html#l00025">NumOfLeds</a>, <a class="el" href="globals_8h_source.html#l00053">PacketComplete</a>, <a class="el" href="_led_effects_8c_source.html#l00138">rotate()</a>, and <a class="el" href="_lightstribe_8c_source.html#l00096">transmit2leds()</a>.</p>
+
+<p>Referenced by <a class="el" href="_led_effects_8c_source.html#l00514">easteregg()</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="a6950e7657ba74d0d490ba36427533c4b"></a>
@@ -349,6 +365,10 @@ Functions</h2></td></tr>
 <dl class="section note"><dt>Note</dt><dd>This function is just a variable delay, there is no coherence with a concrete time (i.e. s, ms) </dd></dl>
 
 <p>Definition at line <a class="el" href="_led_effects_8c_source.html#l00072">72</a> of file <a class="el" href="_led_effects_8c_source.html">LedEffects.c</a>.</p>
+
+<p>References <a class="el" href="globals_8h_source.html#l00053">PacketComplete</a>.</p>
+
+<p>Referenced by <a class="el" href="_led_effects_8c_source.html#l00278">blinkled()</a>, <a class="el" href="_led_effects_8c_source.html#l00489">eastereggbase()</a>, <a class="el" href="_led_effects_8c_source.html#l00366">faden()</a>, <a class="el" href="_led_effects_8c_source.html#l00549">fillup()</a>, <a class="el" href="ws2811lichterkette_8c_source.html#l00249">main()</a>, <a class="el" href="_led_effects_8c_source.html#l00340">recolor()</a>, <a class="el" href="_led_effects_8c_source.html#l00323">run_alternating()</a>, and <a class="el" href="_led_effects_8c_source.html#l00236">runrunled()</a>.</p>
 
 </div>
 </div>
@@ -388,6 +408,10 @@ Functions</h2></td></tr>
 <dl class="section note"><dt>Note</dt><dd>No need to run transmit2leds afterwards! The effect is standalone and ends is looped in the main while loop. The color value proportion is not kept over the whole effect. </dd></dl>
 
 <p>Definition at line <a class="el" href="_led_effects_8c_source.html#l00366">366</a> of file <a class="el" href="_led_effects_8c_source.html">LedEffects.c</a>.</p>
+
+<p>References <a class="el" href="_lightstribe_8h_source.html#l00019">color24bit::blue</a>, <a class="el" href="_led_effects_8c_source.html#l00072">effectdelay()</a>, <a class="el" href="globals_8h_source.html#l00027">effectime</a>, <a class="el" href="_lightstribe_8h_source.html#l00018">color24bit::green</a>, <a class="el" href="globals_8h_source.html#l00053">PacketComplete</a>, <a class="el" href="_lightstribe_8h_source.html#l00017">color24bit::red</a>, <a class="el" href="_led_effects_8c_source.html#l00096">setfullcolor()</a>, and <a class="el" href="_lightstribe_8c_source.html#l00096">transmit2leds()</a>.</p>
+
+<p>Referenced by <a class="el" href="ws2811lichterkette_8c_source.html#l00249">main()</a>.</p>
 
 </div>
 </div>
@@ -435,6 +459,10 @@ Functions</h2></td></tr>
 
 <p>Definition at line <a class="el" href="_led_effects_8c_source.html#l00549">549</a> of file <a class="el" href="_led_effects_8c_source.html">LedEffects.c</a>.</p>
 
+<p>References <a class="el" href="_lightstribe_8c_source.html#l00033">changeled()</a>, <a class="el" href="_led_effects_8c_source.html#l00072">effectdelay()</a>, <a class="el" href="globals_8h_source.html#l00027">effectime</a>, <a class="el" href="globals_8h_source.html#l00025">NumOfLeds</a>, <a class="el" href="globals_8h_source.html#l00053">PacketComplete</a>, and <a class="el" href="_lightstribe_8c_source.html#l00096">transmit2leds()</a>.</p>
+
+<p>Referenced by <a class="el" href="ws2811lichterkette_8c_source.html#l00249">main()</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="af67b7638a175e4971f25df5a5db3d8d0"></a>
@@ -481,6 +509,10 @@ Functions</h2></td></tr>
 
 <p>Definition at line <a class="el" href="_led_effects_8c_source.html#l00300">300</a> of file <a class="el" href="_led_effects_8c_source.html">LedEffects.c</a>.</p>
 
+<p>References <a class="el" href="_lightstribe_8c_source.html#l00033">changeled()</a>, <a class="el" href="globals_8h_source.html#l00025">NumOfLeds</a>, and <a class="el" href="_led_effects_8c_source.html#l00096">setfullcolor()</a>.</p>
+
+<p>Referenced by <a class="el" href="ws2811lichterkette_8c_source.html#l00249">main()</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="a9d0f91360c87b851925bf05be5352435"></a>
@@ -508,6 +540,10 @@ Functions</h2></td></tr>
 <dl class="section note"><dt>Note</dt><dd>Run transmit2leds afterwards! A nice effect is to rotate the array stepwise after the rainbow initialization (run transmit2leds after every rotation). The effect directly sets color values, so there may be a problem with the color profiles (RGB vs. GRB). The function was primary written for WS2812 LEDs (GRB)! The effect needs a minimum number of 20 LEDs to look nice! </dd></dl>
 
 <p>Definition at line <a class="el" href="_led_effects_8c_source.html#l00442">442</a> of file <a class="el" href="_led_effects_8c_source.html">LedEffects.c</a>.</p>
+
+<p>References <a class="el" href="_lightstribe_8h_source.html#l00019">color24bit::blue</a>, <a class="el" href="_lightstribe_8c_source.html#l00033">changeled()</a>, <a class="el" href="_lightstribe_8h_source.html#l00018">color24bit::green</a>, <a class="el" href="globals_8h_source.html#l00025">NumOfLeds</a>, and <a class="el" href="_lightstribe_8h_source.html#l00017">color24bit::red</a>.</p>
+
+<p>Referenced by <a class="el" href="ws2811lichterkette_8c_source.html#l00249">main()</a>.</p>
 
 </div>
 </div>
@@ -554,6 +590,10 @@ Functions</h2></td></tr>
 <dl class="section note"><dt>Note</dt><dd>Run runrunled afterwards to start the effect! </dd></dl>
 
 <p>Definition at line <a class="el" href="_led_effects_8c_source.html#l00217">217</a> of file <a class="el" href="_led_effects_8c_source.html">LedEffects.c</a>.</p>
+
+<p>References <a class="el" href="_lightstribe_8c_source.html#l00033">changeled()</a>, and <a class="el" href="_led_effects_8c_source.html#l00096">setfullcolor()</a>.</p>
+
+<p>Referenced by <a class="el" href="ws2811lichterkette_8c_source.html#l00249">main()</a>.</p>
 
 </div>
 </div>
@@ -615,6 +655,8 @@ Functions</h2></td></tr>
 
 <p>Definition at line <a class="el" href="_led_effects_8c_source.html#l00033">33</a> of file <a class="el" href="_led_effects_8c_source.html">LedEffects.c</a>.</p>
 
+<p>Referenced by <a class="el" href="_led_effects_8c_source.html#l00045">colorconv8to24()</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="a448758d76f47ea6fed4beb349196363f"></a>
@@ -654,6 +696,10 @@ Functions</h2></td></tr>
 
 <p>Definition at line <a class="el" href="_led_effects_8c_source.html#l00340">340</a> of file <a class="el" href="_led_effects_8c_source.html">LedEffects.c</a>.</p>
 
+<p>References <a class="el" href="_lightstribe_8c_source.html#l00033">changeled()</a>, <a class="el" href="_led_effects_8c_source.html#l00072">effectdelay()</a>, <a class="el" href="globals_8h_source.html#l00027">effectime</a>, <a class="el" href="globals_8h_source.html#l00025">NumOfLeds</a>, <a class="el" href="globals_8h_source.html#l00053">PacketComplete</a>, and <a class="el" href="_lightstribe_8c_source.html#l00096">transmit2leds()</a>.</p>
+
+<p>Referenced by <a class="el" href="ws2811lichterkette_8c_source.html#l00249">main()</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="a1c5e6b0f45c1787c25f8eafa8b9c6247"></a>
@@ -681,6 +727,10 @@ Functions</h2></td></tr>
 <dl class="section note"><dt>Note</dt><dd>This function sets the lightdata array to 0x00. To update the stribe run transmit2leds afterwards! </dd></dl>
 
 <p>Definition at line <a class="el" href="_led_effects_8c_source.html#l00118">118</a> of file <a class="el" href="_led_effects_8c_source.html">LedEffects.c</a>.</p>
+
+<p>References <a class="el" href="_lightstribe_8h_source.html#l00019">color24bit::blue</a>, <a class="el" href="_lightstribe_8h_source.html#l00018">color24bit::green</a>, <a class="el" href="_lightstribe_8h_source.html#l00017">color24bit::red</a>, and <a class="el" href="_led_effects_8c_source.html#l00096">setfullcolor()</a>.</p>
+
+<p>Referenced by <a class="el" href="_led_effects_8c_source.html#l00278">blinkled()</a>.</p>
 
 </div>
 </div>
@@ -720,6 +770,10 @@ Functions</h2></td></tr>
 <dl class="section note"><dt>Note</dt><dd>This function rotates lightdata array. To update the stribe run transmit2leds afterwards! The rotation "moves every LED" by one step, the overflowing LED is appended at the other ending. Example: RED BLUE YELLOW GREEN ... rotate... BLUE YELLOW GREEN RED other direction: RED BLUE YELLOW GREEN ... rotate... GREEN RED BLUE YELLOW </dd></dl>
 
 <p>Definition at line <a class="el" href="_led_effects_8c_source.html#l00138">138</a> of file <a class="el" href="_led_effects_8c_source.html">LedEffects.c</a>.</p>
+
+<p>References <a class="el" href="globals_8h_source.html#l00025">NumOfLeds</a>.</p>
+
+<p>Referenced by <a class="el" href="_led_effects_8c_source.html#l00489">eastereggbase()</a>, <a class="el" href="ws2811lichterkette_8c_source.html#l00249">main()</a>, <a class="el" href="_led_effects_8c_source.html#l00196">rotateN()</a>, <a class="el" href="_led_effects_8c_source.html#l00323">run_alternating()</a>, and <a class="el" href="_led_effects_8c_source.html#l00236">runrunled()</a>.</p>
 
 </div>
 </div>
@@ -767,6 +821,8 @@ Functions</h2></td></tr>
 
 <p>Definition at line <a class="el" href="_led_effects_8c_source.html#l00196">196</a> of file <a class="el" href="_led_effects_8c_source.html">LedEffects.c</a>.</p>
 
+<p>References <a class="el" href="_led_effects_8c_source.html#l00138">rotate()</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="a5bde1e9e7fc19a9916f1ec02d8fbcd6c"></a>
@@ -794,6 +850,10 @@ Functions</h2></td></tr>
 <dl class="section note"><dt>Note</dt><dd>No need to run transmit2leds afterwards! The effect is generated by the main while loop. </dd></dl>
 
 <p>Definition at line <a class="el" href="_led_effects_8c_source.html#l00323">323</a> of file <a class="el" href="_led_effects_8c_source.html">LedEffects.c</a>.</p>
+
+<p>References <a class="el" href="_led_effects_8c_source.html#l00072">effectdelay()</a>, <a class="el" href="globals_8h_source.html#l00027">effectime</a>, <a class="el" href="_led_effects_8c_source.html#l00138">rotate()</a>, and <a class="el" href="_lightstribe_8c_source.html#l00096">transmit2leds()</a>.</p>
+
+<p>Referenced by <a class="el" href="ws2811lichterkette_8c_source.html#l00249">main()</a>.</p>
 
 </div>
 </div>
@@ -834,6 +894,10 @@ Functions</h2></td></tr>
 
 <p>Definition at line <a class="el" href="_led_effects_8c_source.html#l00236">236</a> of file <a class="el" href="_led_effects_8c_source.html">LedEffects.c</a>.</p>
 
+<p>References <a class="el" href="_led_effects_8c_source.html#l00072">effectdelay()</a>, <a class="el" href="globals_8h_source.html#l00027">effectime</a>, <a class="el" href="globals_8h_source.html#l00025">NumOfLeds</a>, <a class="el" href="globals_8h_source.html#l00053">PacketComplete</a>, <a class="el" href="_led_effects_8c_source.html#l00138">rotate()</a>, and <a class="el" href="_lightstribe_8c_source.html#l00096">transmit2leds()</a>.</p>
+
+<p>Referenced by <a class="el" href="ws2811lichterkette_8c_source.html#l00249">main()</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="a2d54d1a6c61fe667b7c68ff04a11c503"></a>
@@ -873,6 +937,10 @@ Functions</h2></td></tr>
 
 <p>Definition at line <a class="el" href="_led_effects_8c_source.html#l00096">96</a> of file <a class="el" href="_led_effects_8c_source.html">LedEffects.c</a>.</p>
 
+<p>References <a class="el" href="_lightstribe_8h_source.html#l00019">color24bit::blue</a>, <a class="el" href="_lightstribe_8h_source.html#l00018">color24bit::green</a>, <a class="el" href="globals_8h_source.html#l00025">NumOfLeds</a>, and <a class="el" href="_lightstribe_8h_source.html#l00017">color24bit::red</a>.</p>
+
+<p>Referenced by <a class="el" href="_led_effects_8c_source.html#l00278">blinkled()</a>, <a class="el" href="_led_effects_8c_source.html#l00366">faden()</a>, <a class="el" href="_led_effects_8c_source.html#l00300">init_alternating()</a>, <a class="el" href="_led_effects_8c_source.html#l00217">initrunled()</a>, <a class="el" href="ws2811lichterkette_8c_source.html#l00249">main()</a>, and <a class="el" href="_led_effects_8c_source.html#l00118">resetstribe()</a>.</p>
+
 </div>
 </div>
 </div><!-- contents -->
@@ -881,7 +949,7 @@ Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="_led_effects_8c.html">LedEffects.c</a></li>
-    <li class="footer">Generated on Thu May 5 2016 13:11:01 for Lightstribe WS2811/WS2812 by
+    <li class="footer">Generated on Fri May 6 2016 14:10:35 for Lightstribe WS2811/WS2812 by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.10 </li>
   </ul>

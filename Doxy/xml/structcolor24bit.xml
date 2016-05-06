@@ -1,0 +1,79 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="structcolor24bit" kind="struct" language="C++" prot="public">
+    <compoundname>color24bit</compoundname>
+    <includes refid="_lightstribe_8h" local="no">Lightstribe.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structcolor24bit_1ad47d918910aaa51c73160ac85999d09c" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t red</definition>
+        <argsstring></argsstring>
+        <name>red</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>8 Bit red </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Lightstribe.h" line="17" column="1" bodyfile="Lightstribe.h" bodystart="17" bodyend="-1"/>
+        <referencedby refid="_lightstribe_8h_1a63fa595d401f0e85c1bba55ba2b1d66e" compoundref="_lightstribe_8c" startline="33" endline="41">changeled</referencedby>
+        <referencedby refid="_led_effects_8h_1a55291315ab0f2ca8d508f0e9da1920a7" compoundref="_led_effects_8c" startline="45" endline="65">colorconv8to24</referencedby>
+        <referencedby refid="_led_effects_8h_1a71d3b2ff21a63b48a01461e74be0c2b8" compoundref="_led_effects_8c" startline="366" endline="428">faden</referencedby>
+        <referencedby refid="_led_effects_8h_1a9d0f91360c87b851925bf05be5352435" compoundref="_led_effects_8c" startline="442" endline="481">initrainbow</referencedby>
+        <referencedby refid="_led_effects_8h_1a1c5e6b0f45c1787c25f8eafa8b9c6247" compoundref="_led_effects_8c" startline="118" endline="125">resetstribe</referencedby>
+        <referencedby refid="_led_effects_8h_1a2d54d1a6c61fe667b7c68ff04a11c503" compoundref="_led_effects_8c" startline="96" endline="111">setfullcolor</referencedby>
+        <referencedby refid="_lightstribe_8h_1abba9462833e30ef725eaf18c3d01eb71" compoundref="_lightstribe_8c" startline="51" endline="81">setled</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structcolor24bit_1a90d21fa503b626c00cdc8d94863d5877" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t green</definition>
+        <argsstring></argsstring>
+        <name>green</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>8 Bit green </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Lightstribe.h" line="18" column="1" bodyfile="Lightstribe.h" bodystart="18" bodyend="-1"/>
+        <referencedby refid="_lightstribe_8h_1a63fa595d401f0e85c1bba55ba2b1d66e" compoundref="_lightstribe_8c" startline="33" endline="41">changeled</referencedby>
+        <referencedby refid="_led_effects_8h_1a55291315ab0f2ca8d508f0e9da1920a7" compoundref="_led_effects_8c" startline="45" endline="65">colorconv8to24</referencedby>
+        <referencedby refid="_led_effects_8h_1a71d3b2ff21a63b48a01461e74be0c2b8" compoundref="_led_effects_8c" startline="366" endline="428">faden</referencedby>
+        <referencedby refid="_led_effects_8h_1a9d0f91360c87b851925bf05be5352435" compoundref="_led_effects_8c" startline="442" endline="481">initrainbow</referencedby>
+        <referencedby refid="_led_effects_8h_1a1c5e6b0f45c1787c25f8eafa8b9c6247" compoundref="_led_effects_8c" startline="118" endline="125">resetstribe</referencedby>
+        <referencedby refid="_led_effects_8h_1a2d54d1a6c61fe667b7c68ff04a11c503" compoundref="_led_effects_8c" startline="96" endline="111">setfullcolor</referencedby>
+        <referencedby refid="_lightstribe_8h_1abba9462833e30ef725eaf18c3d01eb71" compoundref="_lightstribe_8c" startline="51" endline="81">setled</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structcolor24bit_1a287b397e90d7b995c81ff54e741f96b2" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t blue</definition>
+        <argsstring></argsstring>
+        <name>blue</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>8 Bit blue </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Lightstribe.h" line="19" column="1" bodyfile="Lightstribe.h" bodystart="19" bodyend="-1"/>
+        <referencedby refid="_lightstribe_8h_1a63fa595d401f0e85c1bba55ba2b1d66e" compoundref="_lightstribe_8c" startline="33" endline="41">changeled</referencedby>
+        <referencedby refid="_led_effects_8h_1a55291315ab0f2ca8d508f0e9da1920a7" compoundref="_led_effects_8c" startline="45" endline="65">colorconv8to24</referencedby>
+        <referencedby refid="_led_effects_8h_1a71d3b2ff21a63b48a01461e74be0c2b8" compoundref="_led_effects_8c" startline="366" endline="428">faden</referencedby>
+        <referencedby refid="_led_effects_8h_1a9d0f91360c87b851925bf05be5352435" compoundref="_led_effects_8c" startline="442" endline="481">initrainbow</referencedby>
+        <referencedby refid="_led_effects_8h_1a1c5e6b0f45c1787c25f8eafa8b9c6247" compoundref="_led_effects_8c" startline="118" endline="125">resetstribe</referencedby>
+        <referencedby refid="_led_effects_8h_1a2d54d1a6c61fe667b7c68ff04a11c503" compoundref="_led_effects_8c" startline="96" endline="111">setfullcolor</referencedby>
+        <referencedby refid="_lightstribe_8h_1abba9462833e30ef725eaf18c3d01eb71" compoundref="_lightstribe_8c" startline="51" endline="81">setled</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>24 Bit color structure RGB 8-8-8 </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Lightstribe.h" line="16" column="1" bodyfile="Lightstribe.h" bodystart="16" bodyend="20"/>
+    <listofallmembers>
+      <member refid="structcolor24bit_1a287b397e90d7b995c81ff54e741f96b2" prot="public" virt="non-virtual"><scope>color24bit</scope><name>blue</name></member>
+      <member refid="structcolor24bit_1a90d21fa503b626c00cdc8d94863d5877" prot="public" virt="non-virtual"><scope>color24bit</scope><name>green</name></member>
+      <member refid="structcolor24bit_1ad47d918910aaa51c73160ac85999d09c" prot="public" virt="non-virtual"><scope>color24bit</scope><name>red</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

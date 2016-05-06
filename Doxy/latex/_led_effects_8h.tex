@@ -27,7 +27,7 @@ file that contains different effect definitions for the lightstribe
 \hypertarget{_led_effects_8h_a6b71fe4d23960c3701fc935a3368a6cc}{}\#define \hyperlink{_led_effects_8h_a6b71fe4d23960c3701fc935a3368a6cc}{R\+E\+C\+O\+L\+O\+R}~7\label{_led_effects_8h_a6b71fe4d23960c3701fc935a3368a6cc}
 
 \begin{DoxyCompactList}\small\item\em define for the recolor effect, used for main switch \end{DoxyCompactList}\item 
-\hypertarget{_led_effects_8h_ac64e9d348f9ff60935a2275f477020dc}{}\#define \hyperlink{_led_effects_8h_ac64e9d348f9ff60935a2275f477020dc}{F\+A\+D\+E\+N}~8\label{_led_effects_8h_ac64e9d348f9ff60935a2275f477020dc}
+\hypertarget{_led_effects_8h_ad8150289b0e08f01126500379852a2a7}{}\#define \hyperlink{_led_effects_8h_ad8150289b0e08f01126500379852a2a7}{F\+A\+D\+E}~8\label{_led_effects_8h_ad8150289b0e08f01126500379852a2a7}
 
 \begin{DoxyCompactList}\small\item\em define for the fade effect, used for main switch \end{DoxyCompactList}\item 
 \hypertarget{_led_effects_8h_a2805176df86592658ae06a508a558720}{}\#define \hyperlink{_led_effects_8h_a2805176df86592658ae06a508a558720}{I\+N\+I\+T\+R\+A\+I\+N\+B\+O\+W}~9\label{_led_effects_8h_a2805176df86592658ae06a508a558720}
@@ -134,6 +134,14 @@ No need to run transmit2leds afterwards! This is already done in the function.
 
 Definition at line \hyperlink{_led_effects_8c_source_l00278}{278} of file \hyperlink{_led_effects_8c_source}{Led\+Effects.\+c}.
 
+
+
+References \hyperlink{_led_effects_8c_source_l00072}{effectdelay()}, \hyperlink{globals_8h_source_l00027}{effectime}, \hyperlink{_led_effects_8c_source_l00118}{resetstribe()}, \hyperlink{_led_effects_8c_source_l00096}{setfullcolor()}, and \hyperlink{_lightstribe_8c_source_l00096}{transmit2leds()}.
+
+
+
+Referenced by \hyperlink{ws2811lichterkette_8c_source_l00249}{main()}.
+
 \hypertarget{_led_effects_8h_a55291315ab0f2ca8d508f0e9da1920a7}{}\index{Led\+Effects.\+h@{Led\+Effects.\+h}!colorconv8to24@{colorconv8to24}}
 \index{colorconv8to24@{colorconv8to24}!Led\+Effects.\+h@{Led\+Effects.\+h}}
 \paragraph[{colorconv8to24(uint8\+\_\+t startcolor)}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf color24bit} colorconv8to24 (
@@ -160,6 +168,14 @@ This function converts the 8 Bit color to a 24 Bit color depending on the ledtyp
 
 Definition at line \hyperlink{_led_effects_8c_source_l00045}{45} of file \hyperlink{_led_effects_8c_source}{Led\+Effects.\+c}.
 
+
+
+References \hyperlink{_lightstribe_8h_source_l00019}{color24bit\+::blue}, \hyperlink{_lightstribe_8h_source_l00018}{color24bit\+::green}, \hyperlink{globals_8h_source_l00029}{ledtype}, \hyperlink{_led_effects_8c_source_l00033}{map()}, and \hyperlink{_lightstribe_8h_source_l00017}{color24bit\+::red}.
+
+
+
+Referenced by \hyperlink{_led_effects_8c_source_l00514}{easteregg()}, and \hyperlink{ws2811lichterkette_8c_source_l00249}{main()}.
+
 \hypertarget{_led_effects_8h_a25e09bcb1481b20ebc2a27e7098b5115}{}\index{Led\+Effects.\+h@{Led\+Effects.\+h}!easteregg@{easteregg}}
 \index{easteregg@{easteregg}!Led\+Effects.\+h@{Led\+Effects.\+h}}
 \paragraph[{easteregg(uint8\+\_\+t $\ast$lightdata)}]{\setlength{\rightskip}{0pt plus 5cm}void easteregg (
@@ -185,6 +201,14 @@ Just try it \+:-\/) funny looking effect
 
 
 Definition at line \hyperlink{_led_effects_8c_source_l00514}{514} of file \hyperlink{_led_effects_8c_source}{Led\+Effects.\+c}.
+
+
+
+References \hyperlink{_led_effects_8c_source_l00045}{colorconv8to24()}, \hyperlink{_led_effects_8c_source_l00489}{eastereggbase()}, and \hyperlink{globals_8h_source_l00053}{Packet\+Complete}.
+
+
+
+Referenced by \hyperlink{ws2811lichterkette_8c_source_l00249}{main()}.
 
 \hypertarget{_led_effects_8h_ac83bd19da7ebd3c475e3667e4229db41}{}\index{Led\+Effects.\+h@{Led\+Effects.\+h}!eastereggbase@{eastereggbase}}
 \index{eastereggbase@{eastereggbase}!Led\+Effects.\+h@{Led\+Effects.\+h}}
@@ -215,6 +239,14 @@ Do not use this function directly; this function is used by the easteregg functi
 
 Definition at line \hyperlink{_led_effects_8c_source_l00489}{489} of file \hyperlink{_led_effects_8c_source}{Led\+Effects.\+c}.
 
+
+
+References \hyperlink{_lightstribe_8c_source_l00033}{changeled()}, \hyperlink{_led_effects_8c_source_l00072}{effectdelay()}, \hyperlink{globals_8h_source_l00027}{effectime}, \hyperlink{globals_8h_source_l00025}{Num\+Of\+Leds}, \hyperlink{globals_8h_source_l00053}{Packet\+Complete}, \hyperlink{_led_effects_8c_source_l00138}{rotate()}, and \hyperlink{_lightstribe_8c_source_l00096}{transmit2leds()}.
+
+
+
+Referenced by \hyperlink{_led_effects_8c_source_l00514}{easteregg()}.
+
 \hypertarget{_led_effects_8h_a6950e7657ba74d0d490ba36427533c4b}{}\index{Led\+Effects.\+h@{Led\+Effects.\+h}!effectdelay@{effectdelay}}
 \index{effectdelay@{effectdelay}!Led\+Effects.\+h@{Led\+Effects.\+h}}
 \paragraph[{effectdelay(uint16\+\_\+t delay)}]{\setlength{\rightskip}{0pt plus 5cm}void effectdelay (
@@ -240,6 +272,14 @@ This function is just a variable delay, there is no coherence with a concrete ti
 
 
 Definition at line \hyperlink{_led_effects_8c_source_l00072}{72} of file \hyperlink{_led_effects_8c_source}{Led\+Effects.\+c}.
+
+
+
+References \hyperlink{globals_8h_source_l00053}{Packet\+Complete}.
+
+
+
+Referenced by \hyperlink{_led_effects_8c_source_l00278}{blinkled()}, \hyperlink{_led_effects_8c_source_l00489}{eastereggbase()}, \hyperlink{_led_effects_8c_source_l00366}{faden()}, \hyperlink{_led_effects_8c_source_l00549}{fillup()}, \hyperlink{ws2811lichterkette_8c_source_l00249}{main()}, \hyperlink{_led_effects_8c_source_l00340}{recolor()}, \hyperlink{_led_effects_8c_source_l00323}{run\+\_\+alternating()}, and \hyperlink{_led_effects_8c_source_l00236}{runrunled()}.
 
 \hypertarget{_led_effects_8h_a71d3b2ff21a63b48a01461e74be0c2b8}{}\index{Led\+Effects.\+h@{Led\+Effects.\+h}!faden@{faden}}
 \index{faden@{faden}!Led\+Effects.\+h@{Led\+Effects.\+h}}
@@ -269,6 +309,14 @@ No need to run transmit2leds afterwards! The effect is standalone and ends is lo
 
 
 Definition at line \hyperlink{_led_effects_8c_source_l00366}{366} of file \hyperlink{_led_effects_8c_source}{Led\+Effects.\+c}.
+
+
+
+References \hyperlink{_lightstribe_8h_source_l00019}{color24bit\+::blue}, \hyperlink{_led_effects_8c_source_l00072}{effectdelay()}, \hyperlink{globals_8h_source_l00027}{effectime}, \hyperlink{_lightstribe_8h_source_l00018}{color24bit\+::green}, \hyperlink{globals_8h_source_l00053}{Packet\+Complete}, \hyperlink{_lightstribe_8h_source_l00017}{color24bit\+::red}, \hyperlink{_led_effects_8c_source_l00096}{setfullcolor()}, and \hyperlink{_lightstribe_8c_source_l00096}{transmit2leds()}.
+
+
+
+Referenced by \hyperlink{ws2811lichterkette_8c_source_l00249}{main()}.
 
 \hypertarget{_led_effects_8h_a99174e2b381d7ec6667d29352e6eca1b}{}\index{Led\+Effects.\+h@{Led\+Effects.\+h}!fillup@{fillup}}
 \index{fillup@{fillup}!Led\+Effects.\+h@{Led\+Effects.\+h}}
@@ -302,6 +350,14 @@ This is a standalone effect.
 
 Definition at line \hyperlink{_led_effects_8c_source_l00549}{549} of file \hyperlink{_led_effects_8c_source}{Led\+Effects.\+c}.
 
+
+
+References \hyperlink{_lightstribe_8c_source_l00033}{changeled()}, \hyperlink{_led_effects_8c_source_l00072}{effectdelay()}, \hyperlink{globals_8h_source_l00027}{effectime}, \hyperlink{globals_8h_source_l00025}{Num\+Of\+Leds}, \hyperlink{globals_8h_source_l00053}{Packet\+Complete}, and \hyperlink{_lightstribe_8c_source_l00096}{transmit2leds()}.
+
+
+
+Referenced by \hyperlink{ws2811lichterkette_8c_source_l00249}{main()}.
+
 \hypertarget{_led_effects_8h_af67b7638a175e4971f25df5a5db3d8d0}{}\index{Led\+Effects.\+h@{Led\+Effects.\+h}!init\+\_\+alternating@{init\+\_\+alternating}}
 \index{init\+\_\+alternating@{init\+\_\+alternating}!Led\+Effects.\+h@{Led\+Effects.\+h}}
 \paragraph[{init\+\_\+alternating(struct color24bit color, struct color24bit backcolor, uint8\+\_\+t $\ast$lightdata)}]{\setlength{\rightskip}{0pt plus 5cm}void init\+\_\+alternating (
@@ -334,6 +390,14 @@ Run run\+\_\+alternating afterwards to start the effect!
 
 Definition at line \hyperlink{_led_effects_8c_source_l00300}{300} of file \hyperlink{_led_effects_8c_source}{Led\+Effects.\+c}.
 
+
+
+References \hyperlink{_lightstribe_8c_source_l00033}{changeled()}, \hyperlink{globals_8h_source_l00025}{Num\+Of\+Leds}, and \hyperlink{_led_effects_8c_source_l00096}{setfullcolor()}.
+
+
+
+Referenced by \hyperlink{ws2811lichterkette_8c_source_l00249}{main()}.
+
 \hypertarget{_led_effects_8h_a9d0f91360c87b851925bf05be5352435}{}\index{Led\+Effects.\+h@{Led\+Effects.\+h}!initrainbow@{initrainbow}}
 \index{initrainbow@{initrainbow}!Led\+Effects.\+h@{Led\+Effects.\+h}}
 \paragraph[{initrainbow(uint8\+\_\+t $\ast$lightdata)}]{\setlength{\rightskip}{0pt plus 5cm}void initrainbow (
@@ -359,6 +423,14 @@ Run transmit2leds afterwards! A nice effect is to rotate the array stepwise afte
 
 
 Definition at line \hyperlink{_led_effects_8c_source_l00442}{442} of file \hyperlink{_led_effects_8c_source}{Led\+Effects.\+c}.
+
+
+
+References \hyperlink{_lightstribe_8h_source_l00019}{color24bit\+::blue}, \hyperlink{_lightstribe_8c_source_l00033}{changeled()}, \hyperlink{_lightstribe_8h_source_l00018}{color24bit\+::green}, \hyperlink{globals_8h_source_l00025}{Num\+Of\+Leds}, and \hyperlink{_lightstribe_8h_source_l00017}{color24bit\+::red}.
+
+
+
+Referenced by \hyperlink{ws2811lichterkette_8c_source_l00249}{main()}.
 
 \hypertarget{_led_effects_8h_aecba07ab559ab94e6f44c16e39012d80}{}\index{Led\+Effects.\+h@{Led\+Effects.\+h}!initrunled@{initrunled}}
 \index{initrunled@{initrunled}!Led\+Effects.\+h@{Led\+Effects.\+h}}
@@ -391,6 +463,14 @@ Run runrunled afterwards to start the effect!
 
 
 Definition at line \hyperlink{_led_effects_8c_source_l00217}{217} of file \hyperlink{_led_effects_8c_source}{Led\+Effects.\+c}.
+
+
+
+References \hyperlink{_lightstribe_8c_source_l00033}{changeled()}, and \hyperlink{_led_effects_8c_source_l00096}{setfullcolor()}.
+
+
+
+Referenced by \hyperlink{ws2811lichterkette_8c_source_l00249}{main()}.
 
 \hypertarget{_led_effects_8h_ad67a4e660b5122ed454e101432bbdba0}{}\index{Led\+Effects.\+h@{Led\+Effects.\+h}!map@{map}}
 \index{map@{map}!Led\+Effects.\+h@{Led\+Effects.\+h}}
@@ -430,6 +510,10 @@ This function is used for color conversion from 8 Bit to 24 Bit colors; How it w
 
 Definition at line \hyperlink{_led_effects_8c_source_l00033}{33} of file \hyperlink{_led_effects_8c_source}{Led\+Effects.\+c}.
 
+
+
+Referenced by \hyperlink{_led_effects_8c_source_l00045}{colorconv8to24()}.
+
 \hypertarget{_led_effects_8h_a448758d76f47ea6fed4beb349196363f}{}\index{Led\+Effects.\+h@{Led\+Effects.\+h}!recolor@{recolor}}
 \index{recolor@{recolor}!Led\+Effects.\+h@{Led\+Effects.\+h}}
 \paragraph[{recolor(struct color24bit color, uint8\+\_\+t $\ast$lightdata)}]{\setlength{\rightskip}{0pt plus 5cm}void recolor (
@@ -459,6 +543,14 @@ No need to run transmit2leds afterwards! The effect is standalone and ends if th
 
 Definition at line \hyperlink{_led_effects_8c_source_l00340}{340} of file \hyperlink{_led_effects_8c_source}{Led\+Effects.\+c}.
 
+
+
+References \hyperlink{_lightstribe_8c_source_l00033}{changeled()}, \hyperlink{_led_effects_8c_source_l00072}{effectdelay()}, \hyperlink{globals_8h_source_l00027}{effectime}, \hyperlink{globals_8h_source_l00025}{Num\+Of\+Leds}, \hyperlink{globals_8h_source_l00053}{Packet\+Complete}, and \hyperlink{_lightstribe_8c_source_l00096}{transmit2leds()}.
+
+
+
+Referenced by \hyperlink{ws2811lichterkette_8c_source_l00249}{main()}.
+
 \hypertarget{_led_effects_8h_a1c5e6b0f45c1787c25f8eafa8b9c6247}{}\index{Led\+Effects.\+h@{Led\+Effects.\+h}!resetstribe@{resetstribe}}
 \index{resetstribe@{resetstribe}!Led\+Effects.\+h@{Led\+Effects.\+h}}
 \paragraph[{resetstribe(uint8\+\_\+t $\ast$lightdata)}]{\setlength{\rightskip}{0pt plus 5cm}void resetstribe (
@@ -484,6 +576,14 @@ This function sets the lightdata array to 0x00. To update the stribe run transmi
 
 
 Definition at line \hyperlink{_led_effects_8c_source_l00118}{118} of file \hyperlink{_led_effects_8c_source}{Led\+Effects.\+c}.
+
+
+
+References \hyperlink{_lightstribe_8h_source_l00019}{color24bit\+::blue}, \hyperlink{_lightstribe_8h_source_l00018}{color24bit\+::green}, \hyperlink{_lightstribe_8h_source_l00017}{color24bit\+::red}, and \hyperlink{_led_effects_8c_source_l00096}{setfullcolor()}.
+
+
+
+Referenced by \hyperlink{_led_effects_8c_source_l00278}{blinkled()}.
 
 \hypertarget{_led_effects_8h_afd64325b08e785d37b4dfaf358e517f0}{}\index{Led\+Effects.\+h@{Led\+Effects.\+h}!rotate@{rotate}}
 \index{rotate@{rotate}!Led\+Effects.\+h@{Led\+Effects.\+h}}
@@ -513,6 +613,14 @@ This function rotates lightdata array. To update the stribe run transmit2leds af
 
 
 Definition at line \hyperlink{_led_effects_8c_source_l00138}{138} of file \hyperlink{_led_effects_8c_source}{Led\+Effects.\+c}.
+
+
+
+References \hyperlink{globals_8h_source_l00025}{Num\+Of\+Leds}.
+
+
+
+Referenced by \hyperlink{_led_effects_8c_source_l00489}{eastereggbase()}, \hyperlink{ws2811lichterkette_8c_source_l00249}{main()}, \hyperlink{_led_effects_8c_source_l00196}{rotate\+N()}, \hyperlink{_led_effects_8c_source_l00323}{run\+\_\+alternating()}, and \hyperlink{_led_effects_8c_source_l00236}{runrunled()}.
 
 \hypertarget{_led_effects_8h_a1fa5e03cb24195a46dcdc5948f596181}{}\index{Led\+Effects.\+h@{Led\+Effects.\+h}!rotate\+N@{rotate\+N}}
 \index{rotate\+N@{rotate\+N}!Led\+Effects.\+h@{Led\+Effects.\+h}}
@@ -546,6 +654,10 @@ This function rotates lightdata array. To update the stribe run transmit2leds af
 
 Definition at line \hyperlink{_led_effects_8c_source_l00196}{196} of file \hyperlink{_led_effects_8c_source}{Led\+Effects.\+c}.
 
+
+
+References \hyperlink{_led_effects_8c_source_l00138}{rotate()}.
+
 \hypertarget{_led_effects_8h_a5bde1e9e7fc19a9916f1ec02d8fbcd6c}{}\index{Led\+Effects.\+h@{Led\+Effects.\+h}!run\+\_\+alternating@{run\+\_\+alternating}}
 \index{run\+\_\+alternating@{run\+\_\+alternating}!Led\+Effects.\+h@{Led\+Effects.\+h}}
 \paragraph[{run\+\_\+alternating(uint8\+\_\+t $\ast$lightdata)}]{\setlength{\rightskip}{0pt plus 5cm}void run\+\_\+alternating (
@@ -571,6 +683,14 @@ No need to run transmit2leds afterwards! The effect is generated by the main whi
 
 
 Definition at line \hyperlink{_led_effects_8c_source_l00323}{323} of file \hyperlink{_led_effects_8c_source}{Led\+Effects.\+c}.
+
+
+
+References \hyperlink{_led_effects_8c_source_l00072}{effectdelay()}, \hyperlink{globals_8h_source_l00027}{effectime}, \hyperlink{_led_effects_8c_source_l00138}{rotate()}, and \hyperlink{_lightstribe_8c_source_l00096}{transmit2leds()}.
+
+
+
+Referenced by \hyperlink{ws2811lichterkette_8c_source_l00249}{main()}.
 
 \hypertarget{_led_effects_8h_a35cfbfc36c975f98a7779a37b6ff63ce}{}\index{Led\+Effects.\+h@{Led\+Effects.\+h}!runrunled@{runrunled}}
 \index{runrunled@{runrunled}!Led\+Effects.\+h@{Led\+Effects.\+h}}
@@ -601,6 +721,14 @@ No need to run transmit2leds afterwards! This is already done in the function. T
 
 Definition at line \hyperlink{_led_effects_8c_source_l00236}{236} of file \hyperlink{_led_effects_8c_source}{Led\+Effects.\+c}.
 
+
+
+References \hyperlink{_led_effects_8c_source_l00072}{effectdelay()}, \hyperlink{globals_8h_source_l00027}{effectime}, \hyperlink{globals_8h_source_l00025}{Num\+Of\+Leds}, \hyperlink{globals_8h_source_l00053}{Packet\+Complete}, \hyperlink{_led_effects_8c_source_l00138}{rotate()}, and \hyperlink{_lightstribe_8c_source_l00096}{transmit2leds()}.
+
+
+
+Referenced by \hyperlink{ws2811lichterkette_8c_source_l00249}{main()}.
+
 \hypertarget{_led_effects_8h_a2d54d1a6c61fe667b7c68ff04a11c503}{}\index{Led\+Effects.\+h@{Led\+Effects.\+h}!setfullcolor@{setfullcolor}}
 \index{setfullcolor@{setfullcolor}!Led\+Effects.\+h@{Led\+Effects.\+h}}
 \paragraph[{setfullcolor(struct color24bit color, uint8\+\_\+t $\ast$lightdata)}]{\setlength{\rightskip}{0pt plus 5cm}void setfullcolor (
@@ -629,4 +757,12 @@ This function sets the lightdata array. To update the stribe run transmit2leds a
 
 
 Definition at line \hyperlink{_led_effects_8c_source_l00096}{96} of file \hyperlink{_led_effects_8c_source}{Led\+Effects.\+c}.
+
+
+
+References \hyperlink{_lightstribe_8h_source_l00019}{color24bit\+::blue}, \hyperlink{_lightstribe_8h_source_l00018}{color24bit\+::green}, \hyperlink{globals_8h_source_l00025}{Num\+Of\+Leds}, and \hyperlink{_lightstribe_8h_source_l00017}{color24bit\+::red}.
+
+
+
+Referenced by \hyperlink{_led_effects_8c_source_l00278}{blinkled()}, \hyperlink{_led_effects_8c_source_l00366}{faden()}, \hyperlink{_led_effects_8c_source_l00300}{init\+\_\+alternating()}, \hyperlink{_led_effects_8c_source_l00217}{initrunled()}, \hyperlink{ws2811lichterkette_8c_source_l00249}{main()}, and \hyperlink{_led_effects_8c_source_l00118}{resetstribe()}.
 

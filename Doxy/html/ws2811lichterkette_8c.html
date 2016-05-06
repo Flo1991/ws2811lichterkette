@@ -138,7 +138,7 @@ Macros</h2></td></tr>
 <tr class="separator:a77366c1bd428629dc898e188bfd182a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a62634036639f88eece6fbf226b45f84b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a62634036639f88eece6fbf226b45f84b"></a>
 #define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ws2811lichterkette_8c.html#a62634036639f88eece6fbf226b45f84b">BAUD</a>&#160;&#160;&#160;38400</td></tr>
-<tr class="memdesc:a62634036639f88eece6fbf226b45f84b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Baudrate definition, choose 76800 or 38400, faster value prefered, the maximum speed of ESP8266 software-UART is 38400. <br /></td></tr>
+<tr class="memdesc:a62634036639f88eece6fbf226b45f84b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Baudrate definition, choose 76800 or 38400, faster value preferred, the maximum speed of ESP8266 software-UART is 38400. <br /></td></tr>
 <tr class="separator:a62634036639f88eece6fbf226b45f84b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a711e9130c825a7269c8c87dbb57a85e0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a711e9130c825a7269c8c87dbb57a85e0"></a>
 #define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ws2811lichterkette_8c.html#a711e9130c825a7269c8c87dbb57a85e0">MYUBRR</a>&#160;&#160;&#160;<a class="el" href="globals_8h.html#a43bafb28b29491ec7f871319b5a3b2f8">F_CPU</a>/16/<a class="el" href="ws2811lichterkette_8c.html#a62634036639f88eece6fbf226b45f84b">BAUD</a> -1</td></tr>
@@ -224,7 +224,11 @@ int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ws281
 <dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
 <dl class="section note"><dt>Note</dt><dd>This function depends on the oscillator clock frequency and the <a class="el" href="ws2811lichterkette_8c.html#a62634036639f88eece6fbf226b45f84b">BAUD</a> defintion. If your UART is not working first check all frequency issues (Fuse settings, clock speed, clock divider, Baudrate) </dd></dl>
 
-<p>Definition at line <a class="el" href="ws2811lichterkette_8c_source.html#l00174">174</a> of file <a class="el" href="ws2811lichterkette_8c_source.html">ws2811lichterkette.c</a>.</p>
+<p>Definition at line <a class="el" href="ws2811lichterkette_8c_source.html#l00234">234</a> of file <a class="el" href="ws2811lichterkette_8c_source.html">ws2811lichterkette.c</a>.</p>
+
+<p>References <a class="el" href="ws2811lichterkette_8c_source.html#l00194">MYUBRR</a>.</p>
+
+<p>Referenced by <a class="el" href="ws2811lichterkette_8c_source.html#l00249">main()</a>.</p>
 
 </div>
 </div>
@@ -234,7 +238,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ws281
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="ws2811lichterkette_8c.html">ws2811lichterkette.c</a></li>
-    <li class="footer">Generated on Thu May 5 2016 13:11:01 for Lightstribe WS2811/WS2812 by
+    <li class="footer">Generated on Fri May 6 2016 14:10:35 for Lightstribe WS2811/WS2812 by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.10 </li>
   </ul>

@@ -1,0 +1,395 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.10">
+  <compounddef id="globals_8h" kind="file" language="C++">
+    <compoundname>globals.h</compoundname>
+    <includes local="no">stdint.h</includes>
+    <includedby refid="_led_effects_8c" local="yes">LedEffects.c</includedby>
+    <includedby refid="_lightstribe_8c" local="yes">Lightstribe.c</includedby>
+    <includedby refid="ws2811lichterkette_8c" local="yes">ws2811lichterkette.c</includedby>
+    <incdepgraph>
+      <node id="0">
+        <label>globals.h</label>
+        <link refid="globals.h"/>
+        <childnode refid="1" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>stdint.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="4">
+        <label>Lightstribe.c</label>
+        <link refid="_lightstribe_8c"/>
+      </node>
+      <node id="2">
+        <label>globals.h</label>
+        <link refid="globals.h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>ws2811lichterkette.c</label>
+        <link refid="ws2811lichterkette_8c"/>
+      </node>
+      <node id="3">
+        <label>LedEffects.c</label>
+        <link refid="_led_effects_8c"/>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="globals_8h_1a9b1581d45c3729eba4966b893457d148" prot="public" static="no">
+        <name>_STR_EXPAND</name>
+        <param><defname>tok</defname></param>
+        <initializer>#tok</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="globals.h" line="15" column="9" bodyfile="globals.h" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="globals_8h_1a3976b857dc3fc0e3627b3a6b28062299" prot="public" static="no">
+        <name>_STR</name>
+        <param><defname>tok</defname></param>
+        <initializer>_STR_EXPAND(tok)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="globals.h" line="16" column="9" bodyfile="globals.h" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="globals_8h_1a1190af2e5eb5d640bf7e59588deddddf" prot="public" static="no">
+        <name>_CPU_INFO</name>
+        <param><defname>x</defname></param>
+        <initializer>CPU_FREQUENCY##x</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="globals.h" line="17" column="9" bodyfile="globals.h" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="globals_8h_1a77366c1bd428629dc898e188bfd182a3" prot="public" static="no">
+        <name>EXTERN</name>
+        <initializer>extern</initializer>
+        <briefdescription>
+<para>macro for global variable management </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="globals.h" line="21" column="9" bodyfile="globals.h" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="globals_8h_1af07a5ce170c7be13d096843960e7b9da" prot="public" static="no">
+        <name>BASELEDTYPE</name>
+        <initializer>11</initializer>
+        <briefdescription>
+<para>default LED type of the stribe (11 for WS2811, do not change here! change ledtype in main function!) </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="globals.h" line="31" column="9" bodyfile="globals.h" bodystart="31" bodyend="-1"/>
+        <referencedby refid="ws2811lichterkette_8c_1a840291bc02cba5474a4cb46a9b9566fe" compoundref="ws2811lichterkette_8c" startline="244" endline="367">main</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="globals_8h_1a6e2b9e79df9491377ae405ef85aa0ca5" prot="public" static="no">
+        <name>MAXNUMCOLORS</name>
+        <initializer>50</initializer>
+        <briefdescription>
+<para>definition for maximum number of different colors that can be handled at the same time (the maximum value should be 250, a higher value may result in an memory overflow refering to 2kByte (atmega328p)) </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="globals.h" line="35" column="9" bodyfile="globals.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="globals_8h_1a0d57378e32bf8278011460740bc29f7f" prot="public" static="no">
+        <name>UART_BUFFER_SIZE</name>
+        <initializer>80</initializer>
+        <briefdescription>
+<para>definition for UART Buffer, must be at least MAXNUMCOLORS+5 </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="globals.h" line="37" column="9" bodyfile="globals.h" bodystart="37" bodyend="-1"/>
+        <referencedby refid="ws2811lichterkette_8c_1a840291bc02cba5474a4cb46a9b9566fe" compoundref="ws2811lichterkette_8c" startline="244" endline="367">main</referencedby>
+        <referencedby refid="ws2811lichterkette_8c_1a09ce999e15ad60b8a3f07d08af1946f9" compoundref="ws2811lichterkette_8c" startline="371" endline="393">ISR</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="globals_8h_1a43bafb28b29491ec7f871319b5a3b2f8" prot="public" static="no">
+        <name>F_CPU</name>
+        <initializer>8000000</initializer>
+        <briefdescription>
+<para>CPU Frequency definition for avr delay function. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="globals.h" line="63" column="9" bodyfile="globals.h" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="globals_8h_1ad5db4045aed262ed4aae2af9d81fab98" prot="public" static="no" mutable="no">
+        <type><ref refid="globals_8h_1a77366c1bd428629dc898e188bfd182a3" kindref="member">EXTERN</ref> uint8_t</type>
+        <definition>EXTERN uint8_t NumOfLeds</definition>
+        <argsstring></argsstring>
+        <name>NumOfLeds</name>
+        <briefdescription>
+<para>global variable for number of leds to control </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="globals.h" line="25" column="1" bodyfile="globals.h" bodystart="25" bodyend="-1"/>
+        <referencedby refid="_led_effects_8h_1a2d54d1a6c61fe667b7c68ff04a11c503" compoundref="_led_effects_8c" startline="96" endline="111">setfullcolor</referencedby>
+        <referencedby refid="_led_effects_8h_1afd64325b08e785d37b4dfaf358e517f0" compoundref="_led_effects_8c" startline="138" endline="182">rotate</referencedby>
+        <referencedby refid="_led_effects_8h_1a35cfbfc36c975f98a7779a37b6ff63ce" compoundref="_led_effects_8c" startline="236" endline="267">runrunled</referencedby>
+        <referencedby refid="_led_effects_8h_1af67b7638a175e4971f25df5a5db3d8d0" compoundref="_led_effects_8c" startline="300" endline="311">init_alternating</referencedby>
+        <referencedby refid="_led_effects_8h_1a448758d76f47ea6fed4beb349196363f" compoundref="_led_effects_8c" startline="340" endline="351">recolor</referencedby>
+        <referencedby refid="_led_effects_8h_1a9d0f91360c87b851925bf05be5352435" compoundref="_led_effects_8c" startline="442" endline="481">initrainbow</referencedby>
+        <referencedby refid="_led_effects_8h_1ac83bd19da7ebd3c475e3667e4229db41" compoundref="_led_effects_8c" startline="489" endline="507">eastereggbase</referencedby>
+        <referencedby refid="_led_effects_8h_1a99174e2b381d7ec6667d29352e6eca1b" compoundref="_led_effects_8c" startline="549" endline="568">fillup</referencedby>
+        <referencedby refid="_lightstribe_8h_1a63fa595d401f0e85c1bba55ba2b1d66e" compoundref="_lightstribe_8c" startline="33" endline="41">changeled</referencedby>
+        <referencedby refid="_lightstribe_8h_1abba9462833e30ef725eaf18c3d01eb71" compoundref="_lightstribe_8c" startline="51" endline="81">setled</referencedby>
+        <referencedby refid="_lightstribe_8h_1aac724dad670e4a26723daf71ce6a8d8a" compoundref="_lightstribe_8c" startline="96" endline="170">transmit2leds</referencedby>
+        <referencedby refid="ws2811lichterkette_8c_1a840291bc02cba5474a4cb46a9b9566fe" compoundref="ws2811lichterkette_8c" startline="244" endline="367">main</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="globals_8h_1ac2445d316b2972d381edeac44bb6a226" prot="public" static="no" mutable="no">
+        <type><ref refid="globals_8h_1a77366c1bd428629dc898e188bfd182a3" kindref="member">EXTERN</ref> uint16_t</type>
+        <definition>EXTERN uint16_t effectime</definition>
+        <argsstring></argsstring>
+        <name>effectime</name>
+        <briefdescription>
+<para>global effectime for effect delays, a higher value means a higher delay </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="globals.h" line="27" column="1" bodyfile="globals.h" bodystart="27" bodyend="-1"/>
+        <referencedby refid="_led_effects_8h_1a35cfbfc36c975f98a7779a37b6ff63ce" compoundref="_led_effects_8c" startline="236" endline="267">runrunled</referencedby>
+        <referencedby refid="_led_effects_8h_1a9fd87d01d5cc4ce5fce6ddca55ebaf37" compoundref="_led_effects_8c" startline="278" endline="288">blinkled</referencedby>
+        <referencedby refid="_led_effects_8h_1a5bde1e9e7fc19a9916f1ec02d8fbcd6c" compoundref="_led_effects_8c" startline="323" endline="328">run_alternating</referencedby>
+        <referencedby refid="_led_effects_8h_1a448758d76f47ea6fed4beb349196363f" compoundref="_led_effects_8c" startline="340" endline="351">recolor</referencedby>
+        <referencedby refid="_led_effects_8h_1a71d3b2ff21a63b48a01461e74be0c2b8" compoundref="_led_effects_8c" startline="366" endline="428">faden</referencedby>
+        <referencedby refid="_led_effects_8h_1ac83bd19da7ebd3c475e3667e4229db41" compoundref="_led_effects_8c" startline="489" endline="507">eastereggbase</referencedby>
+        <referencedby refid="_led_effects_8h_1a99174e2b381d7ec6667d29352e6eca1b" compoundref="_led_effects_8c" startline="549" endline="568">fillup</referencedby>
+        <referencedby refid="ws2811lichterkette_8c_1a840291bc02cba5474a4cb46a9b9566fe" compoundref="ws2811lichterkette_8c" startline="244" endline="367">main</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="globals_8h_1a722e1eb38b661d1338ada3cc7a4049a0" prot="public" static="no" mutable="no">
+        <type><ref refid="globals_8h_1a77366c1bd428629dc898e188bfd182a3" kindref="member">EXTERN</ref> uint8_t</type>
+        <definition>EXTERN uint8_t ledtype</definition>
+        <argsstring></argsstring>
+        <name>ledtype</name>
+        <briefdescription>
+<para>global ledtype, 11 = WS2811 (RGB Color), 12 = WS2812 (GRB Color) </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="globals.h" line="29" column="1" bodyfile="globals.h" bodystart="29" bodyend="-1"/>
+        <referencedby refid="_led_effects_8h_1a55291315ab0f2ca8d508f0e9da1920a7" compoundref="_led_effects_8c" startline="45" endline="65">colorconv8to24</referencedby>
+        <referencedby refid="ws2811lichterkette_8c_1a840291bc02cba5474a4cb46a9b9566fe" compoundref="ws2811lichterkette_8c" startline="244" endline="367">main</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="globals_8h_1a159854edb9d0c7283013495d85bdf997" prot="public" static="no" mutable="no">
+        <type><ref refid="globals_8h_1a77366c1bd428629dc898e188bfd182a3" kindref="member">EXTERN</ref> uint8_t</type>
+        <definition>EXTERN uint8_t CompColorArray[MAXNUMCOLORS]</definition>
+        <argsstring>[MAXNUMCOLORS]</argsstring>
+        <name>CompColorArray</name>
+        <briefdescription>
+<para>color array containing the received packed 8-Bit colors </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="globals.h" line="40" column="1" bodyfile="globals.h" bodystart="40" bodyend="-1"/>
+        <referencedby refid="ws2811lichterkette_8c_1a840291bc02cba5474a4cb46a9b9566fe" compoundref="ws2811lichterkette_8c" startline="244" endline="367">main</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="globals_8h_1a5d735865707e6694a8173d629e0b4d5c" prot="public" static="no" mutable="no">
+        <type><ref refid="globals_8h_1a77366c1bd428629dc898e188bfd182a3" kindref="member">EXTERN</ref> uint8_t</type>
+        <definition>EXTERN uint8_t RecBuffer[UART_BUFFER_SIZE]</definition>
+        <argsstring>[UART_BUFFER_SIZE]</argsstring>
+        <name>RecBuffer</name>
+        <briefdescription>
+<para>receive buffer for UART communication </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="globals.h" line="42" column="1" bodyfile="globals.h" bodystart="42" bodyend="-1"/>
+        <referencedby refid="ws2811lichterkette_8c_1a840291bc02cba5474a4cb46a9b9566fe" compoundref="ws2811lichterkette_8c" startline="244" endline="367">main</referencedby>
+        <referencedby refid="ws2811lichterkette_8c_1a09ce999e15ad60b8a3f07d08af1946f9" compoundref="ws2811lichterkette_8c" startline="371" endline="393">ISR</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="globals_8h_1aa6fcb4d4fca4554ac73bef10668c23cd" prot="public" static="no" mutable="no">
+        <type><ref refid="globals_8h_1a77366c1bd428629dc898e188bfd182a3" kindref="member">EXTERN</ref> uint8_t</type>
+        <definition>EXTERN uint8_t BufferCounter</definition>
+        <argsstring></argsstring>
+        <name>BufferCounter</name>
+        <briefdescription>
+<para>counter for accessing the CompColorArray indices for data income </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="globals.h" line="44" column="1" bodyfile="globals.h" bodystart="44" bodyend="-1"/>
+        <referencedby refid="ws2811lichterkette_8c_1a840291bc02cba5474a4cb46a9b9566fe" compoundref="ws2811lichterkette_8c" startline="244" endline="367">main</referencedby>
+        <referencedby refid="ws2811lichterkette_8c_1a09ce999e15ad60b8a3f07d08af1946f9" compoundref="ws2811lichterkette_8c" startline="371" endline="393">ISR</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="globals_8h_1aaa611e00c18e950be43a4cd5ce0ceeb1" prot="public" static="no" mutable="no">
+        <type><ref refid="globals_8h_1a77366c1bd428629dc898e188bfd182a3" kindref="member">EXTERN</ref> uint8_t</type>
+        <definition>EXTERN uint8_t DataLen</definition>
+        <argsstring></argsstring>
+        <name>DataLen</name>
+        <briefdescription>
+<para>variable to store the current packet length of the UART packet </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="globals.h" line="46" column="1" bodyfile="globals.h" bodystart="46" bodyend="-1"/>
+        <referencedby refid="ws2811lichterkette_8c_1a840291bc02cba5474a4cb46a9b9566fe" compoundref="ws2811lichterkette_8c" startline="244" endline="367">main</referencedby>
+        <referencedby refid="ws2811lichterkette_8c_1a09ce999e15ad60b8a3f07d08af1946f9" compoundref="ws2811lichterkette_8c" startline="371" endline="393">ISR</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="globals_8h_1a053b8e1f039c19251b90d60317db8aed" prot="public" static="no" mutable="no">
+        <type><ref refid="globals_8h_1a77366c1bd428629dc898e188bfd182a3" kindref="member">EXTERN</ref> uint8_t</type>
+        <definition>EXTERN uint8_t effect</definition>
+        <argsstring></argsstring>
+        <name>effect</name>
+        <briefdescription>
+<para>global effect variable to switch between the effects </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="globals.h" line="48" column="1" bodyfile="globals.h" bodystart="48" bodyend="-1"/>
+        <referencedby refid="ws2811lichterkette_8c_1a840291bc02cba5474a4cb46a9b9566fe" compoundref="ws2811lichterkette_8c" startline="244" endline="367">main</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="globals_8h_1a1b09d1a5bcf4c8ab435bb3c9e36def59" prot="public" static="no" mutable="no">
+        <type><ref refid="globals_8h_1a77366c1bd428629dc898e188bfd182a3" kindref="member">EXTERN</ref> uint8_t</type>
+        <definition>EXTERN uint8_t PacketComplete</definition>
+        <argsstring></argsstring>
+        <name>PacketComplete</name>
+        <briefdescription>
+<para>flag to store if a UART packet is complete; a packet is complete if the BufferCounter equals DataLen </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="globals.h" line="53" column="1" bodyfile="globals.h" bodystart="53" bodyend="-1"/>
+        <referencedby refid="_led_effects_8h_1a6950e7657ba74d0d490ba36427533c4b" compoundref="_led_effects_8c" startline="72" endline="88">effectdelay</referencedby>
+        <referencedby refid="_led_effects_8h_1a35cfbfc36c975f98a7779a37b6ff63ce" compoundref="_led_effects_8c" startline="236" endline="267">runrunled</referencedby>
+        <referencedby refid="_led_effects_8h_1a448758d76f47ea6fed4beb349196363f" compoundref="_led_effects_8c" startline="340" endline="351">recolor</referencedby>
+        <referencedby refid="_led_effects_8h_1a71d3b2ff21a63b48a01461e74be0c2b8" compoundref="_led_effects_8c" startline="366" endline="428">faden</referencedby>
+        <referencedby refid="_led_effects_8h_1ac83bd19da7ebd3c475e3667e4229db41" compoundref="_led_effects_8c" startline="489" endline="507">eastereggbase</referencedby>
+        <referencedby refid="_led_effects_8h_1a25e09bcb1481b20ebc2a27e7098b5115" compoundref="_led_effects_8c" startline="514" endline="534">easteregg</referencedby>
+        <referencedby refid="_led_effects_8h_1a99174e2b381d7ec6667d29352e6eca1b" compoundref="_led_effects_8c" startline="549" endline="568">fillup</referencedby>
+        <referencedby refid="ws2811lichterkette_8c_1a840291bc02cba5474a4cb46a9b9566fe" compoundref="ws2811lichterkette_8c" startline="244" endline="367">main</referencedby>
+        <referencedby refid="ws2811lichterkette_8c_1a09ce999e15ad60b8a3f07d08af1946f9" compoundref="ws2811lichterkette_8c" startline="371" endline="393">ISR</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="globals_8h_1aaa3bddd2273257ac5ec259197b62e984" prot="public" static="no" mutable="no">
+        <type><ref refid="globals_8h_1a77366c1bd428629dc898e188bfd182a3" kindref="member">EXTERN</ref> uint8_t</type>
+        <definition>EXTERN uint8_t PaketStart</definition>
+        <argsstring></argsstring>
+        <name>PaketStart</name>
+        <briefdescription>
+<para>flag to store if the <ref refid="ws2811lichterkette_8c_1a8aac8c5098aaf915463fb31715efa09f" kindref="member">PREAMBLE</ref> has been received </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="globals.h" line="55" column="1" bodyfile="globals.h" bodystart="55" bodyend="-1"/>
+        <referencedby refid="ws2811lichterkette_8c_1a840291bc02cba5474a4cb46a9b9566fe" compoundref="ws2811lichterkette_8c" startline="244" endline="367">main</referencedby>
+        <referencedby refid="ws2811lichterkette_8c_1a09ce999e15ad60b8a3f07d08af1946f9" compoundref="ws2811lichterkette_8c" startline="371" endline="393">ISR</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="globals_8h_1a922ad5baed647eca43ad1a979e162ebd" prot="public" static="no" mutable="no">
+        <type><ref refid="globals_8h_1a77366c1bd428629dc898e188bfd182a3" kindref="member">EXTERN</ref> uint8_t</type>
+        <definition>EXTERN uint8_t IsReading</definition>
+        <argsstring></argsstring>
+        <name>IsReading</name>
+        <briefdescription>
+<para>flag to show if the RecBuffer is in copy process so that the array cannot be filled with new data from UART </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="globals.h" line="57" column="1" bodyfile="globals.h" bodystart="57" bodyend="-1"/>
+        <referencedby refid="ws2811lichterkette_8c_1a840291bc02cba5474a4cb46a9b9566fe" compoundref="ws2811lichterkette_8c" startline="244" endline="367">main</referencedby>
+        <referencedby refid="ws2811lichterkette_8c_1a09ce999e15ad60b8a3f07d08af1946f9" compoundref="ws2811lichterkette_8c" startline="371" endline="393">ISR</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="globals_8h_1ab5490074aaca289e986e9a00e0c25663" prot="public" static="no" mutable="no">
+        <type><ref refid="globals_8h_1a77366c1bd428629dc898e188bfd182a3" kindref="member">EXTERN</ref> volatile char</type>
+        <definition>EXTERN volatile char ReceivedChar</definition>
+        <argsstring></argsstring>
+        <name>ReceivedChar</name>
+        <briefdescription>
+<para>current data received from UART </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="globals.h" line="59" column="1" bodyfile="globals.h" bodystart="59" bodyend="-1"/>
+        <referencedby refid="ws2811lichterkette_8c_1a840291bc02cba5474a4cb46a9b9566fe" compoundref="ws2811lichterkette_8c" startline="244" endline="367">main</referencedby>
+        <referencedby refid="ws2811lichterkette_8c_1a09ce999e15ad60b8a3f07d08af1946f9" compoundref="ws2811lichterkette_8c" startline="371" endline="393">ISR</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>file that contains basic and global definitions, changes should be done carefully </para>    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="version"><para>V1.00 </para></simplesect>
+<simplesect kind="date"><para>05.01.2016 </para></simplesect>
+<simplesect kind="authors"><para>Wank Florian </para></simplesect>
+</para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/**************************************************************************/</highlight></codeline>
+<codeline lineno="9"><highlight class="preprocessor">#include<sp/>&lt;stdint.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>GLOBALS_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GLOBALS_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="comment">//macros<sp/>to<sp/>display<sp/>infos<sp/>for<sp/>CPU<sp/>Frequency<sp/>or<sp/>other<sp/>defines</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_STR_EXPAND(tok)<sp/>#tok</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_STR(tok)<sp/>_STR_EXPAND(tok)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_CPU_INFO(x)<sp/>CPU_FREQUENCY##x</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="preprocessor">#ifndef<sp/>EXTERN</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21" refid="globals_8h_1a77366c1bd428629dc898e188bfd182a3" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EXTERN<sp/>extern</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25" refid="globals_8h_1ad5db4045aed262ed4aae2af9d81fab98" refkind="member"><highlight class="normal"><ref refid="globals_8h_1a77366c1bd428629dc898e188bfd182a3" kindref="member">EXTERN</ref><sp/>uint8_t<sp/><ref refid="globals_8h_1ad5db4045aed262ed4aae2af9d81fab98" kindref="member">NumOfLeds</ref>;</highlight></codeline>
+<codeline lineno="27" refid="globals_8h_1ac2445d316b2972d381edeac44bb6a226" refkind="member"><highlight class="normal"><ref refid="globals_8h_1a77366c1bd428629dc898e188bfd182a3" kindref="member">EXTERN</ref><sp/>uint16_t<sp/><ref refid="globals_8h_1ac2445d316b2972d381edeac44bb6a226" kindref="member">effectime</ref>;</highlight></codeline>
+<codeline lineno="29" refid="globals_8h_1a722e1eb38b661d1338ada3cc7a4049a0" refkind="member"><highlight class="normal"><ref refid="globals_8h_1a77366c1bd428629dc898e188bfd182a3" kindref="member">EXTERN</ref><sp/>uint8_t<sp/><ref refid="globals_8h_1a722e1eb38b661d1338ada3cc7a4049a0" kindref="member">ledtype</ref>;</highlight></codeline>
+<codeline lineno="31" refid="globals_8h_1af07a5ce170c7be13d096843960e7b9da" refkind="member"><highlight class="preprocessor">#define<sp/>BASELEDTYPE<sp/>11</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35" refid="globals_8h_1a6e2b9e79df9491377ae405ef85aa0ca5" refkind="member"><highlight class="preprocessor">#define<sp/>MAXNUMCOLORS<sp/>50</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37" refid="globals_8h_1a0d57378e32bf8278011460740bc29f7f" refkind="member"><highlight class="preprocessor">#define<sp/>UART_BUFFER_SIZE<sp/>80</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40" refid="globals_8h_1a159854edb9d0c7283013495d85bdf997" refkind="member"><highlight class="normal"><ref refid="globals_8h_1a77366c1bd428629dc898e188bfd182a3" kindref="member">EXTERN</ref><sp/>uint8_t<sp/><ref refid="globals_8h_1a159854edb9d0c7283013495d85bdf997" kindref="member">CompColorArray</ref>[<ref refid="globals_8h_1a6e2b9e79df9491377ae405ef85aa0ca5" kindref="member">MAXNUMCOLORS</ref>];</highlight></codeline>
+<codeline lineno="42" refid="globals_8h_1a5d735865707e6694a8173d629e0b4d5c" refkind="member"><highlight class="normal"><ref refid="globals_8h_1a77366c1bd428629dc898e188bfd182a3" kindref="member">EXTERN</ref><sp/>uint8_t<sp/><ref refid="globals_8h_1a5d735865707e6694a8173d629e0b4d5c" kindref="member">RecBuffer</ref>[<ref refid="globals_8h_1a0d57378e32bf8278011460740bc29f7f" kindref="member">UART_BUFFER_SIZE</ref>];</highlight></codeline>
+<codeline lineno="44" refid="globals_8h_1aa6fcb4d4fca4554ac73bef10668c23cd" refkind="member"><highlight class="normal"><ref refid="globals_8h_1a77366c1bd428629dc898e188bfd182a3" kindref="member">EXTERN</ref><sp/>uint8_t<sp/><ref refid="globals_8h_1aa6fcb4d4fca4554ac73bef10668c23cd" kindref="member">BufferCounter</ref>;</highlight></codeline>
+<codeline lineno="46" refid="globals_8h_1aaa611e00c18e950be43a4cd5ce0ceeb1" refkind="member"><highlight class="normal"><ref refid="globals_8h_1a77366c1bd428629dc898e188bfd182a3" kindref="member">EXTERN</ref><sp/>uint8_t<sp/><ref refid="globals_8h_1aaa611e00c18e950be43a4cd5ce0ceeb1" kindref="member">DataLen</ref>;</highlight></codeline>
+<codeline lineno="48" refid="globals_8h_1a053b8e1f039c19251b90d60317db8aed" refkind="member"><highlight class="normal"><ref refid="globals_8h_1a77366c1bd428629dc898e188bfd182a3" kindref="member">EXTERN</ref><sp/>uint8_t<sp/><ref refid="globals_8h_1a053b8e1f039c19251b90d60317db8aed" kindref="member">effect</ref>;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight><highlight class="comment">//EXTERN<sp/>uint8_t<sp/>speed;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53" refid="globals_8h_1a1b09d1a5bcf4c8ab435bb3c9e36def59" refkind="member"><highlight class="normal"><ref refid="globals_8h_1a77366c1bd428629dc898e188bfd182a3" kindref="member">EXTERN</ref><sp/>uint8_t<sp/><ref refid="globals_8h_1a1b09d1a5bcf4c8ab435bb3c9e36def59" kindref="member">PacketComplete</ref>;</highlight></codeline>
+<codeline lineno="55" refid="globals_8h_1aaa3bddd2273257ac5ec259197b62e984" refkind="member"><highlight class="normal"><ref refid="globals_8h_1a77366c1bd428629dc898e188bfd182a3" kindref="member">EXTERN</ref><sp/>uint8_t<sp/><ref refid="globals_8h_1aaa3bddd2273257ac5ec259197b62e984" kindref="member">PaketStart</ref>;</highlight></codeline>
+<codeline lineno="57" refid="globals_8h_1a922ad5baed647eca43ad1a979e162ebd" refkind="member"><highlight class="normal"><ref refid="globals_8h_1a77366c1bd428629dc898e188bfd182a3" kindref="member">EXTERN</ref><sp/>uint8_t<sp/><ref refid="globals_8h_1a922ad5baed647eca43ad1a979e162ebd" kindref="member">IsReading</ref>;</highlight></codeline>
+<codeline lineno="59" refid="globals_8h_1ab5490074aaca289e986e9a00e0c25663" refkind="member"><highlight class="normal"><ref refid="globals_8h_1a77366c1bd428629dc898e188bfd182a3" kindref="member">EXTERN</ref><sp/></highlight><highlight class="keyword">volatile</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="globals_8h_1ab5490074aaca289e986e9a00e0c25663" kindref="member">ReceivedChar</ref>;</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="preprocessor">#ifndef<sp/>F_CPU</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63" refid="globals_8h_1a43bafb28b29491ec7f871319b5a3b2f8" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>F_CPU<sp/>8000000</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="65"><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>GLOBALS_H_<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="globals.h"/>
+  </compounddef>
+</doxygen>
