@@ -1,6 +1,6 @@
 /**************************************************************************//**
  * @file     globals.h
- * @brief    file that contains basic and global definitions, no changes should be done here
+ * @brief    file that contains basic and global definitions, changes should be done carefully
  * @version  V1.00
  * @date     05.01.2016
  * @authors  Wank Florian
@@ -31,7 +31,7 @@ EXTERN uint8_t ledtype;
 #define BASELEDTYPE 11
 
 /** \brief definition for maximum number of different colors that can be handled at the same time 
-			(the maximum value should be 50, a higher value may result in an memory overflow refering to 2kByte (atmega328p))*/
+			(the maximum value should be 250, a higher value may result in an memory overflow refering to 2kByte (atmega328p))*/
 #define MAXNUMCOLORS 50
 /** \brief definition for UART Buffer, must be at least MAXNUMCOLORS+5*/
 #define UART_BUFFER_SIZE 80
