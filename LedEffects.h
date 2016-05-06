@@ -25,7 +25,7 @@
 /** \brief define for the recolor effect, used for main switch*/		
 #define RECOLOR 7	
 /** \brief define for the fade effect, used for main switch*/		
-#define FADEN 8		
+#define FADE 8		
 /** \brief define for the initrainbow function, used for main switch*/		
 #define INITRAINBOW 9	
 /** \brief define for the the rotate function right, used for main switch*/	
