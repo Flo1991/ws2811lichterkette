@@ -20,8 +20,8 @@ struct color24bit{
 };
 
 #if F_CPU == 16000000
-#pragma message("Use 16 MHz Macros: ")
-/** \brief macro to transmit a one wire High Bit at PB0; all Pins of PORTB are set/reset*/
+#pragma message("Use 16 MHz Macros")
+/** \brief macro to transmit a one wire High Bit at PB0; all Pins of PORTB are set/reset; timing for 16 MHz clock*/
 #define SETHIGH PORTB=0x01;\
 			   asm ("nop");\
 			   asm ("nop");\
@@ -40,7 +40,8 @@ struct color24bit{
 			   asm ("nop");
 			   
 #elif F_CPU == 8000000
-#pragma message("Use 8 MHz Macros: ")
+#pragma message("Use 8 MHz Macros")
+/** \brief macro to transmit a one wire High Bit at PB0; all Pins of PORTB are set/reset; timing for 8 MHz clock*/
 #define SETHIGH PORTB=0x01;\
 			   asm ("nop");\
 			   asm ("nop");\
@@ -55,7 +56,7 @@ struct color24bit{
 
 
 #if F_CPU == 16000000
-/** \brief macro to transmit a one wire Low Bit at PB0; all Pins of PORTB are set/reset*/
+/** \brief macro to transmit a one wire Low Bit at PB0; all Pins of PORTB are set/reset; timing for 16 MHz clock*/
 #define SETLOW PORTB=0x01;\
 			  asm ("nop");\
 			  asm ("nop");\
@@ -73,6 +74,7 @@ struct color24bit{
 			  asm ("nop");\
 			  asm ("nop");
 #elif F_CPU == 8000000
+/** \brief macro to transmit a one wire Low Bit at PB0; all Pins of PORTB are set/reset; timing for 8 MHz clock*/
 #define SETLOW PORTB=0x01;\
 			   asm ("nop");\
 			   asm ("nop");\

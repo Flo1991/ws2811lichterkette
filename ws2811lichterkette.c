@@ -19,6 +19,19 @@
  * At the last point you can find an example how to use the implementation with an ESP8266 with a webserver.
  * You will find the source code for the ESP8266 and the basic hardware setup.
  
+  \section usage_sec Basic usage
+  For using this implementation follow this steps:
+  <ul>
+  <li>set up the hardware as descriped in section \ref hardware_sec
+  <li>set the \ref F_CPU clock to the value for your hardware
+  <li>set the \ref BAUD to the value you like, 76800 or 38400 are suggested
+  <li>compile your implementation (only O1 optimization is supported)
+  <li>program your AVR with your binaries
+  <li>set the clock divider fuse and the clock source fuse referring to your implementation
+  <li>send protocol data (see section \ref protocol_sec) to the RX pin of the AVR over a serial device, e.g. an FTDI, ESP8266 or Arduino
+  (UART is 8N1 on your chosen \ref BAUD)
+  </ul>
+ 
  \section hardware_sec Hardware
  The basic hardware you need is a AVR controller an some WS2811 or WS2812 LEDs you want to control. The AVR
  controller should have an hardware UART, otherwise you need to write some code for a software serial. In the project
@@ -26,7 +39,7 @@
  data for the LEDs to achieve an accurate timing, see section \ref software_sec. The AVR can be used with the internal
  clock at 8 MHz, remember to clear the clock divider fuse. Otherwise an external 8 MHz or 16 MHz clock source can be used,
  the definition \ref F_CPU must be set to the frequency you chose (remember to set the fuses for an external clock source).
- As an example the figure \ref one shows using an external 16 MHz crystal.
+ As an example figure \ref one "1" shows using an external 16 MHz crystal.
  \anchor one
  \image html  Ws2811_Atmega328_schematic.png "schematic of the AVR to controll WS2812/WS2811"
  \image latex  Ws2811_Atmega328_schematic.png "schematic of the AVR to controll WS2812/WS2811"
@@ -41,7 +54,7 @@
  you set all LEDs to white. If you have only a small voltage drop every LED will have the same color. If the voltage drop
  is too much you can see that the last LEDs will have less blue color, so they will light in a warm white color even up to red.
  If you want to try out the LEDs with the AVR you can build up everything on a breadboard. Pinheaders can be soldered easy at the
- light stribes as you can see in the figure \ref two.
+ light stribes as you can see in figure \ref two "2".
  \anchor two
  \image html   WS2812.png "WS2812 stribe with pin header"
  \image latex   WS2812.png "WS2812 stribe with pin header"
@@ -49,19 +62,66 @@
  The connect GND to the common ground with the AVR, 5 V should be connected to a power supply that can handle the current you need.
  DI is the data in line, this should be connected to PinB0 at the AVR. The stribe is like a big shifting register, all the data
  you sent is shifted bit by bit through the stribe. So DO is the data out pin, you see some data at this pin if all LEDs before
- had already received their color data. The one wire protocol of the LEDs is described in the \ref software_sec section.
+ had already received their color data. The one wire protocol of the LEDs is described in the next section \ref software_sec.
  
- \section software_sec software implementation
+ \section software_sec Software implementation
+ If your hardware is ready you must flash your AVR device with the provided software. Therefore the ISP-6 connector should be
+ used. To get the right timing remember to set the \ref F_CPU definition to the frequency you are working at. Furthermore set
+ the fuses of the AVR referring to your implementation. This means you have to clear the clock divider fuse and may have to
+ change the clock source. I suggest to use the AtmelStudio to program your AVR and its fuses. <br>
+ The WS2812/WS2811 are controlled by one data line that works with a one wire protocol. Because of the missing clock line
+ the timing is really important, this can either be achieved by doing some trick with the hardware interfaces (e.g. using the
+ spi interface) or by bit banging. In this implementation bit banging is used. To get a good timing all color data must be
+ transmitted in one block that is not interrupted by some other code. The timing specifications of the WS2812/WS2811 LEDs
+ can be found in table \ref timingtable "1" which refers to the datasheet.<br>
  
+ \anchor timingtable
+ <table>
+ <caption id="timingtable">Timing table for WS2812/WS2811 one wire protocol</caption>
+ <tr><th>Information                    <th>Timing							<th> Tolerance +/-
+ <tr><td>Transfer 1 Bit                 <td>HighTime+LowTime=1,25 탎		<td>600 ns
+ <tr><td>send 0, high time              <td>0,35 탎							<td>150 ns
+ <tr><td>send 0, low time               <td>0,8 탎							<td>150 ns
+ <tr><td>send 1, high time              <td>0,7 탎							<td>150 ns
+ <tr><td>send 1, low time               <td>0,6 탎							<td>150 ns
+ <tr><td>data transmission complete, low time <td> >50 탎				<td>  -
+ </table>
+ 
+ The timing is done by setting the output and wait the required time by doing nothing (call assembly NOPs). So it is important
+ to compile the provided software at O1, other optimization levels may influence the timing. To send one bit (either high or low)
+ two different macros are defined in Lightstribe.h (SETHIGH and SETLOW), one LED needs 24 color bits. The macros depend on the value of #F_CPU
+ you entered in globals.h. Furthermore the header file Lightstrib.h declares a color struct to handle 24 bit colors (\ref color24bit) and three
+ basic functions to control the LEDs. The corresponding c file Lightstribe.c implements these functions. The most important function
+ is the \ref transmit2leds function. This function and only this function transmits data to the stribe. All other functions either call
+ this function or manipulate the color array. To achieve the right timing all effects and operations are done on a color array that
+ stores the color information for the LEDs. The information is sent to the LEDs by calling transmit2leds with the lightdata pointer that
+ points to an dynamically allocated array that stores the color information depending on the number of LEDs you want to control. Therefore
+ your color array must at least be able to contain 24 bits x your number of LEDs. It can be bigger, what will allow you to create even more
+ effects (e.g. if you rotate a rainbow array). So the effects that are implemented in LedEffects.c change the color array and afterwards
+ the \ref transmit2leds is called. The c file LedEffects.c not only contains effects but also different necessary functions for the 
+ effects and the serial color handling. The \ref colorconv8to24 function converts the received 8 bit colors from the serial port to 24 bit
+ colors for the lightstribes. So you only sent 8 bit colors over the serial port to the AVR to reduce data size. Further information can be
+ found in the \ref protocol_sec section. The colors are decompressed with a simple \ref map function you may know from Arduino. The main.c file
+ initializes the hardware and handles the LEDs. A serial interrupt stores the data temporary. If the data transmission is complete the main
+ function will extract the information and set the new configuration for the lightstribe.<br>
+ The last points to be mentioned in this section are some things you need to be careful. The first thing is that the 8 bit colors are in an
+ RGB 3-3-2 format. The 24 bit color format depend on the LEDs. WS2812 LEDs use a GRB color scheme while WS2811 use a RGB color scheme. This
+ is important, to achieve the right color the protocol includes a bit that decides the color scheme. The right color is resolved by the
+ decompressing function \ref colorconv8to24. Another thing is that the colors are not linearized, what means that you cannot say that a
+ color you got from a color table will be look like this. As an example you picked an orange from a 3-3-2 rgb color table. This orange
+ will not be the same orange on the LED stribe. This depends on many parameters so linearizing is too much effort and almost impossible (to
+ achieve linearization you would have to measure each color, compare it and evaluate correction parameters).
+   
+\section protocol_sec Protocol overview
+This section gives an overview of the implemented serial protocol. The goal of the protocol was to be as simple as possible, to be easily 
+implemented on the AVR and to use as less resources as possible. The figure \ref three shows the base structure of the protocol.
+ \anchor three
+ \image html   Protoll_V1_2_engl.png "WS2812 stribe with pin header"
+ \image latex   Protoll_V1_2_engl.png "WS2812 stribe with pin header"
+ \image rtf   Protoll_V1_2_engl.png "WS2812 stribe with pin header"
 
-  \section install_sec Installation
   
-  \subsection step1 Step 1: Opening the box
-  
-   etc...
-  
-  \section protocol_sec protocol overview
-  
+\section owneffects_sec Implement further effects
    
   
   \section esp_sec control via ESP8266
@@ -128,7 +188,7 @@
 #include "LedEffects.h"
 
 //UART basic definitions
-/** \brief Baudrate definition, choose 76800 or 38400, faster value prefered, the maximum speed of ESP8266 software-UART is 38400*/
+/** \brief Baudrate definition, choose 76800 or 38400, faster value preferred, the maximum speed of ESP8266 software-UART is 38400*/
 #define BAUD 38400	
 /** \brief calculate baudrate register value*/
 #define MYUBRR F_CPU/16/BAUD -1
@@ -180,9 +240,9 @@ void init_uart(void)
 	 UBRR0H = ((MYUBRR) >> 8);
 	 UBRR0L = MYUBRR;
 	 
-	 UCSR0B |= (1 << RXEN0) ;//| (1 << TXEN0);     // Enable receiver and transmitter
-	 UCSR0B |= (1 << RXCIE0);					// Enable the receiver interrupt
-	 UCSR0C |= (1 << UCSZ01) | (1 << UCSZ00);   // 8 data Bit, one stop Bit
+	 UCSR0B |= (1 << RXEN0) ;//| (1 << TXEN0);		// Enable receiver (and transmitter; commited out)
+	 UCSR0B |= (1 << RXCIE0);						// Enable the receiver interrupt
+	 UCSR0C |= (1 << UCSZ01) | (1 << UCSZ00);		// 8 data Bit, one stop Bit
 }
 
 /** \brief main function, should never end, effects are handled in main while*/
@@ -269,7 +329,7 @@ int main(void)
 					recolor(colorconv8to24(CompColorArray[0]),lightdata);
 					effect=255;
 					break;
-				case FADEN:
+				case FADE:
 					faden(colorconv8to24(CompColorArray[0]),lightdata);
 					break;
 				case INITRAINBOW:
@@ -287,7 +347,7 @@ int main(void)
 					transmit2leds(lightdata);
 					break;
 				case CUSTOM:
-				//The custom effect assigns up to MAXNUMCOLORS=50 individual colors to the stribe
+				//The custom effect assigns up to MAXNUMCOLORS individual colors to the stribe
 				//if the number of colors is smaller than the number of LEDs the colors are repeated using
 				//modulo operation
 					for (i=0;i<NumOfLeds;i++)
