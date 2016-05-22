@@ -1,5 +1,8 @@
 
 /*! \mainpage Use WS2811/WS2812 LEDs with an AVR
+
+\tableofcontents
+
  * \image html tree.png
  * \section intro_sec Introduction
  * This project is about using an WS2811 or WS2812 lightstribe with an AVR controller.
@@ -29,7 +32,7 @@
   <li>program your AVR with your binaries
   <li>set the clock divider fuse and the clock source fuse referring to your implementation
   <li>send protocol data (see section \ref protocol_sec) to the RX pin of the AVR over a serial device, e.g. an FTDI, ESP8266 or Arduino
-  (UART is 8N1 on your chosen \ref BAUD)
+  (UART is 8N1 on your chosen \ref BAUD)(example data 254 6 0 1 20 22 = 0xFE 0x06 0x00 0x01 0x14 0x16)
   </ul>
  
  \section hardware_sec Hardware
@@ -39,9 +42,9 @@
  data for the LEDs to achieve an accurate timing, see section \ref software_sec. The AVR can be used with the internal
  clock at 8 MHz, remember to clear the clock divider fuse. Otherwise an external 8 MHz or 16 MHz clock source can be used,
  the definition \ref F_CPU must be set to the frequency you chose (remember to set the fuses for an external clock source).
- As an example figure \ref one "1" shows using an external 16 MHz crystal.
+ As an example \ref one "figure 1" shows using an external 16 MHz crystal.
  \anchor one
- \image html  Ws2811_Atmega328_schematic.png "schematic of the AVR to controll WS2812/WS2811"
+ \image html  Ws2811_Atmega328_schematic.png "Figure 1: schematic of the AVR to controll WS2812/WS2811"
  \image latex  Ws2811_Atmega328_schematic.png "schematic of the AVR to controll WS2812/WS2811"
  \image rtf  Ws2811_Atmega328_schematic.png "schematic of the AVR to controll WS2812/WS2811"
  
@@ -54,15 +57,20 @@
  you set all LEDs to white. If you have only a small voltage drop every LED will have the same color. If the voltage drop
  is too much you can see that the last LEDs will have less blue color, so they will light in a warm white color even up to red.
  If you want to try out the LEDs with the AVR you can build up everything on a breadboard. Pinheaders can be soldered easy at the
- light stribes as you can see in figure \ref two "2".
+ light stribes as you can see in \ref two "figure 2".
  \anchor two
- \image html   WS2812.png "WS2812 stribe with pin header"
+ \image html   WS2812.png "Figure 2: WS2812 stribe with pin header"
  \image latex   WS2812.png "WS2812 stribe with pin header"
  \image rtf   WS2812.png "WS2812 stribe with pin header"
  The connect GND to the common ground with the AVR, 5 V should be connected to a power supply that can handle the current you need.
  DI is the data in line, this should be connected to PinB0 at the AVR. The stribe is like a big shifting register, all the data
  you sent is shifted bit by bit through the stribe. So DO is the data out pin, you see some data at this pin if all LEDs before
  had already received their color data. The one wire protocol of the LEDs is described in the next section \ref software_sec.
+ 
+ Datasheets:<br>
+ <a href="WS2812.pdf" target="_blank"><b>Datasheet WS2812</b></a>			<br>
+ <a href="WS2811.pdf" target="_blank"><b>Datasheet WS2811</b></a>			<br>
+ <a href="Atmega328.pdf" target="_blank"><b>Datasheet Atmega328</b></a>		<br>
  
  \section software_sec Software implementation
  If your hardware is ready you must flash your AVR device with the provided software. Therefore the ISP-6 connector should be
@@ -73,7 +81,7 @@
  the timing is really important, this can either be achieved by doing some trick with the hardware interfaces (e.g. using the
  spi interface) or by bit banging. In this implementation bit banging is used. To get a good timing all color data must be
  transmitted in one block that is not interrupted by some other code. The timing specifications of the WS2812/WS2811 LEDs
- can be found in table \ref timingtable "1" which refers to the datasheet.<br>
+ can be found in table \ref timingtable "1" which refers to the datasheet ( <a href="WS2812.pdf" target="_blank"><b>WS2812</b></a>).<br>
  
  \anchor timingtable
  <table>
@@ -114,18 +122,208 @@
    
 \section protocol_sec Protocol overview
 This section gives an overview of the implemented serial protocol. The goal of the protocol was to be as simple as possible, to be easily 
-implemented on the AVR and to use as less resources as possible. The figure \ref three shows the base structure of the protocol.
+implemented on the AVR and to use as less resources as possible. \ref three "Figure 3" shows the base structure of the protocol.
  \anchor three
- \image html   Protoll_V1_2_engl.png "WS2812 stribe with pin header"
- \image latex   Protoll_V1_2_engl.png "WS2812 stribe with pin header"
- \image rtf   Protoll_V1_2_engl.png "WS2812 stribe with pin header"
+ \image html   Protoll_V1_2_engl.png "Figure 3: serial protocol structure"
+ \image latex   Protoll_V1_2_engl.png "serial protocol structure"
+ \image rtf   Protoll_V1_2_engl.png "serial protocol structure"
+As you can see a data transmission always starts with the preamble 254(0xFE). For a fast and easy implementation this preamble value must
+only be used as preamble and must never be another field value (e.g. you must not send the color value 254). The next byte that is sent
+contains the total length of the packet including the preamble and the length byte. If you sent a wrong length you may get an unexpected 
+behavior until a new correct data packet is sent. The third field contains the effect. The different effects are listed in table  XXX.
+In Bit 7 (MSb) you can choose the LED type you want to control, set the bit to 0 for WS2811 and to 1 for WS2812 LEDs. The next byte is
+a value to control the effect speed. You can set a delay between 0 (no delay) and 250 (longest delay possible). The value unit and is not
+a repeatable setting for different effects. This means that the delay is no correct wait function (e.g. wait for n milliseconds). Furthermore
+the effects work on the color array what may be faster for some effects and slower for others. The best thing is to try the effects with different
+values. The next field contains the number of the LEDs that should be controlled. Be aware that the maximum supported number of LEDs is 250, but this
+depends on your hardware. The chosen Atmega328p can handle this amount, if you choose an AVR with less RAM this will not work. What you can do is
+to allocate more LEDs than you actually have. This gives you the possibility to create further effects. What happens is that only a part of the
+array is sent to the LEDs but the other color values are stored internally in the AVR (in fact all color data is transmitted to the LEDs but the 
+superfluous information is overwritten by new data). The last data field are the color values. One color is 8 bit RGB 3-3-2 and you should sent
+the right amount of colors for your chosen effect. If you sent to less information the data block will not be evaluated because the total length
+does not match. For sending some data do not forget to configure your UART (8N1 \ref BAUD) on both sides.
 
+ \anchor effecttable
+ <table>
+ <caption id="effecttable">Table containing all effects available over the serial protocol</caption>
+ <tr><th>Effect<br>number <th>Number of colors <br> (1 byte RGB 3-3-2)			<th> Description												<th> Example <br> (decimal) 
+ <tr><td>0 = SETFULLCOLOR	<td>1							<td>All LEDs glow at the same color without changes.			<td>254 6 1 20 22
+ <tr><td>1 = FILLUP			<td>2 (foreground, background)	<td>One LED steps through the stribe in the foreground color and colors all LEDs after it in the background color.<br>
+																At the end of the stribe the LED stays at the foreground color and another LED starts to step through the stribe.<br>
+																This continues until the whole stribe is filled in the foreground color. <br>
+																Then the stribe is cleared to the background color and the effects begins again.			<td>254 7 1 22 20 22 201
+ <tr><td>2 = BLINK			<td>1							<td>The stribe blinks in the chosen color and to off (=black) repeatedly.		<td>254 6 2 55 20 56
+ <tr><td>3 = RUNLED			<td>2 (foreground, background)	<td>All LEDs but one are colored in the background color.<br>
+																The one in the foreground color walks through the stribe with overflowing to the beginning.			<td>254 7 3 55 20 56 151
+ <tr><td>5 = ALTERNATE		<td>2 (foreground, background)	<td>The LEDs are alternating in the foreground and the background color.<br>
+																First the even LEDs are colored in foreground and the uneven in the background color, after that vice versa.			<td>254 7 5 55 20 56 151
+ <tr><td>7 = RECOLOR		<td>1							<td>The stribe is filled in a new color step by step until the whole stribe stays in the new color.			<td>254 6 7 55 20 38
+ <tr><td>8 = FADE			<td>1							<td>The destination color is set and the base colors red, green and blue are decreased step by step until the stribe is off.<br>
+																After that the color values are increased until the destination color is reached.<br>
+																This generates a color fading effect. The color fading is not linearized.			<td>254 6 8 55 20 201
+ <tr><td>9 = INITRAINBOW	<td>no color					<td>Set the stribe in a static rainbow color.		<td>254 5 9 0 20
+ <tr><td>10 = ROTATE_R		<td>no color					<td>Rotate all LEDs one step to the right side (depends on lightdata array).			<td>254 5 10 232 20
+ <tr><td>11 = ROTATE_L		<td>no color					<td>Rotate all LEDs one step to the left side (depends on lightdata array).			<td>254 5 11 23 20
+ <tr><td>12 = CUSTOM		<td>N colors					<td>All LEDs are set to the static color referring to the sent color values.<br>
+																If there are more LEDs than color values the colors are repeated.			<td>254 8 12 1 20 22 201 60
+ </table>
+The missing numbers in table \ref effecttable "2" are internally used by the AVR and must not be sent over the serial port.
   
 \section owneffects_sec Implement further effects
-   
+This section tells you how to implement further effects. You may use already existing functions to generate new effects or add something completely new.
+All effects should be written in the LedEffects.c file and declared in its header file LedEffects.h. You must know that everything works on a lightdata
+array that contains the colors stored in an array. The array is sent directly to the stribe if the  \ref transmit2leds function is called. So you first
+need to manipulate the array and than send it to the stribe. The array is ordered in GRB color because the implementation has been done for WS2812 LEDs
+(WS2811 LEDs can be used the colors are converted in the \ref colorconv8to24 function referring to the MSb of the effect you sent, for more information
+see section \ref protocol_sec). So lightdata[0] contains one byte green data, lightdata[1] one byte red data, lightdata[2] blue data and so on. In general
+you can say lightdata[N%3==0] contains green,  lightdata[N%3==1],  lightdata[N%3==2] data. So the color array has a size of \ref MAXNUMCOLORS * 3. So your
+function must at least have a pointer to the lightdata array as a call value. For creating your effect some nice functions are already implemented you may
+use. You can find a list of them in table \ref functiontable "3".
+
+ \anchor functiontable
+ <table>
+ <caption id="functiontable">Provided help functions for your own effect</caption>
+ <tr><th>Function Name					<th>call values						<th> operation
+ <tr><td>\ref map						<td>x,in_min,in_max,out_min,out_max <td>calculate an x value to a new number range
+ <tr><td>\ref effectdelay				<td>delay							<td>wait some time dependend on delay
+ <tr><td>\ref resetstribe               <td>*lightdata						<td>clear the stribe (all LEDs off)
+ <tr><td>\ref rotate		            <td>*lightdata, direction			<td>rotate stribe by one position (means 3 bytes) in direction (right/left)
+ <tr><td>\ref rotateN					<td>*lightdata, direction,width 	<td>rotate LEDs by "width" positions  (means width * 3 bytes) in direction (right/left)
+ <tr><td>\ref setled					<td>color, *lightdata, lednr		<td>set one LED a position lednr in the chosen color, others off (black)
+ <tr><td>\ref changeled					<td>color, *lightdata, lednr		<td>change the color of one LED at position lednr, others are unchanged
+ </table>
+ 
+ Your written effect should get an own definition in LedEffects.h . The last thing is to add your definition in the main switch case structure. 
+ Referring to the implemented protocol your effect is available with the number you defined in LedEffects.h. You must sent the neccessary information
+ for your effect, for example the color values you need and so on. To get the color value you sent you need to call \ref colorconv8to24 to convert
+ the 8 bit RGB color into a 24 bit color. All colors you sent are available in the \ref CompColorArray. The first color you sent is stored in index zero.
+ Your implemented function must not care about the color order if you use the \ref colorconv8to24 function. This does the conversion depending on the
+ MSb of the effect you sent over the serial port. The delay is handled by the global var \ref effectime and the number of LEDs to control is stored in
+ \ref NumOfLeds. The effect is stored in the \ref effect variable. You should not do any changes on the serial part and the protocol reading, otherwise
+ you will change to complete behavior of this implementation.
+
+\section limitations_sec Requirements and Limitations
+The implementation to control has the following requirements and limitations:
+  <ul>
+  <li>colors are 8 bit compressed so you cannot get every color value of the LEDs
+  <li>the protocol implementation with the preamble 254 prohibits this value for other protocol fields (e.g. color)
+  <li>approximate amount of RAM (in bytes) you need: \ref MAXNUMCOLORS(=number of LEDs to control)*3 + \ref UART_BUFFER_SIZE *2 + \ref MAXNUMCOLORS + 160
+  <li>only O1 optimization is supported
+  <li>8 MHz and 16 MHz clock support
+  <li>fuses must be programmed manually (clock source and clock divider)
+  <li>WS2801 stribes not supported (different hardware interface with two wires)
+  <li>AVR should run on 5 V
+  </ul>
   
-  \section esp_sec control via ESP8266
+\section esp_sec Example usage with an ESP8266
+This section gives a short introduction about using the provided programm with an ESP8266. In this example the ESP8266 works as
+a wifi hotspot you can connect with and browse a website which allows different settings for the light stribe. The website is
+quite simple and only a few effects and colors are supported. If you enter the button "DO IT" your configuration is transmitted over the serial interface
+to the AVR. This is done through a software serial implementation, you find all necessary files below. You should step through all instructions to get
+the example work.
+
+\subsection setup_esp ESP8266 setup
+First you need to setup the ESP8266. Because of different versions of ESP8266 modules you may miss something, this is just a quick guide. For more
+information you can browse the web. First you must connect your ESP8266 to a host computer over a serial interface for example using an FTDI. Remember
+to cross RX and TX of the serial port. Furthermore be aware of the ESP8266 voltage, it is 3,3 V. The current a serial chip may provide (some FTDIs provide
+some current) may not be enough for the ESP8266 and what can cause different problems. <br>
+So first you need to flash your ESP8266 with the nodemcu firmware that provides a software serial. The binaries that have been used in this example
+can be found here: <br>
+<a href="0x00000.bin" target="_blank"><b>Binaries part 1</b></a>		<br>
+<a href="0x10000.bin" target="_blank"><b>Binaries part 2</b></a>		<br>
+For uploading this binaries to the ESP8266 you should use the <a href="https://github.com/nodemcu/nodemcu-flasher">nodeMCUFlasher</a>  that can be found on github.
+You need to set the serial port to which your ESP8266 is connected with and configure the source files for flashing the firmware. You need to set the COM port to 
+which you ESP8266 is connected to (see \ref four "figure 4"). Furthermore you must consider the following hardware configuration:
+<ul>
+<li>3,3 V logic level
+<li>bootmode low (IO15)
+<li>chip enable high (CH_PD)
+<li>reset high (drive low to reset the module)
+<li>IO0 low for firmware flashing (high for programming and normal operation)
+</ul>
+The firmware programmer waits for the MAC of the ESP8266 module which will be successfully read if everything is done fine. As you
+can see in \ref four "figure 4" the firmware programmer is still waiting for an ESP8266.
+\anchor four
+\image html   NodeMCUFlasher_flash.PNG "Figure 4: node MCU flasher"
+\image latex  NodeMCUFlasher_flash.PNG "serial protocol structure"
+\image rtf   NodeMCUFlasher_flash.PNG "serial protocol structure"
+If the ESP8266 is connected right you now set the configuration to the provided binaries as you can see in \ref five "figure 5". You must browse to the binary
+files and set the destination address. Now you can hit the "Flash"-Button (see \ref four "figure 4").
+\anchor five
+\image html   NodeMCUFlasher_config.PNG "Figure 5: node MCU flasher configuration"
+\image latex  NodeMCUFlasher_config.PNG "serial protocol structure"
+\image rtf   NodeMCUFlasher_config.PNG "serial protocol structure"
+After flashing the firmware you need to reboot the ESP8266 module. Before you do this you should change the IO0 to high level (3V3) because after the reboot
+we want to program the module with our own program. The reset can be done by setting reset low. The program we will upload to the module is written in Lua.
+Lua is a scripting language that is interpreted by the firmware running on the module. So the performance is not the best, but the programming is quite simple.
+The little program that you can find below set up the module as an access point, runs a simple webserver that interacts with a software serial to control the AVR.
+One thing you must know about the Lua programming is that the variable types are assigned implicit so you cannot control whether a number is stored as 16 bit or
+32 bit signed or unsigned variable. Another thing you should know is that the program you write needs the full memory space of its file. That means shorter variable
+names save memory and furthermore documentation should be as short as possible or left.<br>
+For writing your program you can use any text editor, notepad++ is a good choice. If you are finished you must upload the file to the module. Therefore you
+use the same setup as for firmware updating but you must set IO0 to high level. For uploading your program you can use the ESP8266 Lua Loader. It is easy to handle
+and you can try out several things first, before you upload your code. You can find the main window of the ESP8266 Lua Loader in \ref six "figure 6".
+\anchor six
+\image html   LuaLoader.png "Figure 6: ESP8266 Lua Loader"
+\image latex  LuaLoader.png "ESP8266 Lua Loader"
+\image rtf   LuaLoader.png "ESP8266 Lua Loader"
+On the right side you can set the baud rate for uploading you program to the module. In the GPIO section you can easily set and reset them to try your wiring. 
+By using the restart button you will restart the module. This may be necessary if your heap (RAM) is to low. This is caused by inefficient programming or by a 
+program that is to big for the module. Global variables need a lot of heap. For uploading your program hit the "Upload File..." button. In a file browser you
+choose your program that should be transferred to the module. After completion you hit the "dofile" button to run the program. This short description should be 
+enough.<br>
+So now we upload the Lua program that starts the webserver and sends data over a software serial to the AVR. You can find this program here:<br>
+<a href="complex_server.lua" target="_blank"><b>lua program for controlling the AVR</b></a>		<br>
+The program does the following:
+  <ul>
+  <li>set up the ESP8266 module as an access point (SSID=Lichterkette, password=12345678, you may change this)
+  <li>start a webserver that listens on port 80
+  <li>load the index.html website and handle requests
+  <li>sent UART commands matching for the AVR implementation to generate different effects depending on the request
+  <li>software serial is set to GPIO5 (GPIO5 is available at software number 1)
+  </ul>
+Some further things you should know:
+  <ul>
+  <li>the maximum of parallel accessing devices is four
+  <li>parallel devices can never access another device
+  <li>the software uart only supports TX (8N1 up to 38400 baud)
+  <li>if you change the website you must change the hard coded content length of the website
+  <li>the address of the ESP8266 is always 192.168.4.1
+  </ul>
   
+\subsection avr_con_esp Connect ESP8266 with AVR
+After uploading the main program file you need to upload the <a href="_index.html" target="_blank"><b>_index.html</b></a> file. Before uploading remove the
+underscore so that the files name is index.html (the underscore has been inserted because of conflicts with this html documentation). For uploading other
+file types (than lua programs) to your ESP8266 module you need to use the "Upload Bin" button of the Lua Loader. The file will be uploaded to the file system
+on the ESP8266. <br>
+Now your ESP8266 module is ready to try the first communication with the AVR. So now you need a hardware setup where the ESP8266 and AVR are connected.
+Be aware of the different voltage levels (AVR uses 5V, ESP8266 3V3). You should connect everything like \ref seven "figure 7" shows.
+
+\anchor seven
+\image html   Ws2811_Atmega328.png "Figure 7: schematic using ESP8266 with AVR WS2811 software"
+\image latex  Ws2811_Atmega328.png "schematic using ESP8266 with AVR WS2811 software"
+\image rtf   Ws2811_Atmega328.png "schematic using ESP8266 with AVR WS2811 software"
+
+Your ESP8266 should still be connected with the host computer. If your hardware setup is ready you now must hit the "dofile" button in the Lua Loader 
+(complexe_server.lua must be the selected file that should be executed). After a short time you can use any device to search for the access point that is set up
+by the ESP8266 module. It will have your SSID (default "Lichterkette") and your chosen password (default "12345678"). After you connected to your ESP8266 module
+you should open a web browser and browse the IP address 192.168.4.1. The browser should load the website. Now choose your configuration for the LEDs and hit the
+"DO IT" Button on the website. The website should be reloaded and the lightstribes get the configuration you have chosen. If everything is working fine the last
+thing to do is to make the ESP8266 as a stand alone device without the need of an external host. For this you must remove the complex_webserver.lua file from
+the module. Now you rename the file on your host computer to init.lua. Afterwards you upload this file to the ESP8266. This file is always loaded at first when
+the ESP8266 is powered on. So now you have a stand alone webserver that communicates with your AVR for controlling WS2811/WS2812 LEDs.<br>
+
+\subsection short_setup Short setup
+  <ul>
+  <li>flash the provided image (<a href="0x00000.bin" target="_blank"><b>Binaries part 1</b></a>,<a href="0x10000.bin" target="_blank"><b>Binaries part 2</b></a>
+  <li>upload the <a href="_index.html" target="_blank"><b>_index.html</b></a> renamed to index.html
+  <li>upload the lua program <a href="complex_server.lua" target="_blank"><b>complex_server.lua</b></a> renamed to init.lua
+  <li>setup your hardware refering to \ref seven "figure 7"
+  <li>connect to your ESP8266 with your SSID and your password (default: Lichterkette, 12345678)
+  <li>browse 192.168.4.1 on your device
+  <li>set up your configuration and hit "DO IT"
+  </ul>
+  <br>
   author: Florian Wank, 2016
  */
 /**************************************************************************//**
@@ -216,7 +414,7 @@ implemented on the AVR and to use as less resources as possible. The figure \ref
 #define EFFECTINDEX 2		
 /** \brief definition of the delay field, contains the delay duplicator*/
 #define DELAYINDEX 3		
-/** \brief field position for the number of LEDs to control, should be max. 200 (dynamic memory allocation for the lightdata array)*/
+/** \brief field position for the number of LEDs to control*/
 #define NUMOFLEDINDEX 4		
 
 

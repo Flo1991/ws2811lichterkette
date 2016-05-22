@@ -14,9 +14,12 @@
 
 /** \brief 24 Bit color structure RGB 8-8-8*/
 struct color24bit{
-	uint8_t red;									/**<8 Bit red*/
-	uint8_t green;									/**<8 Bit green*/
-	uint8_t blue;									/**<8 Bit blue*/
+	/**\brief 8 Bit red*/
+	uint8_t red;	
+	/**\brief 8 Bit green*/								
+	uint8_t green;	
+	/**\brief 8 Bit blue*/								
+	uint8_t blue;								
 };
 
 #if F_CPU == 16000000
