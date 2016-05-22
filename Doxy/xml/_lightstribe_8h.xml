@@ -96,17 +96,17 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Lightstribe.h" line="89" column="1" bodyfile="Lightstribe.c" bodystart="33" bodyend="41"/>
-        <references refid="structcolor24bit_1a287b397e90d7b995c81ff54e741f96b2" compoundref="_lightstribe_8h" startline="19">color24bit::blue</references>
-        <references refid="structcolor24bit_1a90d21fa503b626c00cdc8d94863d5877" compoundref="_lightstribe_8h" startline="18">color24bit::green</references>
+        <location file="Lightstribe.h" line="92" column="1" bodyfile="Lightstribe.c" bodystart="33" bodyend="41"/>
+        <references refid="structcolor24bit_1a287b397e90d7b995c81ff54e741f96b2" compoundref="_lightstribe_8h" startline="22">color24bit::blue</references>
+        <references refid="structcolor24bit_1a90d21fa503b626c00cdc8d94863d5877" compoundref="_lightstribe_8h" startline="20">color24bit::green</references>
         <references refid="globals_8h_1ad5db4045aed262ed4aae2af9d81fab98" compoundref="globals_8h" startline="25">NumOfLeds</references>
-        <references refid="structcolor24bit_1ad47d918910aaa51c73160ac85999d09c" compoundref="_lightstribe_8h" startline="17">color24bit::red</references>
+        <references refid="structcolor24bit_1ad47d918910aaa51c73160ac85999d09c" compoundref="_lightstribe_8h" startline="18">color24bit::red</references>
         <referencedby refid="_led_effects_8h_1ac83bd19da7ebd3c475e3667e4229db41" compoundref="_led_effects_8c" startline="489" endline="507">eastereggbase</referencedby>
         <referencedby refid="_led_effects_8h_1a99174e2b381d7ec6667d29352e6eca1b" compoundref="_led_effects_8c" startline="549" endline="568">fillup</referencedby>
         <referencedby refid="_led_effects_8h_1af67b7638a175e4971f25df5a5db3d8d0" compoundref="_led_effects_8c" startline="300" endline="311">init_alternating</referencedby>
         <referencedby refid="_led_effects_8h_1a9d0f91360c87b851925bf05be5352435" compoundref="_led_effects_8c" startline="442" endline="481">initrainbow</referencedby>
         <referencedby refid="_led_effects_8h_1aecba07ab559ab94e6f44c16e39012d80" compoundref="_led_effects_8c" startline="217" endline="221">initrunled</referencedby>
-        <referencedby refid="ws2811lichterkette_8c_1a840291bc02cba5474a4cb46a9b9566fe" compoundref="ws2811lichterkette_8c" startline="244" endline="367">main</referencedby>
+        <referencedby refid="ws2811lichterkette_8c_1a840291bc02cba5474a4cb46a9b9566fe" compoundref="ws2811lichterkette_8c" startline="447" endline="570">main</referencedby>
         <referencedby refid="_led_effects_8h_1a448758d76f47ea6fed4beb349196363f" compoundref="_led_effects_8c" startline="340" endline="351">recolor</referencedby>
       </memberdef>
       <memberdef kind="function" id="_lightstribe_8h_1abba9462833e30ef725eaf18c3d01eb71" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -156,11 +156,11 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Lightstribe.h" line="91" column="1" bodyfile="Lightstribe.c" bodystart="51" bodyend="81"/>
-        <references refid="structcolor24bit_1a287b397e90d7b995c81ff54e741f96b2" compoundref="_lightstribe_8h" startline="19">color24bit::blue</references>
-        <references refid="structcolor24bit_1a90d21fa503b626c00cdc8d94863d5877" compoundref="_lightstribe_8h" startline="18">color24bit::green</references>
+        <location file="Lightstribe.h" line="94" column="1" bodyfile="Lightstribe.c" bodystart="51" bodyend="81"/>
+        <references refid="structcolor24bit_1a287b397e90d7b995c81ff54e741f96b2" compoundref="_lightstribe_8h" startline="22">color24bit::blue</references>
+        <references refid="structcolor24bit_1a90d21fa503b626c00cdc8d94863d5877" compoundref="_lightstribe_8h" startline="20">color24bit::green</references>
         <references refid="globals_8h_1ad5db4045aed262ed4aae2af9d81fab98" compoundref="globals_8h" startline="25">NumOfLeds</references>
-        <references refid="structcolor24bit_1ad47d918910aaa51c73160ac85999d09c" compoundref="_lightstribe_8h" startline="17">color24bit::red</references>
+        <references refid="structcolor24bit_1ad47d918910aaa51c73160ac85999d09c" compoundref="_lightstribe_8h" startline="18">color24bit::red</references>
       </memberdef>
       <memberdef kind="function" id="_lightstribe_8h_1aac724dad670e4a26723daf71ce6a8d8a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -188,13 +188,13 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Lightstribe.h" line="93" column="1" bodyfile="Lightstribe.c" bodystart="96" bodyend="170"/>
+        <location file="Lightstribe.h" line="96" column="1" bodyfile="Lightstribe.c" bodystart="96" bodyend="170"/>
         <references refid="globals_8h_1ad5db4045aed262ed4aae2af9d81fab98" compoundref="globals_8h" startline="25">NumOfLeds</references>
         <referencedby refid="_led_effects_8h_1a9fd87d01d5cc4ce5fce6ddca55ebaf37" compoundref="_led_effects_8c" startline="278" endline="288">blinkled</referencedby>
         <referencedby refid="_led_effects_8h_1ac83bd19da7ebd3c475e3667e4229db41" compoundref="_led_effects_8c" startline="489" endline="507">eastereggbase</referencedby>
         <referencedby refid="_led_effects_8h_1a71d3b2ff21a63b48a01461e74be0c2b8" compoundref="_led_effects_8c" startline="366" endline="428">faden</referencedby>
         <referencedby refid="_led_effects_8h_1a99174e2b381d7ec6667d29352e6eca1b" compoundref="_led_effects_8c" startline="549" endline="568">fillup</referencedby>
-        <referencedby refid="ws2811lichterkette_8c_1a840291bc02cba5474a4cb46a9b9566fe" compoundref="ws2811lichterkette_8c" startline="244" endline="367">main</referencedby>
+        <referencedby refid="ws2811lichterkette_8c_1a840291bc02cba5474a4cb46a9b9566fe" compoundref="ws2811lichterkette_8c" startline="447" endline="570">main</referencedby>
         <referencedby refid="_led_effects_8h_1a448758d76f47ea6fed4beb349196363f" compoundref="_led_effects_8c" startline="340" endline="351">recolor</referencedby>
         <referencedby refid="_led_effects_8h_1a5bde1e9e7fc19a9916f1ec02d8fbcd6c" compoundref="_led_effects_8c" startline="323" endline="328">run_alternating</referencedby>
         <referencedby refid="_led_effects_8h_1a35cfbfc36c975f98a7779a37b6ff63ce" compoundref="_led_effects_8c" startline="236" endline="267">runrunled</referencedby>
@@ -216,18 +216,15 @@
 <codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LIGHTSTRIBE_H_</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="14"><highlight class="normal"></highlight></codeline>
 <codeline lineno="16" refid="structcolor24bit" refkind="compound"><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structcolor24bit" kindref="compound">color24bit</ref>{</highlight></codeline>
-<codeline lineno="17" refid="structcolor24bit_1ad47d918910aaa51c73160ac85999d09c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="structcolor24bit_1ad47d918910aaa51c73160ac85999d09c" kindref="member">red</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="18" refid="structcolor24bit_1a90d21fa503b626c00cdc8d94863d5877" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="structcolor24bit_1a90d21fa503b626c00cdc8d94863d5877" kindref="member">green</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="19" refid="structcolor24bit_1a287b397e90d7b995c81ff54e741f96b2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="structcolor24bit_1a287b397e90d7b995c81ff54e741f96b2" kindref="member">blue</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="20"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="21"><highlight class="normal"></highlight></codeline>
-<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>F_CPU<sp/>==<sp/>16000000</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>message(&quot;Use<sp/>16<sp/>MHz<sp/>Macros&quot;)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18" refid="structcolor24bit_1ad47d918910aaa51c73160ac85999d09c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="structcolor24bit_1ad47d918910aaa51c73160ac85999d09c" kindref="member">red</ref>;<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="20" refid="structcolor24bit_1a90d21fa503b626c00cdc8d94863d5877" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="structcolor24bit_1a90d21fa503b626c00cdc8d94863d5877" kindref="member">green</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="22" refid="structcolor24bit_1a287b397e90d7b995c81ff54e741f96b2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="structcolor24bit_1a287b397e90d7b995c81ff54e741f96b2" kindref="member">blue</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="23"><highlight class="normal">};</highlight></codeline>
 <codeline lineno="24"><highlight class="normal"></highlight></codeline>
-<codeline lineno="25"><highlight class="preprocessor">#define<sp/>SETHIGH<sp/>PORTB=0x01;\</highlight></codeline>
-<codeline lineno="26"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>asm<sp/>(&quot;nop&quot;);\</highlight></codeline>
-<codeline lineno="27"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>asm<sp/>(&quot;nop&quot;);\</highlight></codeline>
-<codeline lineno="28"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>asm<sp/>(&quot;nop&quot;);\</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>F_CPU<sp/>==<sp/>16000000</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>message(&quot;Use<sp/>16<sp/>MHz<sp/>Macros&quot;)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="preprocessor">#define<sp/>SETHIGH<sp/>PORTB=0x01;\</highlight></codeline>
 <codeline lineno="29"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>asm<sp/>(&quot;nop&quot;);\</highlight></codeline>
 <codeline lineno="30"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>asm<sp/>(&quot;nop&quot;);\</highlight></codeline>
 <codeline lineno="31"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>asm<sp/>(&quot;nop&quot;);\</highlight></codeline>
@@ -236,65 +233,68 @@
 <codeline lineno="34"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>asm<sp/>(&quot;nop&quot;);\</highlight></codeline>
 <codeline lineno="35"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>asm<sp/>(&quot;nop&quot;);\</highlight></codeline>
 <codeline lineno="36"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>asm<sp/>(&quot;nop&quot;);\</highlight></codeline>
-<codeline lineno="37"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>PORTB=0x00;\</highlight></codeline>
+<codeline lineno="37"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>asm<sp/>(&quot;nop&quot;);\</highlight></codeline>
 <codeline lineno="38"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>asm<sp/>(&quot;nop&quot;);\</highlight></codeline>
 <codeline lineno="39"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>asm<sp/>(&quot;nop&quot;);\</highlight></codeline>
-<codeline lineno="40"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>asm<sp/>(&quot;nop&quot;);</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="42"><highlight class="normal"></highlight><highlight class="preprocessor">#elif<sp/>F_CPU<sp/>==<sp/>8000000</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="43"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>message(&quot;Use<sp/>8<sp/>MHz<sp/>Macros&quot;)</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="44"><highlight class="normal"></highlight></codeline>
-<codeline lineno="45"><highlight class="preprocessor">#define<sp/>SETHIGH<sp/>PORTB=0x01;\</highlight></codeline>
-<codeline lineno="46"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>asm<sp/>(&quot;nop&quot;);\</highlight></codeline>
-<codeline lineno="47"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>asm<sp/>(&quot;nop&quot;);\</highlight></codeline>
-<codeline lineno="48"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>asm<sp/>(&quot;nop&quot;);\</highlight></codeline>
+<codeline lineno="40"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>PORTB=0x00;\</highlight></codeline>
+<codeline lineno="41"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>asm<sp/>(&quot;nop&quot;);\</highlight></codeline>
+<codeline lineno="42"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>asm<sp/>(&quot;nop&quot;);\</highlight></codeline>
+<codeline lineno="43"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>asm<sp/>(&quot;nop&quot;);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="preprocessor">#elif<sp/>F_CPU<sp/>==<sp/>8000000</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>message(&quot;Use<sp/>8<sp/>MHz<sp/>Macros&quot;)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="preprocessor">#define<sp/>SETHIGH<sp/>PORTB=0x01;\</highlight></codeline>
 <codeline lineno="49"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>asm<sp/>(&quot;nop&quot;);\</highlight></codeline>
 <codeline lineno="50"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>asm<sp/>(&quot;nop&quot;);\</highlight></codeline>
-<codeline lineno="51"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>PORTB=0x00;\</highlight></codeline>
+<codeline lineno="51"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>asm<sp/>(&quot;nop&quot;);\</highlight></codeline>
 <codeline lineno="52"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>asm<sp/>(&quot;nop&quot;);\</highlight></codeline>
-<codeline lineno="53"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>asm<sp/>(&quot;nop&quot;);</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="54"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="55"><highlight class="normal"></highlight></codeline>
-<codeline lineno="56"><highlight class="normal"></highlight></codeline>
-<codeline lineno="57"><highlight class="normal"></highlight></codeline>
-<codeline lineno="58"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>F_CPU<sp/>==<sp/>16000000</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>asm<sp/>(&quot;nop&quot;);\</highlight></codeline>
+<codeline lineno="54"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>PORTB=0x00;\</highlight></codeline>
+<codeline lineno="55"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>asm<sp/>(&quot;nop&quot;);\</highlight></codeline>
+<codeline lineno="56"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>asm<sp/>(&quot;nop&quot;);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
 <codeline lineno="59"><highlight class="normal"></highlight></codeline>
-<codeline lineno="60"><highlight class="preprocessor">#define<sp/>SETLOW<sp/>PORTB=0x01;\</highlight></codeline>
-<codeline lineno="61"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>asm<sp/>(&quot;nop&quot;);\</highlight></codeline>
-<codeline lineno="62"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>asm<sp/>(&quot;nop&quot;);\</highlight></codeline>
-<codeline lineno="63"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>asm<sp/>(&quot;nop&quot;);\</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>F_CPU<sp/>==<sp/>16000000</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="preprocessor">#define<sp/>SETLOW<sp/>PORTB=0x01;\</highlight></codeline>
 <codeline lineno="64"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>asm<sp/>(&quot;nop&quot;);\</highlight></codeline>
 <codeline lineno="65"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>asm<sp/>(&quot;nop&quot;);\</highlight></codeline>
-<codeline lineno="66"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>PORTB=0x00;\</highlight></codeline>
+<codeline lineno="66"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>asm<sp/>(&quot;nop&quot;);\</highlight></codeline>
 <codeline lineno="67"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>asm<sp/>(&quot;nop&quot;);\</highlight></codeline>
 <codeline lineno="68"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>asm<sp/>(&quot;nop&quot;);\</highlight></codeline>
-<codeline lineno="69"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>asm<sp/>(&quot;nop&quot;);\</highlight></codeline>
+<codeline lineno="69"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>PORTB=0x00;\</highlight></codeline>
 <codeline lineno="70"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>asm<sp/>(&quot;nop&quot;);\</highlight></codeline>
 <codeline lineno="71"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>asm<sp/>(&quot;nop&quot;);\</highlight></codeline>
 <codeline lineno="72"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>asm<sp/>(&quot;nop&quot;);\</highlight></codeline>
 <codeline lineno="73"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>asm<sp/>(&quot;nop&quot;);\</highlight></codeline>
 <codeline lineno="74"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>asm<sp/>(&quot;nop&quot;);\</highlight></codeline>
-<codeline lineno="75"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>asm<sp/>(&quot;nop&quot;);</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="76"><highlight class="normal"></highlight><highlight class="preprocessor">#elif<sp/>F_CPU<sp/>==<sp/>8000000</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="77"><highlight class="normal"></highlight></codeline>
-<codeline lineno="78"><highlight class="preprocessor">#define<sp/>SETLOW<sp/>PORTB=0x01;\</highlight></codeline>
-<codeline lineno="79"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>asm<sp/>(&quot;nop&quot;);\</highlight></codeline>
-<codeline lineno="80"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>asm<sp/>(&quot;nop&quot;);\</highlight></codeline>
-<codeline lineno="81"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>PORTB=0x00;\</highlight></codeline>
+<codeline lineno="75"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>asm<sp/>(&quot;nop&quot;);\</highlight></codeline>
+<codeline lineno="76"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>asm<sp/>(&quot;nop&quot;);\</highlight></codeline>
+<codeline lineno="77"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>asm<sp/>(&quot;nop&quot;);\</highlight></codeline>
+<codeline lineno="78"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>asm<sp/>(&quot;nop&quot;);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight><highlight class="preprocessor">#elif<sp/>F_CPU<sp/>==<sp/>8000000</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="preprocessor">#define<sp/>SETLOW<sp/>PORTB=0x01;\</highlight></codeline>
 <codeline lineno="82"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>asm<sp/>(&quot;nop&quot;);\</highlight></codeline>
 <codeline lineno="83"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>asm<sp/>(&quot;nop&quot;);\</highlight></codeline>
-<codeline lineno="84"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>asm<sp/>(&quot;nop&quot;);</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="85"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="86"><highlight class="normal"></highlight></codeline>
-<codeline lineno="87"><highlight class="normal"></highlight></codeline>
-<codeline lineno="88"><highlight class="normal"></highlight><highlight class="comment">//function<sp/>to<sp/>change<sp/>one<sp/>LED<sp/>at<sp/>a<sp/>specific<sp/>position;<sp/>all<sp/>other<sp/>LEDs<sp/>are<sp/>not<sp/>changed;<sp/>run<sp/>transmit2leds<sp/>afterwards</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="89"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_lightstribe_8h_1a63fa595d401f0e85c1bba55ba2b1d66e" kindref="member">changeled</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structcolor24bit" kindref="compound">color24bit</ref><sp/>color,<sp/>uint8_t<sp/>*lightdata,<sp/>uint8_t<sp/>lednr);</highlight></codeline>
-<codeline lineno="90"><highlight class="normal"></highlight><highlight class="comment">//function<sp/>to<sp/>set<sp/>one<sp/>LED<sp/>at<sp/>a<sp/>specific<sp/>position;<sp/>all<sp/>other<sp/>LEDs<sp/>are<sp/>turned<sp/>off;<sp/>run<sp/>transmit2leds<sp/>afterwards</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="91"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_lightstribe_8h_1abba9462833e30ef725eaf18c3d01eb71" kindref="member">setled</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structcolor24bit" kindref="compound">color24bit</ref><sp/>color,<sp/>uint8_t<sp/>*lightdata,<sp/>uint8_t<sp/>lednr);</highlight></codeline>
-<codeline lineno="92"><highlight class="normal"></highlight><highlight class="comment">//transmit<sp/>the<sp/>color<sp/>array<sp/>to<sp/>the<sp/>stribe<sp/>--&gt;<sp/>one<sp/>wire<sp/>data<sp/>transmission</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="93"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_lightstribe_8h_1aac724dad670e4a26723daf71ce6a8d8a" kindref="member">transmit2leds</ref>(uint8_t<sp/>lightdata[]);</highlight></codeline>
-<codeline lineno="94"><highlight class="normal"></highlight></codeline>
-<codeline lineno="95"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>LIGHTSTRIBE_H_<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+<codeline lineno="84"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>PORTB=0x00;\</highlight></codeline>
+<codeline lineno="85"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>asm<sp/>(&quot;nop&quot;);\</highlight></codeline>
+<codeline lineno="86"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>asm<sp/>(&quot;nop&quot;);\</highlight></codeline>
+<codeline lineno="87"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>asm<sp/>(&quot;nop&quot;);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight><highlight class="comment">//function<sp/>to<sp/>change<sp/>one<sp/>LED<sp/>at<sp/>a<sp/>specific<sp/>position;<sp/>all<sp/>other<sp/>LEDs<sp/>are<sp/>not<sp/>changed;<sp/>run<sp/>transmit2leds<sp/>afterwards</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_lightstribe_8h_1a63fa595d401f0e85c1bba55ba2b1d66e" kindref="member">changeled</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structcolor24bit" kindref="compound">color24bit</ref><sp/>color,<sp/>uint8_t<sp/>*lightdata,<sp/>uint8_t<sp/>lednr);</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight><highlight class="comment">//function<sp/>to<sp/>set<sp/>one<sp/>LED<sp/>at<sp/>a<sp/>specific<sp/>position;<sp/>all<sp/>other<sp/>LEDs<sp/>are<sp/>turned<sp/>off;<sp/>run<sp/>transmit2leds<sp/>afterwards</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_lightstribe_8h_1abba9462833e30ef725eaf18c3d01eb71" kindref="member">setled</ref>(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structcolor24bit" kindref="compound">color24bit</ref><sp/>color,<sp/>uint8_t<sp/>*lightdata,<sp/>uint8_t<sp/>lednr);</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight><highlight class="comment">//transmit<sp/>the<sp/>color<sp/>array<sp/>to<sp/>the<sp/>stribe<sp/>--&gt;<sp/>one<sp/>wire<sp/>data<sp/>transmission</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_lightstribe_8h_1aac724dad670e4a26723daf71ce6a8d8a" kindref="member">transmit2leds</ref>(uint8_t<sp/>lightdata[]);</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>LIGHTSTRIBE_H_<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
     </programlisting>
     <location file="Lightstribe.h"/>
   </compounddef>

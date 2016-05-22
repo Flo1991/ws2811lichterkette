@@ -40,6 +40,7 @@
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Lightstribe WS2811/WS2812
    </div>
+   <div id="projectbrief">Control WS2811/WS2812 LEDs with an AVR</div>
   </td>
  </tr>
  </tbody>
@@ -237,12 +238,12 @@ $(document).ready(function(){initNavTree('_lightstribe_8c_source.html','');});
 <div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;}</div>
 <div class="ttc" id="_lightstribe_8c_html_aac724dad670e4a26723daf71ce6a8d8a"><div class="ttname"><a href="_lightstribe_8c.html#aac724dad670e4a26723daf71ce6a8d8a">transmit2leds</a></div><div class="ttdeci">void transmit2leds(uint8_t lightdata[])</div><div class="ttdoc">transmit the color array to the stribe </div><div class="ttdef"><b>Definition:</b> <a href="_lightstribe_8c_source.html#l00096">Lightstribe.c:96</a></div></div>
 <div class="ttc" id="globals_8h_html"><div class="ttname"><a href="globals_8h.html">globals.h</a></div><div class="ttdoc">file that contains basic and global definitions, changes should be done carefully ...</div></div>
-<div class="ttc" id="structcolor24bit_html_a90d21fa503b626c00cdc8d94863d5877"><div class="ttname"><a href="structcolor24bit.html#a90d21fa503b626c00cdc8d94863d5877">color24bit::green</a></div><div class="ttdeci">uint8_t green</div><div class="ttdef"><b>Definition:</b> <a href="_lightstribe_8h_source.html#l00018">Lightstribe.h:18</a></div></div>
+<div class="ttc" id="structcolor24bit_html_a90d21fa503b626c00cdc8d94863d5877"><div class="ttname"><a href="structcolor24bit.html#a90d21fa503b626c00cdc8d94863d5877">color24bit::green</a></div><div class="ttdeci">uint8_t green</div><div class="ttdoc">8 Bit green </div><div class="ttdef"><b>Definition:</b> <a href="_lightstribe_8h_source.html#l00020">Lightstribe.h:20</a></div></div>
 <div class="ttc" id="_lightstribe_8c_html_abba9462833e30ef725eaf18c3d01eb71"><div class="ttname"><a href="_lightstribe_8c.html#abba9462833e30ef725eaf18c3d01eb71">setled</a></div><div class="ttdeci">void setled(struct color24bit color, uint8_t *lightdata, uint8_t lednr)</div><div class="ttdoc">set the color of one LED at a specific position, all others are off; run transmit2leds afterwards to ...</div><div class="ttdef"><b>Definition:</b> <a href="_lightstribe_8c_source.html#l00051">Lightstribe.c:51</a></div></div>
 <div class="ttc" id="globals_8h_html_ad5db4045aed262ed4aae2af9d81fab98"><div class="ttname"><a href="globals_8h.html#ad5db4045aed262ed4aae2af9d81fab98">NumOfLeds</a></div><div class="ttdeci">EXTERN uint8_t NumOfLeds</div><div class="ttdoc">global variable for number of leds to control </div><div class="ttdef"><b>Definition:</b> <a href="globals_8h_source.html#l00025">globals.h:25</a></div></div>
 <div class="ttc" id="_lightstribe_8c_html_a63fa595d401f0e85c1bba55ba2b1d66e"><div class="ttname"><a href="_lightstribe_8c.html#a63fa595d401f0e85c1bba55ba2b1d66e">changeled</a></div><div class="ttdeci">void changeled(struct color24bit color, uint8_t *lightdata, uint8_t lednr)</div><div class="ttdoc">change the color of one LED at a specific position; run transmit2leds afterwards to update the LEDs ...</div><div class="ttdef"><b>Definition:</b> <a href="_lightstribe_8c_source.html#l00033">Lightstribe.c:33</a></div></div>
-<div class="ttc" id="structcolor24bit_html_ad47d918910aaa51c73160ac85999d09c"><div class="ttname"><a href="structcolor24bit.html#ad47d918910aaa51c73160ac85999d09c">color24bit::red</a></div><div class="ttdeci">uint8_t red</div><div class="ttdef"><b>Definition:</b> <a href="_lightstribe_8h_source.html#l00017">Lightstribe.h:17</a></div></div>
-<div class="ttc" id="structcolor24bit_html_a287b397e90d7b995c81ff54e741f96b2"><div class="ttname"><a href="structcolor24bit.html#a287b397e90d7b995c81ff54e741f96b2">color24bit::blue</a></div><div class="ttdeci">uint8_t blue</div><div class="ttdef"><b>Definition:</b> <a href="_lightstribe_8h_source.html#l00019">Lightstribe.h:19</a></div></div>
+<div class="ttc" id="structcolor24bit_html_ad47d918910aaa51c73160ac85999d09c"><div class="ttname"><a href="structcolor24bit.html#ad47d918910aaa51c73160ac85999d09c">color24bit::red</a></div><div class="ttdeci">uint8_t red</div><div class="ttdoc">8 Bit red </div><div class="ttdef"><b>Definition:</b> <a href="_lightstribe_8h_source.html#l00018">Lightstribe.h:18</a></div></div>
+<div class="ttc" id="structcolor24bit_html_a287b397e90d7b995c81ff54e741f96b2"><div class="ttname"><a href="structcolor24bit.html#a287b397e90d7b995c81ff54e741f96b2">color24bit::blue</a></div><div class="ttdeci">uint8_t blue</div><div class="ttdoc">8 Bit blue </div><div class="ttdef"><b>Definition:</b> <a href="_lightstribe_8h_source.html#l00022">Lightstribe.h:22</a></div></div>
 <div class="ttc" id="_lightstribe_8h_html"><div class="ttname"><a href="_lightstribe_8h.html">Lightstribe.h</a></div><div class="ttdoc">basic functions for controlling WS2811/WS2812 LEDs </div></div>
 <div class="ttc" id="structcolor24bit_html"><div class="ttname"><a href="structcolor24bit.html">color24bit</a></div><div class="ttdoc">24 Bit color structure RGB 8-8-8 </div><div class="ttdef"><b>Definition:</b> <a href="_lightstribe_8h_source.html#l00016">Lightstribe.h:16</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
@@ -251,7 +252,7 @@ $(document).ready(function(){initNavTree('_lightstribe_8c_source.html','');});
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="_lightstribe_8c.html">Lightstribe.c</a></li>
-    <li class="footer">Generated on Fri May 6 2016 14:10:35 for Lightstribe WS2811/WS2812 by
+    <li class="footer">Generated on Sun May 22 2016 16:48:52 for Lightstribe WS2811/WS2812 by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.10 </li>
   </ul>

@@ -1,0 +1,1184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<add>
+  <doc>
+    <field name="type">source</field>
+    <field name="name">globals.h</field>
+    <field name="url">globals_8h_source.html#l00001</field>
+    <field name="keywords"></field>
+    <field name="text"></field>
+  </doc>
+  <doc>
+    <field name="type">source</field>
+    <field name="name">globals.h</field>
+    <field name="url">globals_8h_source.html#l00021</field>
+    <field name="keywords"></field>
+    <field name="text"></field>
+  </doc>
+  <doc>
+    <field name="type">source</field>
+    <field name="name">globals.h</field>
+    <field name="url">globals_8h_source.html#l00025</field>
+    <field name="keywords"></field>
+    <field name="text">EXTERN uint8_t NumOfLeds</field>
+  </doc>
+  <doc>
+    <field name="type">source</field>
+    <field name="name">globals.h</field>
+    <field name="url">globals_8h_source.html#l00027</field>
+    <field name="keywords"></field>
+    <field name="text">EXTERN uint16_t effectime</field>
+  </doc>
+  <doc>
+    <field name="type">source</field>
+    <field name="name">globals.h</field>
+    <field name="url">globals_8h_source.html#l00029</field>
+    <field name="keywords"></field>
+    <field name="text">EXTERN uint8_t ledtype</field>
+  </doc>
+  <doc>
+    <field name="type">source</field>
+    <field name="name">globals.h</field>
+    <field name="url">globals_8h_source.html#l00031</field>
+    <field name="keywords"></field>
+    <field name="text"></field>
+  </doc>
+  <doc>
+    <field name="type">source</field>
+    <field name="name">globals.h</field>
+    <field name="url">globals_8h_source.html#l00035</field>
+    <field name="keywords"></field>
+    <field name="text"></field>
+  </doc>
+  <doc>
+    <field name="type">source</field>
+    <field name="name">globals.h</field>
+    <field name="url">globals_8h_source.html#l00037</field>
+    <field name="keywords"></field>
+    <field name="text"></field>
+  </doc>
+  <doc>
+    <field name="type">source</field>
+    <field name="name">globals.h</field>
+    <field name="url">globals_8h_source.html#l00040</field>
+    <field name="keywords"></field>
+    <field name="text">EXTERN uint8_t CompColorArray MAXNUMCOLORS</field>
+  </doc>
+  <doc>
+    <field name="type">source</field>
+    <field name="name">globals.h</field>
+    <field name="url">globals_8h_source.html#l00042</field>
+    <field name="keywords"></field>
+    <field name="text">EXTERN uint8_t RecBuffer UART_BUFFER_SIZE</field>
+  </doc>
+  <doc>
+    <field name="type">source</field>
+    <field name="name">globals.h</field>
+    <field name="url">globals_8h_source.html#l00044</field>
+    <field name="keywords"></field>
+    <field name="text">EXTERN uint8_t BufferCounter</field>
+  </doc>
+  <doc>
+    <field name="type">source</field>
+    <field name="name">globals.h</field>
+    <field name="url">globals_8h_source.html#l00046</field>
+    <field name="keywords"></field>
+    <field name="text">EXTERN uint8_t DataLen</field>
+  </doc>
+  <doc>
+    <field name="type">source</field>
+    <field name="name">globals.h</field>
+    <field name="url">globals_8h_source.html#l00048</field>
+    <field name="keywords"></field>
+    <field name="text">EXTERN uint8_t effect</field>
+  </doc>
+  <doc>
+    <field name="type">source</field>
+    <field name="name">globals.h</field>
+    <field name="url">globals_8h_source.html#l00053</field>
+    <field name="keywords"></field>
+    <field name="text">EXTERN uint8_t PacketComplete</field>
+  </doc>
+  <doc>
+    <field name="type">source</field>
+    <field name="name">globals.h</field>
+    <field name="url">globals_8h_source.html#l00055</field>
+    <field name="keywords"></field>
+    <field name="text">EXTERN uint8_t PaketStart</field>
+  </doc>
+  <doc>
+    <field name="type">source</field>
+    <field name="name">globals.h</field>
+    <field name="url">globals_8h_source.html#l00057</field>
+    <field name="keywords"></field>
+    <field name="text">EXTERN uint8_t IsReading</field>
+  </doc>
+  <doc>
+    <field name="type">source</field>
+    <field name="name">globals.h</field>
+    <field name="url">globals_8h_source.html#l00059</field>
+    <field name="keywords"></field>
+    <field name="text">EXTERN ReceivedChar</field>
+  </doc>
+  <doc>
+    <field name="type">source</field>
+    <field name="name">globals.h</field>
+    <field name="url">globals_8h_source.html#l00063</field>
+    <field name="keywords"></field>
+    <field name="text"></field>
+  </doc>
+  <doc>
+    <field name="type">source</field>
+    <field name="name">LedEffects.c</field>
+    <field name="url">_led_effects_8c_source.html#l00001</field>
+    <field name="keywords"></field>
+    <field name="text"></field>
+  </doc>
+  <doc>
+    <field name="type">source</field>
+    <field name="name">LedEffects.c</field>
+    <field name="url">_led_effects_8c_source.html#l00033</field>
+    <field name="keywords"></field>
+    <field name="text">uint8_t map uint8_t x uint8_t in_min uint8_t in_max uint8_t out_min uint8_t out_max x in_min out_max out_min in_max in_min out_min</field>
+  </doc>
+  <doc>
+    <field name="type">source</field>
+    <field name="name">LedEffects.c</field>
+    <field name="url">_led_effects_8c_source.html#l00045</field>
+    <field name="keywords"></field>
+    <field name="text">color24bit colorconv8to24 uint8_t startcolor color24bit color ledtype color blue map b00000011 startcolor color red map b00011100 startcolor color green map b11100000 startcolor color blue map b00000011 startcolor color green map b00011100 startcolor color red map b11100000 startcolor color</field>
+  </doc>
+  <doc>
+    <field name="type">source</field>
+    <field name="name">LedEffects.c</field>
+    <field name="url">_led_effects_8c_source.html#l00072</field>
+    <field name="keywords"></field>
+    <field name="text">effectdelay uint16_t delay uint16_t j delay j PacketComplete j delay</field>
+  </doc>
+  <doc>
+    <field name="type">source</field>
+    <field name="name">LedEffects.c</field>
+    <field name="url">_led_effects_8c_source.html#l00096</field>
+    <field name="keywords"></field>
+    <field name="text">setfullcolor color24bit color uint8_t lightdata uint8_t ledcolor uint16_t i i i NumOfLeds i ledcolor i ledcolor lightdata color green ledcolor lightdata color red lightdata color blue</field>
+  </doc>
+  <doc>
+    <field name="type">source</field>
+    <field name="name">LedEffects.c</field>
+    <field name="url">_led_effects_8c_source.html#l00118</field>
+    <field name="keywords"></field>
+    <field name="text">resetstribe uint8_t lightdata color24bit color color blue color green color red setfullcolor color lightdata</field>
+  </doc>
+  <doc>
+    <field name="type">source</field>
+    <field name="name">LedEffects.c</field>
+    <field name="url">_led_effects_8c_source.html#l00138</field>
+    <field name="keywords"></field>
+    <field name="text">rotate uint8_t lightdata uint8_t direction uint8_t temp1 temp2 temp3 uint8_t tempp uint16_t i direction temp1 lightdata temp2 lightdata temp3 lightdata i i NumOfLeds i lightdata lightdata lightdata lightdata temp1 lightdata temp2 lightdata temp3 tempp lightdata NumOfLeds temp1 tempp temp2 tempp temp3 tempp i i NumOfLeds i tempp tempp tempp tempp temp1 tempp temp2 tempp temp3</field>
+  </doc>
+  <doc>
+    <field name="type">source</field>
+    <field name="name">LedEffects.c</field>
+    <field name="url">_led_effects_8c_source.html#l00196</field>
+    <field name="keywords"></field>
+    <field name="text">rotateN uint8_t lightdata uint8_t direction uint8_t width uint8_t i i i width i rotate lightdata direction</field>
+  </doc>
+  <doc>
+    <field name="type">source</field>
+    <field name="name">LedEffects.c</field>
+    <field name="url">_led_effects_8c_source.html#l00217</field>
+    <field name="keywords"></field>
+    <field name="text">initrunled color24bit color uint8_t lightdata color24bit background setfullcolor background lightdata changeled color lightdata</field>
+  </doc>
+  <doc>
+    <field name="type">source</field>
+    <field name="name">LedEffects.c</field>
+    <field name="url">_led_effects_8c_source.html#l00236</field>
+    <field name="keywords"></field>
+    <field name="text">runrunled uint8_t lightdata uint8_t direction uint8_t i direction i i NumOfLeds i transmit2leds lightdata rotate lightdata effectdelay effectime PacketComplete i i NumOfLeds i rotate lightdata transmit2leds lightdata effectdelay effectime PacketComplete rotate lightdata direction transmit2leds lightdata effectdelay effectime</field>
+  </doc>
+  <doc>
+    <field name="type">source</field>
+    <field name="name">LedEffects.c</field>
+    <field name="url">_led_effects_8c_source.html#l00278</field>
+    <field name="keywords"></field>
+    <field name="text">blinkled color24bit color uint8_t lightdata setfullcolor color lightdata transmit2leds lightdata effectdelay effectime resetstribe lightdata transmit2leds lightdata effectdelay effectime</field>
+  </doc>
+  <doc>
+    <field name="type">source</field>
+    <field name="name">LedEffects.c</field>
+    <field name="url">_led_effects_8c_source.html#l00300</field>
+    <field name="keywords"></field>
+    <field name="text">init_alternating color24bit color color24bit backcolor uint8_t lightdata uint16_t i setfullcolor backcolor lightdata i i NumOfLeds i i changeled color lightdata i</field>
+  </doc>
+  <doc>
+    <field name="type">source</field>
+    <field name="name">LedEffects.c</field>
+    <field name="url">_led_effects_8c_source.html#l00323</field>
+    <field name="keywords"></field>
+    <field name="text">run_alternating uint8_t lightdata transmit2leds lightdata effectdelay effectime rotate lightdata</field>
+  </doc>
+  <doc>
+    <field name="type">source</field>
+    <field name="name">LedEffects.c</field>
+    <field name="url">_led_effects_8c_source.html#l00340</field>
+    <field name="keywords"></field>
+    <field name="text">recolor color24bit color uint8_t lightdata uint8_t i i i NumOfLeds i changeled color lightdata i transmit2leds lightdata effectdelay effectime PacketComplete</field>
+  </doc>
+  <doc>
+    <field name="type">source</field>
+    <field name="name">LedEffects.c</field>
+    <field name="url">_led_effects_8c_source.html#l00366</field>
+    <field name="keywords"></field>
+    <field name="text">faden color24bit color uint8_t lightdata uint8_t i uint8_t maxgreen maxred maxblue maxgreen color green maxblue color blue maxred color red i i i setfullcolor color lightdata transmit2leds lightdata effectdelay effectime color green color green color blue color blue color red color red color red color blue color green PacketComplete i i i setfullcolor color lightdata transmit2leds lightdata effectdelay effectime color green maxgreen color green color blue maxblue color blue color red maxred color red color red maxred color blue maxblue color green maxgreen PacketComplete</field>
+  </doc>
+  <doc>
+    <field name="type">source</field>
+    <field name="name">LedEffects.c</field>
+    <field name="url">_led_effects_8c_source.html#l00442</field>
+    <field name="keywords"></field>
+    <field name="text">initrainbow uint8_t lightdata uint8_t steps NumOfLeds color24bit color uint8_t i j color red color blue color green j i i NumOfLeds i j steps color blue steps j j steps j steps color red steps j j steps j steps color green steps j j steps j steps color blue steps j j steps j steps color red steps j j steps color green steps j j changeled color lightdata i</field>
+  </doc>
+  <doc>
+    <field name="type">source</field>
+    <field name="name">LedEffects.c</field>
+    <field name="url">_led_effects_8c_source.html#l00489</field>
+    <field name="keywords"></field>
+    <field name="text">eastereggbase color24bit color uint8_t lightdata uint8_t i j uint8_t n j NumOfLeds i i NumOfLeds i n j i changeled color lightdata n rotate lightdata transmit2leds lightdata effectdelay effectime PacketComplete</field>
+  </doc>
+  <doc>
+    <field name="type">source</field>
+    <field name="name">LedEffects.c</field>
+    <field name="url">_led_effects_8c_source.html#l00514</field>
+    <field name="keywords"></field>
+    <field name="text">easteregg uint8_t lightdata color24bit color color2 uint8_t i color colorconv8to24 color2 colorconv8to24 eastereggbase color2 lightdata i i i PacketComplete _delay_ms eastereggbase color lightdata i i i PacketComplete _delay_ms</field>
+  </doc>
+  <doc>
+    <field name="type">source</field>
+    <field name="name">LedEffects.c</field>
+    <field name="url">_led_effects_8c_source.html#l00549</field>
+    <field name="keywords"></field>
+    <field name="text">fillup color24bit color color24bit backcolor uint8_t lightdata uint8_t i j i i NumOfLeds i j j NumOfLeds i j changeled color lightdata j j changeled backcolor lightdata j transmit2leds lightdata effectdelay effectime PacketComplete effectdelay effectime</field>
+  </doc>
+  <doc>
+    <field name="type">source</field>
+    <field name="name">LedEffects.h</field>
+    <field name="url">_led_effects_8h_source.html#l00001</field>
+    <field name="keywords"></field>
+    <field name="text"></field>
+  </doc>
+  <doc>
+    <field name="type">source</field>
+    <field name="name">LedEffects.h</field>
+    <field name="url">_led_effects_8h_source.html#l00016</field>
+    <field name="keywords"></field>
+    <field name="text"></field>
+  </doc>
+  <doc>
+    <field name="type">source</field>
+    <field name="name">LedEffects.h</field>
+    <field name="url">_led_effects_8h_source.html#l00018</field>
+    <field name="keywords"></field>
+    <field name="text"></field>
+  </doc>
+  <doc>
+    <field name="type">source</field>
+    <field name="name">LedEffects.h</field>
+    <field name="url">_led_effects_8h_source.html#l00020</field>
+    <field name="keywords"></field>
+    <field name="text"></field>
+  </doc>
+  <doc>
+    <field name="type">source</field>
+    <field name="name">LedEffects.h</field>
+    <field name="url">_led_effects_8h_source.html#l00022</field>
+    <field name="keywords"></field>
+    <field name="text"></field>
+  </doc>
+  <doc>
+    <field name="type">source</field>
+    <field name="name">LedEffects.h</field>
+    <field name="url">_led_effects_8h_source.html#l00024</field>
+    <field name="keywords"></field>
+    <field name="text"></field>
+  </doc>
+  <doc>
+    <field name="type">source</field>
+    <field name="name">LedEffects.h</field>
+    <field name="url">_led_effects_8h_source.html#l00026</field>
+    <field name="keywords"></field>
+    <field name="text"></field>
+  </doc>
+  <doc>
+    <field name="type">source</field>
+    <field name="name">LedEffects.h</field>
+    <field name="url">_led_effects_8h_source.html#l00028</field>
+    <field name="keywords"></field>
+    <field name="text"></field>
+  </doc>
+  <doc>
+    <field name="type">source</field>
+    <field name="name">LedEffects.h</field>
+    <field name="url">_led_effects_8h_source.html#l00030</field>
+    <field name="keywords"></field>
+    <field name="text"></field>
+  </doc>
+  <doc>
+    <field name="type">source</field>
+    <field name="name">LedEffects.h</field>
+    <field name="url">_led_effects_8h_source.html#l00032</field>
+    <field name="keywords"></field>
+    <field name="text"></field>
+  </doc>
+  <doc>
+    <field name="type">source</field>
+    <field name="name">LedEffects.h</field>
+    <field name="url">_led_effects_8h_source.html#l00034</field>
+    <field name="keywords"></field>
+    <field name="text"></field>
+  </doc>
+  <doc>
+    <field name="type">source</field>
+    <field name="name">LedEffects.h</field>
+    <field name="url">_led_effects_8h_source.html#l00036</field>
+    <field name="keywords"></field>
+    <field name="text"></field>
+  </doc>
+  <doc>
+    <field name="type">source</field>
+    <field name="name">LedEffects.h</field>
+    <field name="url">_led_effects_8h_source.html#l00038</field>
+    <field name="keywords"></field>
+    <field name="text">uint8_t map uint8_t x uint8_t in_min uint8_t in_max uint8_t out_min uint8_t out_max color24bit colorconv8to24 uint8_t startcolor effectdelay uint16_t delay setfullcolor color24bit color uint8_t lightdata resetstribe uint8_t lightdata rotate uint8_t lightdata uint8_t direction rotateN uint8_t lightdata uint8_t direction uint8_t width initrunled color24bit color uint8_t lightdata color24bit background runrunled uint8_t lightdata uint8_t direction blinkled color24bit color uint8_t lightdata init_alternating color24bit color color24bit backcolor uint8_t lightdata run_alternating uint8_t lightdata recolor color24bit color uint8_t lightdata faden color24bit color uint8_t lightdata initrainbow uint8_t lightdata eastereggbase color24bit color uint8_t lightdata easteregg uint8_t lightdata fillup color24bit color color24bit backcolor uint8_t lightdata</field>
+  </doc>
+  <doc>
+    <field name="type">source</field>
+    <field name="name">Lightstribe.c</field>
+    <field name="url">_lightstribe_8c_source.html#l00001</field>
+    <field name="keywords"></field>
+    <field name="text"></field>
+  </doc>
+  <doc>
+    <field name="type">source</field>
+    <field name="name">Lightstribe.c</field>
+    <field name="url">_lightstribe_8c_source.html#l00033</field>
+    <field name="keywords"></field>
+    <field name="text">changeled color24bit color uint8_t lightdata uint8_t lednr lednr NumOfLeds lightdata lightdata lednr lightdata color green lightdata color red lightdata color blue</field>
+  </doc>
+  <doc>
+    <field name="type">source</field>
+    <field name="name">Lightstribe.c</field>
+    <field name="url">_lightstribe_8c_source.html#l00051</field>
+    <field name="keywords"></field>
+    <field name="text">setled color24bit color uint8_t lightdata uint8_t lednr uint8_t ledcolor uint16_t i lednr NumOfLeds i i NumOfLeds i i lednr i lednr i lednr ledcolor i ledcolor lightdata color green ledcolor lightdata color red lightdata color blue ledcolor i ledcolor lightdata ledcolor lightdata lightdata</field>
+  </doc>
+  <doc>
+    <field name="type">source</field>
+    <field name="name">Lightstribe.c</field>
+    <field name="url">_lightstribe_8c_source.html#l00096</field>
+    <field name="keywords"></field>
+    <field name="text">transmit2leds uint8_t lightdata uint16_t i uint8_t byte2send i i NumOfLeds i byte2send lightdata i byte2send SETLOW SETHIGH byte2send SETLOW SETHIGH byte2send SETLOW SETHIGH byte2send SETLOW SETHIGH byte2send SETLOW SETHIGH byte2send SETLOW SETHIGH byte2send SETLOW SETHIGH byte2send SETLOW SETHIGH _delay_us</field>
+  </doc>
+  <doc>
+    <field name="type">source</field>
+    <field name="name">Lightstribe.h</field>
+    <field name="url">_lightstribe_8h_source.html#l00001</field>
+    <field name="keywords"></field>
+    <field name="text"></field>
+  </doc>
+  <doc>
+    <field name="type">source</field>
+    <field name="name">Lightstribe.h</field>
+    <field name="url">_lightstribe_8h_source.html#l00016</field>
+    <field name="keywords"></field>
+    <field name="text">color24bit</field>
+  </doc>
+  <doc>
+    <field name="type">source</field>
+    <field name="name">Lightstribe.h</field>
+    <field name="url">_lightstribe_8h_source.html#l00017</field>
+    <field name="keywords"></field>
+    <field name="text">uint8_t red</field>
+  </doc>
+  <doc>
+    <field name="type">source</field>
+    <field name="name">Lightstribe.h</field>
+    <field name="url">_lightstribe_8h_source.html#l00018</field>
+    <field name="keywords"></field>
+    <field name="text">uint8_t green</field>
+  </doc>
+  <doc>
+    <field name="type">source</field>
+    <field name="name">Lightstribe.h</field>
+    <field name="url">_lightstribe_8h_source.html#l00019</field>
+    <field name="keywords"></field>
+    <field name="text">uint8_t blue changeled color24bit color uint8_t lightdata uint8_t lednr setled color24bit color uint8_t lightdata uint8_t lednr transmit2leds uint8_t lightdata</field>
+  </doc>
+  <doc>
+    <field name="type">source</field>
+    <field name="name">ws2811lichterkette.c</field>
+    <field name="url">ws2811lichterkette_8c_source.html#l00001</field>
+    <field name="keywords"></field>
+    <field name="text"></field>
+  </doc>
+  <doc>
+    <field name="type">source</field>
+    <field name="name">ws2811lichterkette.c</field>
+    <field name="url">ws2811lichterkette_8c_source.html#l00318</field>
+    <field name="keywords"></field>
+    <field name="text"></field>
+  </doc>
+  <doc>
+    <field name="type">source</field>
+    <field name="name">ws2811lichterkette.c</field>
+    <field name="url">ws2811lichterkette_8c_source.html#l00320</field>
+    <field name="keywords"></field>
+    <field name="text"></field>
+  </doc>
+  <doc>
+    <field name="type">source</field>
+    <field name="name">ws2811lichterkette.c</field>
+    <field name="url">ws2811lichterkette_8c_source.html#l00338</field>
+    <field name="keywords"></field>
+    <field name="text"></field>
+  </doc>
+  <doc>
+    <field name="type">source</field>
+    <field name="name">ws2811lichterkette.c</field>
+    <field name="url">ws2811lichterkette_8c_source.html#l00340</field>
+    <field name="keywords"></field>
+    <field name="text"></field>
+  </doc>
+  <doc>
+    <field name="type">source</field>
+    <field name="name">ws2811lichterkette.c</field>
+    <field name="url">ws2811lichterkette_8c_source.html#l00342</field>
+    <field name="keywords"></field>
+    <field name="text"></field>
+  </doc>
+  <doc>
+    <field name="type">source</field>
+    <field name="name">ws2811lichterkette.c</field>
+    <field name="url">ws2811lichterkette_8c_source.html#l00344</field>
+    <field name="keywords"></field>
+    <field name="text"></field>
+  </doc>
+  <doc>
+    <field name="type">source</field>
+    <field name="name">ws2811lichterkette.c</field>
+    <field name="url">ws2811lichterkette_8c_source.html#l00346</field>
+    <field name="keywords"></field>
+    <field name="text"></field>
+  </doc>
+  <doc>
+    <field name="type">source</field>
+    <field name="name">ws2811lichterkette.c</field>
+    <field name="url">ws2811lichterkette_8c_source.html#l00360</field>
+    <field name="keywords"></field>
+    <field name="text">init_uart DDRD _BV PD1 DDRD _BV PD0 UBRR0H MYUBRR UBRR0L MYUBRR UCSR0B RXEN0 UCSR0B RXCIE0 UCSR0C UCSZ01 UCSZ00</field>
+  </doc>
+  <doc>
+    <field name="type">source</field>
+    <field name="name">ws2811lichterkette.c</field>
+    <field name="url">ws2811lichterkette_8c_source.html#l00375</field>
+    <field name="keywords"></field>
+    <field name="text">main uint16_t i j uint8_t TempBuffer UART_BUFFER_SIZE uint8_t lightdata NumOfLeds PacketComplete IsReading PaketStart BufferCounter memset RecBuffer RecBuffer UART_BUFFER_SIZE memset TempBuffer RecBuffer UART_BUFFER_SIZE ledtype BASELEDTYPE DDRB PORTB ReceivedChar effectime effect BufferCounter init_uart sei PacketComplete IsReading PaketStart memcpy TempBuffer RecBuffer DataLen effect TempBuffer EFFECTINDEX effectime TempBuffer DELAYINDEX ledtype BASELEDTYPE TempBuffer EFFECTINDEX NumOfLeds TempBuffer NUMOFLEDINDEX IsReading memcpy CompColorArray TempBuffer DataLen lightdata NULL free lightdata lightdata uint8_t malloc NumOfLeds PacketComplete effect SETFULLCOLOR setfullcolor colorconv8to24 CompColorArray lightdata transmit2leds lightdata FILLUP fillup colorconv8to24 CompColorArray colorconv8to24 CompColorArray lightdata transmit2leds lightdata BLINK blinkled colorconv8to24 CompColorArray lightdata RUNLED initrunled colorconv8to24 CompColorArray lightdata colorconv8to24 CompColorArray effect runrunled lightdata ALTERNATE init_alternating colorconv8to24 CompColorArray colorconv8to24 CompColorArray lightdata effect run_alternating lightdata RECOLOR recolor colorconv8to24 CompColorArray lightdata effect FADE faden colorconv8to24 CompColorArray lightdata INITRAINBOW initrainbow lightdata transmit2leds lightdata ROTATE_R rotate lightdata effectdelay effectime transmit2leds lightdata ROTATE_L rotate lightdata effectdelay effectime transmit2leds lightdata CUSTOM i i NumOfLeds i j i DataLen changeled colorconv8to24 CompColorArray j lightdata i transmit2leds lightdata effect EASTEREGG easteregg lightdata</field>
+  </doc>
+  <doc>
+    <field name="type">source</field>
+    <field name="name">ws2811lichterkette.c</field>
+    <field name="url">ws2811lichterkette_8c_source.html#l00502</field>
+    <field name="keywords"></field>
+    <field name="text">ISR USART_RX_vect ReceivedChar UDR0 ReceivedChar PREAMBLE IsReading PacketComplete PaketStart memset RecBuffer RecBuffer UART_BUFFER_SIZE BufferCounter RecBuffer ReceivedChar PaketStart BufferCounter RecBuffer BufferCounter ReceivedChar DataLen RecBuffer LENINDEX DataLen BufferCounter PacketComplete</field>
+  </doc>
+  <doc>
+    <field name="type">file</field>
+    <field name="name">globals.h</field>
+    <field name="url">globals_8h.html</field>
+    <field name="keywords">globals.h</field>
+    <field name="text">file that contains basic and global definitions changes should be done carefully V1.00 05.01.2016 Wank Florian</field>
+  </doc>
+  <doc>
+    <field name="type">define</field>
+    <field name="name">EXTERN</field>
+    <field name="url">globals_8h.html#a77366c1bd428629dc898e188bfd182a3</field>
+    <field name="keywords">EXTERN</field>
+    <field name="text">macro for global variable management</field>
+  </doc>
+  <doc>
+    <field name="type">define</field>
+    <field name="name">BASELEDTYPE</field>
+    <field name="url">globals_8h.html#af07a5ce170c7be13d096843960e7b9da</field>
+    <field name="keywords">BASELEDTYPE</field>
+    <field name="text">default LED type of the stribe 11 for WS2811 do not change here! change ledtype in main function!</field>
+  </doc>
+  <doc>
+    <field name="type">define</field>
+    <field name="name">MAXNUMCOLORS</field>
+    <field name="url">globals_8h.html#a6e2b9e79df9491377ae405ef85aa0ca5</field>
+    <field name="keywords">MAXNUMCOLORS</field>
+    <field name="text">definition for maximum number of different colors that can be handled at the same time the maximum value should be 250 a higher value may result in an memory overflow refering to 2kByte atmega328p</field>
+  </doc>
+  <doc>
+    <field name="type">define</field>
+    <field name="name">UART_BUFFER_SIZE</field>
+    <field name="url">globals_8h.html#a0d57378e32bf8278011460740bc29f7f</field>
+    <field name="keywords">UART_BUFFER_SIZE</field>
+    <field name="text">definition for UART Buffer must be at least MAXNUMCOLORS+5</field>
+  </doc>
+  <doc>
+    <field name="type">define</field>
+    <field name="name">F_CPU</field>
+    <field name="url">globals_8h.html#a43bafb28b29491ec7f871319b5a3b2f8</field>
+    <field name="keywords">F_CPU</field>
+    <field name="text">CPU Frequency definition for avr delay function</field>
+  </doc>
+  <doc>
+    <field name="type">variable</field>
+    <field name="name">NumOfLeds</field>
+    <field name="url">globals_8h.html#ad5db4045aed262ed4aae2af9d81fab98</field>
+    <field name="keywords">NumOfLeds</field>
+    <field name="text">global variable for number of leds to control</field>
+  </doc>
+  <doc>
+    <field name="type">variable</field>
+    <field name="name">effectime</field>
+    <field name="url">globals_8h.html#ac2445d316b2972d381edeac44bb6a226</field>
+    <field name="keywords">effectime</field>
+    <field name="text">global effectime for effect delays a higher value means a higher delay</field>
+  </doc>
+  <doc>
+    <field name="type">variable</field>
+    <field name="name">ledtype</field>
+    <field name="url">globals_8h.html#a722e1eb38b661d1338ada3cc7a4049a0</field>
+    <field name="keywords">ledtype</field>
+    <field name="text">global ledtype 11 WS2811 RGB Color 12 WS2812 GRB Color</field>
+  </doc>
+  <doc>
+    <field name="type">variable</field>
+    <field name="name">CompColorArray</field>
+    <field name="args">[MAXNUMCOLORS]</field>
+    <field name="url">globals_8h.html#a159854edb9d0c7283013495d85bdf997</field>
+    <field name="keywords">CompColorArray</field>
+    <field name="text">color array containing the received packed 8-Bit colors</field>
+  </doc>
+  <doc>
+    <field name="type">variable</field>
+    <field name="name">RecBuffer</field>
+    <field name="args">[UART_BUFFER_SIZE]</field>
+    <field name="url">globals_8h.html#a5d735865707e6694a8173d629e0b4d5c</field>
+    <field name="keywords">RecBuffer</field>
+    <field name="text">receive buffer for UART communication</field>
+  </doc>
+  <doc>
+    <field name="type">variable</field>
+    <field name="name">BufferCounter</field>
+    <field name="url">globals_8h.html#aa6fcb4d4fca4554ac73bef10668c23cd</field>
+    <field name="keywords">BufferCounter</field>
+    <field name="text">counter for accessing the CompColorArray indices for data income</field>
+  </doc>
+  <doc>
+    <field name="type">variable</field>
+    <field name="name">DataLen</field>
+    <field name="url">globals_8h.html#aaa611e00c18e950be43a4cd5ce0ceeb1</field>
+    <field name="keywords">DataLen</field>
+    <field name="text">variable to store the current packet length of the UART packet</field>
+  </doc>
+  <doc>
+    <field name="type">variable</field>
+    <field name="name">effect</field>
+    <field name="url">globals_8h.html#a053b8e1f039c19251b90d60317db8aed</field>
+    <field name="keywords">effect</field>
+    <field name="text">global effect variable to switch between the effects</field>
+  </doc>
+  <doc>
+    <field name="type">variable</field>
+    <field name="name">PacketComplete</field>
+    <field name="url">globals_8h.html#a1b09d1a5bcf4c8ab435bb3c9e36def59</field>
+    <field name="keywords">PacketComplete</field>
+    <field name="text">flag to store if a UART packet is complete a packet is complete if the BufferCounter equals DataLen</field>
+  </doc>
+  <doc>
+    <field name="type">variable</field>
+    <field name="name">PaketStart</field>
+    <field name="url">globals_8h.html#aaa3bddd2273257ac5ec259197b62e984</field>
+    <field name="keywords">PaketStart</field>
+    <field name="text">flag to store if the PREAMBLE has been received</field>
+  </doc>
+  <doc>
+    <field name="type">variable</field>
+    <field name="name">IsReading</field>
+    <field name="url">globals_8h.html#a922ad5baed647eca43ad1a979e162ebd</field>
+    <field name="keywords">IsReading</field>
+    <field name="text">flag to show if the RecBuffer is in copy process so that the array cannot be filled with new data from UART</field>
+  </doc>
+  <doc>
+    <field name="type">variable</field>
+    <field name="name">ReceivedChar</field>
+    <field name="url">globals_8h.html#ab5490074aaca289e986e9a00e0c25663</field>
+    <field name="keywords">ReceivedChar</field>
+    <field name="text">current data received from UART</field>
+  </doc>
+  <doc>
+    <field name="type">file</field>
+    <field name="name">LedEffects.c</field>
+    <field name="url">_led_effects_8c.html</field>
+    <field name="keywords">LedEffects.c</field>
+    <field name="text">effect functions for controlling WS2811/WS2812 LEDs This file contains different effect functions to control WS2811/WS2812 LEDs using an AVR It also contains a conversion function to convert 8 Bit color values RGB 3-3-2 to 24 Bit color values RGB/GRB 8-8-8 The effects control first the lightdata array and then transmit the array data to the stribe Using different operations result in different effects You can add different functions if you like to But remember that all operations need to be done on the lightdata array that needs to be transmitted at one block to the LEDs after your array has been changed V1.00 05.01.2016 Wank Florian</field>
+  </doc>
+  <doc>
+    <field name="type">function</field>
+    <field name="name">map</field>
+    <field name="args">(uint8_t x, uint8_t in_min, uint8_t in_max, uint8_t out_min, uint8_t out_max)</field>
+    <field name="url">_led_effects_8c.html#ad67a4e660b5122ed454e101432bbdba0</field>
+    <field name="keywords">map</field>
+    <field name="text">Arduino map function used for color conversion uint8_t x value to map uint8_t in_min minimum value input reference uint8_t in_max maximum value input reference uint8_t out_min minimum value output reference uint8_t out_max maximum value output reference uint8_t mapped value referring to the input This function is used for color conversion from 8 Bit to 24 Bit colors How it works in_min x in_max convert to out_min returnvalue out_max by positioning the x proportionally in the new number range</field>
+  </doc>
+  <doc>
+    <field name="type">function</field>
+    <field name="name">colorconv8to24</field>
+    <field name="args">(uint8_t startcolor)</field>
+    <field name="url">_led_effects_8c.html#a55291315ab0f2ca8d508f0e9da1920a7</field>
+    <field name="keywords">colorconv8to24</field>
+    <field name="text">color conversion function converts a 8 Bit color RGB 3-3-2 to a 24 Bit color RGB 8-8-8 uint8_t startcolor 8 Bit color to convert struct color24bit 24 Bit color result This function converts the 8 Bit color to a 24 Bit color depending on the ledtype This is neccessary because of differnt color formats WS2811- RGB WS2812- GRB Original the whole environment was for WS2812 LEDs!</field>
+  </doc>
+  <doc>
+    <field name="type">function</field>
+    <field name="name">effectdelay</field>
+    <field name="args">(uint16_t delay)</field>
+    <field name="url">_led_effects_8c.html#a6950e7657ba74d0d490ba36427533c4b</field>
+    <field name="keywords">effectdelay</field>
+    <field name="text">simple delay function no concrete delay time uint16_t delay delay value void This function is just a variable delay there is no coherence with a concrete time i.e s ms</field>
+  </doc>
+  <doc>
+    <field name="type">function</field>
+    <field name="name">setfullcolor</field>
+    <field name="args">(struct color24bit color, uint8_t *lightdata)</field>
+    <field name="url">_led_effects_8c.html#a2d54d1a6c61fe667b7c68ff04a11c503</field>
+    <field name="keywords">setfullcolor</field>
+    <field name="text">Set all LEDs to the chosen color run transmit2leds afterwards to update the LEDs struct color24bit color color to set uint8_t lightdata array that holds the color values for the stribe void This function sets the lightdata array To update the stribe run transmit2leds afterwards!</field>
+  </doc>
+  <doc>
+    <field name="type">function</field>
+    <field name="name">resetstribe</field>
+    <field name="args">(uint8_t *lightdata)</field>
+    <field name="url">_led_effects_8c.html#a1c5e6b0f45c1787c25f8eafa8b9c6247</field>
+    <field name="keywords">resetstribe</field>
+    <field name="text">Set all LEDs off run transmit2leds afterwards to update the LEDs uint8_t lightdata array that holds the color values for the stribe void This function sets the lightdata array to 0x00 To update the stribe run transmit2leds afterwards!</field>
+  </doc>
+  <doc>
+    <field name="type">function</field>
+    <field name="name">rotate</field>
+    <field name="args">(uint8_t *lightdata, uint8_t direction)</field>
+    <field name="url">_led_effects_8c.html#afd64325b08e785d37b4dfaf358e517f0</field>
+    <field name="keywords">rotate</field>
+    <field name="text">Rotate the lightdata for 1 LED Position run transmit2leds afterwards to update the LEDs uint8_t lightdata array that holds the color values for the stribe uint8_t direction direction to rotate void This function rotates lightdata array To update the stribe run transmit2leds afterwards! The rotation by one step the overflowing LED is appended at the other ending Example RED BLUE YELLOW GREEN rotate BLUE YELLOW GREEN RED other direction RED BLUE YELLOW GREEN rotate GREEN RED BLUE YELLOW</field>
+  </doc>
+  <doc>
+    <field name="type">function</field>
+    <field name="name">rotateN</field>
+    <field name="args">(uint8_t *lightdata, uint8_t direction, uint8_t width)</field>
+    <field name="url">_led_effects_8c.html#a1fa5e03cb24195a46dcdc5948f596181</field>
+    <field name="keywords">rotateN</field>
+    <field name="text">Rotate the lightdata for n LED Positions run transmit2leds afterwards to update the LEDs uint8_t lightdata array that holds the color values for the stribe uint8_t direction direction to rotate uint8_t width width to rotate void This function rotates lightdata array To update the stribe run transmit2leds afterwards! The rotation by n steps the overflowing LEDs are appended at the other ending Example RED BLUE YELLOW GREEN PINK rotate 2 YELLOW GREEN PINK RED BLUE other direction RED BLUE YELLOW GREEN PINK rotate 2 GREEN PINK RED BLUE YELLOW</field>
+  </doc>
+  <doc>
+    <field name="type">function</field>
+    <field name="name">initrunled</field>
+    <field name="args">(struct color24bit color, uint8_t *lightdata, struct color24bit background)</field>
+    <field name="url">_led_effects_8c.html#aecba07ab559ab94e6f44c16e39012d80</field>
+    <field name="keywords">initrunled</field>
+    <field name="text">init the runled effect run runrunled afterwards to start the effect This function initializes the running LED effect The running LED effect has a background color that is used for all LEDs except one One LED is in the foreground color an moves stepwise along the stribe The initialization prepares the lightdata array by setting one LED at the start position and filling the others with the background color struct color24bit color 24 Bit color for the effect uint8_t lightdata array that holds the color values for the stribe struct color24bit background 24 Bit color for the effect background void Run runrunled afterwards to start the effect!</field>
+  </doc>
+  <doc>
+    <field name="type">function</field>
+    <field name="name">runrunled</field>
+    <field name="args">(uint8_t *lightdata, uint8_t direction)</field>
+    <field name="url">_led_effects_8c.html#a35cfbfc36c975f98a7779a37b6ff63ce</field>
+    <field name="keywords">runrunled</field>
+    <field name="text">Do the runled effect before this function is called the lightdata needs to be initiliazed using initrunled! This function runs the running LED effect The running LED effect has a background color that is used for all LEDs except one The one LED moves stepwise to the next position depending on the chosen direction Direction 0/1 are right/left direction 2 runs from left to right an back again For direction 0/1 the running LED overflows and begins on the other ending uint8_t lightdata array that holds the color values for the stribe uint8_t direction movement direction 0/1 right/left 2 left- right and back void No need to run transmit2leds afterwards! This is already done in the function The function is interrupted if a new UART package is completely received so a new effect gets active</field>
+  </doc>
+  <doc>
+    <field name="type">function</field>
+    <field name="name">blinkled</field>
+    <field name="args">(struct color24bit color, uint8_t *lightdata)</field>
+    <field name="url">_led_effects_8c.html#a9fd87d01d5cc4ce5fce6ddca55ebaf37</field>
+    <field name="keywords">blinkled</field>
+    <field name="text">blink the whole stribe this function does not need another function call This function creates a blinking effect First all LEDs are set to the chosen color after the defined delay the LEDs are turned off This is repeated in the main while loop struct color24bit color color for the blink effect uint8_t lightdata array that holds the color values for the stribe void No need to run transmit2leds afterwards! This is already done in the function</field>
+  </doc>
+  <doc>
+    <field name="type">function</field>
+    <field name="name">init_alternating</field>
+    <field name="args">(struct color24bit color, struct color24bit backcolor, uint8_t *lightdata)</field>
+    <field name="url">_led_effects_8c.html#af67b7638a175e4971f25df5a5db3d8d0</field>
+    <field name="keywords">init_alternating</field>
+    <field name="text">initialize the alternating function call run_alternating afterwards This function initializes the alternating effect The effect assigns every even LED number in one color and the odd numbers in the background color If the effect is running the odd and even LED switch positions struct color24bit color color for the alternate effect Init even LEDs struct color24bit backcolor color for the alternate effect bakckground Init odd LEDs uint8_t lightdata array that holds the color values for the stribe void Run run_alternating afterwards to start the effect!</field>
+  </doc>
+  <doc>
+    <field name="type">function</field>
+    <field name="name">run_alternating</field>
+    <field name="args">(uint8_t *lightdata)</field>
+    <field name="url">_led_effects_8c.html#a5bde1e9e7fc19a9916f1ec02d8fbcd6c</field>
+    <field name="keywords">run_alternating</field>
+    <field name="text">Run the alternating effect call init_alternating before This function runs the alternating effect The effect assigns every even LED number in one color and the odd numbers in the background color If the effect is running the odd and even LED switch positions This function rotates the LEDs by one position to achieve the effect The rotation direction is not of importance uint8_t lightdata array that holds the color values for the stribe void No need to run transmit2leds afterwards! The effect is generated by the main while loop</field>
+  </doc>
+  <doc>
+    <field name="type">function</field>
+    <field name="name">recolor</field>
+    <field name="args">(struct color24bit color, uint8_t *lightdata)</field>
+    <field name="url">_led_effects_8c.html#a448758d76f47ea6fed4beb349196363f</field>
+    <field name="keywords">recolor</field>
+    <field name="text">Recolor the LED stribe no other function call is necessary This function generates a recolor effect The old configuration of the LEDs is overwritten with the new color step by step When the whole stribe is filled with the new color the effect ends struct color24bit color color that is used for recoloring uint8_t lightdata array that holds the color values for the stribe void No need to run transmit2leds afterwards! The effect is standalone and ends if the stribe is recolored</field>
+  </doc>
+  <doc>
+    <field name="type">function</field>
+    <field name="name">faden</field>
+    <field name="args">(struct color24bit color, uint8_t *lightdata)</field>
+    <field name="url">_led_effects_8c.html#a71d3b2ff21a63b48a01461e74be0c2b8</field>
+    <field name="keywords">faden</field>
+    <field name="text">Generate a fading color effect No other function call is necessary This function generates a fading color effect At the beginning the whole stribe is filled with the chosen color The color intensity of each color channel blue red green is decreased until the stribe is off After that the color values are increased until the chosen color values are reached The effect looks different depending on the chosen color because the color value proportion is not kept over the whole effect struct color24bit color color that is used for the fading effect uint8_t lightdata array that holds the color values for the stribe void No need to run transmit2leds afterwards! The effect is standalone and ends is looped in the main while loop The color value proportion is not kept over the whole effect</field>
+  </doc>
+  <doc>
+    <field name="type">function</field>
+    <field name="name">initrainbow</field>
+    <field name="args">(uint8_t *lightdata)</field>
+    <field name="url">_led_effects_8c.html#a9d0f91360c87b851925bf05be5352435</field>
+    <field name="keywords">initrainbow</field>
+    <field name="text">Initialize a rainbow on the color array to show the rainbow run transmit2leds afterwards This function fills the color array with rainbow colors For this effect the color array is filled with different colors that are calculated by increasing and decreasing the color channels to loop over a RGB palette uint8_t lightdata array that holds the color values for the stribe void Run transmit2leds afterwards! A nice effect is to rotate the array stepwise after the rainbow initialization run transmit2leds after every rotation The effect directly sets color values so there may be a problem with the color profiles RGB vs GRB The function was primary written for WS2812 LEDs GRB The effect needs a minimum number of 20 LEDs to look nice!</field>
+  </doc>
+  <doc>
+    <field name="type">function</field>
+    <field name="name">eastereggbase</field>
+    <field name="args">(struct color24bit color, uint8_t *lightdata)</field>
+    <field name="url">_led_effects_8c.html#ac83bd19da7ebd3c475e3667e4229db41</field>
+    <field name="keywords">eastereggbase</field>
+    <field name="text">Initialize the easteregg do not use directly this function is used by the easteregg function struct color24bit color color for the easteregg uint8_t lightdata array that holds the color values for the stribe void Do not use this function directly this function is used by the easteregg function</field>
+  </doc>
+  <doc>
+    <field name="type">function</field>
+    <field name="name">easteregg</field>
+    <field name="args">(uint8_t *lightdata)</field>
+    <field name="url">_led_effects_8c.html#a25e09bcb1481b20ebc2a27e7098b5115</field>
+    <field name="keywords">easteregg</field>
+    <field name="text">Run the easteregg No other function call is necessary uint8_t lightdata array that holds the color values for the stribe void Just try it funny looking effect</field>
+  </doc>
+  <doc>
+    <field name="type">function</field>
+    <field name="name">fillup</field>
+    <field name="args">(struct color24bit color, struct color24bit backcolor, uint8_t *lightdata)</field>
+    <field name="url">_led_effects_8c.html#a99174e2b381d7ec6667d29352e6eca1b</field>
+    <field name="keywords">fillup</field>
+    <field name="text">This function fills up the stribe No other function call is necessary This function fills up the whole stribe and beginns again if it is finished First one LED moves in the chosen color stepwise through the whole stribe and recolors all LEDs in the background color which have already been passed At the end of the stribe the LED stays an the next single LED is going to move to the last-1 position The next LED to the last-2 position This is going on until the whole stribe is colored Then the effect restarts main while loop struct color24bit color foreground color for the moving LED struct color24bit backcolor background color uint8_t lightdata array that holds the color values for the stribe void This is a standalone effect</field>
+  </doc>
+  <doc>
+    <field name="type">file</field>
+    <field name="name">LedEffects.h</field>
+    <field name="url">_led_effects_8h.html</field>
+    <field name="keywords">LedEffects.h</field>
+    <field name="text">file that contains different effect definitions for the lightstribe V1.00 05.01.2016 Wank Florian</field>
+  </doc>
+  <doc>
+    <field name="type">define</field>
+    <field name="name">SETFULLCOLOR</field>
+    <field name="url">_led_effects_8h.html#a996334f1d53296a931624800377d5b01</field>
+    <field name="keywords">SETFULLCOLOR</field>
+    <field name="text">define for the setfullcolor effect used for main switch</field>
+  </doc>
+  <doc>
+    <field name="type">define</field>
+    <field name="name">FILLUP</field>
+    <field name="url">_led_effects_8h.html#a2f349ea8f5412514d90f138ede08da62</field>
+    <field name="keywords">FILLUP</field>
+    <field name="text">define for the the fillup effect used for main switch</field>
+  </doc>
+  <doc>
+    <field name="type">define</field>
+    <field name="name">BLINK</field>
+    <field name="url">_led_effects_8h.html#a38eec52a7dccb94ff563e30eda32c891</field>
+    <field name="keywords">BLINK</field>
+    <field name="text">define for the blink effect used for main switch</field>
+  </doc>
+  <doc>
+    <field name="type">define</field>
+    <field name="name">RUNLED</field>
+    <field name="url">_led_effects_8h.html#ab6e06c8b4c17edc65d75be641a0fc39b</field>
+    <field name="keywords">RUNLED</field>
+    <field name="text">define for the runled effect used for main switch refers to the runled init</field>
+  </doc>
+  <doc>
+    <field name="type">define</field>
+    <field name="name">ALTERNATE</field>
+    <field name="url">_led_effects_8h.html#ac7190c598c8618207180d135c0650dac</field>
+    <field name="keywords">ALTERNATE</field>
+    <field name="text">define for the alternating effect used for main switch refers to the alternate init</field>
+  </doc>
+  <doc>
+    <field name="type">define</field>
+    <field name="name">RECOLOR</field>
+    <field name="url">_led_effects_8h.html#a6b71fe4d23960c3701fc935a3368a6cc</field>
+    <field name="keywords">RECOLOR</field>
+    <field name="text">define for the recolor effect used for main switch</field>
+  </doc>
+  <doc>
+    <field name="type">define</field>
+    <field name="name">FADE</field>
+    <field name="url">_led_effects_8h.html#ad8150289b0e08f01126500379852a2a7</field>
+    <field name="keywords">FADE</field>
+    <field name="text">define for the fade effect used for main switch</field>
+  </doc>
+  <doc>
+    <field name="type">define</field>
+    <field name="name">INITRAINBOW</field>
+    <field name="url">_led_effects_8h.html#a2805176df86592658ae06a508a558720</field>
+    <field name="keywords">INITRAINBOW</field>
+    <field name="text">define for the initrainbow function used for main switch</field>
+  </doc>
+  <doc>
+    <field name="type">define</field>
+    <field name="name">ROTATE_R</field>
+    <field name="url">_led_effects_8h.html#a85bd242525add173bd67847b7acac00b</field>
+    <field name="keywords">ROTATE_R</field>
+    <field name="text">define for the the rotate function right used for main switch</field>
+  </doc>
+  <doc>
+    <field name="type">define</field>
+    <field name="name">ROTATE_L</field>
+    <field name="url">_led_effects_8h.html#a4a0c329f45825186172aee0c62531423</field>
+    <field name="keywords">ROTATE_L</field>
+    <field name="text">define for the the rotate function left used for main switch</field>
+  </doc>
+  <doc>
+    <field name="type">define</field>
+    <field name="name">CUSTOM</field>
+    <field name="url">_led_effects_8h.html#a686dea444026cbf1236c24e7edb3a96d</field>
+    <field name="keywords">CUSTOM</field>
+    <field name="text">define for the custom effect used for main switch every LED is filled in a userdefined color up to MAXNUMCOLORS then reloop the colors</field>
+  </doc>
+  <doc>
+    <field name="type">define</field>
+    <field name="name">EASTEREGG</field>
+    <field name="url">_led_effects_8h.html#a5645ec20d3cd39bfc1c9ad5ec99db2f2</field>
+    <field name="keywords">EASTEREGG</field>
+    <field name="text">define for the easteregg effect used for main switch</field>
+  </doc>
+  <doc>
+    <field name="type">function</field>
+    <field name="name">map</field>
+    <field name="args">(uint8_t x, uint8_t in_min, uint8_t in_max, uint8_t out_min, uint8_t out_max)</field>
+    <field name="url">_led_effects_8h.html#ad67a4e660b5122ed454e101432bbdba0</field>
+    <field name="keywords">map</field>
+    <field name="text">Arduino map function used for color conversion uint8_t x value to map uint8_t in_min minimum value input reference uint8_t in_max maximum value input reference uint8_t out_min minimum value output reference uint8_t out_max maximum value output reference uint8_t mapped value referring to the input This function is used for color conversion from 8 Bit to 24 Bit colors How it works in_min x in_max convert to out_min returnvalue out_max by positioning the x proportionally in the new number range</field>
+  </doc>
+  <doc>
+    <field name="type">function</field>
+    <field name="name">colorconv8to24</field>
+    <field name="args">(uint8_t startcolor)</field>
+    <field name="url">_led_effects_8h.html#a55291315ab0f2ca8d508f0e9da1920a7</field>
+    <field name="keywords">colorconv8to24</field>
+    <field name="text">color conversion function converts a 8 Bit color RGB 3-3-2 to a 24 Bit color RGB 8-8-8 uint8_t startcolor 8 Bit color to convert struct color24bit 24 Bit color result This function converts the 8 Bit color to a 24 Bit color depending on the ledtype This is neccessary because of differnt color formats WS2811- RGB WS2812- GRB Original the whole environment was for WS2812 LEDs!</field>
+  </doc>
+  <doc>
+    <field name="type">function</field>
+    <field name="name">effectdelay</field>
+    <field name="args">(uint16_t delay)</field>
+    <field name="url">_led_effects_8h.html#a6950e7657ba74d0d490ba36427533c4b</field>
+    <field name="keywords">effectdelay</field>
+    <field name="text">simple delay function no concrete delay time uint16_t delay delay value void This function is just a variable delay there is no coherence with a concrete time i.e s ms</field>
+  </doc>
+  <doc>
+    <field name="type">function</field>
+    <field name="name">setfullcolor</field>
+    <field name="args">(struct color24bit color, uint8_t *lightdata)</field>
+    <field name="url">_led_effects_8h.html#a2d54d1a6c61fe667b7c68ff04a11c503</field>
+    <field name="keywords">setfullcolor</field>
+    <field name="text">Set all LEDs to the chosen color run transmit2leds afterwards to update the LEDs struct color24bit color color to set uint8_t lightdata array that holds the color values for the stribe void This function sets the lightdata array To update the stribe run transmit2leds afterwards!</field>
+  </doc>
+  <doc>
+    <field name="type">function</field>
+    <field name="name">resetstribe</field>
+    <field name="args">(uint8_t *lightdata)</field>
+    <field name="url">_led_effects_8h.html#a1c5e6b0f45c1787c25f8eafa8b9c6247</field>
+    <field name="keywords">resetstribe</field>
+    <field name="text">Set all LEDs off run transmit2leds afterwards to update the LEDs uint8_t lightdata array that holds the color values for the stribe void This function sets the lightdata array to 0x00 To update the stribe run transmit2leds afterwards!</field>
+  </doc>
+  <doc>
+    <field name="type">function</field>
+    <field name="name">rotate</field>
+    <field name="args">(uint8_t *lightdata, uint8_t direction)</field>
+    <field name="url">_led_effects_8h.html#afd64325b08e785d37b4dfaf358e517f0</field>
+    <field name="keywords">rotate</field>
+    <field name="text">Rotate the lightdata for 1 LED Position run transmit2leds afterwards to update the LEDs uint8_t lightdata array that holds the color values for the stribe uint8_t direction direction to rotate void This function rotates lightdata array To update the stribe run transmit2leds afterwards! The rotation by one step the overflowing LED is appended at the other ending Example RED BLUE YELLOW GREEN rotate BLUE YELLOW GREEN RED other direction RED BLUE YELLOW GREEN rotate GREEN RED BLUE YELLOW</field>
+  </doc>
+  <doc>
+    <field name="type">function</field>
+    <field name="name">rotateN</field>
+    <field name="args">(uint8_t *lightdata, uint8_t direction, uint8_t width)</field>
+    <field name="url">_led_effects_8h.html#a1fa5e03cb24195a46dcdc5948f596181</field>
+    <field name="keywords">rotateN</field>
+    <field name="text">Rotate the lightdata for n LED Positions run transmit2leds afterwards to update the LEDs uint8_t lightdata array that holds the color values for the stribe uint8_t direction direction to rotate uint8_t width width to rotate void This function rotates lightdata array To update the stribe run transmit2leds afterwards! The rotation by n steps the overflowing LEDs are appended at the other ending Example RED BLUE YELLOW GREEN PINK rotate 2 YELLOW GREEN PINK RED BLUE other direction RED BLUE YELLOW GREEN PINK rotate 2 GREEN PINK RED BLUE YELLOW</field>
+  </doc>
+  <doc>
+    <field name="type">function</field>
+    <field name="name">initrunled</field>
+    <field name="args">(struct color24bit color, uint8_t *lightdata, struct color24bit background)</field>
+    <field name="url">_led_effects_8h.html#aecba07ab559ab94e6f44c16e39012d80</field>
+    <field name="keywords">initrunled</field>
+    <field name="text">init the runled effect run runrunled afterwards to start the effect This function initializes the running LED effect The running LED effect has a background color that is used for all LEDs except one One LED is in the foreground color an moves stepwise along the stribe The initialization prepares the lightdata array by setting one LED at the start position and filling the others with the background color struct color24bit color 24 Bit color for the effect uint8_t lightdata array that holds the color values for the stribe struct color24bit background 24 Bit color for the effect background void Run runrunled afterwards to start the effect!</field>
+  </doc>
+  <doc>
+    <field name="type">function</field>
+    <field name="name">runrunled</field>
+    <field name="args">(uint8_t *lightdata, uint8_t direction)</field>
+    <field name="url">_led_effects_8h.html#a35cfbfc36c975f98a7779a37b6ff63ce</field>
+    <field name="keywords">runrunled</field>
+    <field name="text">Do the runled effect before this function is called the lightdata needs to be initiliazed using initrunled! This function runs the running LED effect The running LED effect has a background color that is used for all LEDs except one The one LED moves stepwise to the next position depending on the chosen direction Direction 0/1 are right/left direction 2 runs from left to right an back again For direction 0/1 the running LED overflows and begins on the other ending uint8_t lightdata array that holds the color values for the stribe uint8_t direction movement direction 0/1 right/left 2 left- right and back void No need to run transmit2leds afterwards! This is already done in the function The function is interrupted if a new UART package is completely received so a new effect gets active</field>
+  </doc>
+  <doc>
+    <field name="type">function</field>
+    <field name="name">blinkled</field>
+    <field name="args">(struct color24bit color, uint8_t *lightdata)</field>
+    <field name="url">_led_effects_8h.html#a9fd87d01d5cc4ce5fce6ddca55ebaf37</field>
+    <field name="keywords">blinkled</field>
+    <field name="text">blink the whole stribe this function does not need another function call This function creates a blinking effect First all LEDs are set to the chosen color after the defined delay the LEDs are turned off This is repeated in the main while loop struct color24bit color color for the blink effect uint8_t lightdata array that holds the color values for the stribe void No need to run transmit2leds afterwards! This is already done in the function</field>
+  </doc>
+  <doc>
+    <field name="type">function</field>
+    <field name="name">init_alternating</field>
+    <field name="args">(struct color24bit color, struct color24bit backcolor, uint8_t *lightdata)</field>
+    <field name="url">_led_effects_8h.html#af67b7638a175e4971f25df5a5db3d8d0</field>
+    <field name="keywords">init_alternating</field>
+    <field name="text">initialize the alternating function call run_alternating afterwards This function initializes the alternating effect The effect assigns every even LED number in one color and the odd numbers in the background color If the effect is running the odd and even LED switch positions struct color24bit color color for the alternate effect Init even LEDs struct color24bit backcolor color for the alternate effect bakckground Init odd LEDs uint8_t lightdata array that holds the color values for the stribe void Run run_alternating afterwards to start the effect!</field>
+  </doc>
+  <doc>
+    <field name="type">function</field>
+    <field name="name">run_alternating</field>
+    <field name="args">(uint8_t *lightdata)</field>
+    <field name="url">_led_effects_8h.html#a5bde1e9e7fc19a9916f1ec02d8fbcd6c</field>
+    <field name="keywords">run_alternating</field>
+    <field name="text">Run the alternating effect call init_alternating before This function runs the alternating effect The effect assigns every even LED number in one color and the odd numbers in the background color If the effect is running the odd and even LED switch positions This function rotates the LEDs by one position to achieve the effect The rotation direction is not of importance uint8_t lightdata array that holds the color values for the stribe void No need to run transmit2leds afterwards! The effect is generated by the main while loop</field>
+  </doc>
+  <doc>
+    <field name="type">function</field>
+    <field name="name">recolor</field>
+    <field name="args">(struct color24bit color, uint8_t *lightdata)</field>
+    <field name="url">_led_effects_8h.html#a448758d76f47ea6fed4beb349196363f</field>
+    <field name="keywords">recolor</field>
+    <field name="text">Recolor the LED stribe no other function call is necessary This function generates a recolor effect The old configuration of the LEDs is overwritten with the new color step by step When the whole stribe is filled with the new color the effect ends struct color24bit color color that is used for recoloring uint8_t lightdata array that holds the color values for the stribe void No need to run transmit2leds afterwards! The effect is standalone and ends if the stribe is recolored</field>
+  </doc>
+  <doc>
+    <field name="type">function</field>
+    <field name="name">faden</field>
+    <field name="args">(struct color24bit color, uint8_t *lightdata)</field>
+    <field name="url">_led_effects_8h.html#a71d3b2ff21a63b48a01461e74be0c2b8</field>
+    <field name="keywords">faden</field>
+    <field name="text">Generate a fading color effect No other function call is necessary This function generates a fading color effect At the beginning the whole stribe is filled with the chosen color The color intensity of each color channel blue red green is decreased until the stribe is off After that the color values are increased until the chosen color values are reached The effect looks different depending on the chosen color because the color value proportion is not kept over the whole effect struct color24bit color color that is used for the fading effect uint8_t lightdata array that holds the color values for the stribe void No need to run transmit2leds afterwards! The effect is standalone and ends is looped in the main while loop The color value proportion is not kept over the whole effect</field>
+  </doc>
+  <doc>
+    <field name="type">function</field>
+    <field name="name">initrainbow</field>
+    <field name="args">(uint8_t *lightdata)</field>
+    <field name="url">_led_effects_8h.html#a9d0f91360c87b851925bf05be5352435</field>
+    <field name="keywords">initrainbow</field>
+    <field name="text">Initialize a rainbow on the color array to show the rainbow run transmit2leds afterwards This function fills the color array with rainbow colors For this effect the color array is filled with different colors that are calculated by increasing and decreasing the color channels to loop over a RGB palette uint8_t lightdata array that holds the color values for the stribe void Run transmit2leds afterwards! A nice effect is to rotate the array stepwise after the rainbow initialization run transmit2leds after every rotation The effect directly sets color values so there may be a problem with the color profiles RGB vs GRB The function was primary written for WS2812 LEDs GRB The effect needs a minimum number of 20 LEDs to look nice!</field>
+  </doc>
+  <doc>
+    <field name="type">function</field>
+    <field name="name">eastereggbase</field>
+    <field name="args">(struct color24bit color, uint8_t *lightdata)</field>
+    <field name="url">_led_effects_8h.html#ac83bd19da7ebd3c475e3667e4229db41</field>
+    <field name="keywords">eastereggbase</field>
+    <field name="text">Initialize the easteregg do not use directly this function is used by the easteregg function struct color24bit color color for the easteregg uint8_t lightdata array that holds the color values for the stribe void Do not use this function directly this function is used by the easteregg function</field>
+  </doc>
+  <doc>
+    <field name="type">function</field>
+    <field name="name">easteregg</field>
+    <field name="args">(uint8_t *lightdata)</field>
+    <field name="url">_led_effects_8h.html#a25e09bcb1481b20ebc2a27e7098b5115</field>
+    <field name="keywords">easteregg</field>
+    <field name="text">Run the easteregg No other function call is necessary uint8_t lightdata array that holds the color values for the stribe void Just try it funny looking effect</field>
+  </doc>
+  <doc>
+    <field name="type">function</field>
+    <field name="name">fillup</field>
+    <field name="args">(struct color24bit color, struct color24bit backcolor, uint8_t *lightdata)</field>
+    <field name="url">_led_effects_8h.html#a99174e2b381d7ec6667d29352e6eca1b</field>
+    <field name="keywords">fillup</field>
+    <field name="text">This function fills up the stribe No other function call is necessary This function fills up the whole stribe and beginns again if it is finished First one LED moves in the chosen color stepwise through the whole stribe and recolors all LEDs in the background color which have already been passed At the end of the stribe the LED stays an the next single LED is going to move to the last-1 position The next LED to the last-2 position This is going on until the whole stribe is colored Then the effect restarts main while loop struct color24bit color foreground color for the moving LED struct color24bit backcolor background color uint8_t lightdata array that holds the color values for the stribe void This is a standalone effect</field>
+  </doc>
+  <doc>
+    <field name="type">file</field>
+    <field name="name">Lightstribe.c</field>
+    <field name="url">_lightstribe_8c.html</field>
+    <field name="keywords">Lightstribe.c</field>
+    <field name="text">basic functions for controlling WS2811/WS2812 LEDs This file contains the basic functions to control WS2811/WS2812 LEDs using an AVR It declares the function to transmit lightdata to a stribe using the one wire protocol For the right timing be aware of the crystal frequency! This code is written for using an extern clock of 16 MHz if you change it you need to modify the number of NOPs in the macros defined in the header file This file also contains the basic functions to set or to change one LED in the stribe The whole system is working with a color array that stores the 24 Bit colors for all LEDs in an GRB format WS2812 Every effect changes the array after that the array is sent out by the transmit2leds function This guarantees a correct timing The most functions base on uint8_t variables so the maximum length of the stribe to control contains 255 LEDs This should not be changed because you have hardware limitations as well that will limit a basic setup to 200-250 LEDs V1.00 05.01.2016 Wank Florian</field>
+  </doc>
+  <doc>
+    <field name="type">function</field>
+    <field name="name">changeled</field>
+    <field name="args">(struct color24bit color, uint8_t *lightdata, uint8_t lednr)</field>
+    <field name="url">_lightstribe_8c.html#a63fa595d401f0e85c1bba55ba2b1d66e</field>
+    <field name="keywords">changeled</field>
+    <field name="text">change the color of one LED at a specific position run transmit2leds afterwards to update the LEDs struct color24bit color 24 bit color in GRB format uint8_t pointer to the complete lightdata that contains all color values uint8_t lednr position of the LED that should be changed void the right color format is created using the colorconv8to24-function with the ledtype predefined</field>
+  </doc>
+  <doc>
+    <field name="type">function</field>
+    <field name="name">setled</field>
+    <field name="args">(struct color24bit color, uint8_t *lightdata, uint8_t lednr)</field>
+    <field name="url">_lightstribe_8c.html#abba9462833e30ef725eaf18c3d01eb71</field>
+    <field name="keywords">setled</field>
+    <field name="text">set the color of one LED at a specific position all others are off run transmit2leds afterwards to update the LEDs struct color24bit color 24 bit color in GRB format uint8_t pointer to the complete lightdata that contains all color values uint8_t lednr position of the LED that should be set void the right color format is created using the colorconv8to24-function with the ledtype predefined all other LEDs are cleared so they are off</field>
+  </doc>
+  <doc>
+    <field name="type">function</field>
+    <field name="name">transmit2leds</field>
+    <field name="args">(uint8_t lightdata[])</field>
+    <field name="url">_lightstribe_8c.html#aac724dad670e4a26723daf71ce6a8d8a</field>
+    <field name="keywords">transmit2leds</field>
+    <field name="text">transmit the color array to the stribe To control the LEDs of type WS2811/WS2812 a critical timing is necessary To achieve the correct timing and to create effects the lightdata is stored in an array first All operations effect the color array If the color array is prepared it is transmitted to the stribes via a one-wire protocol using this function This function generates the high and low times using assembler NOPs to achieve the timing The number of NOPs are stored in macros for transmitting a Low Bit SETLOW or a High Bit SETHIGH This function should not be changed or optimized because of the timing! uint8_t lightdata data with the colors for each LED to control void This function should not be changed or optimized because of the timing! Do not use higher optimization than O1!!! Do not remove the brackets because SETLOW/SETHIGH are definitions with several commands!</field>
+  </doc>
+  <doc>
+    <field name="type">file</field>
+    <field name="name">Lightstribe.h</field>
+    <field name="url">_lightstribe_8h.html</field>
+    <field name="keywords">Lightstribe.h</field>
+    <field name="text">basic functions for controlling WS2811/WS2812 LEDs V1.00 05.01.2016 Wank Florian</field>
+  </doc>
+  <doc>
+    <field name="type">function</field>
+    <field name="name">changeled</field>
+    <field name="args">(struct color24bit color, uint8_t *lightdata, uint8_t lednr)</field>
+    <field name="url">_lightstribe_8h.html#a63fa595d401f0e85c1bba55ba2b1d66e</field>
+    <field name="keywords">changeled</field>
+    <field name="text">change the color of one LED at a specific position run transmit2leds afterwards to update the LEDs struct color24bit color 24 bit color in GRB format uint8_t pointer to the complete lightdata that contains all color values uint8_t lednr position of the LED that should be changed void the right color format is created using the colorconv8to24-function with the ledtype predefined</field>
+  </doc>
+  <doc>
+    <field name="type">function</field>
+    <field name="name">setled</field>
+    <field name="args">(struct color24bit color, uint8_t *lightdata, uint8_t lednr)</field>
+    <field name="url">_lightstribe_8h.html#abba9462833e30ef725eaf18c3d01eb71</field>
+    <field name="keywords">setled</field>
+    <field name="text">set the color of one LED at a specific position all others are off run transmit2leds afterwards to update the LEDs struct color24bit color 24 bit color in GRB format uint8_t pointer to the complete lightdata that contains all color values uint8_t lednr position of the LED that should be set void the right color format is created using the colorconv8to24-function with the ledtype predefined all other LEDs are cleared so they are off</field>
+  </doc>
+  <doc>
+    <field name="type">function</field>
+    <field name="name">transmit2leds</field>
+    <field name="args">(uint8_t lightdata[])</field>
+    <field name="url">_lightstribe_8h.html#aac724dad670e4a26723daf71ce6a8d8a</field>
+    <field name="keywords">transmit2leds</field>
+    <field name="text">transmit the color array to the stribe To control the LEDs of type WS2811/WS2812 a critical timing is necessary To achieve the correct timing and to create effects the lightdata is stored in an array first All operations effect the color array If the color array is prepared it is transmitted to the stribes via a one-wire protocol using this function This function generates the high and low times using assembler NOPs to achieve the timing The number of NOPs are stored in macros for transmitting a Low Bit SETLOW or a High Bit SETHIGH This function should not be changed or optimized because of the timing! uint8_t lightdata data with the colors for each LED to control void This function should not be changed or optimized because of the timing! Do not use higher optimization than O1!!! Do not remove the brackets because SETLOW/SETHIGH are definitions with several commands!</field>
+  </doc>
+  <doc>
+    <field name="type">file</field>
+    <field name="name">ws2811lichterkette.c</field>
+    <field name="url">ws2811lichterkette_8c.html</field>
+    <field name="keywords">ws2811lichterkette.c</field>
+    <field name="text">main file for interfacing WS2811/WS2812 LEDs This file contains the main environment for interfacing WS2811/WS2812 LEDs with an AVR The implementation has been done for an atmega328p You may use another controller but be aware of the memory you need for the color array dynamically allocated The AVR interfaces the one wire of the LEDs All operations effects colorchange etc are done on an lightdata array that needs to be transmitted to the LEDs after your operations The reason for this is the critical timing for interfacing the LEDs So also be aware if you change the clock speed If you do so you have to change the number of NOPs in the macros of Lightstribe.h Because of the critical timing compile all files at optimization O1! Furthermore be aware of the BAUDRATE changes the BAUD error may be to worse if you change the CPU frequency The one wire output is on the PIN B0! You can change in the main and Lightstribe.h By default this file just initializes the AVR system no updates to the LEDs are done by default To change the LED configuration you need to access the AVR UART Interface with another controller FTDI is also possible Over the UART you send a message containing all relevant information for the system Therefore a simple protocol is used 1 Byte preamble 254 1 Byte total packet length including the preamble 1 Byte effect 1 Byte effect delay effect speed 1 Byte number of LEDs to control n Bytes containing 8-Bit color values RGB 3-3-2 depended on the effect max 50 values The preamble 254 must never be used at another position!!! Protocol examples SETFULLCOLOR 254 6 0 1 20 22 FILLUP 254 7 1 22 20 22 201 BLINK 254 6 2 55 20 56 RUNLED 254 7 3 55 20 56 151 INITRAINBOW 254 5 9 0 20 ROTATE_R 254 5 11 23 20 CUSTOM 254 8 12 1 20 22 201 60 EASTEREGG 254 5 13 2 20 The UART communication is done by using an RX interrupt an storing the data into a temp array In the main loop a flag shows if a data packet is complete So you will get no update on the LEDs if the UART package was wrong too short In the project this programm has been written the UART was controlled by an ESP8266 or BLE113 Have Fun! V1.00 05.01.2016 Wank Florian</field>
+  </doc>
+  <doc>
+    <field name="type">define</field>
+    <field name="name">BAUD</field>
+    <field name="url">ws2811lichterkette_8c.html#a62634036639f88eece6fbf226b45f84b</field>
+    <field name="keywords">BAUD</field>
+    <field name="text">Baudrate definition choose 76800 or 38400 faster value preferred the maximum speed of ESP8266 software-UART is 38400</field>
+  </doc>
+  <doc>
+    <field name="type">define</field>
+    <field name="name">MYUBRR</field>
+    <field name="url">ws2811lichterkette_8c.html#a711e9130c825a7269c8c87dbb57a85e0</field>
+    <field name="keywords">MYUBRR</field>
+    <field name="text">calculate baudrate register value</field>
+  </doc>
+  <doc>
+    <field name="type">define</field>
+    <field name="name">PREAMBLE</field>
+    <field name="url">ws2811lichterkette_8c.html#a8aac8c5098aaf915463fb31715efa09f</field>
+    <field name="keywords">PREAMBLE</field>
+    <field name="text">definition of the preamble is 254 no other data field must contain this value</field>
+  </doc>
+  <doc>
+    <field name="type">define</field>
+    <field name="name">LENINDEX</field>
+    <field name="url">ws2811lichterkette_8c.html#aec9ae4a8d59e838ac8ed93ad0de8e827</field>
+    <field name="keywords">LENINDEX</field>
+    <field name="text">definition of the second field contains the total packet length including the preamble</field>
+  </doc>
+  <doc>
+    <field name="type">define</field>
+    <field name="name">EFFECTINDEX</field>
+    <field name="url">ws2811lichterkette_8c.html#a8d4e4cf47dd6136ace963623e1a8e27c</field>
+    <field name="keywords">EFFECTINDEX</field>
+    <field name="text">definition of 1 Byte effect at third position the MSBit is used to choose WS2811/WS2812 color profile RGB or GRB</field>
+  </doc>
+  <doc>
+    <field name="type">define</field>
+    <field name="name">DELAYINDEX</field>
+    <field name="url">ws2811lichterkette_8c.html#a9ff437877d0878dd16eacf103a1e1c40</field>
+    <field name="keywords">DELAYINDEX</field>
+    <field name="text">definition of the delay field contains the delay duplicator</field>
+  </doc>
+  <doc>
+    <field name="type">define</field>
+    <field name="name">NUMOFLEDINDEX</field>
+    <field name="url">ws2811lichterkette_8c.html#afbc75dc20761a05dda7cbb70b9b322dd</field>
+    <field name="keywords">NUMOFLEDINDEX</field>
+    <field name="text">field position for the number of LEDs to control</field>
+  </doc>
+  <doc>
+    <field name="type">function</field>
+    <field name="name">init_uart</field>
+    <field name="args">(void)</field>
+    <field name="url">ws2811lichterkette_8c.html#ac7b3df0fa68526d64c732d5f916e34b1</field>
+    <field name="keywords">init_uart</field>
+    <field name="text">Init the hardware UART with Baud 76800/38400 depending on BAUD definition 8 Databits 1 Stopbit no Parity void This function depends on the oscillator clock frequency and the BAUD defintion If your UART is not working first check all frequency issues Fuse settings clock speed clock divider Baudrate</field>
+  </doc>
+  <doc>
+    <field name="type">function</field>
+    <field name="name">main</field>
+    <field name="args">(void)</field>
+    <field name="url">ws2811lichterkette_8c.html#a840291bc02cba5474a4cb46a9b9566fe</field>
+    <field name="keywords">main</field>
+    <field name="text">main function should never end effects are handled in main while</field>
+  </doc>
+  <doc>
+    <field name="type">function</field>
+    <field name="name">ISR</field>
+    <field name="args">(USART_RX_vect)</field>
+    <field name="url">ws2811lichterkette_8c.html#a09ce999e15ad60b8a3f07d08af1946f9</field>
+    <field name="keywords">ISR</field>
+    <field name="text">UART Interrupt handler interrupts when new data is available in the RX buffer</field>
+  </doc>
+  <doc>
+    <field name="type">struct</field>
+    <field name="name">color24bit</field>
+    <field name="url">structcolor24bit.html</field>
+    <field name="keywords">color24bit</field>
+    <field name="text">24 Bit color structure RGB 8-8-8</field>
+  </doc>
+  <doc>
+    <field name="type">variable</field>
+    <field name="name">color24bit::red</field>
+    <field name="url">structcolor24bit.html#ad47d918910aaa51c73160ac85999d09c</field>
+    <field name="keywords">red color24bit::red color24bit</field>
+    <field name="text">8 Bit red</field>
+  </doc>
+  <doc>
+    <field name="type">variable</field>
+    <field name="name">color24bit::green</field>
+    <field name="url">structcolor24bit.html#a90d21fa503b626c00cdc8d94863d5877</field>
+    <field name="keywords">green color24bit::green color24bit</field>
+    <field name="text">8 Bit green</field>
+  </doc>
+  <doc>
+    <field name="type">variable</field>
+    <field name="name">color24bit::blue</field>
+    <field name="url">structcolor24bit.html#a287b397e90d7b995c81ff54e741f96b2</field>
+    <field name="keywords">blue color24bit::blue color24bit</field>
+    <field name="text">8 Bit blue</field>
+  </doc>
+  <doc>
+    <field name="type">page</field>
+    <field name="name">index</field>
+    <field name="url">index.html</field>
+    <field name="keywords"></field>
+    <field name="text">Use WS2811/WS2812 LEDs with an AVR This project is about using an WS2811 or WS2812 lightstribe with an AVR controller It is possible to handle up to 250 LEDs at the same time so I chose an Atmega328p with enough RAM amount If you want to handle less LEDs you can use most parts of this project with every AVR The AVR is programmed to receive the light data over UART so you can control the LEDs by using a serial interface The interface uses a specified simple protocol which is described in Protocol overview section Everything has been developed in a university course to control the lights of a Christmas tree In the original implementation there were some further components included This is a simplified version of the implementation so that everyone can use it As an example for controlling the LEDs using a smart phone the Example usage with an ESP8266 section shows how this could be done by using a webserver on the ESP8266 You can use everything else that provide a serial interface maybe connect with a bluetooth serial module The structure of this documentation is split in a hardware part for the AVR that describes the basic hardware that should be used The next part is about how the software is working on the AVR that handles the LEDs and different effects You may include some more stuff in your own After that you can see a small protocol overview where you find which command can be sent to the AVR to control the LEDs Be aware that at the initialization state all LEDs are off At the last point you can find an example how to use the implementation with an ESP8266 with a webserver You will find the source code for the ESP8266 and the basic hardware setup For using this implementation follow this steps set up the hardware as descriped in section Hardware set the F_CPU clock to the value for your hardware set the BAUD to the value you like 76800 or 38400 are suggested compile your implementation only O1 optimization is supported program your AVR with your binaries set the clock divider fuse and the clock source fuse referring to your implementation send protocol data see section Protocol overview to the RX pin of the AVR over a serial device e.g an FTDI ESP8266 or Arduino UART is 8N1 on your chosen BAUD example data 254 6 0 1 20 22 0xFE 0x06 0x00 0x01 0x14 0x16 The basic hardware you need is a AVR controller an some WS2811 or WS2812 LEDs you want to control The AVR controller should have an hardware UART otherwise you need to write some code for a software serial In the project we chose an Atmega328p that has enough RAM to control 250 LEDs The internal software structure buffers the color data for the LEDs to achieve an accurate timing see section Software implementation The AVR can be used with the internal clock at 8 MHz remember to clear the clock divider fuse Otherwise an external 8 MHz or 16 MHz clock source can be used the definition F_CPU must be set to the frequency you chose remember to set the fuses for an external clock source As an example figure 1 shows using an external 16 MHz crystal schematic of the AVR to controll WS2812/WS2811 schematic of the AVR to controll WS2812/WS2811 schematic of the AVR to controll WS2812/WS2811 As you can see in the picture the AVR is programmed by using the ISP interface The WS2812/WS2811 get the same voltage as the AVR the light data is available at PinB0 you may change this if you like Referring to the LEDs be aware of the current amount they may draw if every LED has its full brightness One WS2812 can draw up to 60 mA so one meter with 30 LEDs already need 1 8 A If you want to control more LEDs you may have a problem with the voltage drop along the stribe For example if you control 180 LEDs at six meters you not only need 10 8 A furthermore you will probably have a voltage drop up to 2 V To reduce the voltage drop you must increase the wire size with parallel wires to you stribe You can see the voltage drop if you set all LEDs to white If you have only a small voltage drop every LED will have the same color If the voltage drop is too much you can see that the last LEDs will have less blue color so they will light in a warm white color even up to red If you want to try out the LEDs with the AVR you can build up everything on a breadboard Pinheaders can be soldered easy at the light stribes as you can see in figure 2 WS2812 stribe with pin header WS2812 stribe with pin header WS2812 stribe with pin header The connect GND to the common ground with the AVR 5 V should be connected to a power supply that can handle the current you need DI is the data in line this should be connected to PinB0 at the AVR The stribe is like a big shifting register all the data you sent is shifted bit by bit through the stribe So DO is the data out pin you see some data at this pin if all LEDs before had already received their color data The one wire protocol of the LEDs is described in the next section Software implementation Datasheets Datasheet WS2812 Datasheet WS2811 Datasheet Atmega328 If your hardware is ready you must flash your AVR device with the provided software Therefore the ISP-6 connector should be used To get the right timing remember to set the F_CPU definition to the frequency you are working at Furthermore set the fuses of the AVR referring to your implementation This means you have to clear the clock divider fuse and may have to change the clock source I suggest to use the AtmelStudio to program your AVR and its fuses The WS2812/WS2811 are controlled by one data line that works with a one wire protocol Because of the missing clock line the timing is really important this can either be achieved by doing some trick with the hardware interfaces e.g using the spi interface or by bit banging In this implementation bit banging is used To get a good timing all color data must be transmitted in one block that is not interrupted by some other code The timing specifications of the WS2812/WS2811 LEDs can be found in table 1 which refers to the datasheet WS2812 Timing table for WS2812/WS2811 one wire protocol Information Timing Tolerance Transfer 1 Bit HighTime+LowTime 1 25 µs 600 ns send 0 high time 0 35 µs 150 ns send 0 low time 0 8 µs 150 ns send 1 high time 0 7 µs 150 ns send 1 low time 0 6 µs 150 ns data transmission complete low time 50 µs The timing is done by setting the output and wait the required time by doing nothing call assembly NOPs So it is important to compile the provided software at O1 other optimization levels may influence the timing To send one bit either high or low two different macros are defined in Lightstribe.h SETHIGH and SETLOW one LED needs 24 color bits The macros depend on the value of F_CPU you entered in globals.h Furthermore the header file Lightstrib.h declares a color struct to handle 24 bit colors color24bit and three basic functions to control the LEDs The corresponding c file Lightstribe.c implements these functions The most important function is the transmit2leds function This function and only this function transmits data to the stribe All other functions either call this function or manipulate the color array To achieve the right timing all effects and operations are done on a color array that stores the color information for the LEDs The information is sent to the LEDs by calling transmit2leds with the lightdata pointer that points to an dynamically allocated array that stores the color information depending on the number of LEDs you want to control Therefore your color array must at least be able to contain 24 bits x your number of LEDs It can be bigger what will allow you to create even more effects e.g if you rotate a rainbow array So the effects that are implemented in LedEffects.c change the color array and afterwards the transmit2leds is called The c file LedEffects.c not only contains effects but also different necessary functions for the effects and the serial color handling The colorconv8to24 function converts the received 8 bit colors from the serial port to 24 bit colors for the lightstribes So you only sent 8 bit colors over the serial port to the AVR to reduce data size Further information can be found in the Protocol overview section The colors are decompressed with a simple map function you may know from Arduino The main.c file initializes the hardware and handles the LEDs A serial interrupt stores the data temporary If the data transmission is complete the main function will extract the information and set the new configuration for the lightstribe The last points to be mentioned in this section are some things you need to be careful The first thing is that the 8 bit colors are in an RGB 3-3-2 format The 24 bit color format depend on the LEDs WS2812 LEDs use a GRB color scheme while WS2811 use a RGB color scheme This is important to achieve the right color the protocol includes a bit that decides the color scheme The right color is resolved by the decompressing function colorconv8to24 Another thing is that the colors are not linearized what means that you cannot say that a color you got from a color table will be look like this As an example you picked an orange from a 3-3-2 rgb color table This orange will not be the same orange on the LED stribe This depends on many parameters so linearizing is too much effort and almost impossible to achieve linearization you would have to measure each color compare it and evaluate correction parameters This section gives an overview of the implemented serial protocol The goal of the protocol was to be as simple as possible to be easily implemented on the AVR and to use as less resources as possible The figure 3 shows the base structure of the protocol serial protocol structure serial protocol structure serial protocol structure As you can see a data transmission always starts with the preamble 254 0xFE For a fast and easy implementation this preamble value must only be used as preamble and must never be another field value e.g you must not send the color value 254 The next byte that is sent contains the total length of the packet including the preamble and the length byte If you sent a wrong length you may get an unexpected behavior until a new correct data packet is sent The third field contains the effect The different effects are listed in table XXX In Bit 7 MSb you can choose the LED type you want to control set the bit to 0 for WS2811 and to 1 for WS2812 LEDs The next byte is a value to control the effect speed You can set a delay between 0 no delay and 250 longest delay possible The value unit and is not a repeatable setting for different effects This means that the delay is no correct wait function e.g wait for n milliseconds Furthermore the effects work on the color array what may be faster for some effects and slower for others The best thing is to try the effects with different values The next field contains the number of the LEDs that should be controlled Be aware that the maximum supported number of LEDs is 250 but this depends on your hardware The chosen Atmega328p can handle this amount if you choose an AVR with less RAM this will not work What you can do is to allocate more LEDs than you actually have This gives you the possibility to create further effects What happens is that only a part of the array is sent to the LEDs but the other color values are stored internally in the AVR in fact all color data is transmitted to the LEDs but the superfluous information is overwritten by new data The last data field are the color values One color is 8 bit RGB 3-3-2 and you should sent the right amount of colors for your chosen effect If you sent to less information the data block will not be evaluated because the total length does not match For sending some data do not forget to configure your UART 8N1 BAUD on both sides Table containing all effects available over the serial protocol Effect number Number of colors 1 byte RGB 3-3-2 Description Example decimal 0 SETFULLCOLOR 1 All LEDs glow at the same color without changes 254 6 1 20 22 1 FILLUP 2 foreground background One LED steps through the stribe in the foreground color and colors all LEDs after it in the background color At the end of the stribe the LED stays at the foreground color and another LED starts to step through the stribe This continues until the whole stribe is filled in the foreground color Then the stribe is cleared to the background color and the effects begins again 254 7 1 22 20 22 201 2 BLINK 1 The stribe blinks in the chosen color and to off black repeatedly 254 6 2 55 20 56 3 RUNLED 2 foreground background All LEDs but one are colored in the background color The one in the foreground color walks through the stribe with overflowing to the beginning 254 7 3 55 20 56 151 5 ALTERNATE 2 foreground background The LEDs are alternating in the foreground and the background color First the even LEDs are colored in foreground and the uneven in the background color after that vice versa 254 7 5 55 20 56 151 7 RECOLOR 1 The stribe is filled in a new color step by step until the whole stribe stays in the new color 254 6 7 55 20 38 8 FADE 1 The destination color is set and the base colors red green and blue are decreased step by step until the stribe is off After that the color values are increased until the destination color is reached This generates a color fading effect The color fading is not linearized 254 6 8 55 20 201 9 INITRAINBOW no color Set the stribe in a static rainbow color 254 5 9 0 20 10 ROTATE_R no color Rotate all LEDs one step to the right side depends on lightdata array 254 5 10 232 20 11 ROTATE_L no color Rotate all LEDs one step to the left side depends on lightdata array 254 5 11 23 20 12 CUSTOM N colors All LEDs are set to the static color referring to the sent color values If there are more LEDs than color values the colors are repeated 254 8 12 1 20 22 201 60 The missing numbers in table 2 are internally used by the AVR and must not be sent over the serial port This section tells you how to implement further effects You may use already existing functions to generate new effects or add something completely new All effects should be written in the LedEffects.c file and declared in its header file LedEffects.h You must know that everything works on a lightdata array that contains the colors stored in an array The array is sent directly to the stribe if the transmit2leds function is called So you first need to manipulate the array and than send it to the stribe The array is ordered in GRB color because the implementation has been done for WS2812 LEDs WS2811 LEDs can be used the colors are converted in the colorconv8to24 function referring to the MSb of the effect you sent for more information see section Protocol overview So lightdata 0 contains one byte green data lightdata 1 one byte red data lightdata 2 blue data and so on In general you can say lightdata N 3 0 contains green lightdata N 3 1 lightdata N 3 2 data So the color array has a size of MAXNUMCOLORS 3 So your function must at least have a pointer to the lightdata array as a call value For creating your effect some nice functions are already implemented you may use You can find a list of them in table 3 Provided help functions for your own effect Function Name call values operation map x in_min in_max out_min out_max calculate an x value to a new number range effectdelay delay wait some time dependend on delay resetstribe clear the stribe all LEDs off rotate direction rotate stribe by one position means 3 bytes in direction right/left rotateN direction width rotate LEDs by positions means width 3 bytes in direction right/left setled color lednr set one LED a position lednr in the chosen color others off black changeled color lednr change the color of one LED at position lednr others are unchanged Your written effect should get an own definition in LedEffects.h The last thing is to add your definition in the main switch case structure Referring to the implemented protocol your effect is available with the number you defined in LedEffects.h You must sent the neccessary information for your effect for example the color values you need and so on To get the color value you sent you need to call colorconv8to24 to convert the 8 bit RGB color into a 24 bit color All colors you sent are available in the CompColorArray The first color you sent is stored in index zero Your implemented function must not care about the color order if you use the colorconv8to24 function This does the conversion depending on the MSb of the effect you sent over the serial port The delay is handled by the global var effectime and the number of LEDs to control is stored in NumOfLeds The effect is stored in the effect variable You should not do any changes on the serial part and the protocol reading otherwise you will change to complete behavior of this implementation The implementation to control has the following requirements and limitations colors are 8 bit compressed so you cannot get every color value of the LEDs the protocol implementation with the preamble 254 prohibits this value for other protocol fields e.g color approximate amount of RAM in bytes you need MAXNUMCOLORS number of LEDs to control UART_BUFFER_SIZE MAXNUMCOLORS 160 only O1 optimization is supported 8 MHz and 16 MHz clock support fuses must be programmed manually clock source and clock divider WS2801 stribes not supported different hardware interface with two wires AVR should run on 5 V This section gives a short introduction about using the provided programm with an ESP8266 In this example the ESP8266 works as a wifi hotspot you can connect with and browse a website which allows different settings for the light stribe The website is quite simple and only a few effects and colors are supported If you enter the button your configuration is transmitted over the serial interface to the AVR This is done through a software serial implementation you find all necessary files below You should step through all instructions to get the example work First you need to setup the ESP8266 Because of different versions of ESP8266 modules you may miss something this is just a quick guide For more information you can browse the web First you must connect your ESP8266 to a host computer over a serial interface for example using an FTDI Remember to cross RX and TX of the serial port Furthermore be aware of the ESP8266 voltage it is 3 3 V The current a serial chip may provide some FTDIs provide some current may not be enough for the ESP8266 and what can cause different problems So first you need to flash your ESP8266 with the nodemcu firmware that provides a software serial The binaries that have been used in this example can be found here Binaries part 1 Binaries part 2 For uploading this binaries to the ESP8266 you should use the nodeMCUFlasher that can be found on github You need to set the serial port to which your ESP8266 is connected with and configure the source files for flashing the firmware You need to set the COM port to which you ESP8266 is connected to see figure 4 Furthermore you must consider the following hardware configuration 3 3 V logic level bootmode low IO15 chip enable high CH_PD reset high drive low to reset the module IO0 low for firmware flashing high for programming and normal operation The firmware programmer waits for the MAC of the ESP8266 module which will be successfully read if everything is done fine As you can see in figure figure 4 the firmware programmer is still waiting for an ESP8266 node MCU flasher serial protocol structure serial protocol structure If the ESP8266 is connected right you now set the configuration to the provided binaries as you can see in figure 5 You must browse to the binary files and set the destination address Now you can hit the see figure 4 node MCU flasher configuration serial protocol structure serial protocol structure author Florian Wank 2016</field>
+  </doc>
+</add>

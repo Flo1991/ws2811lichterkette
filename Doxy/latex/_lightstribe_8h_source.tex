@@ -9,18 +9,15 @@
 00013 \textcolor{preprocessor}{#define LIGHTSTRIBE\_H\_}
 00014 
 \hypertarget{_lightstribe_8h_source_l00016}{}\hyperlink{structcolor24bit}{00016} \textcolor{keyword}{struct }\hyperlink{structcolor24bit}{color24bit}\{
-\hypertarget{_lightstribe_8h_source_l00017}{}\hyperlink{structcolor24bit_ad47d918910aaa51c73160ac85999d09c}{00017}     uint8\_t \hyperlink{structcolor24bit_ad47d918910aaa51c73160ac85999d09c}{red};                                 
-\hypertarget{_lightstribe_8h_source_l00018}{}\hyperlink{structcolor24bit_a90d21fa503b626c00cdc8d94863d5877}{00018}     uint8\_t \hyperlink{structcolor24bit_a90d21fa503b626c00cdc8d94863d5877}{green};                                 
-\hypertarget{_lightstribe_8h_source_l00019}{}\hyperlink{structcolor24bit_a287b397e90d7b995c81ff54e741f96b2}{00019}     uint8\_t \hyperlink{structcolor24bit_a287b397e90d7b995c81ff54e741f96b2}{blue};                                   
-00020 \};
-00021 
-00022 \textcolor{preprocessor}{#if F\_CPU == 16000000}
-00023 \textcolor{preprocessor}{#pragma message("Use 16 MHz Macros")}
+\hypertarget{_lightstribe_8h_source_l00018}{}\hyperlink{structcolor24bit_ad47d918910aaa51c73160ac85999d09c}{00018}     uint8\_t \hyperlink{structcolor24bit_ad47d918910aaa51c73160ac85999d09c}{red}; 
+\hypertarget{_lightstribe_8h_source_l00020}{}\hyperlink{structcolor24bit_a90d21fa503b626c00cdc8d94863d5877}{00020}     uint8\_t \hyperlink{structcolor24bit_a90d21fa503b626c00cdc8d94863d5877}{green}; 
+\hypertarget{_lightstribe_8h_source_l00022}{}\hyperlink{structcolor24bit_a287b397e90d7b995c81ff54e741f96b2}{00022}     uint8\_t \hyperlink{structcolor24bit_a287b397e90d7b995c81ff54e741f96b2}{blue};                               
+00023 \};
 00024 
-00025 \textcolor{preprocessor}{#define SETHIGH PORTB=0x01;\(\backslash\)}
-00026 \textcolor{preprocessor}{               asm ("nop");\(\backslash\)}
-00027 \textcolor{preprocessor}{               asm ("nop");\(\backslash\)}
-00028 \textcolor{preprocessor}{               asm ("nop");\(\backslash\)}
+00025 \textcolor{preprocessor}{#if F\_CPU == 16000000}
+00026 \textcolor{preprocessor}{#pragma message("Use 16 MHz Macros")}
+00027 
+00028 \textcolor{preprocessor}{#define SETHIGH PORTB=0x01;\(\backslash\)}
 00029 \textcolor{preprocessor}{               asm ("nop");\(\backslash\)}
 00030 \textcolor{preprocessor}{               asm ("nop");\(\backslash\)}
 00031 \textcolor{preprocessor}{               asm ("nop");\(\backslash\)}
@@ -29,65 +26,68 @@
 00034 \textcolor{preprocessor}{               asm ("nop");\(\backslash\)}
 00035 \textcolor{preprocessor}{               asm ("nop");\(\backslash\)}
 00036 \textcolor{preprocessor}{               asm ("nop");\(\backslash\)}
-00037 \textcolor{preprocessor}{               PORTB=0x00;\(\backslash\)}
+00037 \textcolor{preprocessor}{               asm ("nop");\(\backslash\)}
 00038 \textcolor{preprocessor}{               asm ("nop");\(\backslash\)}
 00039 \textcolor{preprocessor}{               asm ("nop");\(\backslash\)}
-00040 \textcolor{preprocessor}{               asm ("nop");}
-00041                
-00042 \textcolor{preprocessor}{#elif F\_CPU == 8000000}
-00043 \textcolor{preprocessor}{#pragma message("Use 8 MHz Macros")}
-00044 
-00045 \textcolor{preprocessor}{#define SETHIGH PORTB=0x01;\(\backslash\)}
-00046 \textcolor{preprocessor}{               asm ("nop");\(\backslash\)}
-00047 \textcolor{preprocessor}{               asm ("nop");\(\backslash\)}
-00048 \textcolor{preprocessor}{               asm ("nop");\(\backslash\)}
+00040 \textcolor{preprocessor}{               PORTB=0x00;\(\backslash\)}
+00041 \textcolor{preprocessor}{               asm ("nop");\(\backslash\)}
+00042 \textcolor{preprocessor}{               asm ("nop");\(\backslash\)}
+00043 \textcolor{preprocessor}{               asm ("nop");}
+00044                
+00045 \textcolor{preprocessor}{#elif F\_CPU == 8000000}
+00046 \textcolor{preprocessor}{#pragma message("Use 8 MHz Macros")}
+00047 
+00048 \textcolor{preprocessor}{#define SETHIGH PORTB=0x01;\(\backslash\)}
 00049 \textcolor{preprocessor}{               asm ("nop");\(\backslash\)}
 00050 \textcolor{preprocessor}{               asm ("nop");\(\backslash\)}
-00051 \textcolor{preprocessor}{               PORTB=0x00;\(\backslash\)}
+00051 \textcolor{preprocessor}{               asm ("nop");\(\backslash\)}
 00052 \textcolor{preprocessor}{               asm ("nop");\(\backslash\)}
-00053 \textcolor{preprocessor}{               asm ("nop");}
-00054 \textcolor{preprocessor}{#endif}
-00055 
-00056 
-00057 
-00058 \textcolor{preprocessor}{#if F\_CPU == 16000000}
+00053 \textcolor{preprocessor}{               asm ("nop");\(\backslash\)}
+00054 \textcolor{preprocessor}{               PORTB=0x00;\(\backslash\)}
+00055 \textcolor{preprocessor}{               asm ("nop");\(\backslash\)}
+00056 \textcolor{preprocessor}{               asm ("nop");}
+00057 \textcolor{preprocessor}{#endif}
+00058 
 00059 
-00060 \textcolor{preprocessor}{#define SETLOW PORTB=0x01;\(\backslash\)}
-00061 \textcolor{preprocessor}{              asm ("nop");\(\backslash\)}
-00062 \textcolor{preprocessor}{              asm ("nop");\(\backslash\)}
-00063 \textcolor{preprocessor}{              asm ("nop");\(\backslash\)}
+00060 
+00061 \textcolor{preprocessor}{#if F\_CPU == 16000000}
+00062 
+00063 \textcolor{preprocessor}{#define SETLOW PORTB=0x01;\(\backslash\)}
 00064 \textcolor{preprocessor}{              asm ("nop");\(\backslash\)}
 00065 \textcolor{preprocessor}{              asm ("nop");\(\backslash\)}
-00066 \textcolor{preprocessor}{              PORTB=0x00;\(\backslash\)}
+00066 \textcolor{preprocessor}{              asm ("nop");\(\backslash\)}
 00067 \textcolor{preprocessor}{              asm ("nop");\(\backslash\)}
 00068 \textcolor{preprocessor}{              asm ("nop");\(\backslash\)}
-00069 \textcolor{preprocessor}{              asm ("nop");\(\backslash\)}
+00069 \textcolor{preprocessor}{              PORTB=0x00;\(\backslash\)}
 00070 \textcolor{preprocessor}{              asm ("nop");\(\backslash\)}
 00071 \textcolor{preprocessor}{              asm ("nop");\(\backslash\)}
 00072 \textcolor{preprocessor}{              asm ("nop");\(\backslash\)}
 00073 \textcolor{preprocessor}{              asm ("nop");\(\backslash\)}
 00074 \textcolor{preprocessor}{              asm ("nop");\(\backslash\)}
-00075 \textcolor{preprocessor}{              asm ("nop");}
-00076 \textcolor{preprocessor}{#elif F\_CPU == 8000000}
-00077 
-00078 \textcolor{preprocessor}{#define SETLOW PORTB=0x01;\(\backslash\)}
-00079 \textcolor{preprocessor}{               asm ("nop");\(\backslash\)}
-00080 \textcolor{preprocessor}{               asm ("nop");\(\backslash\)}
-00081 \textcolor{preprocessor}{               PORTB=0x00;\(\backslash\)}
+00075 \textcolor{preprocessor}{              asm ("nop");\(\backslash\)}
+00076 \textcolor{preprocessor}{              asm ("nop");\(\backslash\)}
+00077 \textcolor{preprocessor}{              asm ("nop");\(\backslash\)}
+00078 \textcolor{preprocessor}{              asm ("nop");}
+00079 \textcolor{preprocessor}{#elif F\_CPU == 8000000}
+00080 
+00081 \textcolor{preprocessor}{#define SETLOW PORTB=0x01;\(\backslash\)}
 00082 \textcolor{preprocessor}{               asm ("nop");\(\backslash\)}
 00083 \textcolor{preprocessor}{               asm ("nop");\(\backslash\)}
-00084 \textcolor{preprocessor}{               asm ("nop");}
-00085 \textcolor{preprocessor}{#endif}
-00086 
-00087 
-00088 \textcolor{comment}{//function to change one LED at a specific position; all other LEDs are not changed; run transmit2leds
+00084 \textcolor{preprocessor}{               PORTB=0x00;\(\backslash\)}
+00085 \textcolor{preprocessor}{               asm ("nop");\(\backslash\)}
+00086 \textcolor{preprocessor}{               asm ("nop");\(\backslash\)}
+00087 \textcolor{preprocessor}{               asm ("nop");}
+00088 \textcolor{preprocessor}{#endif}
+00089 
+00090 
+00091 \textcolor{comment}{//function to change one LED at a specific position; all other LEDs are not changed; run transmit2leds
        afterwards}
-00089 \textcolor{keywordtype}{void} \hyperlink{_lightstribe_8h_a63fa595d401f0e85c1bba55ba2b1d66e}{changeled}(\textcolor{keyword}{struct} \hyperlink{structcolor24bit}{color24bit} color, uint8\_t *lightdata, uint8\_t lednr);
-00090 \textcolor{comment}{//function to set one LED at a specific position; all other LEDs are turned off; run transmit2leds
+00092 \textcolor{keywordtype}{void} \hyperlink{_lightstribe_8h_a63fa595d401f0e85c1bba55ba2b1d66e}{changeled}(\textcolor{keyword}{struct} \hyperlink{structcolor24bit}{color24bit} color, uint8\_t *lightdata, uint8\_t lednr);
+00093 \textcolor{comment}{//function to set one LED at a specific position; all other LEDs are turned off; run transmit2leds
        afterwards}
-00091 \textcolor{keywordtype}{void} \hyperlink{_lightstribe_8h_abba9462833e30ef725eaf18c3d01eb71}{setled}(\textcolor{keyword}{struct} \hyperlink{structcolor24bit}{color24bit} color, uint8\_t *lightdata, uint8\_t lednr);
-00092 \textcolor{comment}{//transmit the color array to the stribe --> one wire data transmission}
-00093 \textcolor{keywordtype}{void} \hyperlink{_lightstribe_8h_aac724dad670e4a26723daf71ce6a8d8a}{transmit2leds}(uint8\_t lightdata[]);
-00094 
-00095 \textcolor{preprocessor}{#endif }\textcolor{comment}{/* LIGHTSTRIBE\_H\_ */}\textcolor{preprocessor}{}
+00094 \textcolor{keywordtype}{void} \hyperlink{_lightstribe_8h_abba9462833e30ef725eaf18c3d01eb71}{setled}(\textcolor{keyword}{struct} \hyperlink{structcolor24bit}{color24bit} color, uint8\_t *lightdata, uint8\_t lednr);
+00095 \textcolor{comment}{//transmit the color array to the stribe --> one wire data transmission}
+00096 \textcolor{keywordtype}{void} \hyperlink{_lightstribe_8h_aac724dad670e4a26723daf71ce6a8d8a}{transmit2leds}(uint8\_t lightdata[]);
+00097 
+00098 \textcolor{preprocessor}{#endif }\textcolor{comment}{/* LIGHTSTRIBE\_H\_ */}\textcolor{preprocessor}{}
 \end{DoxyCode}

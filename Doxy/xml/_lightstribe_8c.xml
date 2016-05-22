@@ -89,16 +89,16 @@
         <inbodydescription>
         </inbodydescription>
         <location file="Lightstribe.c" line="33" column="1" bodyfile="Lightstribe.c" bodystart="33" bodyend="41"/>
-        <references refid="structcolor24bit_1a287b397e90d7b995c81ff54e741f96b2" compoundref="_lightstribe_8h" startline="19">color24bit::blue</references>
-        <references refid="structcolor24bit_1a90d21fa503b626c00cdc8d94863d5877" compoundref="_lightstribe_8h" startline="18">color24bit::green</references>
+        <references refid="structcolor24bit_1a287b397e90d7b995c81ff54e741f96b2" compoundref="_lightstribe_8h" startline="22">color24bit::blue</references>
+        <references refid="structcolor24bit_1a90d21fa503b626c00cdc8d94863d5877" compoundref="_lightstribe_8h" startline="20">color24bit::green</references>
         <references refid="globals_8h_1ad5db4045aed262ed4aae2af9d81fab98" compoundref="globals_8h" startline="25">NumOfLeds</references>
-        <references refid="structcolor24bit_1ad47d918910aaa51c73160ac85999d09c" compoundref="_lightstribe_8h" startline="17">color24bit::red</references>
+        <references refid="structcolor24bit_1ad47d918910aaa51c73160ac85999d09c" compoundref="_lightstribe_8h" startline="18">color24bit::red</references>
         <referencedby refid="_led_effects_8h_1ac83bd19da7ebd3c475e3667e4229db41" compoundref="_led_effects_8c" startline="489" endline="507">eastereggbase</referencedby>
         <referencedby refid="_led_effects_8h_1a99174e2b381d7ec6667d29352e6eca1b" compoundref="_led_effects_8c" startline="549" endline="568">fillup</referencedby>
         <referencedby refid="_led_effects_8h_1af67b7638a175e4971f25df5a5db3d8d0" compoundref="_led_effects_8c" startline="300" endline="311">init_alternating</referencedby>
         <referencedby refid="_led_effects_8h_1a9d0f91360c87b851925bf05be5352435" compoundref="_led_effects_8c" startline="442" endline="481">initrainbow</referencedby>
         <referencedby refid="_led_effects_8h_1aecba07ab559ab94e6f44c16e39012d80" compoundref="_led_effects_8c" startline="217" endline="221">initrunled</referencedby>
-        <referencedby refid="ws2811lichterkette_8c_1a840291bc02cba5474a4cb46a9b9566fe" compoundref="ws2811lichterkette_8c" startline="244" endline="367">main</referencedby>
+        <referencedby refid="ws2811lichterkette_8c_1a840291bc02cba5474a4cb46a9b9566fe" compoundref="ws2811lichterkette_8c" startline="447" endline="570">main</referencedby>
         <referencedby refid="_led_effects_8h_1a448758d76f47ea6fed4beb349196363f" compoundref="_led_effects_8c" startline="340" endline="351">recolor</referencedby>
       </memberdef>
       <memberdef kind="function" id="_lightstribe_8c_1abba9462833e30ef725eaf18c3d01eb71" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -149,10 +149,10 @@
         <inbodydescription>
         </inbodydescription>
         <location file="Lightstribe.c" line="51" column="1" bodyfile="Lightstribe.c" bodystart="51" bodyend="81"/>
-        <references refid="structcolor24bit_1a287b397e90d7b995c81ff54e741f96b2" compoundref="_lightstribe_8h" startline="19">color24bit::blue</references>
-        <references refid="structcolor24bit_1a90d21fa503b626c00cdc8d94863d5877" compoundref="_lightstribe_8h" startline="18">color24bit::green</references>
+        <references refid="structcolor24bit_1a287b397e90d7b995c81ff54e741f96b2" compoundref="_lightstribe_8h" startline="22">color24bit::blue</references>
+        <references refid="structcolor24bit_1a90d21fa503b626c00cdc8d94863d5877" compoundref="_lightstribe_8h" startline="20">color24bit::green</references>
         <references refid="globals_8h_1ad5db4045aed262ed4aae2af9d81fab98" compoundref="globals_8h" startline="25">NumOfLeds</references>
-        <references refid="structcolor24bit_1ad47d918910aaa51c73160ac85999d09c" compoundref="_lightstribe_8h" startline="17">color24bit::red</references>
+        <references refid="structcolor24bit_1ad47d918910aaa51c73160ac85999d09c" compoundref="_lightstribe_8h" startline="18">color24bit::red</references>
       </memberdef>
       <memberdef kind="function" id="_lightstribe_8c_1aac724dad670e4a26723daf71ce6a8d8a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -186,7 +186,7 @@
         <referencedby refid="_led_effects_8h_1ac83bd19da7ebd3c475e3667e4229db41" compoundref="_led_effects_8c" startline="489" endline="507">eastereggbase</referencedby>
         <referencedby refid="_led_effects_8h_1a71d3b2ff21a63b48a01461e74be0c2b8" compoundref="_led_effects_8c" startline="366" endline="428">faden</referencedby>
         <referencedby refid="_led_effects_8h_1a99174e2b381d7ec6667d29352e6eca1b" compoundref="_led_effects_8c" startline="549" endline="568">fillup</referencedby>
-        <referencedby refid="ws2811lichterkette_8c_1a840291bc02cba5474a4cb46a9b9566fe" compoundref="ws2811lichterkette_8c" startline="244" endline="367">main</referencedby>
+        <referencedby refid="ws2811lichterkette_8c_1a840291bc02cba5474a4cb46a9b9566fe" compoundref="ws2811lichterkette_8c" startline="447" endline="570">main</referencedby>
         <referencedby refid="_led_effects_8h_1a448758d76f47ea6fed4beb349196363f" compoundref="_led_effects_8c" startline="340" endline="351">recolor</referencedby>
         <referencedby refid="_led_effects_8h_1a5bde1e9e7fc19a9916f1ec02d8fbcd6c" compoundref="_led_effects_8c" startline="323" endline="328">run_alternating</referencedby>
         <referencedby refid="_led_effects_8h_1a35cfbfc36c975f98a7779a37b6ff63ce" compoundref="_led_effects_8c" startline="236" endline="267">runrunled</referencedby>

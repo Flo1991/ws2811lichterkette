@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.8.25)  6 MAY 2016 13:52
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.8.25)  22 MAY 2016 15:43
 entering extended mode
 **refman
 
@@ -1057,53 +1057,102 @@ File: ts1phv.fd 2001/06/04 scalable font definitions for TS1/phv.
 )
 LaTeX Font Info:    Font shape `TS1/phv/m/n' will be
 (Font)              scaled to size 8.99994pt on input line 5.
-
-<Ws2811_Atmega328_schematic.png, id=229, 168.8709pt x 101.178pt>
+ [1]
+<Ws2811_Atmega328_schematic.png, id=253, 168.8709pt x 101.178pt>
 File: Ws2811_Atmega328_schematic.png Graphic file (type png)
 
 <use Ws2811_Atmega328_schematic.png>
 Package pdftex.def Info: Ws2811_Atmega328_schematic.png used on input line 17.
 (pdftex.def)             Requested size: 455.31586pt x 272.79977pt.
- [1]
-<WS2812.png, id=246, 803.0pt x 127.47626pt>
+
+<WS2812.png, id=256, 803.0pt x 127.47626pt>
 File: WS2812.png Graphic file (type png)
  <use WS2812.png>
 Package pdftex.def Info: WS2812.png used on input line 24.
 (pdftex.def)             Requested size: 455.25195pt x 72.27124pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 28--30
-
- []
-
-
-Underfull \vbox (badness 1810) has occurred while \output is active []
-
  [2 <C:/Users/Commander/Documents/Atmel Studio/6.2/ws2811lichterkette/ws2811lic
 hterkette/Doxy/latex/Ws2811_Atmega328_schematic.png> <C:/Users/Commander/Docume
 nts/Atmel Studio/6.2/ws2811lichterkette/ws2811lichterkette/Doxy/latex/WS2812.pn
 g>]
-Underfull \hbox (badness 10000) in alignment at lines 34--43
+LaTeX Font Info:    Try loading font information for T1+pcr on input line 30.
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\t1pcr.fd"
+File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
+)
+LaTeX Font Info:    Font shape `T1/pcr/bx/n' in size <10> not available
+(Font)              Font shape `T1/pcr/b/n' tried instead on input line 30.
+LaTeX Font Info:    Font shape `T1/pcr/bx/n' in size <7> not available
+(Font)              Font shape `T1/pcr/b/n' tried instead on input line 30.
+
+Underfull \hbox (badness 10000) in paragraph at lines 34--36
+
+ []
+
+
+Underfull \hbox (badness 10000) in alignment at lines 40--49
+[][][] 
+ []
+
+[3] <Protoll_V1_2_engl.png, id=305, 240.9pt x 70.3428pt>
+File: Protoll_V1_2_engl.png Graphic file (type png)
+
+<use Protoll_V1_2_engl.png>
+Package pdftex.def Info: Protoll_V1_2_engl.png used on input line 61.
+(pdftex.def)             Requested size: 455.28868pt x 132.94429pt.
+
+
+LaTeX Warning: Float too large for page by 171.2388pt on input line 96.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[4 <C:/Users/Commander/Documents/Atmel Studio/6.2/ws2811lichterkette/ws2811lich
+terkette/Doxy/latex/Protoll_V1_2_engl.png>]
+Underfull \hbox (badness 10000) in alignment at lines 102--112
 [][][] 
  []
 
 
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+LaTeX Font Info:    Font shape `T1/phv/bc/n' will be
+(Font)              scaled to size 8.99994pt on input line 130.
+[5] <NodeMCUFlasher_flash.PNG, id=364, 430.60875pt x 249.93375pt>
+File: NodeMCUFlasher_flash.PNG Graphic file (type png)
+
+<use NodeMCUFlasher_flash.PNG>
+Package pdftex.def Info: NodeMCUFlasher_flash.PNG used on input line 146.
+(pdftex.def)             Requested size: 455.25381pt x 264.23824pt.
+
+<NodeMCUFlasher_config.PNG, id=367, 430.60875pt x 253.69781pt>
+File: NodeMCUFlasher_config.PNG Graphic file (type png)
+
+<use NodeMCUFlasher_config.PNG>
+Package pdftex.def Info: NodeMCUFlasher_config.PNG used on input line 153.
+(pdftex.def)             Requested size: 455.25381pt x 268.21773pt.
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [3])
+ [6 <C:/Users/Commander/Documents/Atmel Studio/6.2/ws2811lichterkette/ws2811lic
+hterkette/Doxy/latex/NodeMCUFlasher_flash.PNG>]
+<LuaLoader.png, id=378, 935.495pt x 671.50874pt>
+File: LuaLoader.png Graphic file (type png)
+ <use LuaLoader.png>
+Package pdftex.def Info: LuaLoader.png used on input line 161.
+(pdftex.def)             Requested size: 455.2419pt x 326.77771pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [7 <C:/Users/Commander/Documents/Atmel Studio/6.2/ws2811lichterkette/ws2811lic
+hterkette/Doxy/latex/NodeMCUFlasher_config.PNG>] [8 <C:/Users/Commander/Documen
+ts/Atmel Studio/6.2/ws2811lichterkette/ws2811lichterkette/Doxy/latex/LuaLoader.
+png>])
 ("C:\Users\Commander\Documents\Atmel Studio\6.2\ws2811lichterkette\ws2811lichte
 rkette\Doxy\latex\annotated.tex")
 ("C:\Users\Commander\Documents\Atmel Studio\6.2\ws2811lichterkette\ws2811lichte
 rkette\Doxy\latex\files.tex")
 ("C:\Users\Commander\Documents\Atmel Studio\6.2\ws2811lichterkette\ws2811lichte
-rkette\Doxy\latex\structcolor24bit.tex"
-LaTeX Font Info:    Try loading font information for T1+pcr on input line 10.
-
-("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\t1pcr.fd"
-File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
-)
-LaTeX Font Info:    Font shape `T1/phv/bc/n' will be
-(Font)              scaled to size 8.99994pt on input line 12.
- [4])
+rkette\Doxy\latex\structcolor24bit.tex" [9])
 ("C:\Users\Commander\Documents\Atmel Studio\6.2\ws2811lichterkette\ws2811lichte
 rkette\Doxy\latex\globals_8h.tex"
 Underfull \hbox (badness 10000) in paragraph at lines 8--9
@@ -1118,7 +1167,7 @@ LaTeX Font Info:    Font shape `T1/phv/m/it' in size <7> not available
 (Font)              Font shape `T1/phv/m/sl' tried instead on input line 26.
 LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
 (Font)              scaled to size 6.29996pt on input line 26.
-[5]
+[10]
 Underfull \hbox (badness 10000) detected at line 80
 [][][]
  []
@@ -1135,14 +1184,14 @@ Underfull \hbox (badness 10000) detected at line 86
 
 )
 ("C:\Users\Commander\Documents\Atmel Studio\6.2\ws2811lichterkette\ws2811lichte
-rkette\Doxy\latex\globals_8h_source.tex" [6])
+rkette\Doxy\latex\globals_8h_source.tex" [11])
 ("C:\Users\Commander\Documents\Atmel Studio\6.2\ws2811lichterkette\ws2811lichte
 rkette\Doxy\latex\_led_effects_8c.tex"
 Underfull \hbox (badness 10000) in paragraph at lines 8--12
 
  []
 
-[7]
+[12]
 Underfull \hbox (badness 10000) detected at line 56
 [][][]
  []
@@ -1161,7 +1210,7 @@ LaTeX Font Info:    Font shape `T1/phv/bc/it' in size <10> not available
 (Font)              Font shape `T1/phv/bc/sl' tried instead on input line 79.
 LaTeX Font Info:    Font shape `T1/phv/bc/sl' will be
 (Font)              scaled to size 8.99994pt on input line 79.
-[8]
+[13]
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <10> not available
 (Font)              Font shape `T1/phv/m/sl' tried instead on input line 86.
 LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
@@ -1196,7 +1245,7 @@ Underfull \hbox (badness 10000) detected at line 162
 [][][]
  []
 
-[9] [10]
+[14] [15]
 Underfull \hbox (badness 10000) detected at line 196
 [][][]
  []
@@ -1226,7 +1275,7 @@ Underfull \hbox (badness 10000) detected at line 270
 [][][]
  []
 
-[11]
+[16]
 Underfull \hbox (badness 10000) detected at line 307
 [][][]
  []
@@ -1246,7 +1295,7 @@ Underfull \hbox (badness 10000) detected at line 350
 [][][]
  []
 
-[12]
+[17]
 Underfull \hbox (badness 10000) detected at line 381
 [][][]
  []
@@ -1270,7 +1319,7 @@ LaTeX Font Info:    Font shape `T1/phv/bc/it' in size <7> not available
 (Font)              Font shape `T1/phv/bc/sl' tried instead on input line 449.
 LaTeX Font Info:    Font shape `T1/phv/bc/sl' will be
 (Font)              scaled to size 6.29996pt on input line 449.
-[13]
+[18]
 Underfull \hbox (badness 10000) detected at line 467
 [][][]
  []
@@ -1300,7 +1349,7 @@ Underfull \hbox (badness 10000) detected at line 537
 [][][]
  []
 
-[14]
+[19]
 Underfull \hbox (badness 10000) detected at line 571
 [][][]
  []
@@ -1320,7 +1369,7 @@ Underfull \hbox (badness 10000) detected at line 614
 [][][]
  []
 
-[15] [16]
+[20] [21]
 Underfull \hbox (badness 10000) detected at line 641
 [][][]
  []
@@ -1352,13 +1401,13 @@ Underfull \hbox (badness 10000) detected at line 718
 
 )
 ("C:\Users\Commander\Documents\Atmel Studio\6.2\ws2811lichterkette\ws2811lichte
-rkette\Doxy\latex\_led_effects_8c_source.tex" [17] [18]
+rkette\Doxy\latex\_led_effects_8c_source.tex" [22] [23]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [19]
+ [24]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [20]
+ [25]
 Overfull \hbox (19.35555pt too wide) in paragraph at lines 264--265
 []\T1/pcr/m/n/7 00406         []//Increase the color values is they are lower t
 han the chosen color value, stop if all maximums are[] 
@@ -1367,14 +1416,14 @@ han the chosen color value, stop if all maximums are[]
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [21])
+ [26])
 ("C:\Users\Commander\Documents\Atmel Studio\6.2\ws2811lichterkette\ws2811lichte
 rkette\Doxy\latex\_led_effects_8h.tex"
 Underfull \hbox (badness 10000) in paragraph at lines 8--9
 
  []
 
-[22] [23]
+[27] [28]
 Underfull \hbox (badness 10000) detected at line 92
 [][][]
  []
@@ -1399,7 +1448,7 @@ Underfull \hbox (badness 10000) detected at line 130
 [][][]
  []
 
-[24]
+[29]
 Underfull \hbox (badness 10000) detected at line 161
 [][][]
  []
@@ -1429,7 +1478,7 @@ Underfull \hbox (badness 10000) detected at line 235
 [][][]
  []
 
-[25] [26]
+[30] [31]
 Underfull \hbox (badness 10000) detected at line 266
 [][][]
  []
@@ -1449,7 +1498,7 @@ Underfull \hbox (badness 10000) detected at line 306
 [][][]
  []
 
-[27]
+[32]
 Underfull \hbox (badness 10000) detected at line 343
 [][][]
  []
@@ -1479,7 +1528,7 @@ Underfull \hbox (badness 10000) detected at line 420
 [][][]
  []
 
-[28]
+[33]
 Underfull \hbox (badness 10000) detected at line 457
 [][][]
  []
@@ -1499,7 +1548,7 @@ Underfull \hbox (badness 10000) detected at line 506
 [][][]
  []
 
-[29]
+[34]
 Underfull \hbox (badness 10000) detected at line 536
 [][][]
  []
@@ -1529,7 +1578,7 @@ Underfull \hbox (badness 10000) detected at line 610
 [][][]
  []
 
-[30]
+[35]
 Underfull \hbox (badness 10000) detected at line 647
 [][][]
  []
@@ -1549,7 +1598,7 @@ Underfull \hbox (badness 10000) detected at line 680
 [][][]
  []
 
-[31]
+[36]
 Underfull \hbox (badness 10000) detected at line 714
 [][][]
  []
@@ -1571,7 +1620,7 @@ Underfull \hbox (badness 10000) detected at line 754
 
 )
 ("C:\Users\Commander\Documents\Atmel Studio\6.2\ws2811lichterkette\ws2811lichte
-rkette\Doxy\latex\_led_effects_8h_source.tex" [32]
+rkette\Doxy\latex\_led_effects_8h_source.tex" [37]
 Overfull \hbox (44.55553pt too wide) in paragraph at lines 71--72
 []      \T1/pcr/m/n/7 lightdata);         []//fill the stribe step by step unti
 l the stribe has one color, the background color is filled[] 
@@ -1584,7 +1633,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 8--11
 
  []
 
-[33]
+[38]
 Underfull \hbox (badness 10000) detected at line 25
 [][][]
  []
@@ -1609,7 +1658,7 @@ Underfull \hbox (badness 10000) detected at line 66
 [][][]
  []
 
-[34]
+[39]
 Underfull \hbox (badness 10000) detected at line 103
 [][][]
  []
@@ -1631,10 +1680,10 @@ Underfull \hbox (badness 10000) detected at line 136
 
 )
 ("C:\Users\Commander\Documents\Atmel Studio\6.2\ws2811lichterkette\ws2811lichte
-rkette\Doxy\latex\_lightstribe_8c_source.tex" [35]
+rkette\Doxy\latex\_lightstribe_8c_source.tex" [40]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [36])
+ [41])
 ("C:\Users\Commander\Documents\Atmel Studio\6.2\ws2811lichterkette\ws2811lichte
 rkette\Doxy\latex\_lightstribe_8h.tex"
 Underfull \hbox (badness 10000) in paragraph at lines 8--10
@@ -1656,7 +1705,7 @@ Underfull \hbox (badness 10000) detected at line 35
 [][][]
  []
 
-[37] [38]
+[42] [43]
 Underfull \hbox (badness 10000) detected at line 67
 [][][]
  []
@@ -1686,16 +1735,16 @@ Underfull \hbox (badness 10000) detected at line 140
 [][][]
  []
 
-[39])
+[44])
 ("C:\Users\Commander\Documents\Atmel Studio\6.2\ws2811lichterkette\ws2811lichte
-rkette\Doxy\latex\_lightstribe_8h_source.tex" [40])
+rkette\Doxy\latex\_lightstribe_8h_source.tex" [45])
 ("C:\Users\Commander\Documents\Atmel Studio\6.2\ws2811lichterkette\ws2811lichte
 rkette\Doxy\latex\ws2811lichterkette_8c.tex"
 Underfull \hbox (badness 10000) in paragraph at lines 8--17
 
  []
 
-[41]
+[46]
 Underfull \hbox (badness 10000) in paragraph at lines 66--78
 
  []
@@ -1715,7 +1764,7 @@ Underfull \hbox (badness 10000) detected at line 86
 [][][]
  []
 
-[42]
+[47]
 Underfull \hbox (badness 10000) detected at line 107
 [][][]
  []
@@ -1727,25 +1776,26 @@ Underfull \hbox (badness 10000) detected at line 110
 
 )
 ("C:\Users\Commander\Documents\Atmel Studio\6.2\ws2811lichterkette\ws2811lichte
-rkette\Doxy\latex\ws2811lichterkette_8c_source.tex" [43]
+rkette\Doxy\latex\ws2811lichterkette_8c_source.tex" [48]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [44]
+ [49]
 Overfull \hbox (15.15555pt too wide) in paragraph at lines 191--191
-[]\T1/pcr/m/n/7 00346                 []//if the number of colors is smaller th
+[]\T1/pcr/m/n/7 00516                 []//if the number of colors is smaller th
 an the number of LEDs the colors are repeated using[][] 
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [45])
-[46]
+ [50])
+[51] [52] [53] [54
+
+]
 ("C:\Users\Commander\Documents\Atmel Studio\6.2\ws2811lichterkette\ws2811lichte
-rkette\Doxy\latex\refman.ind" [47
+rkette\Doxy\latex\refman.ind" [55
 
-
-] [48
+] [56
 
 ])
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 166.
@@ -1756,30 +1806,31 @@ rkette\Doxy\latex\refman.aux")
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 166.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 166.
 Package rerunfilecheck Info: File `refman.out' has not changed.
-(rerunfilecheck)             Checksum: 287985B3D69AA5F78E37FF7C50BE2EAD;7621.
+(rerunfilecheck)             Checksum: 5C9F4880AC507DCECB35424D65553C1B;8075.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 166.
  ) 
 Here is how much of TeX's memory you used:
- 13360 strings out of 493921
- 196798 string characters out of 3147270
- 280253 words of memory out of 3000000
- 16073 multiletter control sequences out of 15000+200000
- 52532 words of font info for 61 fonts, out of 3000000 for 9000
+ 13423 strings out of 493921
+ 197786 string characters out of 3147270
+ 300686 words of memory out of 3000000
+ 16105 multiletter control sequences out of 15000+200000
+ 53475 words of font info for 64 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 48i,16n,43p,2925b,520s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 48i,16n,43p,2925b,528s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Program File
 s/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX
  2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Program Files/MiKTeX 2.9/font
 s/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/
 public/amsfonts/cm/cmsy7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/couri
-er/ucrr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvb8a.pfb>
-<C:/Program Files/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvb8ac.pfb><C:/Program F
-iles/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvbo8ac.pfb><C:/Program Files/MiKTeX 
-2.9/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type
-1/urw/helvetic/uhvro8a.pfb>
-Output written on refman.pdf (50 pages, 840516 bytes).
+er/ucrb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/courier/ucrr8a.pfb><
+C:/Program Files/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Program Fil
+es/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvb8ac.pfb><C:/Program Files/MiKTeX 2.9
+/fonts/type1/urw/helvetic/uhvbo8ac.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1
+/urw/helvetic/uhvr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/helvetic/
+uhvro8a.pfb>
+Output written on refman.pdf (58 pages, 1087738 bytes).
 PDF statistics:
- 1919 PDF objects out of 2073 (max. 8388607)
- 330 named destinations out of 1000 (max. 500000)
- 339 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 2034 PDF objects out of 2073 (max. 8388607)
+ 354 named destinations out of 1000 (max. 500000)
+ 375 words of extra memory for PDF output out of 10000 (max. 10000000)
 

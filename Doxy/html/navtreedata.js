@@ -8,7 +8,12 @@ var NAVTREE =
       [ "Software implementation", "index.html#software_sec", null ],
       [ "Protocol overview", "index.html#protocol_sec", null ],
       [ "Implement further effects", "index.html#owneffects_sec", null ],
-      [ "control via ESP8266", "index.html#esp_sec", null ]
+      [ "Requirements and Limitations", "index.html#limitations_sec", null ],
+      [ "Example usage with an ESP8266", "index.html#esp_sec", [
+        [ "ESP8266 setup", "index.html#setup_esp", null ],
+        [ "Connect ESP8266 with AVR", "index.html#avr_con_esp", null ],
+        [ "Short setup", "index.html#short_setup", null ]
+      ] ]
     ] ],
     [ "Data Structures", "annotated.html", [
       [ "Data Structures", "annotated.html", "annotated_dup" ],

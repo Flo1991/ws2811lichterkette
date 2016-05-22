@@ -7,7 +7,7 @@
 <para><image type="html" name="tree.png"></image>
  </para><sect1 id="index_1intro_sec">
 <title>Introduction</title>
-<para>This project is about using an WS2811 or WS2812 lightstribe with an AVR controller. It is possible to handle up to 250 LEDs at the same time, so I chose an Atmega328p with enough RAM amount. If you want to handle less LEDs you can use most parts of this project with every AVR. The AVR is programmed to receive the light data over UART so you can control the LEDs by using a serial interface. The interface uses a specified simple protocol which is described in <ref refid="index_1protocol_sec" kindref="member">Protocol overview</ref> section. Everything has been developed in a university course to control the lights of a Christmas tree. In the original implementation there were some further components included. This is a simplified version of the implementation so that everyone can use it. As an example for controlling the LEDs using a smart phone the <ref refid="index_1esp_sec" kindref="member">control via ESP8266</ref> section shows how this could be done by using a webserver on the ESP8266. You can use everything else that provide a serial interface (maybe connect with a bluetooth serial module). The structure of this documentation is split in a hardware part for the AVR that describes the basic hardware that should be used. The next part is about how the software is working on the AVR that handles the LEDs and different effects. You may include some more stuff in your own. After that you can see a small protocol overview, where you find which command can be sent to the AVR to control the LEDs. Be aware that at the initialization state all LEDs are off. At the last point you can find an example how to use the implementation with an ESP8266 with a webserver. You will find the source code for the ESP8266 and the basic hardware setup.</para></sect1>
+<para>This project is about using an WS2811 or WS2812 lightstribe with an AVR controller. It is possible to handle up to 250 LEDs at the same time, so I chose an Atmega328p with enough RAM amount. If you want to handle less LEDs you can use most parts of this project with every AVR. The AVR is programmed to receive the light data over UART so you can control the LEDs by using a serial interface. The interface uses a specified simple protocol which is described in <ref refid="index_1protocol_sec" kindref="member">Protocol overview</ref> section. Everything has been developed in a university course to control the lights of a Christmas tree. In the original implementation there were some further components included. This is a simplified version of the implementation so that everyone can use it. As an example for controlling the LEDs using a smart phone the <ref refid="index_1esp_sec" kindref="member">Example usage with an ESP8266</ref> section shows how this could be done by using a webserver on the ESP8266. You can use everything else that provide a serial interface (maybe connect with a bluetooth serial module). The structure of this documentation is split in a hardware part for the AVR that describes the basic hardware that should be used. The next part is about how the software is working on the AVR that handles the LEDs and different effects. You may include some more stuff in your own. After that you can see a small protocol overview, where you find which command can be sent to the AVR to control the LEDs. Be aware that at the initialization state all LEDs are off. At the last point you can find an example how to use the implementation with an ESP8266 with a webserver. You will find the source code for the ESP8266 and the basic hardware setup.</para></sect1>
 <sect1 id="index_1usage_sec">
 <title>Basic usage</title>
 <para>For using this implementation follow this steps: <itemizedlist>
@@ -24,22 +24,26 @@
 <listitem>
 <para>set the clock divider fuse and the clock source fuse referring to your implementation </para></listitem>
 <listitem>
-<para>send protocol data (see section <ref refid="index_1protocol_sec" kindref="member">Protocol overview</ref>) to the RX pin of the AVR over a serial device, e.g. an FTDI, ESP8266 or Arduino (UART is 8N1 on your chosen <ref refid="ws2811lichterkette_8c_1a62634036639f88eece6fbf226b45f84b" kindref="member">BAUD</ref>) </para></listitem>
+<para>send protocol data (see section <ref refid="index_1protocol_sec" kindref="member">Protocol overview</ref>) to the RX pin of the AVR over a serial device, e.g. an FTDI, ESP8266 or Arduino (UART is 8N1 on your chosen <ref refid="ws2811lichterkette_8c_1a62634036639f88eece6fbf226b45f84b" kindref="member">BAUD</ref>)(example data 254 6 0 1 20 22 = 0xFE 0x06 0x00 0x01 0x14 0x16) </para></listitem>
 </itemizedlist>
 </para></sect1>
 <sect1 id="index_1hardware_sec">
 <title>Hardware</title>
-<para>The basic hardware you need is a AVR controller an some WS2811 or WS2812 LEDs you want to control. The AVR controller should have an hardware UART, otherwise you need to write some code for a software serial. In the project we chose an Atmega328p that has enough RAM to control 250 LEDs. The internal software structure buffers the color data for the LEDs to achieve an accurate timing, see section <ref refid="index_1software_sec" kindref="member">Software implementation</ref>. The AVR can be used with the internal clock at 8 MHz, remember to clear the clock divider fuse. Otherwise an external 8 MHz or 16 MHz clock source can be used, the definition <ref refid="globals_8h_1a43bafb28b29491ec7f871319b5a3b2f8" kindref="member">F_CPU</ref> must be set to the frequency you chose (remember to set the fuses for an external clock source). As an example figure <ref refid="index_1one" kindref="member">1</ref> shows using an external 16 MHz crystal. <anchor id="index_1one"/> <image type="html" name="Ws2811_Atmega328_schematic.png">schematic of the AVR to controll WS2812/WS2811</image>
+<para>The basic hardware you need is a AVR controller an some WS2811 or WS2812 LEDs you want to control. The AVR controller should have an hardware UART, otherwise you need to write some code for a software serial. In the project we chose an Atmega328p that has enough RAM to control 250 LEDs. The internal software structure buffers the color data for the LEDs to achieve an accurate timing, see section <ref refid="index_1software_sec" kindref="member">Software implementation</ref>. The AVR can be used with the internal clock at 8 MHz, remember to clear the clock divider fuse. Otherwise an external 8 MHz or 16 MHz clock source can be used, the definition <ref refid="globals_8h_1a43bafb28b29491ec7f871319b5a3b2f8" kindref="member">F_CPU</ref> must be set to the frequency you chose (remember to set the fuses for an external clock source). As an example <ref refid="index_1one" kindref="member">figure 1</ref> shows using an external 16 MHz crystal. <anchor id="index_1one"/> <image type="html" name="Ws2811_Atmega328_schematic.png">Figure 1: schematic of the AVR to controll WS2812/WS2811</image>
  <image type="latex" name="Ws2811_Atmega328_schematic.png">schematic of the AVR to controll WS2812/WS2811</image>
  <image type="rtf" name="Ws2811_Atmega328_schematic.png">schematic of the AVR to controll WS2812/WS2811</image>
- As you can see in the picture the AVR is programmed by using the ISP interface. The WS2812/WS2811 get the same voltage as the AVR, the light data is available at PinB0, you may change this if you like. Referring to the LEDs be aware of the current amount they may draw if every LED has its full brightness. One WS2812 can draw up to 60 mA, so one meter with 30 LEDs already need 1,8 A. If you want to control more LEDs you may have a problem with the voltage drop along the stribe. For example if you control 180 LEDs at six meters you not only need 10,8 A, furthermore you will probably have a voltage drop up to 2 V. To reduce the voltage drop you must increase the wire size with parallel wires to you stribe. You can see the voltage drop if you set all LEDs to white. If you have only a small voltage drop every LED will have the same color. If the voltage drop is too much you can see that the last LEDs will have less blue color, so they will light in a warm white color even up to red. If you want to try out the LEDs with the AVR you can build up everything on a breadboard. Pinheaders can be soldered easy at the light stribes as you can see in figure <ref refid="index_1two" kindref="member">2</ref>. <anchor id="index_1two"/> <image type="html" name="WS2812.png">WS2812 stribe with pin header</image>
+ As you can see in the picture the AVR is programmed by using the ISP interface. The WS2812/WS2811 get the same voltage as the AVR, the light data is available at PinB0, you may change this if you like. Referring to the LEDs be aware of the current amount they may draw if every LED has its full brightness. One WS2812 can draw up to 60 mA, so one meter with 30 LEDs already need 1,8 A. If you want to control more LEDs you may have a problem with the voltage drop along the stribe. For example if you control 180 LEDs at six meters you not only need 10,8 A, furthermore you will probably have a voltage drop up to 2 V. To reduce the voltage drop you must increase the wire size with parallel wires to you stribe. You can see the voltage drop if you set all LEDs to white. If you have only a small voltage drop every LED will have the same color. If the voltage drop is too much you can see that the last LEDs will have less blue color, so they will light in a warm white color even up to red. If you want to try out the LEDs with the AVR you can build up everything on a breadboard. Pinheaders can be soldered easy at the light stribes as you can see in <ref refid="index_1two" kindref="member">figure 2</ref>. <anchor id="index_1two"/> <image type="html" name="WS2812.png">Figure 2: WS2812 stribe with pin header</image>
  <image type="latex" name="WS2812.png">WS2812 stribe with pin header</image>
  <image type="rtf" name="WS2812.png">WS2812 stribe with pin header</image>
- The connect GND to the common ground with the AVR, 5 V should be connected to a power supply that can handle the current you need. DI is the data in line, this should be connected to PinB0 at the AVR. The stribe is like a big shifting register, all the data you sent is shifted bit by bit through the stribe. So DO is the data out pin, you see some data at this pin if all LEDs before had already received their color data. The one wire protocol of the LEDs is described in the next section <ref refid="index_1software_sec" kindref="member">Software implementation</ref>.</para></sect1>
+ The connect GND to the common ground with the AVR, 5 V should be connected to a power supply that can handle the current you need. DI is the data in line, this should be connected to PinB0 at the AVR. The stribe is like a big shifting register, all the data you sent is shifted bit by bit through the stribe. So DO is the data out pin, you see some data at this pin if all LEDs before had already received their color data. The one wire protocol of the LEDs is described in the next section <ref refid="index_1software_sec" kindref="member">Software implementation</ref>.</para><para>Datasheets:<linebreak/>
+ <ulink url="WS2812.pdf"><bold>Datasheet WS2812</bold></ulink> <linebreak/>
+ <ulink url="WS2811.pdf"><bold>Datasheet WS2811</bold></ulink> <linebreak/>
+ <ulink url="Atmega328.pdf"><bold>Datasheet Atmega328</bold></ulink> <linebreak/>
+</para></sect1>
 <sect1 id="index_1software_sec">
 <title>Software implementation</title>
 <para>If your hardware is ready you must flash your AVR device with the provided software. Therefore the ISP-6 connector should be used. To get the right timing remember to set the <ref refid="globals_8h_1a43bafb28b29491ec7f871319b5a3b2f8" kindref="member">F_CPU</ref> definition to the frequency you are working at. Furthermore set the fuses of the AVR referring to your implementation. This means you have to clear the clock divider fuse and may have to change the clock source. I suggest to use the AtmelStudio to program your AVR and its fuses. <linebreak/>
- The WS2812/WS2811 are controlled by one data line that works with a one wire protocol. Because of the missing clock line the timing is really important, this can either be achieved by doing some trick with the hardware interfaces (e.g. using the spi interface) or by bit banging. In this implementation bit banging is used. To get a good timing all color data must be transmitted in one block that is not interrupted by some other code. The timing specifications of the WS2812/WS2811 LEDs can be found in table <ref refid="index_1timingtable" kindref="member">1</ref> which refers to the datasheet.<linebreak/>
+ The WS2812/WS2811 are controlled by one data line that works with a one wire protocol. Because of the missing clock line the timing is really important, this can either be achieved by doing some trick with the hardware interfaces (e.g. using the spi interface) or by bit banging. In this implementation bit banging is used. To get a good timing all color data must be transmitted in one block that is not interrupted by some other code. The timing specifications of the WS2812/WS2811 LEDs can be found in table <ref refid="index_1timingtable" kindref="member">1</ref> which refers to the datasheet ( <ulink url="WS2812.pdf"><bold>WS2812</bold></ulink>).<linebreak/>
 </para><para><anchor id="index_1timingtable"/> <table rows="7" cols="3"><row>
 <entry thead="yes"><para>Information </para></entry><entry thead="yes"><para>Timing </para></entry><entry thead="yes"><para>Tolerance +/- </para></entry></row>
 <row>
@@ -60,13 +64,176 @@
  The last points to be mentioned in this section are some things you need to be careful. The first thing is that the 8 bit colors are in an RGB 3-3-2 format. The 24 bit color format depend on the LEDs. WS2812 LEDs use a GRB color scheme while WS2811 use a RGB color scheme. This is important, to achieve the right color the protocol includes a bit that decides the color scheme. The right color is resolved by the decompressing function <ref refid="_led_effects_8h_1a55291315ab0f2ca8d508f0e9da1920a7" kindref="member">colorconv8to24</ref>. Another thing is that the colors are not linearized, what means that you cannot say that a color you got from a color table will be look like this. As an example you picked an orange from a 3-3-2 rgb color table. This orange will not be the same orange on the LED stribe. This depends on many parameters so linearizing is too much effort and almost impossible (to achieve linearization you would have to measure each color, compare it and evaluate correction parameters).</para></sect1>
 <sect1 id="index_1protocol_sec">
 <title>Protocol overview</title>
-<para>This section gives an overview of the implemented serial protocol. The goal of the protocol was to be as simple as possible, to be easily implemented on the AVR and to use as less resources as possible.</para></sect1>
+<para>This section gives an overview of the implemented serial protocol. The goal of the protocol was to be as simple as possible, to be easily implemented on the AVR and to use as less resources as possible. <ref refid="index_1three" kindref="member">Figure 3</ref> shows the base structure of the protocol. <anchor id="index_1three"/> <image type="html" name="Protoll_V1_2_engl.png">Figure 3: serial protocol structure</image>
+ <image type="latex" name="Protoll_V1_2_engl.png">serial protocol structure</image>
+ <image type="rtf" name="Protoll_V1_2_engl.png">serial protocol structure</image>
+As you can see a data transmission always starts with the preamble 254(0xFE). For a fast and easy implementation this preamble value must only be used as preamble and must never be another field value (e.g. you must not send the color value 254). The next byte that is sent contains the total length of the packet including the preamble and the length byte. If you sent a wrong length you may get an unexpected behavior until a new correct data packet is sent. The third field contains the effect. The different effects are listed in table XXX. In Bit 7 (MSb) you can choose the LED type you want to control, set the bit to 0 for WS2811 and to 1 for WS2812 LEDs. The next byte is a value to control the effect speed. You can set a delay between 0 (no delay) and 250 (longest delay possible). The value unit and is not a repeatable setting for different effects. This means that the delay is no correct wait function (e.g. wait for n milliseconds). Furthermore the effects work on the color array what may be faster for some effects and slower for others. The best thing is to try the effects with different values. The next field contains the number of the LEDs that should be controlled. Be aware that the maximum supported number of LEDs is 250, but this depends on your hardware. The chosen Atmega328p can handle this amount, if you choose an AVR with less RAM this will not work. What you can do is to allocate more LEDs than you actually have. This gives you the possibility to create further effects. What happens is that only a part of the array is sent to the LEDs but the other color values are stored internally in the AVR (in fact all color data is transmitted to the LEDs but the superfluous information is overwritten by new data). The last data field are the color values. One color is 8 bit RGB 3-3-2 and you should sent the right amount of colors for your chosen effect. If you sent to less information the data block will not be evaluated because the total length does not match. For sending some data do not forget to configure your UART (8N1 <ref refid="ws2811lichterkette_8c_1a62634036639f88eece6fbf226b45f84b" kindref="member">BAUD</ref>) on both sides.</para><para><anchor id="index_1effecttable"/> <table rows="12" cols="4"><row>
+<entry thead="yes"><para>Effect<linebreak/>
+number </para></entry><entry thead="yes"><para>Number of colors <linebreak/>
+ (1 byte RGB 3-3-2) </para></entry><entry thead="yes"><para>Description </para></entry><entry thead="yes"><para>Example <linebreak/>
+ (decimal) </para></entry></row>
+<row>
+<entry thead="no"><para>0 = SETFULLCOLOR </para></entry><entry thead="no"><para>1 </para></entry><entry thead="no"><para>All LEDs glow at the same color without changes. </para></entry><entry thead="no"><para>254 6 1 20 22 </para></entry></row>
+<row>
+<entry thead="no"><para>1 = FILLUP </para></entry><entry thead="no"><para>2 (foreground, background) </para></entry><entry thead="no"><para>One LED steps through the stribe in the foreground color and colors all LEDs after it in the background color.<linebreak/>
+ At the end of the stribe the LED stays at the foreground color and another LED starts to step through the stribe.<linebreak/>
+ This continues until the whole stribe is filled in the foreground color. <linebreak/>
+ Then the stribe is cleared to the background color and the effects begins again. </para></entry><entry thead="no"><para>254 7 1 22 20 22 201 </para></entry></row>
+<row>
+<entry thead="no"><para>2 = BLINK </para></entry><entry thead="no"><para>1 </para></entry><entry thead="no"><para>The stribe blinks in the chosen color and to off (=black) repeatedly. </para></entry><entry thead="no"><para>254 6 2 55 20 56 </para></entry></row>
+<row>
+<entry thead="no"><para>3 = RUNLED </para></entry><entry thead="no"><para>2 (foreground, background) </para></entry><entry thead="no"><para>All LEDs but one are colored in the background color.<linebreak/>
+ The one in the foreground color walks through the stribe with overflowing to the beginning. </para></entry><entry thead="no"><para>254 7 3 55 20 56 151 </para></entry></row>
+<row>
+<entry thead="no"><para>5 = ALTERNATE </para></entry><entry thead="no"><para>2 (foreground, background) </para></entry><entry thead="no"><para>The LEDs are alternating in the foreground and the background color.<linebreak/>
+ First the even LEDs are colored in foreground and the uneven in the background color, after that vice versa. </para></entry><entry thead="no"><para>254 7 5 55 20 56 151 </para></entry></row>
+<row>
+<entry thead="no"><para>7 = RECOLOR </para></entry><entry thead="no"><para>1 </para></entry><entry thead="no"><para>The stribe is filled in a new color step by step until the whole stribe stays in the new color. </para></entry><entry thead="no"><para>254 6 7 55 20 38 </para></entry></row>
+<row>
+<entry thead="no"><para>8 = FADE </para></entry><entry thead="no"><para>1 </para></entry><entry thead="no"><para>The destination color is set and the base colors red, green and blue are decreased step by step until the stribe is off.<linebreak/>
+ After that the color values are increased until the destination color is reached.<linebreak/>
+ This generates a color fading effect. The color fading is not linearized. </para></entry><entry thead="no"><para>254 6 8 55 20 201 </para></entry></row>
+<row>
+<entry thead="no"><para>9 = INITRAINBOW </para></entry><entry thead="no"><para>no color </para></entry><entry thead="no"><para>Set the stribe in a static rainbow color. </para></entry><entry thead="no"><para>254 5 9 0 20 </para></entry></row>
+<row>
+<entry thead="no"><para>10 = ROTATE_R </para></entry><entry thead="no"><para>no color </para></entry><entry thead="no"><para>Rotate all LEDs one step to the right side (depends on lightdata array). </para></entry><entry thead="no"><para>254 5 10 232 20 </para></entry></row>
+<row>
+<entry thead="no"><para>11 = ROTATE_L </para></entry><entry thead="no"><para>no color </para></entry><entry thead="no"><para>Rotate all LEDs one step to the left side (depends on lightdata array). </para></entry><entry thead="no"><para>254 5 11 23 20 </para></entry></row>
+<row>
+<entry thead="no"><para>12 = CUSTOM </para></entry><entry thead="no"><para>N colors </para></entry><entry thead="no"><para>All LEDs are set to the static color referring to the sent color values.<linebreak/>
+ If there are more LEDs than color values the colors are repeated. </para></entry><entry thead="no"><para>254 8 12 1 20 22 201 60 </para></entry></row>
+<caption>Table containing all effects available over the serial protocol</caption>
+</table>
+The missing numbers in table <ref refid="index_1effecttable" kindref="member">2</ref> are internally used by the AVR and must not be sent over the serial port.</para></sect1>
 <sect1 id="index_1owneffects_sec">
 <title>Implement further effects</title>
-</sect1>
+<para>This section tells you how to implement further effects. You may use already existing functions to generate new effects or add something completely new. All effects should be written in the <ref refid="_led_effects_8c" kindref="compound">LedEffects.c</ref> file and declared in its header file <ref refid="_led_effects_8h" kindref="compound">LedEffects.h</ref>. You must know that everything works on a lightdata array that contains the colors stored in an array. The array is sent directly to the stribe if the <ref refid="_lightstribe_8h_1aac724dad670e4a26723daf71ce6a8d8a" kindref="member">transmit2leds</ref> function is called. So you first need to manipulate the array and than send it to the stribe. The array is ordered in GRB color because the implementation has been done for WS2812 LEDs (WS2811 LEDs can be used the colors are converted in the <ref refid="_led_effects_8h_1a55291315ab0f2ca8d508f0e9da1920a7" kindref="member">colorconv8to24</ref> function referring to the MSb of the effect you sent, for more information see section <ref refid="index_1protocol_sec" kindref="member">Protocol overview</ref>). So lightdata[0] contains one byte green data, lightdata[1] one byte red data, lightdata[2] blue data and so on. In general you can say lightdata[N%3==0] contains green, lightdata[N%3==1], lightdata[N%3==2] data. So the color array has a size of <ref refid="globals_8h_1a6e2b9e79df9491377ae405ef85aa0ca5" kindref="member">MAXNUMCOLORS</ref> * 3. So your function must at least have a pointer to the lightdata array as a call value. For creating your effect some nice functions are already implemented you may use. You can find a list of them in table <ref refid="index_1functiontable" kindref="member">3</ref>.</para><para><anchor id="index_1functiontable"/> <table rows="8" cols="3"><row>
+<entry thead="yes"><para>Function Name </para></entry><entry thead="yes"><para>call values </para></entry><entry thead="yes"><para>operation </para></entry></row>
+<row>
+<entry thead="no"><para><ref refid="_led_effects_8h_1ad67a4e660b5122ed454e101432bbdba0" kindref="member">map</ref> </para></entry><entry thead="no"><para>x,in_min,in_max,out_min,out_max </para></entry><entry thead="no"><para>calculate an x value to a new number range </para></entry></row>
+<row>
+<entry thead="no"><para><ref refid="_led_effects_8h_1a6950e7657ba74d0d490ba36427533c4b" kindref="member">effectdelay</ref> </para></entry><entry thead="no"><para>delay </para></entry><entry thead="no"><para>wait some time dependend on delay </para></entry></row>
+<row>
+<entry thead="no"><para><ref refid="_led_effects_8h_1a1c5e6b0f45c1787c25f8eafa8b9c6247" kindref="member">resetstribe</ref> </para></entry><entry thead="no"><para>*lightdata </para></entry><entry thead="no"><para>clear the stribe (all LEDs off) </para></entry></row>
+<row>
+<entry thead="no"><para><ref refid="_led_effects_8h_1afd64325b08e785d37b4dfaf358e517f0" kindref="member">rotate</ref> </para></entry><entry thead="no"><para>*lightdata, direction </para></entry><entry thead="no"><para>rotate stribe by one position (means 3 bytes) in direction (right/left) </para></entry></row>
+<row>
+<entry thead="no"><para><ref refid="_led_effects_8h_1a1fa5e03cb24195a46dcdc5948f596181" kindref="member">rotateN</ref> </para></entry><entry thead="no"><para>*lightdata, direction,width </para></entry><entry thead="no"><para>rotate LEDs by &quot;width&quot; positions (means width * 3 bytes) in direction (right/left) </para></entry></row>
+<row>
+<entry thead="no"><para><ref refid="_lightstribe_8h_1abba9462833e30ef725eaf18c3d01eb71" kindref="member">setled</ref> </para></entry><entry thead="no"><para>color, *lightdata, lednr </para></entry><entry thead="no"><para>set one LED a position lednr in the chosen color, others off (black) </para></entry></row>
+<row>
+<entry thead="no"><para><ref refid="_lightstribe_8h_1a63fa595d401f0e85c1bba55ba2b1d66e" kindref="member">changeled</ref> </para></entry><entry thead="no"><para>color, *lightdata, lednr </para></entry><entry thead="no"><para>change the color of one LED at position lednr, others are unchanged </para></entry></row>
+<caption>Provided help functions for your own effect</caption>
+</table>
+</para><para>Your written effect should get an own definition in <ref refid="_led_effects_8h" kindref="compound">LedEffects.h</ref> . The last thing is to add your definition in the main switch case structure. Referring to the implemented protocol your effect is available with the number you defined in <ref refid="_led_effects_8h" kindref="compound">LedEffects.h</ref>. You must sent the neccessary information for your effect, for example the color values you need and so on. To get the color value you sent you need to call <ref refid="_led_effects_8h_1a55291315ab0f2ca8d508f0e9da1920a7" kindref="member">colorconv8to24</ref> to convert the 8 bit RGB color into a 24 bit color. All colors you sent are available in the <ref refid="globals_8h_1a159854edb9d0c7283013495d85bdf997" kindref="member">CompColorArray</ref>. The first color you sent is stored in index zero. Your implemented function must not care about the color order if you use the <ref refid="_led_effects_8h_1a55291315ab0f2ca8d508f0e9da1920a7" kindref="member">colorconv8to24</ref> function. This does the conversion depending on the MSb of the effect you sent over the serial port. The delay is handled by the global var <ref refid="globals_8h_1ac2445d316b2972d381edeac44bb6a226" kindref="member">effectime</ref> and the number of LEDs to control is stored in <ref refid="globals_8h_1ad5db4045aed262ed4aae2af9d81fab98" kindref="member">NumOfLeds</ref>. The effect is stored in the <ref refid="globals_8h_1a053b8e1f039c19251b90d60317db8aed" kindref="member">effect</ref> variable. You should not do any changes on the serial part and the protocol reading, otherwise you will change to complete behavior of this implementation.</para></sect1>
+<sect1 id="index_1limitations_sec">
+<title>Requirements and Limitations</title>
+<para>The implementation to control has the following requirements and limitations: <itemizedlist>
+<listitem>
+<para>colors are 8 bit compressed so you cannot get every color value of the LEDs </para></listitem>
+<listitem>
+<para>the protocol implementation with the preamble 254 prohibits this value for other protocol fields (e.g. color) </para></listitem>
+<listitem>
+<para>approximate amount of RAM (in bytes) you need: <ref refid="globals_8h_1a6e2b9e79df9491377ae405ef85aa0ca5" kindref="member">MAXNUMCOLORS</ref>(=number of LEDs to control)*3 + <ref refid="globals_8h_1a0d57378e32bf8278011460740bc29f7f" kindref="member">UART_BUFFER_SIZE</ref> *2 + <ref refid="globals_8h_1a6e2b9e79df9491377ae405ef85aa0ca5" kindref="member">MAXNUMCOLORS</ref> + 160 </para></listitem>
+<listitem>
+<para>only O1 optimization is supported </para></listitem>
+<listitem>
+<para>8 MHz and 16 MHz clock support </para></listitem>
+<listitem>
+<para>fuses must be programmed manually (clock source and clock divider) </para></listitem>
+<listitem>
+<para>WS2801 stribes not supported (different hardware interface with two wires) </para></listitem>
+<listitem>
+<para>AVR should run on 5 V </para></listitem>
+</itemizedlist>
+</para></sect1>
 <sect1 id="index_1esp_sec">
-<title>control via ESP8266</title>
-<para>author: Florian Wank, 2016 </para></sect1>
+<title>Example usage with an ESP8266</title>
+<para>This section gives a short introduction about using the provided programm with an ESP8266. In this example the ESP8266 works as a wifi hotspot you can connect with and browse a website which allows different settings for the light stribe. The website is quite simple and only a few effects and colors are supported. If you enter the button &quot;DO IT&quot; your configuration is transmitted over the serial interface to the AVR. This is done through a software serial implementation, you find all necessary files below. You should step through all instructions to get the example work.</para><sect2 id="index_1setup_esp">
+<title>ESP8266 setup</title>
+<para>First you need to setup the ESP8266. Because of different versions of ESP8266 modules you may miss something, this is just a quick guide. For more information you can browse the web. First you must connect your ESP8266 to a host computer over a serial interface for example using an FTDI. Remember to cross RX and TX of the serial port. Furthermore be aware of the ESP8266 voltage, it is 3,3 V. The current a serial chip may provide (some FTDIs provide some current) may not be enough for the ESP8266 and what can cause different problems. <linebreak/>
+ So first you need to flash your ESP8266 with the nodemcu firmware that provides a software serial. The binaries that have been used in this example can be found here: <linebreak/>
+ <ulink url="0x00000.bin"><bold>Binaries part 1</bold></ulink> <linebreak/>
+ <ulink url="0x10000.bin"><bold>Binaries part 2</bold></ulink> <linebreak/>
+ For uploading this binaries to the ESP8266 you should use the <ulink url="https://github.com/nodemcu/nodemcu-flasher">nodeMCUFlasher</ulink> that can be found on github. You need to set the serial port to which your ESP8266 is connected with and configure the source files for flashing the firmware. You need to set the COM port to which you ESP8266 is connected to (see <ref refid="index_1four" kindref="member">figure 4</ref>). Furthermore you must consider the following hardware configuration: <itemizedlist>
+<listitem>
+<para>3,3 V logic level </para></listitem>
+<listitem>
+<para>bootmode low (IO15) </para></listitem>
+<listitem>
+<para>chip enable high (CH_PD) </para></listitem>
+<listitem>
+<para>reset high (drive low to reset the module) </para></listitem>
+<listitem>
+<para>IO0 low for firmware flashing (high for programming and normal operation) </para></listitem>
+</itemizedlist>
+The firmware programmer waits for the MAC of the ESP8266 module which will be successfully read if everything is done fine. As you can see in <ref refid="index_1four" kindref="member">figure 4</ref> the firmware programmer is still waiting for an ESP8266. <anchor id="index_1four"/><image type="html" name="NodeMCUFlasher_flash.PNG">Figure 4: node MCU flasher</image>
+<image type="latex" name="NodeMCUFlasher_flash.PNG">serial protocol structure</image>
+<image type="rtf" name="NodeMCUFlasher_flash.PNG">serial protocol structure</image>
+If the ESP8266 is connected right you now set the configuration to the provided binaries as you can see in <ref refid="index_1five" kindref="member">figure 5</ref>. You must browse to the binary files and set the destination address. Now you can hit the &quot;Flash&quot;-Button (see <ref refid="index_1four" kindref="member">figure 4</ref>). <anchor id="index_1five"/><image type="html" name="NodeMCUFlasher_config.PNG">Figure 5: node MCU flasher configuration</image>
+<image type="latex" name="NodeMCUFlasher_config.PNG">serial protocol structure</image>
+<image type="rtf" name="NodeMCUFlasher_config.PNG">serial protocol structure</image>
+After flashing the firmware you need to reboot the ESP8266 module. Before you do this you should change the IO0 to high level (3V3) because after the reboot we want to program the module with our own program. The reset can be done by setting reset low. The program we will upload to the module is written in Lua. Lua is a scripting language that is interpreted by the firmware running on the module. So the performance is not the best, but the programming is quite simple. The little program that you can find below set up the module as an access point, runs a simple webserver that interacts with a software serial to control the AVR. One thing you must know about the Lua programming is that the variable types are assigned implicit so you cannot control whether a number is stored as 16 bit or 32 bit signed or unsigned variable. Another thing you should know is that the program you write needs the full memory space of its file. That means shorter variable names save memory and furthermore documentation should be as short as possible or left.<linebreak/>
+ For writing your program you can use any text editor, notepad++ is a good choice. If you are finished you must upload the file to the module. Therefore you use the same setup as for firmware updating but you must set IO0 to high level. For uploading your program you can use the ESP8266 Lua Loader. It is easy to handle and you can try out several things first, before you upload your code. You can find the main window of the ESP8266 Lua Loader in <ref refid="index_1six" kindref="member">figure 6</ref>. <anchor id="index_1six"/><image type="html" name="LuaLoader.png">Figure 6: ESP8266 Lua Loader</image>
+<image type="latex" name="LuaLoader.png">ESP8266 Lua Loader</image>
+<image type="rtf" name="LuaLoader.png">ESP8266 Lua Loader</image>
+On the right side you can set the baud rate for uploading you program to the module. In the GPIO section you can easily set and reset them to try your wiring. By using the restart button you will restart the module. This may be necessary if your heap (RAM) is to low. This is caused by inefficient programming or by a program that is to big for the module. Global variables need a lot of heap. For uploading your program hit the &quot;Upload File...&quot; button. In a file browser you choose your program that should be transferred to the module. After completion you hit the &quot;dofile&quot; button to run the program. This short description should be enough.<linebreak/>
+ So now we upload the Lua program that starts the webserver and sends data over a software serial to the AVR. You can find this program here:<linebreak/>
+ <ulink url="complex_server.lua"><bold>lua program for controlling the AVR</bold></ulink> <linebreak/>
+ The program does the following: <itemizedlist>
+<listitem>
+<para>set up the ESP8266 module as an access point (SSID=Lichterkette, password=12345678, you may change this) </para></listitem>
+<listitem>
+<para>start a webserver that listens on port 80 </para></listitem>
+<listitem>
+<para>load the index.html website and handle requests </para></listitem>
+<listitem>
+<para>sent UART commands matching for the AVR implementation to generate different effects depending on the request </para></listitem>
+<listitem>
+<para>software serial is set to GPIO5 (GPIO5 is available at software number 1) </para></listitem>
+</itemizedlist>
+Some further things you should know: <itemizedlist>
+<listitem>
+<para>the maximum of parallel accessing devices is four </para></listitem>
+<listitem>
+<para>parallel devices can never access another device </para></listitem>
+<listitem>
+<para>the software uart only supports TX (8N1 up to 38400 baud) </para></listitem>
+<listitem>
+<para>if you change the website you must change the hard coded content length of the website </para></listitem>
+<listitem>
+<para>the address of the ESP8266 is always 192.168.4.1 </para></listitem>
+</itemizedlist>
+</para></sect2>
+<sect2 id="index_1avr_con_esp">
+<title>Connect ESP8266 with AVR</title>
+<para>After uploading the main program file you need to upload the <ulink url="_index.html"><bold>_index.html</bold></ulink> file. Before uploading remove the underscore so that the files name is index.html (the underscore has been inserted because of conflicts with this html documentation). For uploading other file types (than lua programs) to your ESP8266 module you need to use the &quot;Upload Bin&quot; button of the Lua Loader. The file will be uploaded to the file system on the ESP8266. <linebreak/>
+ Now your ESP8266 module is ready to try the first communication with the AVR. So now you need a hardware setup where the ESP8266 and AVR are connected. Be aware of the different voltage levels (AVR uses 5V, ESP8266 3V3). You should connect everything like <ref refid="index_1seven" kindref="member">figure 7</ref> shows.</para><para><anchor id="index_1seven"/><image type="html" name="Ws2811_Atmega328.png">Figure 7: schematic using ESP8266 with AVR WS2811 software</image>
+<image type="latex" name="Ws2811_Atmega328.png">schematic using ESP8266 with AVR WS2811 software</image>
+<image type="rtf" name="Ws2811_Atmega328.png">schematic using ESP8266 with AVR WS2811 software</image>
+ Your ESP8266 should still be connected with the host computer. If your hardware setup is ready you now must hit the &quot;dofile&quot; button in the Lua Loader (complexe_server.lua must be the selected file that should be executed). After a short time you can use any device to search for the access point that is set up by the ESP8266 module. It will have your SSID (default &quot;Lichterkette&quot;) and your chosen password (default &quot;12345678&quot;). After you connected to your ESP8266 module you should open a web browser and browse the IP address 192.168.4.1. The browser should load the website. Now choose your configuration for the LEDs and hit the &quot;DO IT&quot; Button on the website. The website should be reloaded and the lightstribes get the configuration you have chosen. If everything is working fine the last thing to do is to make the ESP8266 as a stand alone device without the need of an external host. For this you must remove the complex_webserver.lua file from the module. Now you rename the file on your host computer to init.lua. Afterwards you upload this file to the ESP8266. This file is always loaded at first when the ESP8266 is powered on. So now you have a stand alone webserver that communicates with your AVR for controlling WS2811/WS2812 LEDs.<linebreak/>
+</para></sect2>
+<sect2 id="index_1short_setup">
+<title>Short setup</title>
+<para><itemizedlist>
+<listitem>
+<para>flash the provided image (<ulink url="0x00000.bin"><bold>Binaries part 1</bold></ulink>,<ulink url="0x10000.bin"><bold>Binaries part 2</bold></ulink> </para></listitem>
+<listitem>
+<para>upload the <ulink url="_index.html"><bold>_index.html</bold></ulink> renamed to index.html </para></listitem>
+<listitem>
+<para>upload the lua program <ulink url="complex_server.lua"><bold>complex_server.lua</bold></ulink> renamed to init.lua </para></listitem>
+<listitem>
+<para>setup your hardware refering to <ref refid="index_1seven" kindref="member">figure 7</ref> </para></listitem>
+<listitem>
+<para>connect to your ESP8266 with your SSID and your password (default: Lichterkette, 12345678) </para></listitem>
+<listitem>
+<para>browse 192.168.4.1 on your device </para></listitem>
+<listitem>
+<para>set up your configuration and hit &quot;DO IT&quot; </para></listitem>
+</itemizedlist>
+<linebreak/>
+ author: Florian Wank, 2016 </para></sect2>
+</sect1>
     </detaileddescription>
   </compounddef>
 </doxygen>

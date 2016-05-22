@@ -40,6 +40,7 @@
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Lightstribe WS2811/WS2812
    </div>
+   <div id="projectbrief">Control WS2811/WS2812 LEDs with an AVR</div>
   </td>
  </tr>
  </tbody>
@@ -121,18 +122,15 @@ $(document).ready(function(){initNavTree('_lightstribe_8h_source.html','');});
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#define LIGHTSTRIBE_H_</span></div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
 <div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="structcolor24bit.html">   16</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structcolor24bit.html">color24bit</a>{</div>
-<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="structcolor24bit.html#ad47d918910aaa51c73160ac85999d09c">   17</a></span>&#160;    uint8_t <a class="code" href="structcolor24bit.html#ad47d918910aaa51c73160ac85999d09c">red</a>;                                    </div>
-<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="structcolor24bit.html#a90d21fa503b626c00cdc8d94863d5877">   18</a></span>&#160;    uint8_t <a class="code" href="structcolor24bit.html#a90d21fa503b626c00cdc8d94863d5877">green</a>;                                  </div>
-<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="structcolor24bit.html#a287b397e90d7b995c81ff54e741f96b2">   19</a></span>&#160;    uint8_t <a class="code" href="structcolor24bit.html#a287b397e90d7b995c81ff54e741f96b2">blue</a>;                                   </div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;};</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#if F_CPU == 16000000</span></div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#pragma message(&quot;Use 16 MHz Macros&quot;)</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="structcolor24bit.html#ad47d918910aaa51c73160ac85999d09c">   18</a></span>&#160;    uint8_t <a class="code" href="structcolor24bit.html#ad47d918910aaa51c73160ac85999d09c">red</a>;    </div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="structcolor24bit.html#a90d21fa503b626c00cdc8d94863d5877">   20</a></span>&#160;    uint8_t <a class="code" href="structcolor24bit.html#a90d21fa503b626c00cdc8d94863d5877">green</a>;  </div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="structcolor24bit.html#a287b397e90d7b995c81ff54e741f96b2">   22</a></span>&#160;    uint8_t <a class="code" href="structcolor24bit.html#a287b397e90d7b995c81ff54e741f96b2">blue</a>;                               </div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;};</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#define SETHIGH PORTB=0x01;\</span></div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">               asm (&quot;nop&quot;);\</span></div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">               asm (&quot;nop&quot;);\</span></div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">               asm (&quot;nop&quot;);\</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#if F_CPU == 16000000</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#pragma message(&quot;Use 16 MHz Macros&quot;)</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#define SETHIGH PORTB=0x01;\</span></div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">               asm (&quot;nop&quot;);\</span></div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">               asm (&quot;nop&quot;);\</span></div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">               asm (&quot;nop&quot;);\</span></div>
@@ -141,71 +139,74 @@ $(document).ready(function(){initNavTree('_lightstribe_8h_source.html','');});
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor">               asm (&quot;nop&quot;);\</span></div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="preprocessor">               asm (&quot;nop&quot;);\</span></div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="preprocessor">               asm (&quot;nop&quot;);\</span></div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="preprocessor">               PORTB=0x00;\</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="preprocessor">               asm (&quot;nop&quot;);\</span></div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="preprocessor">               asm (&quot;nop&quot;);\</span></div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="preprocessor">               asm (&quot;nop&quot;);\</span></div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="preprocessor">               asm (&quot;nop&quot;);</span></div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;               </div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="preprocessor">#elif F_CPU == 8000000</span></div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="preprocessor">#pragma message(&quot;Use 8 MHz Macros&quot;)</span></div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="preprocessor">#define SETHIGH PORTB=0x01;\</span></div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="preprocessor">               asm (&quot;nop&quot;);\</span></div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="preprocessor">               asm (&quot;nop&quot;);\</span></div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="preprocessor">               asm (&quot;nop&quot;);\</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="preprocessor">               PORTB=0x00;\</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="preprocessor">               asm (&quot;nop&quot;);\</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="preprocessor">               asm (&quot;nop&quot;);\</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="preprocessor">               asm (&quot;nop&quot;);</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;               </div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="preprocessor">#elif F_CPU == 8000000</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="preprocessor">#pragma message(&quot;Use 8 MHz Macros&quot;)</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="preprocessor">#define SETHIGH PORTB=0x01;\</span></div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="preprocessor">               asm (&quot;nop&quot;);\</span></div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="preprocessor">               asm (&quot;nop&quot;);\</span></div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="preprocessor">               PORTB=0x00;\</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="preprocessor">               asm (&quot;nop&quot;);\</span></div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="preprocessor">               asm (&quot;nop&quot;);\</span></div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="preprocessor">               asm (&quot;nop&quot;);</span></div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="preprocessor">#if F_CPU == 16000000</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="preprocessor">               asm (&quot;nop&quot;);\</span></div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="preprocessor">               PORTB=0x00;\</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="preprocessor">               asm (&quot;nop&quot;);\</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="preprocessor">               asm (&quot;nop&quot;);</span></div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="preprocessor">#define SETLOW PORTB=0x01;\</span></div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="preprocessor">              asm (&quot;nop&quot;);\</span></div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="preprocessor">              asm (&quot;nop&quot;);\</span></div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="preprocessor">              asm (&quot;nop&quot;);\</span></div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="preprocessor">#if F_CPU == 16000000</span></div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="preprocessor">#define SETLOW PORTB=0x01;\</span></div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="preprocessor">              asm (&quot;nop&quot;);\</span></div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="preprocessor">              asm (&quot;nop&quot;);\</span></div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="preprocessor">              PORTB=0x00;\</span></div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="preprocessor">              asm (&quot;nop&quot;);\</span></div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="preprocessor">              asm (&quot;nop&quot;);\</span></div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="preprocessor">              asm (&quot;nop&quot;);\</span></div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="preprocessor">              asm (&quot;nop&quot;);\</span></div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="preprocessor">              PORTB=0x00;\</span></div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="preprocessor">              asm (&quot;nop&quot;);\</span></div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="preprocessor">              asm (&quot;nop&quot;);\</span></div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="preprocessor">              asm (&quot;nop&quot;);\</span></div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="preprocessor">              asm (&quot;nop&quot;);\</span></div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="preprocessor">              asm (&quot;nop&quot;);\</span></div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="preprocessor">              asm (&quot;nop&quot;);</span></div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="preprocessor">#elif F_CPU == 8000000</span></div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="preprocessor">#define SETLOW PORTB=0x01;\</span></div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="preprocessor">               asm (&quot;nop&quot;);\</span></div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="preprocessor">               asm (&quot;nop&quot;);\</span></div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="preprocessor">               PORTB=0x00;\</span></div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="preprocessor">              asm (&quot;nop&quot;);\</span></div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="preprocessor">              asm (&quot;nop&quot;);\</span></div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="preprocessor">              asm (&quot;nop&quot;);\</span></div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="preprocessor">              asm (&quot;nop&quot;);</span></div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="preprocessor">#elif F_CPU == 8000000</span></div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="preprocessor">#define SETLOW PORTB=0x01;\</span></div>
 <div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="preprocessor">               asm (&quot;nop&quot;);\</span></div>
 <div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<span class="preprocessor">               asm (&quot;nop&quot;);\</span></div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="preprocessor">               asm (&quot;nop&quot;);</span></div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<span class="comment">//function to change one LED at a specific position; all other LEDs are not changed; run transmit2leds afterwards</span></div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<span class="keywordtype">void</span> <a class="code" href="_lightstribe_8h.html#a63fa595d401f0e85c1bba55ba2b1d66e">changeled</a>(<span class="keyword">struct</span> <a class="code" href="structcolor24bit.html">color24bit</a> color, uint8_t *lightdata, uint8_t lednr);</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;<span class="comment">//function to set one LED at a specific position; all other LEDs are turned off; run transmit2leds afterwards</span></div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;<span class="keywordtype">void</span> <a class="code" href="_lightstribe_8h.html#abba9462833e30ef725eaf18c3d01eb71">setled</a>(<span class="keyword">struct</span> <a class="code" href="structcolor24bit.html">color24bit</a> color, uint8_t *lightdata, uint8_t lednr);</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;<span class="comment">//transmit the color array to the stribe --&gt; one wire data transmission</span></div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;<span class="keywordtype">void</span> <a class="code" href="_lightstribe_8h.html#aac724dad670e4a26723daf71ce6a8d8a">transmit2leds</a>(uint8_t lightdata[]);</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* LIGHTSTRIBE_H_ */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="preprocessor">               PORTB=0x00;\</span></div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<span class="preprocessor">               asm (&quot;nop&quot;);\</span></div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;<span class="preprocessor">               asm (&quot;nop&quot;);\</span></div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;<span class="preprocessor">               asm (&quot;nop&quot;);</span></div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;<span class="comment">//function to change one LED at a specific position; all other LEDs are not changed; run transmit2leds afterwards</span></div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;<span class="keywordtype">void</span> <a class="code" href="_lightstribe_8h.html#a63fa595d401f0e85c1bba55ba2b1d66e">changeled</a>(<span class="keyword">struct</span> <a class="code" href="structcolor24bit.html">color24bit</a> color, uint8_t *lightdata, uint8_t lednr);</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;<span class="comment">//function to set one LED at a specific position; all other LEDs are turned off; run transmit2leds afterwards</span></div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="keywordtype">void</span> <a class="code" href="_lightstribe_8h.html#abba9462833e30ef725eaf18c3d01eb71">setled</a>(<span class="keyword">struct</span> <a class="code" href="structcolor24bit.html">color24bit</a> color, uint8_t *lightdata, uint8_t lednr);</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;<span class="comment">//transmit the color array to the stribe --&gt; one wire data transmission</span></div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;<span class="keywordtype">void</span> <a class="code" href="_lightstribe_8h.html#aac724dad670e4a26723daf71ce6a8d8a">transmit2leds</a>(uint8_t lightdata[]);</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* LIGHTSTRIBE_H_ */</span><span class="preprocessor"></span></div>
 <div class="ttc" id="_lightstribe_8h_html_a63fa595d401f0e85c1bba55ba2b1d66e"><div class="ttname"><a href="_lightstribe_8h.html#a63fa595d401f0e85c1bba55ba2b1d66e">changeled</a></div><div class="ttdeci">void changeled(struct color24bit color, uint8_t *lightdata, uint8_t lednr)</div><div class="ttdoc">change the color of one LED at a specific position; run transmit2leds afterwards to update the LEDs ...</div><div class="ttdef"><b>Definition:</b> <a href="_lightstribe_8c_source.html#l00033">Lightstribe.c:33</a></div></div>
 <div class="ttc" id="_lightstribe_8h_html_aac724dad670e4a26723daf71ce6a8d8a"><div class="ttname"><a href="_lightstribe_8h.html#aac724dad670e4a26723daf71ce6a8d8a">transmit2leds</a></div><div class="ttdeci">void transmit2leds(uint8_t lightdata[])</div><div class="ttdoc">transmit the color array to the stribe </div><div class="ttdef"><b>Definition:</b> <a href="_lightstribe_8c_source.html#l00096">Lightstribe.c:96</a></div></div>
-<div class="ttc" id="structcolor24bit_html_a90d21fa503b626c00cdc8d94863d5877"><div class="ttname"><a href="structcolor24bit.html#a90d21fa503b626c00cdc8d94863d5877">color24bit::green</a></div><div class="ttdeci">uint8_t green</div><div class="ttdef"><b>Definition:</b> <a href="_lightstribe_8h_source.html#l00018">Lightstribe.h:18</a></div></div>
+<div class="ttc" id="structcolor24bit_html_a90d21fa503b626c00cdc8d94863d5877"><div class="ttname"><a href="structcolor24bit.html#a90d21fa503b626c00cdc8d94863d5877">color24bit::green</a></div><div class="ttdeci">uint8_t green</div><div class="ttdoc">8 Bit green </div><div class="ttdef"><b>Definition:</b> <a href="_lightstribe_8h_source.html#l00020">Lightstribe.h:20</a></div></div>
 <div class="ttc" id="_lightstribe_8h_html_abba9462833e30ef725eaf18c3d01eb71"><div class="ttname"><a href="_lightstribe_8h.html#abba9462833e30ef725eaf18c3d01eb71">setled</a></div><div class="ttdeci">void setled(struct color24bit color, uint8_t *lightdata, uint8_t lednr)</div><div class="ttdoc">set the color of one LED at a specific position, all others are off; run transmit2leds afterwards to ...</div><div class="ttdef"><b>Definition:</b> <a href="_lightstribe_8c_source.html#l00051">Lightstribe.c:51</a></div></div>
-<div class="ttc" id="structcolor24bit_html_ad47d918910aaa51c73160ac85999d09c"><div class="ttname"><a href="structcolor24bit.html#ad47d918910aaa51c73160ac85999d09c">color24bit::red</a></div><div class="ttdeci">uint8_t red</div><div class="ttdef"><b>Definition:</b> <a href="_lightstribe_8h_source.html#l00017">Lightstribe.h:17</a></div></div>
-<div class="ttc" id="structcolor24bit_html_a287b397e90d7b995c81ff54e741f96b2"><div class="ttname"><a href="structcolor24bit.html#a287b397e90d7b995c81ff54e741f96b2">color24bit::blue</a></div><div class="ttdeci">uint8_t blue</div><div class="ttdef"><b>Definition:</b> <a href="_lightstribe_8h_source.html#l00019">Lightstribe.h:19</a></div></div>
+<div class="ttc" id="structcolor24bit_html_ad47d918910aaa51c73160ac85999d09c"><div class="ttname"><a href="structcolor24bit.html#ad47d918910aaa51c73160ac85999d09c">color24bit::red</a></div><div class="ttdeci">uint8_t red</div><div class="ttdoc">8 Bit red </div><div class="ttdef"><b>Definition:</b> <a href="_lightstribe_8h_source.html#l00018">Lightstribe.h:18</a></div></div>
+<div class="ttc" id="structcolor24bit_html_a287b397e90d7b995c81ff54e741f96b2"><div class="ttname"><a href="structcolor24bit.html#a287b397e90d7b995c81ff54e741f96b2">color24bit::blue</a></div><div class="ttdeci">uint8_t blue</div><div class="ttdoc">8 Bit blue </div><div class="ttdef"><b>Definition:</b> <a href="_lightstribe_8h_source.html#l00022">Lightstribe.h:22</a></div></div>
 <div class="ttc" id="structcolor24bit_html"><div class="ttname"><a href="structcolor24bit.html">color24bit</a></div><div class="ttdoc">24 Bit color structure RGB 8-8-8 </div><div class="ttdef"><b>Definition:</b> <a href="_lightstribe_8h_source.html#l00016">Lightstribe.h:16</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
@@ -213,7 +214,7 @@ $(document).ready(function(){initNavTree('_lightstribe_8h_source.html','');});
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="_lightstribe_8h.html">Lightstribe.h</a></li>
-    <li class="footer">Generated on Fri May 6 2016 14:10:35 for Lightstribe WS2811/WS2812 by
+    <li class="footer">Generated on Sun May 22 2016 16:48:52 for Lightstribe WS2811/WS2812 by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.10 </li>
   </ul>
